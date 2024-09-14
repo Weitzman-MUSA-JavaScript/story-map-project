@@ -16,8 +16,16 @@
   <main>
     <div class="map-container">
       <div class="map" id="map"></div>
+      <img id="slide-image" src="" alt="Slide image" style="display:none; width:100%; height:100%; object-fit:cover;">
     </div>
+
     <section class="slide-section">
+
+      <article class="slide" id="image-slide-1" data-image-src="assets/sugaring-hero.jpg">
+        <h1>Headings</h1>
+        <p>MUSA Assignment 1</p>
+      </article>
+
       <article class="slide" id="title-slide">
         <h1>Story Map title</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie hendrerit quam, efficitur vestibulum justo vehicula a.</p>
@@ -34,11 +42,34 @@
         <h2>Third slide title</h2>
         <p>Pellentesque nunc tellus, euismod sed mauris vitae, volutpat viverra metus. Nunc vel nisl massa. Nunc ullamcorper interdum vehicula. Ut at mi congue, lacinia eros eget, gravida libero. Vivamus et cursus lorem. Nulla elementum neque a nunc sollicitudin, eget maximus turpis egestas. In hac habitasse platea dictumst. Maecenas aliquet nibh tempor leo pretium, vel congue dui malesuada. Sed non felis porttitor, laoreet ante ac, volutpat nibh. Sed tincidunt eleifend felis, et porttitor dui interdum scelerisque. Mauris eget eros pharetra, pretium justo nec, commodo tellus. Duis orci sem, vehicula a leo eget, lacinia venenatis neque. Duis purus enim, volutpat dapibus arcu eget, aliquam malesuada nulla. Duis nisi eros, semper eu bibendum condimentum, vehicula vel felis. Integer a lacus dictum, tempor nulla at, ornare ante.</p>
       </article>
+
+      <article class="slide" id="fourth-slide">
+        <h2>Fourth slide title</h2>
+        <p>Pellentesque nunc tellus, euismod sed mauris vitae, volutpat viverra metus. Nunc vel nisl massa. Nunc ullamcorper interdum vehicula. Ut at mi congue, lacinia eros eget, gravida libero. Vivamus et cursus lorem. Nulla elementum neque a nunc sollicitudin, eget maximus turpis egestas. In hac habitasse platea dictumst. Maecenas aliquet nibh tempor leo pretium, vel congue dui malesuada. Sed non felis porttitor, laoreet ante ac, volutpat nibh. Sed tincidunt eleifend felis, et porttitor dui interdum scelerisque. Mauris eget eros pharetra, pretium justo nec, commodo tellus. Duis orci sem, vehicula a leo eget, lacinia venenatis neque. Duis purus enim, volutpat dapibus arcu eget, aliquam malesuada nulla. Duis nisi eros, semper eu bibendum condimentum, vehicula vel felis. Integer a lacus dictum, tempor nulla at, ornare ante.</p>
+      </article>
+
+      <article class="slide" id="fifth-slide">
+        <h2>Fifth slide title</h2>
+        <p>Pellentesque nunc tellus, euismod sed mauris vitae, volutpat viverra metus. Nunc vel nisl massa. Nunc ullamcorper interdum vehicula. Ut at mi congue, lacinia eros eget, gravida libero. Vivamus et cursus lorem. Nulla elementum neque a nunc sollicitudin, eget maximus turpis egestas. In hac habitasse platea dictumst. Maecenas aliquet nibh tempor leo pretium, vel congue dui malesuada. Sed non felis porttitor, laoreet ante ac, volutpat nibh. Sed tincidunt eleifend felis, et porttitor dui interdum scelerisque. Mauris eget eros pharetra, pretium justo nec, commodo tellus. Duis orci sem, vehicula a leo eget, lacinia venenatis neque. Duis purus enim, volutpat dapibus arcu eget, aliquam malesuada nulla. Duis nisi eros, semper eu bibendum condimentum, vehicula vel felis. Integer a lacus dictum, tempor nulla at, ornare ante.</p>
+      </article>
+
+      <article class="slide" id="sixth-slide">
+        <h2>Sixth slide title</h2>
+        <p>Pellentesque nunc tellus, euismod sed mauris vitae, volutpat viverra metus. Nunc vel nisl massa. Nunc ullamcorper interdum vehicula. Ut at mi congue, lacinia eros eget, gravida libero. Vivamus et cursus lorem. Nulla elementum neque a nunc sollicitudin, eget maximus turpis egestas. In hac habitasse platea dictumst. Maecenas aliquet nibh tempor leo pretium, vel congue dui malesuada. Sed non felis porttitor, laoreet ante ac, volutpat nibh. Sed tincidunt eleifend felis, et porttitor dui interdum scelerisque. Mauris eget eros pharetra, pretium justo nec, commodo tellus. Duis orci sem, vehicula a leo eget, lacinia venenatis neque. Duis purus enim, volutpat dapibus arcu eget, aliquam malesuada nulla. Duis nisi eros, semper eu bibendum condimentum, vehicula vel felis. Integer a lacus dictum, tempor nulla at, ornare ante.</p>
+      </article>
+
+      <article class="slide" id="image-slide-2" data-image-src="assets/test2.jpg">
+        <h2>Third slide title</h2>
+        <p>Pellentesque nunc tellus, euismod sed mauris vitae, volutpat viverra metus. Nunc vel nisl massa. Nunc ullamcorper interdum vehicula. Ut at mi congue, lacinia eros eget, gravida libero. Vivamus et cursus lorem. Nulla elementum neque a nunc sollicitudin, eget maximus turpis egestas. In hac habitasse platea dictumst. Maecenas aliquet nibh tempor leo pretium, vel congue dui malesuada. Sed non felis porttitor, laoreet ante ac, volutpat nibh. Sed tincidunt eleifend felis, et porttitor dui interdum scelerisque. Mauris eget eros pharetra, pretium justo nec, commodo tellus. Duis orci sem, vehicula a leo eget, lacinia venenatis neque. Duis purus enim, volutpat dapibus arcu eget, aliquam malesuada nulla. Duis nisi eros, semper eu bibendum condimentum, vehicula vel felis. Integer a lacus dictum, tempor nulla at, ornare ante.</p>
+      </article>
+
     </section>
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/index.js" type="module"></script>
+  <script src="js/mouseover.js"></script>
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
 </body>
 </html>
