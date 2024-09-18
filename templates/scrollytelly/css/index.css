@@ -23,6 +23,7 @@ body {
   margin-top: -30vh;
   z-index: 100;
   pointer-events: none;
+  border-bottom: 1px solid rgb(0 0 0 / 10%);
 }
 
 .slide {

@@ -10,7 +10,7 @@ const slides = [
       <iframe src="https://open.spotify.com/embed/track/3xy8hSnwLShT5cc6WhKvRK" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     `,
     origin: null,
-    bounds: [[-75, -180], [75, 180]],
+    bounds: [[-75, -1], [75, 180]],
   },
 
   {

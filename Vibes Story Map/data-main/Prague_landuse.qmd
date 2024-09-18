@@ -1,0 +1,71 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.34.5-Prizren">
+  <identifier>PVP_FVU_P</identifier>
+  <parentidentifier></parentidentifier>
+  <language>CZE</language>
+  <type>dataset</type>
+  <title>Plán využití ploch - funkční plochy (územní plán)</title>
+  <abstract>Plán využití ploch (územní plán) - polyfunkční území a monofunkční plochy Územního plánu sídelního útvaru hl. m. Prahy v měřítku 1 : 10 000.
+
+Územní plán sídelního útvaru hl. m. Prahy</abstract>
+  <keywords vocabulary="Search keys">
+    <keyword>územní plán</keyword>
+    <keyword>urbanismus</keyword>
+    <keyword>využití území</keyword>
+  </keywords>
+  <keywords vocabulary="gmd:topicCategory">
+    <keyword>územní plán</keyword>
+    <keyword>urbanismus</keyword>
+    <keyword>využití území</keyword>
+  </keywords>
+  <contact>
+    <contactAddress>
+      <type></type>
+      <address></address>
+      <city></city>
+      <administrativearea></administrativearea>
+      <postalcode></postalcode>
+      <country></country>
+    </contactAddress>
+    <name>Jana Irová</name>
+    <organization>Institut plánování a rozvoje hl. m. Prahy</organization>
+    <position></position>
+    <voice></voice>
+    <fax></fax>
+    <email>irova@ipr.praha.eu</email>
+    <role>Point of contact</role>
+  </contact>
+  <links/>
+  <history>Datová sada pořízená Institutem plánování a rozvoje hl. m. Prahy.</history>
+  <dates>
+    <date type="Created" value="2010-06-17T00:00:00"/>
+    <date type="Published" value="2010-06-17T00:00:00"/>
+    <date type="Revised" value="2024-09-05T00:00:00"/>
+  </dates>
+  <fees></fees>
+  <constraints type="Limitations of use">www.geoportalpraha.cz</constraints>
+  <license></license>
+  <encoding></encoding>
+  <crs>
+    <spatialrefsys nativeFormat="Wkt">
+      <wkt>PROJCRS["S-JTSK / Krovak East North",BASEGEOGCRS["S-JTSK",DATUM["System of the Unified Trigonometrical Cadastral Network",ELLIPSOID["Bessel 1841",6377397.155,299.1528128,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4156]],CONVERSION["Krovak East North (Greenwich)",METHOD["Krovak (North Orientated)",ID["EPSG",1041]],PARAMETER["Latitude of projection centre",49.5,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8811]],PARAMETER["Longitude of origin",24.8333333333333,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8833]],PARAMETER["Co-latitude of cone axis",30.2881397527778,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",1036]],PARAMETER["Latitude of pseudo standard parallel",78.5,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8818]],PARAMETER["Scale factor on pseudo standard parallel",0.9999,SCALEUNIT["unity",1],ID["EPSG",8819]],PARAMETER["False easting",0,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["GIS."],AREA["Czechia; Slovakia."],BBOX[47.73,12.09,51.06,22.56]],ID["EPSG",5514]]</wkt>
+      <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.8333333333333 +alpha=30.2881397527778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=589,76,480,0,0,0,0 +units=m +no_defs</proj4>
+      <srsid>26812</srsid>
+      <srid>5514</srid>
+      <authid>EPSG:5514</authid>
+      <description>S-JTSK / Krovak East North</description>
+      <projectionacronym>krovak</projectionacronym>
+      <ellipsoidacronym>EPSG:7004</ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </crs>
+  <extent>
+    <spatial minx="14.21529999999999916" maxz="0" miny="49.93070000000000164" crs="EPSG:5514" maxx="14.73189999999999955" maxy="50.19189999999999685" minz="0" dimensions="2"/>
+    <temporal>
+      <period>
+        <start>2010-06-17T04:00:00Z</start>
+        <end></end>
+      </period>
+    </temporal>
+  </extent>
+</qgis>

@@ -10,10 +10,11 @@ const baseTileLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_wat
 baseTileLayer.addTo(map);
 
 // ## Interface Elements
+const container = document.querySelector('.slide-section');
 const slides = document.querySelectorAll('.slide');
 
 // ## The SlideDeck object
-const deck = new SlideDeck(slides, map);
+const deck = new SlideDeck(container, slides, map);
 
 document.addEventListener('scroll', () => deck.calcCurrentSlideIndex());
 
