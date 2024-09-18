@@ -341,7 +341,7 @@ body {
   border-radius: 0.5rem;
   pointer-events: initial;
   width: 48%;
-  background: linear-gradient(to bottom, rgba(214, 204, 145, 0.9), rgba(255, 255, 255, 0.9));
+  background: linear-gradient(to bottom, rgba(214, 204, 145, 90%), rgba(255, 255, 255, 90%));
   color: black;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -385,13 +385,13 @@ body {
   border: 1px solid gray;
   width: 95%;
   height:100%;
-  background-color: rgba(242, 235, 235, 0.7);
+  background-color: rgba(242, 235, 235, 70%);
   color: black;
   border-radius: 0 !important;
 }
 
 .text {
-	font-family: "Didact Gothic";
+  font-family: "Didact Gothic", sans-serif;
 	font-size: 70px;
   font-weight: 800;
   color: #eee;
@@ -405,19 +405,24 @@ body {
 		padding-left: 20px;
 		padding-right: 20px;
 		padding-top: 20px;
-		.letter {
-			transition: ease-out 0.8s;
-			transform: translateY(30%);
-		}
+
+    
+    .letter {
+      transition: ease-out 0.8s;
+      transform: translateY(30%);
+    }
+
 		.shadow {
 			transform: scale(1, -1);
 			color: #fffbfb62;
 			transition: ease-in 2s, ease-out 2s;
 		}
+
 		&:hover {
 			.letter {
 				transform: translateY(-200%);
 			}
+
 			.shadow {
 				opacity: 0;
 				transform: translateY(200%);
@@ -427,7 +432,7 @@ body {
 }
 
 #image-slide-3  p:first-of-type{
-  font-family: 'Didact Gothic';
+  font-family: 'Didact Gothic', sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   text-align: center;
@@ -439,7 +444,7 @@ body {
 }
 
 #image-slide-3  p:nth-of-type(2){
-  font-family: 'Mulish';
+  font-family: Mulish, sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
   text-align: center;
@@ -450,7 +455,7 @@ body {
 }
 
 #image-slide-3  p:nth-of-type(3){
-  font-family: 'Mulish';
+  font-family: Mulish, sans-serif;
   font-weight: 300;
   font-size: 0.7rem;
   text-align: center;
