@@ -13,8 +13,12 @@ let leafIcon;
  * Preloads the leaf icon image.
  */
 function preload() {
+  // Load image with error handling
   // eslint-disable-next-line no-undef
-  leafIcon = loadImage('../assets/maple.svg'); // Replace with the path to your SVG file
+  leafIcon = loadImage('https://raw.githubusercontent.com/emilyzhou112/story-map-project/main/assets/maple.svg',
+      () => console.log('Image loaded successfully'),
+      (err) => console.error('Error loading image:', err),
+  );
 }
 
 
