@@ -4,10 +4,12 @@
 class SlideDeck {
   /**
    * Constructor for the SlideDeck object.
+   * @param {Node} container The container element for the slides.
    * @param {NodeList} slides A list of HTML elements containing the slide text.
    * @param {L.map} map The Leaflet map where data will be shown.
    */
-  constructor(slides, map) {
+  constructor(container, slides, map) {
+    this.container = container;
     this.slides = slides;
     this.map = map;
 
@@ -370,7 +372,7 @@ class SlideDeck {
    * Calculate the current slide index based on the current scroll position.
    */
   calcCurrentSlideIndex() {
-    const scrollPos = window.scrollY;
+    const scrollPos = window.scrollY - this.container.offsetTop;
     const windowHeight = window.innerHeight;
 
     let i;
