@@ -15,10 +15,7 @@ let leafIcon;
 function preload() {
   // Load image with error handling
   // eslint-disable-next-line no-undef
-  leafIcon = loadImage('maple.svg',
-      () => console.log('Image loaded successfully'),
-      (err) => console.error('Error loading image:', err),
-  );
+  leafIcon = loadImage('assets/maple.svg');
 }
 
 
