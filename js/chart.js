@@ -65,7 +65,7 @@ d3.csv('assets/production_over_time.csv').then( function(data) {
   const allGroup = new Set(data.map((d) => d.State));
 
   // eslint-disable-next-line no-undef
-  d3.select('#selectButton')
+  d3.select('#select-button')
       .selectAll('myOptions')
       .data(allGroup)
       .enter()
@@ -158,7 +158,7 @@ d3.csv('assets/production_over_time.csv').then( function(data) {
   }
 
   // eslint-disable-next-line no-undef
-  d3.select('#selectButton').on('change', function(event, d) {
+  d3.select('#select-button').on('change', function(event, d) {
     // eslint-disable-next-line no-invalid-this, no-undef
     const selectedOption = d3.select(this).property('value');
     update(selectedOption);

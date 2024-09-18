@@ -1,13 +1,27 @@
+/* stylelint-disable color-function-notation */
 
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
+h1 {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size:1.7rem;
+  font-weight: 600;  
+  color: #80280a;
+}
+
+p{
+  font-family: Mulish, sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 30px;
+}
 
 /* Chart Slide */
 
 #chart-image-slide {
-  background-color: rgb(236, 214, 187, 0.9);
+  background-color: rgba(236, 214, 187, 90%);
   margin: 4rem; 
   padding: 2rem; 
   box-shadow: -0.5rem 0 1rem rgba(0 0 0 / 50%);
@@ -23,7 +37,7 @@
   gap: 0.8rem; 
 }
 
-#selectButton {
+#select-button {
   grid-area: button;
   padding: 0.5rem 1rem; 
   font-size: 1rem; 
@@ -37,7 +51,7 @@
   width: 100%; 
 }
 
-#selectButton:hover {
+#select-button:hover {
   background-color: #eca431; 
 }
 
@@ -65,10 +79,9 @@
 }
 
 
-
 /* Front Page Design */
 #image-slide-1 {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 70%);
   border: none;
   box-shadow: none;
   height:30vh;
@@ -88,40 +101,36 @@
   font-size: 3.2rem;
   color: #80280a;
   letter-spacing:8px;
-  font-family: 'Satisfy';
+  font-family: Satisfy, cursive;
   cursor:pointer;
   transition:.6s;
   margin: 0;
   padding-bottom: 0.5rem; 
 }
 
-#image-slide-1 h1:before,#image-slide-1 h1:after {
+#image-slide-1 h1::before,#image-slide-1 h1::after {
   content:attr(data-text);
   transition:.6s;
 }
-#image-slide-1 h1:before {
+
+#image-slide-1 h1::before {
   left: 0;
   top: 0;
   position: absolute;
   z-index:-1;
-  text-shadow:
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px;
-  -webkit-mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0, 0, 0, 0.5) 0 6px);
-          mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+  text-shadow:none;
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-mask: 
+          repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,50%) 0 6px); 
+          mask: repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,50%) 0 6px);
 }
+
+
 #image-slide-1 h1:hover {
   transform:translate(-5px,-5px);
 }  
-#image-slide-1 h1:hover:before {
+
+#image-slide-1 h1:hover::before {
   text-shadow:
    1px 1px,
    2px 2px,
@@ -138,7 +147,7 @@
 #image-slide-1 p:nth-of-type(1) {
   font-size: 1.4rem; 
   font-weight: 500;
-  font-family: Mulish;
+  font-family: Mulish, sans-serif;
   text-align: center;
   padding: 1rem;
   color: black;
@@ -149,7 +158,7 @@
 #image-slide-1 p:nth-of-type(2) {
   font-size: 1.1rem; 
   font-weight: 380;
-  font-family: Mulish;
+  font-family: Mulish, sans-serif;
   text-align: center;
   padding: 1rem;
   color: black;
@@ -162,7 +171,7 @@
   font-size: 1.1em;
   font-weight: 380;
   line-height: 15px;
-  font-family: Mulish;
+  font-family: Mulish, sans-serif;
   text-decoration: none;
   background-image: linear-gradient(to right, #fcd202 0, #fcd202 100%);
   background-position: 0 1.2em;
@@ -175,7 +184,7 @@
   background-size: 100% 100%;
 }
 
-.underlined--thick {
+.underlined-thick {
   background-position: 0 -0.3em;
 }
 
@@ -191,7 +200,7 @@
   border-radius: 0.5rem;
   pointer-events: initial;
   width: 48%;
-  background-color: rgba(242, 235, 235, 0.85);
+  background-color: rgba(242, 235, 235, 85%);
   color: black;
   position: relative;
 }
@@ -205,23 +214,8 @@
   height: auto;
   z-index: 10; 
   border-radius: 3%;
-  border: 5px solid rgba(0, 0, 0, 0.3); 
+  border: 5px solid rgba(0, 0, 0, 30%); 
   filter: blur(0.2px);
-}
-
-
-h1{
-  font-family: 'Didact Gothic';
-  font-size:1.7rem;
-  font-weight: 600;  
-  color: #80280a;
-}
-
-p{
-  font-family: 'Mulish';
-  font-weight: 500;
-  font-size: 0.9rem;
-  line-height: 30px;
 }
 
 /* General Headings and Bodies */
