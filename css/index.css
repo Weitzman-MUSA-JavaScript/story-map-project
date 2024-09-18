@@ -166,28 +166,6 @@ p{
   line-height: 15px;
 }
 
-.underlined {
-  color: black;
-  font-size: 1.1em;
-  font-weight: 380;
-  line-height: 15px;
-  font-family: Mulish, sans-serif;
-  text-decoration: none;
-  background-image: linear-gradient(to right, #fcd202 0, #fcd202 100%);
-  background-position: 0 1.5em;
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-  transition: background .5s;
-}
-
-.underlined:hover {
-  background-size: 100% 100%;
-}
-
-.underlined-thick {
-  background-position: 0 -0.3em;
-}
-
 /* Introduction to Maple Syrup */
 #image-slide-2 {
   margin-top: 90vh;
