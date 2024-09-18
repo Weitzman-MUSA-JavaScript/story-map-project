@@ -47,7 +47,7 @@
  */
 // set the dimensions and margins of the graph
 const margin = {top: 10, right: 30, bottom: 30, left: 60};
-const width = 460 - margin.left - margin.right;
+const width = 470 - margin.left - margin.right;
 const height = 400 - margin.top - margin.bottom;
 
 // appen the svg object to the body of the page
@@ -90,7 +90,9 @@ d3.csv('assets/production_over_time.csv').then( function(data) {
   svg.append('g')
       .attr('transform', `translate(0, ${height})`)
       // eslint-disable-next-line no-undef
-      .call(d3.axisBottom(x).ticks(7));
+      .call(d3.axisBottom(x).ticks(7))
+      .selectAll('text')
+      .attr('font-size', '11px');
 
   // eslint-disable-next-line no-undef
   const y = d3.scaleLinear()
@@ -101,7 +103,9 @@ d3.csv('assets/production_over_time.csv').then( function(data) {
       .range([height, 0]);
   svg.append('g')
       // eslint-disable-next-line no-undef
-      .call(d3.axisLeft(y));
+      .call(d3.axisLeft(y))
+      .selectAll('text')
+      .attr('font-size', '11px');
 
   const line = svg
       .append('g')
@@ -122,7 +126,8 @@ d3.csv('assets/production_over_time.csv').then( function(data) {
         return myColor('valueA');
       })
       .style('stroke-width', 4)
-      .style('fill', 'none');
+      .style('fill', 'none')
+      .style('stroke-linecap', 'round');
 
   /**
  * Updates the chart based on the selected group.
