@@ -26,12 +26,12 @@ class SlideDeck {
    * @return {L.GeoJSONLayer} The new GeoJSON layer that has been added to the
    *                          data layer group.
    */
-   updateDataLayer(data) {
+  updateDataLayer(data) {
     this.dataLayer.clearLayers();
     const geoJsonLayer = L.geoJSON(data, {
       pointToLayer: (feature, latlng) => {
-        const iconUrl = feature.properties.note === '鳥居' ? 'pic/birdnest.svg' : 'pic/shrine.svg'; 
-        const iconSize = feature.properties.note === '鳥居' ? [20, 20] : [30, 30]; 
+        const iconUrl = feature.properties.note === '鳥居' ? 'pic/birdnest.svg' : 'pic/shrine.svg';
+        const iconSize = feature.properties.note === '鳥居' ? [20, 20] : [30, 30];
         const markerIcon = L.icon({
           iconUrl: iconUrl,
           iconSize: iconSize,
@@ -57,7 +57,7 @@ class SlideDeck {
         };
       },
     }).addTo(this.dataLayer);
-  
+
     return geoJsonLayer;
   }
 
@@ -98,7 +98,7 @@ class SlideDeck {
   async syncMapToSlide(slide) {
     const collection = await this.getSlideFeatureCollection(slide);
     const layer = this.updateDataLayer(collection);
-    
+ 
     /**
      * Create a bounds object from a GeoJSON bbox array.
      * @param {Array} bbox The bounding box of the collection
@@ -111,7 +111,7 @@ class SlideDeck {
           L.latLng(north, east),
       );
       return bounds;
-    }
+    };
 
     /**
      * Create a temporary event handler that will show tooltips on the map
@@ -183,7 +183,7 @@ class SlideDeck {
   /**
    * Calculate the current slide index based on the current scroll position.
    */
-   calcCurrentSlideIndex() {
+  calcCurrentSlideIndex() {
     const scrollPos = window.scrollY - this.container.offsetTop;
     const windowHeight = window.innerHeight;
 
