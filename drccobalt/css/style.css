@@ -131,6 +131,7 @@
     height: 100%;
   }
 
+
   #punchimg {
     object-fit: contain;
     height: 50%;
@@ -139,7 +140,7 @@
 }
 
 #sources {
-  text-wrap: wrap;
+  text-overflow: clip;
 }
   
   .slide-section {
