@@ -10,11 +10,9 @@ class SlideDeck {
   constructor(slides, map) {
     this.slides = slides;
     this.map = map;
-
     this.dataLayer = L.layerGroup().addTo(map);
     this.currentSlideIndex = 0;
   }
-
 
   /**
    * ### updateDataLayer
@@ -32,15 +30,12 @@ class SlideDeck {
     this.dataLayer.clearLayers();
     const geoJsonLayer = L.geoJSON(data, {
       pointToLayer: (feature, latlng) => {
-        // 根据 note 属性选择图标和大小
-        const iconUrl = feature.properties.note === '鳥居' ? 'pic/birdnest.svg' : 'pic/shrine.svg'; // 替换为神社 SVG 文件路径
-  
-        const iconSize = feature.properties.note === '鳥居' ? [20, 20] : [30, 30]; // 设置图标大小
-  
+        const iconUrl = feature.properties.note === '鳥居' ? 'pic/birdnest.svg' : 'pic/shrine.svg'; 
+        const iconSize = feature.properties.note === '鳥居' ? [20, 20] : [30, 30]; 
         const markerIcon = L.icon({
           iconUrl: iconUrl,
-          iconSize: iconSize, // 根据 note 属性设置图标大小
-          iconAnchor: [iconSize[0] / 2, iconSize[1] / 2], // 图标锚点
+          iconSize: iconSize,
+          iconAnchor: [iconSize[0] / 2, iconSize[1] / 2],
         });
         return L.marker(latlng, { icon: markerIcon });
       },
@@ -56,16 +51,15 @@ class SlideDeck {
       style: (feature) => {
         return {
           color: '#843636',
-          fillColor: 'rgba(132, 54, 54, 0.5)', 
-          fillOpacity: 0.5, 
-          weight: 2, 
+          fillColor: 'rgba(132 54 54 / 50%)',
+          fillOpacity: 0.5,
+          weight: 2,
         };
       },
     }).addTo(this.dataLayer);
   
     return geoJsonLayer;
   }
-  
 
   /**
    * ### getSlideFeatureCollection
@@ -75,11 +69,11 @@ class SlideDeck {
    * @param {HTMLElement} slide The slide's HTML element. The element id should match the key for the slide's GeoJSON file
    * @return {object} The FeatureCollection as loaded from the data file
    */
-   async getSlideFeatureCollection(slide) {
-     const resp = await fetch(`data/${slide.id}.geojson`);
-     const data = await resp.json();
-     return data;
-   }
+  async getSlideFeatureCollection(slide) {
+    const resp = await fetch(`data/${slide.id}.geojson`);
+    const data = await resp.json();
+    return data;
+  }
 
   /**
    * ### hideAllSlides
@@ -104,7 +98,7 @@ class SlideDeck {
   async syncMapToSlide(slide) {
     const collection = await this.getSlideFeatureCollection(slide);
     const layer = this.updateDataLayer(collection);
-
+    
     /**
      * Create a bounds object from a GeoJSON bbox array.
      * @param {Array} bbox The bounding box of the collection
@@ -117,7 +111,7 @@ class SlideDeck {
           L.latLng(north, east),
       );
       return bounds;
-    };
+    }
 
     /**
      * Create a temporary event handler that will show tooltips on the map
@@ -132,7 +126,6 @@ class SlideDeck {
       }
       this.map.removeEventListener('moveend', handleFlyEnd);
     };
-
     this.map.addEventListener('moveend', handleFlyEnd);
     if (collection.bbox) {
       this.map.flyToBounds(boundsFromBbox(collection.bbox));
@@ -156,11 +149,9 @@ class SlideDeck {
    */
   goNextSlide() {
     this.currentSlideIndex++;
-
     if (this.currentSlideIndex === this.slides.length) {
       this.currentSlideIndex = 0;
     }
-
     this.syncMapToCurrentSlide();
   }
 
@@ -170,11 +161,9 @@ class SlideDeck {
    */
   goPrevSlide() {
     this.currentSlideIndex--;
-
     if (this.currentSlideIndex < 0) {
       this.currentSlideIndex = this.slides.length - 1;
     }
-
     this.syncMapToCurrentSlide();
   }
 
@@ -194,8 +183,8 @@ class SlideDeck {
   /**
    * Calculate the current slide index based on the current scroll position.
    */
-  calcCurrentSlideIndex() {
-    const scrollPos = window.scrollY;
+   calcCurrentSlideIndex() {
+    const scrollPos = window.scrollY - this.container.offsetTop;
     const windowHeight = window.innerHeight;
 
     let i;
