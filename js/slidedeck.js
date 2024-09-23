@@ -42,7 +42,7 @@ class SlideDeck {
         const markerIcon = L.icon({
           iconUrl: iconUrl,
           iconSize: iconSize, // 根据 note 属性设置图标大小
-          iconAnchor: [iconSize[0] / 2, iconSize[1] / 2], // 图标锚点
+          iconAnchor: [iconSize[0] / 2, iconSize[1] / 2], 
         });
         return L.marker(latlng, { icon: markerIcon });
       },
@@ -57,16 +57,16 @@ class SlideDeck {
       },
       style: (feature) => {
         return {
-          color: '#843636', 
+          color: '#843636',
           fillColor: 'rgba(132, 54, 54, 0.5)', 
           fillOpacity: 0.5, 
-          weight: 2, // 边框宽度
+          weight: 2, 
         };
       },
     }).addTo(this.dataLayer);
   
     return geoJsonLayer;
-  }  
+  }
   
 
   /**
