@@ -15,13 +15,11 @@ h1, h2 {
   position: sticky;
   top: 0;
   height: 100vh;
-  width: 100%;
   z-index: 0;
 }
 
 .map {
   height: 100%;
-  width: 100%;
 }
 
 .slide-section {
@@ -87,3 +85,4 @@ h1, h2 {
 .slide-nav-select {
   min-width: 0;
 }
+

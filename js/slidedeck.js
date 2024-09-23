@@ -60,7 +60,7 @@ class SlideDeck {
           color: '#843636', 
           fillColor: 'rgba(132, 54, 54, 0.5)', 
           fillOpacity: 0.5, 
-          weight: 2, 
+          weight: 2, // 边框宽度
         };
       },
     }).addTo(this.dataLayer);
