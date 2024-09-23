@@ -136,11 +136,10 @@
   }
 
 
-  #punchimg {
-    object-fit: contain;
-    height: 50%;
+  .imageslide1 {
     width: 100%;
-    object-fit: scale-down;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 #sources {
