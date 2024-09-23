@@ -31,6 +31,12 @@ class SlideDeck {
    */
   updateDataLayer(data) {
     this.dataLayer.clearLayers();
+
+    const defaultOptions = {
+      pointToLayer: (p, latlng) => L.marker(latlng),
+      style: (feature) => feature.properties.style,
+    };
+    
     const geoJsonLayer = L.geoJSON(data, {
       pointToLayer: (p, latlng) => L.marker(latlng),
       style: (feature) => feature.properties.style,

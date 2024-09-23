@@ -3,15 +3,20 @@ body {
   border-width: 0;
   box-sizing: border-box;
   height: 100vh;
-
   font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .map-container {
   position: sticky;
   top: 0;
   height: 100vh;
-  z-index: 0;
+  z-index: 1;
+  border: #888;
 }
 
 .map {

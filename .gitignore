@@ -1,1 +1,7 @@
-node_modules/
+*
+
+# But don't ignore the drccobalt directory
+!/drccobalt/
+
+# Don't ignore any contents of drccobalt
+!/drccobalt/**
