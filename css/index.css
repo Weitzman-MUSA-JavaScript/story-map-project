@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
   height: 100vh;
 
-  font-family: 'Quicksand', sans-serif;
+  font-family: Quicksand, sans-serif;
 }
 
 h1, h2 {
@@ -42,7 +42,7 @@ h1, h2 {
 
   width: 25rem;
 
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 60%), rgba(200, 200, 200, 60%));
+  background: linear-gradient(to bottom right, rgba(255 255 255 / 60%), rgba(200 200 200 / 60%));
   color: black;
 }
 
