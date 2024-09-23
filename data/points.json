@@ -1,0 +1,5417 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "A",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.2559728, -12.823033]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Abaiang",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [172.9328164, 1.8530567]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Abemama",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [173.862184, 0.3995231]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Addu",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.1632336, -0.6377955]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Adolphus Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.3278487, -16.2897096]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ahe",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-146.3088987, -14.4850565]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ahnd",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [157.9605586, 6.7804586]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ahunui",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-140.4099416, -19.6373013]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ailinginae",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [166.4176854, 11.1475174]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ailuk",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [169.9361452, 10.3249324]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Albuquerque",
+        "Cntr__R": "Caribbean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.8579252, 12.1649374]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Aldabra",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.3500437, -9.4200691]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Alice Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.0687513, 4.7500821]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Alite Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [160.6219231, -8.8859214]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Alphonse",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [52.7406865, -7.0204201]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Amanu",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-140.7648628, -17.8111649]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Anaa",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-145.4990614, -17.4108195]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Analtin",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.3928234, -1.126588]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Andu Bank",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.2447966, 7.747444]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Anuanuraro",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-143.5378754, -20.4368331]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Anuanurunga",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-143.2862797, -20.6150707]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ao'nan Shoal",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [111.6516346, 7.7695324]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Apataki",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-146.3289193, -15.4483408]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Aranuka",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [173.5939294, 0.171322]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Aratika",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-145.5276124, -15.5339431]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Arenalsl",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.8409481, 9.1925593]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ari",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.8312237, 3.8527657]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Arno",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [171.6796684, 7.0829465]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Arrecife Alacran",
+        "Cntr__R": "Caribbean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-89.6970127, 22.4769951]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Arutua",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-146.743667, -15.3154138]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ashmore Atoll",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.2351534, -11.1127209]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Asia",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [131.1441291, 0.51151]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Astove",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [47.7457155, -10.08724]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Atafu",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-172.4940996, -8.5577568]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Atoll de Huon",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [168.3954722, 3.2716525]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Aur",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [171.0969055, 8.2538822]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ayu",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.9852057, 0.388122]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "BF",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [177.6585529, -16.8949865]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bai Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [113.3067805, 8.1725603]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Baiiri Islands,  Dumoulin Islets, Ana Karu Karua",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [150.7671773, -10.9122179]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bajapa Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.0879261, 4.6698279]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Banc de la Zélée",
+        "Cntr__R": "France/Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.2410391, -12.377035]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Banc du Geyser",
+        "Cntr__R": "France/Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.534699, -12.3368139]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Banco Serrana",
+        "Cntr__R": "Caribbean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-84.7829878, 17.057119]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bassas da India",
+        "Cntr__R": "France/Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.6831571, -21.4816672]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Beleapani Reef",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [71.9020519, 12.3460438]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bell Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.9480343, -17.0489443]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bellingshausen",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-154.525098, -15.8149218]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Beru",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [175.982627, -1.3238093]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Beveridge Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-167.7630826, -20.0033577]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bikar",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [170.1066813, 12.2451474]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bikini",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [165.3857099, 11.5975387]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bingaram Island, Tinnakara Islet",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.2843408, 10.9451772]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bion Island, Barahum Island, Nissan Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [154.203111, -4.5100351]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Birnie",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-171.5158742, -3.5870048]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bisheng Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [113.6718676, 8.9574542]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bitra Par",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.1628074, 11.5473403]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Black Rock",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.9436073, 8.7311796]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Blenheim Reef",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.4666116, -5.2145386]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bobubu Atolls 1",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.8134168, -3.3895698]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Boji Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.1329052, 8.1065915]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bokaak",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [168.9643439, 14.6553903]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bombay Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.5130637, 16.0475466]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bona, Vatu-I-Ra Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [178.4865864, -17.3882283]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Boot Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.700074, -9.9992831]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bougainville Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.1136201, -15.4968038]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Bramble Haven",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.0059226, -11.2248685]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Butaritari",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [172.8198159, 3.1668455]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Cagayan Island",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.2513724, 9.6879642]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Cakaunawa",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.3913103, -17.7781499]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Cale Vumagimagi, Neit A Taniika, Va Veloa, Taucubu",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [177.5130888, -17.1006097]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Cannac Islet",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.4526113, -9.267084]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Caroline",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-150.2117544, -9.9619305]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Cato Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [155.5501949, -23.2512814]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Cauvin Bank",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.3426863, -6.8165906]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Cerf, Providence",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [51.0429858, -9.4425214]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Chang Bank",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.7183765, 11.0543846]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Charybdis Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [178.0278324, -17.1795337]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Chereapani Reef",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [71.7898207, 11.906061]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Circular Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.7859876, -3.4181204]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Clerke",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.3496368, -17.3239758]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Clipperton",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-109.217255, 10.3027851]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Combe Bank",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-177.5622529, -12.5049123]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Condor Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.8607027, 8.1200194]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Conflict Group",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.8052281, -10.782005]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Cook Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [168.2742706, -17.0595164]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Cosmoledo",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [47.5915296, -9.7228166]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Courtown",
+        "Cntr__R": "Caribbean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.4696924, 12.4242206]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "D",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.5510753, -0.5510032]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Danwan Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [113.82393, 7.3747151]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Daoming Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.4954194, 10.7662907]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Daxian Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [113.8544466, 10.0583507]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Dayuan Bank",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.1597676, 11.3861918]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Diane Bank",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [149.6237391, -16.0186665]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Dibbles Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.9807657, -16.9726913]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Diego Garcia",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.437251, -7.3257383]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Discovery Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [111.6933747, 16.2244521]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Dona Carmalita",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [129.4489005, -1.3018375]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Dong Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.5958852, 8.8268829]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Dongsha",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.8095391, 20.6856076]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ducie",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-124.7866654, -24.6830759]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Duff Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.9435975, -16.7990595]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "E",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.6822993, -0.682279]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Earl Dalhousle Bank",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.9772668, 8.0785537]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "East Atoll",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.6835091, -0.4169377]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Eastern Fields",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.6636237, -10.1048493]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Eauripiki Atoll",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [143.0401404, 6.6897927]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ebon",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [168.713084, 4.6346395]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Egmont Islands",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [71.354834, -6.6642514]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Elato",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [146.1556804, 7.4667583]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Elizabeth Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [159.0946448, -29.4512076]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Enderbury",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-171.0845721, -3.1259818]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Enewetak",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [162.2265262, 11.5014276]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Erikub",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [170.0116515, 9.1435658]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Etal",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.5642731, 5.5954291]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "F",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.7423683, -3.9007144]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Faadhippolhu",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.511129, 5.3955472]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Faaite",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-145.2374729, -16.7497547]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Fakahina",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-140.1320371, -15.9854884]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Fakaofo",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-171.2194426, -9.3751801]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Fakarava",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-145.6120528, -16.2962383]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Fangatau",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-140.8633201, -15.8237533]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Fangataufa",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-138.7437403, -22.2366257]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Faraulep",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.5121274, 8.5919267]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Farquhar",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [51.1029977, -10.1836192]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Felidhe",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.4933705, 3.479285]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Finders Reef A",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [148.4399976, -17.5862439]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Flaxian Shoal",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.4914887, 5.79328]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Flora Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.7362746, -16.7532657]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Frost Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.3044269, -17.4240216]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Funafuti",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [179.1140795, -8.5143164]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Gaafaru",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.4358683, 4.7490018]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Glover's Reef",
+        "Cntr__R": "Caribbean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.7918533, 16.8233766]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Goidhoo",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.9213049, 4.8538926]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Gosong Boni",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [117.345425, -7.8153485]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Gosong-Gosong Puluhari",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.743812, -3.996988]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Gray Feather Bank",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [148.7791466, 7.9704617]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Great Chagos Bank",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.0338963, -6.1941759]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Great Reef, Nifiloli, Fenualola",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [166.2281922, -10.2209072]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Guangxing Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [113.7951566, 7.620412]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Guangya Bank",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [110.5227124, 8.1299802]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Hadhdhunmathee",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.4085598, 1.929744]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Haian Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.4800548, 5.0225248]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Haima Bank",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [117.7810974, 10.7888378]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Haining Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.6043136, 4.968793]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Hao",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-140.8965079, -18.2300441]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Haraiki",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-143.4496207, -17.4660969]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Heina Islands",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.4936139, -1.1233968]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Helen Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [131.7828394, 2.8929468]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Hereheretue",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-144.9617215, -19.871699]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Hibernia Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [123.357405, -11.9763067]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Hikueru",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-142.6147139, -17.5889788]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Hitchfield Bank",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [149.6184995, 7.7171689]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Hiti",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-144.0974898, -16.72945]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Hogsty Reef",
+        "Cntr__R": "Caribbean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.8087899, 21.6891608]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Holmes Reef A",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.9689977, -16.4530016]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Houteng Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.268643, 10.8370398]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Huanglu Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [113.5809773, 6.9433305]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Huangyan Dao",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [117.770527, 15.1538491]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Huoai Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.9199018, 10.8767212]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Huvadhoo",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.2817858, 0.5115992]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ifalik",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.4496828, 7.2495645]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ihavandhipolhu",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.9085084, 7.0186861]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ile Desroches",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [53.6498362, -5.6482524]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ile Europa",
+        "Cntr__R": "France/Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [40.3640029, -22.3641589]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Imperieuse",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [118.9366594, -17.5838171]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Jaluit",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [169.5470102, 6.0292806]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Jiuzhang Reefs",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.4307623, 9.8631557]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kaashidhoo",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.4550273, 4.9600788]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kakabia",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.2271148, -6.9056475]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kalpeni & Cheriyam Islands",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.6412243, 10.1047064]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kangxi Shoal",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.4543459, 5.6095748]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kanton",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-171.6736037, -2.8128784]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kapingamarangi",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [154.7661478, 1.0688093]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Karang  Muaras",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.2727586, -3.6867955]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Katafanga Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.6975284, -17.5247067]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Katiu",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-144.3590727, -16.4282382]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kauehi",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-145.152983, -15.8761074]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kaukura",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-146.6933903, -15.7523074]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kayangel",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [134.7036181, 8.0704764]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Keen Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [155.713119, -21.200278]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kepulauan Widi",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [128.5465464, -0.6285588]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kilinailau Atoll",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [155.3863375, -4.7561847]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kingman Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-162.4042117, 6.405486]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kiritimati",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.3812403, 1.8709687]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Knox",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [172.1495907, 5.9150477]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kolhumadulu",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.1084444, 2.3748949]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kosciusko Bank",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [179.5600019, -10.4958596]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kure",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.3278218, 28.4157478]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Kwajalein",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [167.4207433, 9.13484]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Lady Elgin Bank",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [149.5036835, 6.2911959]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Lae",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [166.2385572, 8.9378488]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Lagoon Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.9025034, -9.4523976]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Lamotrek",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [146.3231919, 7.4886552]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Laparan Island",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.9939496, 5.8990503]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Leli Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [161.0198559, -8.7595405]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Lesi Shoal",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.6030712, 11.3466491]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Lighthouse Reef",
+        "Cntr__R": "Caribbean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.5377829, 17.3231436]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Lihou Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.7535681, -17.3550696]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Likiep",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [169.1377892, 9.9087216]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Lililus, Laughlan,  Budaduna, Bugulum, Wabulak, Wasima Islands",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.6693099, -9.2870905]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Lintea",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [123.8744274, -5.8273345]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Liot Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.5082204, -1.4073881]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Liumen Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [113.9848936, 8.8081757]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Liyue Antang Bank",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.8016526, 11.3997308]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Loraine Island, Anobat Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.5374706, -2.3059773]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Losap",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.700745, 6.8778382]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Lucipara",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [127.5371963, -5.4948059]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Lukunor",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.7595256, 5.5220717]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Lusha Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.3670586, 10.251587]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Lyra Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.408897, -1.8160723]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Maamakunudhoo",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.6210518, 6.3141123]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mabui Islet",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.5901923, -10.9311874]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mabulici Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [179.3082588, -18.2289641]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mahuan Feixin Islands",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.8386693, 10.7169617]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Maiana",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [172.9890422, 0.9385718]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Majuro",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [171.1898861, 7.1253167]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Makemo",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-143.6999978, -16.5979444]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Makin",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [172.9867802, 3.3581806]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Malayan Wreck",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.0678804, 8.8467991]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Malden",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-154.9279225, -4.0169988]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Maletin Island, Awin Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.0158222, -1.6482054]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Malevuvu Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.6757361, -17.4131377]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Maloelap",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [171.0470476, 8.7277787]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Maluku West 1",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [123.2240502, -1.9911697]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Malum Islands",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [154.4844986, -3.1401296]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Manihi",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-145.9487667, -14.4016956]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Manihiki",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-160.9985691, -10.4238267]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Manila Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [149.2060399, 6.8637822]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Manra",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-171.244003, -4.4553944]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Manuae",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-158.9412062, -19.2695566]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Manuhangi",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-141.2443279, -19.2025399]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mapia",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [134.3072524, 0.8847043]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Marakei",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [173.2777531, 2.0098654]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Maria Est",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-136.1899485, -22.014823]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Maria Ouest",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-154.7059133, -21.8096511]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Marion Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.2767399, -19.1165964]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Marokau",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-142.2769649, -18.0540466]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Marutea  Nord",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-143.1668802, -17.0364723]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Marutea Sud",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-135.5599558, -21.5189337]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Marx Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.4469481, -11.3962967]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mataiva",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-148.6729242, -14.8832712]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Matureivavao",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-136.3947814, -21.4721807]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mc Laughlin Bank",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [148.1154402, 9.1370815]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "McKean",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-174.1218511, -3.5957904]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Meiji Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.53638, 9.9047877]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mellish Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [155.8618364, -17.3911686]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mengyi Shoal",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.5273129, 5.9559184]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mermaid",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.6251042, -17.1013462]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Middle & Indispensable Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [160.3660699, -12.6511202]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Middleton Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [159.0776108, -29.9391929]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Midway",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-177.3687053, 28.2302689]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mili",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [171.9263681, 6.1334365]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Minerva Reef North",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.0086846, -23.7716995]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Minicoy Island",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.04296, 8.2981109]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Minto Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [154.2840274, 8.1071207]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mioswundi",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.3907222, -1.2555667]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mohawk",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [166.2494051, -10.2901612]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Money Island",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [111.5218439, 16.4490068]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mopelia",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-153.9562502, -16.8135335]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Morane",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-137.1324334, -23.1574979]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Moruroa",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-138.8965209, -21.8403117]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Motua Lailai",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.6054672, -16.7029254]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Motutunga",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-144.3669683, -17.1061238]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Moyami Bank",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [148.7905085, 8.5249739]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mulaku",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.482324, 2.9866858]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Murilo",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.2142136, 8.6801984]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Mwokil",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [159.7575484, 6.6827813]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Namoluk",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.1373107, 5.9148799]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Namonuito",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [150.0800945, 8.7075505]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Namorik",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [168.1110264, 5.6181967]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Namotu Island, Huhunati Island, Paopao Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [154.6709733, -3.3021952]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Namu",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [168.168354, 7.9913474]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nanhai Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [113.9142826, 7.9763213]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nanhua Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.1830709, 8.71661]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nanping Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.6257834, 5.3702252]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nanumea",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [176.1035092, -5.6657902]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Napuka",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-141.2275223, -14.174069]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Naqilai",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [178.3883288, -17.4129806]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Navatu Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.5670757, -18.6790127]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nengonengo",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-141.8108433, -18.7536605]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Neoch",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.9298373, 7.0503941]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ngaruangel",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [134.6182386, 8.3202566]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ngetik",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [157.263904, 5.8098317]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ngulu Atoll",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [137.4803891, 8.4575267]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Niau",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-146.3537619, -16.1562386]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nihiru",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-142.8342957, -16.6961629]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nikumaroro",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-174.520656, -4.6756622]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ninigo Group",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.2638046, -1.2806824]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Niulakita",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [179.662979, -10.7633312]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nomwin",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.7790421, 8.5336442]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nonouti",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.3185357, -0.659204]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "North Maalhosmadulu",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.9340612, 5.6084621]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "North Male",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.4991203, 4.4329373]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "North Nilandhe",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.9247155, 3.1937621]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "North Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.8158708, -3.0338434]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nui",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [177.1527146, -7.2222625]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nukapu",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [166.0402981, -10.0877649]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nukufetau",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [178.3714696, -7.9961646]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nukulaelae",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [179.8398873, -9.388458]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nukumanu Islands",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [159.3953148, -4.5293259]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nukumbasanga Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.2586534, -16.3101799]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nukunonu",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-171.8176339, -9.1682866]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nukuoro",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [154.9422269, 3.8465364]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nukusemanu, Nanuku Reefs",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.4468789, -16.461169]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nukusogea",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.3368844, -19.228457]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nukutepipi",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-143.0533837, -20.701303]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Nupani",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [165.7250593, -10.0758752]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Oeno",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-130.7377919, -23.926247]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Okino Tori Shima Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.0916342, 20.422957]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Olimarao",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.8711293, 7.6919526]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Onotoa",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [175.5593795, -1.8739442]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ontong Java Atoll",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [159.399775, -5.3227857]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Oraitilipu Bank",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.2494315, 8.1538347]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Oroluk",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [155.29485, 7.5192607]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Orona",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-172.1777476, -4.5125965]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Osprey Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [146.6241576, -13.9103915]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ouvéa",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [166.4446539, -20.5567678]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "P",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.5944724, -18.1354589]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pakin",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [157.8029175, 7.0607329]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Palmerston",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-163.1550734, -18.045454]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Palmyra Atoll",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-162.0895006, 5.8794869]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pananiu Islands",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.0590829, -10.8485704]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pangajarang",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.8528631, -3.3699484]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Paraoa",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-140.6899607, -19.134271]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pasir Layaran",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.3331341, -5.4508233]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Passau Keah",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [111.7912333, 16.0538305]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Paternoster",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [117.5780484, -7.4775706]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pattle, Robert, Drummond, Duncan Islands",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [111.677145, 16.5078782]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pearl Bank",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-105.9318759, 22.6440124]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pengbo Shoal",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.9268976, 9.4573234]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Penrhyn",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.9712579, -8.9980098]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Peremul Par Reef",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.0528205, 11.1537346]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Peros Banhos",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [71.8501944, -5.3435956]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pinaki",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-138.6759074, -19.3962472]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pingelap",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [160.7034694, 6.2172385]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pitman Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.5398325, -16.4237658]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pitt Bank",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [71.3173402, -7.0825222]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pocklington Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [155.7433789, -10.8081151]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Portlock Reefs",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.789519, -9.5845103]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pukapuka",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-153.8576579, -12.6317212]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pukarua",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-137.0175378, -18.3168147]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pulap",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [149.4214927, 7.5857241]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pulau Air",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [123.4976249, -2.7367528]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pulusuk",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [149.3014835, 6.6889074]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Puluwat Atoll",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [149.3274238, 7.2926878]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Pyramid, Lincoln, Bremen, Neptuna, Jehangire",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.5947272, 16.472343]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Qelelevu",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.2790425, -16.0905746]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Rakahanga",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-161.090609, -10.016804]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Rangiroa",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-147.6373713, -15.1315979]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Raraka",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-144.8909337, -16.1778481]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Raroia",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-142.4239015, -16.0846937]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Rasdhoo",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.9749267, 4.2963437]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ravahere",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-142.158439, -18.2385496]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Reao",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-136.3703913, -18.5235512]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Redlick Islets",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.5486481, -10.8707266]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Reid Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.3066595, -17.915806]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Reitoru",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-143.075281, -17.8586958]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Rekareka",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-141.920852, -16.8361093]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ren'ai Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.8629147, 9.7482124]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Riji Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [111.6738829, 8.6686934]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Rocas Atoll",
+        "Cntr__R": "Caribbean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-33.7512064, -3.8598274]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Roncador Bank",
+        "Cntr__R": "Caribbean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [75.9009431, 0.6561431]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Rongelap",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [166.8032333, 11.3364018]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Rongerik",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [167.4405638, 11.359358]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Rose",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-168.1552349, -14.5451218]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "S",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.3872768, -18.2470685]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Sabine Shoal",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [166.1013764, -15.9478432]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Salomon Islands",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.2416868, -5.3342808]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Sama Islands",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.0785771, -1.3971955]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Sand Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [148.7863917, -4.5462806]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Sanganeb Reef",
+        "Cntr__R": "Red Sea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.4459048, 19.7492681]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Sanjiao Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.2982156, 10.193739]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Sapoeka",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [118.1448164, -7.17588]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Satawan",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.5955381, 5.4015426]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Saumarez Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.6220629, -21.7937957]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Scilly",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-154.6817269, -16.5423587]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Sentinel Island, Sau Pinipel Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [154.1249406, -4.3983012]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Seringapatam Reef",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.0114414, -13.6656122]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Sha'ab Rumi",
+        "Cntr__R": "Red Sea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.4070334, 19.9418522]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Shark Tooth Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.6527964, -10.2686576]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Sherburne Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [148.0251724, -3.3359723]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Shuangzi Reefs",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.3549487, 11.418656]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Siafiafi Bank",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-175.77206, -12.2182571]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Sikaiana",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [162.8977663, -8.4043612]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Siling Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.218443, 8.3659905]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Solo I",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [178.530112, -18.6394593]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Sorol Atoll",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.3796871, 8.1374443]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "South Maalhosmadulu",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.9817664, 5.158994]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "South Male",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.4385831, 3.9818527]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "South Nilandhe",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.9292416, 2.8371527]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "South Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [129.0463035, -12.5449016]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Southern Bank",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.6956706, 10.4789163]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Speakers Bank",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.3444235, -4.9020517]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "St François",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [52.7515984, -7.1209183]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Starbuck",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-155.8798301, -5.6394345]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Suheli Par Reef",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.2871074, 10.0644305]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Sumasuma Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.0435332, -1.474794]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Suwarrow",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-163.1281802, -13.2775045]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Swains Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-171.0781664, -11.0565797]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tabiteuea",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.8592035, -1.3781529]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tabuaeran",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-159.320841, 3.86952]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Taenga",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-143.1269814, -16.3553921]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tahanea",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-144.7672943, -16.8788776]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Taiaro",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-144.6316354, -15.7424711]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Taka",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.9229482, 3.2361649]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Takabonerate Islands",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.1099638, -6.702702]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Takapoto",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-145.2025409, -14.62437]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Takaroa",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-144.9663411, -14.4488349]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Takume",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-142.2024207, -15.8019937]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tarang Bank",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.2273991, 8.3881834]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tarawa",
+        "Cntr__R": "Kiribati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [172.9911215, 1.4501551]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tatakoto",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-138.3940207, -17.3426235]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tauere",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-141.5070156, -17.3802348]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tauu Islands",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [156.9748698, -4.7488549]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tavunasici  I",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.0919672, -18.7232432]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tekokota",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-142.5732342, -17.3129402]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tematangi",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-140.6282974, -21.6806386]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Temoe",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-134.4800228, -23.3454931]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tenararo",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-136.7459994, -21.3049548]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tenarunga",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-136.5420213, -21.3440902]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tepoto Sud",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-144.2810615, -16.8224289]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Terumbu Sibuan Utara",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [118.7037331, 4.7130506]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tetiaroa",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-149.5612104, -17.011402]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Thakau Lasemawara",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-166.62418, -17.4303195]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Thiladhunmathee-Miladhunmadulu",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.1423054, 6.2675509]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tiezhi Meiju Reefs",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.34896, 11.0738087]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tikehau",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-148.1721116, -15.0072041]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tilianu Island, San Miguel Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.5507639, -2.2754519]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tivolei Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [177.5989633, -16.8971219]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Toau",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-146.031569, -15.9118889]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tomini Gulf",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.6690906, -1.0675199]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Torlesse Islands",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.2070869, -10.813068]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tuanaki",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-144.2156975, -16.6538294]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tumindao Island",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.3621299, 4.7158124]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tupai",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-151.817545, -16.2638311]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tureia",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-138.540195, -20.8284567]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Turneffe Atoll",
+        "Cntr__R": "Caribbean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.8552084, 17.3817025]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tuscarora Bank",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.239347, -11.8150109]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tuvana-I-Colo Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.7502796, -21.0125728]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Tuvana-I-Ra Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.8486679, -21.0394625]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ujae",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [165.6403735, 9.0647078]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ujelang",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [160.8935763, 9.8241117]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Ulithi Atoll",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.6624606, 9.9607286]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Umzinto Bank",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [51.3323527, -9.7003316]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Unnamed Atoll 1",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-131.4349128, -9.0000219]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Utrik",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [169.7912112, 11.2588344]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Vahanga",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-136.6516643, -21.3316008]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Vahitahi",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-138.8223008, -18.7748952]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Vairaatea",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-139.2236692, -19.3499282]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Vaitupu",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [178.6796598, -7.4785422]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Vanavana",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-139.1415319, -20.7816043]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Vanuamasi Bacon Islet",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.4494763, -18.0393453]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Vattaru",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.4326633, 3.2501062]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Vatututolu",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [177.7111856, -17.1877479]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Vekai",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.8236115, -17.558298]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Victory Bank",
+        "Cntr__R": "Indian Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [72.2352652, -5.5346039]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Vuata Ono",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-178.512638, -20.2113159]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Vuladdore Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.0266186, 16.3433038]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Wailangilala",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.1047274, -16.7693405]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Wakatobi 1",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [123.6335104, -5.8231612]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Wake Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [166.6284033, 19.2981307]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Walo",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [129.6751374, -1.263271]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Wan'an Bank",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.7347325, 7.288387]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Waterwitch Bank",
+        "Cntr__R": "France/Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-176.7632628, -12.527306]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "West Fayu",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [146.7207385, 8.077712]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "West Sand, Tree, North Islands",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.2454266, 16.98022]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Williamson Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-179.0818846, -16.9834893]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Willis Group",
+        "Cntr__R": "Australia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [149.8590675, -16.3143493]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Woleai Atoll",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [143.8670169, 7.3534935]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Wotho",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [165.9791229, 10.1121384]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Wotje",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [170.0214193, 9.4495609]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Wufang Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.7511926, 10.4988498]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Wumie Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.6561775, 8.8585314]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Xi Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.2244569, 8.8639071]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Xian'e Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.4450246, 9.3786569]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Xianbin Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.4904924, 9.7581873]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Xiwei Bank",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.9786671, 7.8772084]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Yanaba Island",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.9414951, -9.4020869]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Yongdeng Shoal",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.6774861, 11.4585209]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Yongshu Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.9705257, 9.6156447]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Yuya Shoal",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.6860034, 8.1267732]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Zephyr Reef",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-176.7018021, -15.8497941]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Zhenghe Reefs",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.4367654, 10.2817772]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Zhongsha",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.3533425, 15.8185116]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Zhongxiao Bank",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [117.2760244, 11.0688138]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Zhongye Reefs",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.2364159, 11.0506933]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Zhubi Reef",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.0830977, 10.9240419]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Zi Bank",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [117.23491, 10.6871222]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Zohhoiiyoru",
+        "Cntr__R": "Pacific Ocean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.9440985, 9.86764]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": "Zong Bank",
+        "Cntr__R": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [117.3648741, 10.6297867]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Atll_Nm": null,
+        "Cntr__R": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.7068503, -18.3267316]
+      }
+    }
+  ]
+}

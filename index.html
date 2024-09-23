@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Story</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="data:,">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+  <main>
+    <div class="map-container">
+      <div class="map" id="map"></div>
+      <img id="slide-image" src="" alt="Slide image" style="display:none; width:100%; height:100%; object-fit:cover;">
+      <div id="image-source">Photo Credit: <span id="source-text"></span></div>
+    </div>
+    <section class="slide-section">
+      <article class="slide" id="slide-image-first_slide" data-image-src = "images/rim1-sm.jpg" data-image-source="Atolls of the World Dataset / IRD">
+        <h1>Atolls of the World</h1>
+        <p>From the air, they appear as delicate rings of emerald and ivory set upon a canvas of deepest blue - <br>
+        Welcome to the captivating world of atolls, where land and sea dance in perfect harmony.<br>
+        <span class="smaller">Data used in this story map is collected from Atolls of the World Dataset published by Institut de recherche pour le développement(IRD).</span></p>
+      </article>
+
+      <article class="slide" id="slide-image-second_slide" data-image-src = "images/rim1-sm.jpg" data-image-source="Atolls of the World Dataset / IRD">
+        <div class="title">What is an <span class="highlight">Atoll</span>?</div>
+        <div class="text-content">
+        <p>The story of an <span class="highlight">Atoll</span> starts with a volcanic island that pops up from the ocean, formed by magma from deep inside the Earth. As this island settles, it becomes a home for life, with tiny coral creatures attaching to its edges and starting to build a reef. Over thousands of years, while the island itself wears down and starts to sink back into the sea, the coral keeps growing upwards, reaching for the sunlight it needs to survive. Eventually, the island disappears under the water, leaving behind a ring-shaped barrier of coral that surrounds a calm lagoon. This lagoon, shallow and full of marine life, is bordered by the reef and sometimes has little islands made of coral bits and sand. This completes the transformation into the beautiful atoll we see today, a perfect circle of life and nature’s craft.</p>
+        <p><span class="smaller">Image by: USFWS</span></p>
+        </div>
+        <div class="image-content">
+        <img src="images/form.jpg" alt="Atoll formation. Photo Credit: USFWS" />
+        </div>
+        
+      </article>
+
+      <article class="slide" id="points">
+        <h2>Approximately <span class="highlight_2">90%</span> of all atolls are <span class="highlight_2">Oceanic</span>, which means they developed around submerged volcanoes in deep waters, as opposed to continental shelves. 
+        The <span class="highlight_2">Pacific Ocean</span> hosts the majority of atolls as well as the largest combined area of atolls.</h2>
+      </article>
+
+      <article class="slide" id="maldives">
+        <p><span class="highlight_3">The Maldives</span>, a tropical paradise in the Indian Ocean, is the nation with the <span class="highlight_3">Largest Total Atoll Area</span> in the world. 
+          It consists of 22 natural oceanic atolls, which are coral reef formations that have developed around submerged volcanoes over millions of years. 
+          These atolls, characterized by their shallow central lagoons and vibrant coral ecosystems, are home to over 1,000 islands. 
+          The Maldives' unique geography supports an extraordinary diversity of marine life, making it a global hotspot for coral reefs, snorkeling, and scuba diving. 
+          As the world's lowest-lying country, the Maldives is highly vulnerable to sea-level rise, highlighting the importance of preserving its delicate atoll ecosystems.<br>
+           <span class="smaller">Photo Credit: Arjun Shekar | Flickr </span>
+        </p>
+        
+        <div class="image-content">
+          <img src="images/maldives.jpg" alt="Maldives Bird Eye View. Photo Credit: Asad Photo Maldives / Pexels" />
+        </div>        
+      </article>
+      
+      <article class="slide" id="tuamotu">
+        <p><span class="highlight_3">The Tuamotu Archipelago</span>, located in French Polynesia, is the region with the <span class="highlight_3">Highest Number of Atolls</span> in the world, comprising nearly 60 distinct atolls spread across the Pacific Ocean. 
+          These atolls, like other oceanic atolls, formed around submerged volcanic islands over millions of years and are characterized by their coral reef structures that enclose shallow, turquoise lagoons. 
+          The largest atoll, Rangiroa, is one of the world’s largest, providing a hub for marine life and tourism. 
+          The isolation and vast area of the Tuamotu atolls contribute to their unique ecosystems and rich biodiversity.<br>
+          <span class="smaller">Entrance to the lagoon of Rangiroa Atoll. Photo Credit: Wikimedia </span></p>
+          <div class="image-content">
+            <img src="images/tuamotu.jpg" alt="Entrance to the lagoon of Rangiroa Atoll. Photo Credit: Wikimedia" />
+          </div>
+      </article>
+
+      <article class="slide" id="chagos">
+        <p><span class="highlight_3">The Great Chagos Bank</span>, located in the Indian Ocean within the British Indian Ocean Territory, is the <span class="highlight_3">Largest Atoll in the World</span>. 
+          Covering an area of around 12,000 square kilometers, it comprises a ring of coral reefs enclosing a vast central lagoon, though much of the reef is submerged. 
+          Unlike typical atolls with numerous islands, the Great Chagos Bank features fewer land areas but supports significant biodiversity, with coral reefs that are home to a wide variety of marine species. 
+          <span class="smaller">Three small islands on the Three Brothers group on the western Great Chagos Bank. Photo Credit: Brian W Bowen </span></p>
+          <div class="image-content">
+            <img src="images/chagos.jpg" alt="Three small islands on the Three Brothers group on the western Great Chagos Bank. Photo Credit: Brian W Bowen" />
+          </div>
+      </article>
+
+      <article class="slide" id="thilad">
+        <p><span class="highlight_3">Thiladhunmathi Atoll</span>, located in the northern part of the Maldives, holds the distinction of having the <span class="highlight_3">Largest Lagoon Area</span> among all atolls. 
+          Spanning both Haa Alif and Haa Dhaalu administrative regions, this atoll is characterized by its expansive, shallow lagoon, which supports a wide range of marine biodiversity. 
+          The vast lagoon area, dotted with coral reefs and small islands, offers a rich environment for fishing, marine tourism, and traditional livelihoods.<br>
+          <span class="smaller">Resorts on Thiladhunmathi Atoll's islands. Photo Credit: Travel Trade Maldives </span></p>
+          <div class="image-content">
+            <img src="images/thilad.jpg" alt="Three small islands on the Three Brothers group on the western Great Chagos Bank. Photo Credit: Brian W Bowen" />
+          </div>
+      </article>
+
+      <article class="slide" id="kiriti">
+        <p><span class="highlight_3">Kiritimati</span>, also known as <span class="highlight_3">Christmas Island</span>, is located in the central Pacific Ocean and is the atoll with the <span class="highlight_3">Largest Land Area</span> in the world. 
+          Unlike most atolls, which have minimal land and are primarily composed of coral reefs surrounding a lagoon, Kiritimati possesses about 400 square kilometers of land, 
+          making it exceptionally large for an atoll. As part of the Republic of Kiribati, this atoll supports unique ecosystems, including coastal lagoons, wetlands, and significant bird habitats. 
+          <br>
+          <span class="smaller">Coastal Edge of Kiritimati Atoll. Photo Credit: Calvin Smith | Flickr </span></p>
+          <div class="image-content">
+            <img src="images/kiriti.jpg" alt="Coastal Edge of Kiritimati Atoll. Photo Credit: Calvin Smith | Flickr" />
+          </div>
+      </article>
+
+      <article class="slide" id="slide-image-third_slide" data-image-src = "images/rim1-sm.jpg" data-image-source="Atolls of the World Dataset / IRD">
+        <div class="title"><span class="highlight">Atolls</span> are Like <span class="sparkle">Hidden Gems</span> of the Ocean, </div>
+        <div class="text-content">
+        <p>
+          <span class="highlight">Not just because they're beautiful,</span> but because they are crucial for marine life and the communities that depend on them. 
+          These rings of coral create ideal environments for marine species, like fish and sea turtles, by providing shelter, nutrition and the perfect temperature for life to thrive. 
+          Additionally, atolls serve as natural shields, protecting nearby islands from storms. <br>
+          
+          <span class="highlight">However, they are fragile ecosystems,</span> highly vulnerable to climate change and rising sea levels, which threaten their stability.
+          Poor soil and constant erosion make farming nearly impossible on these islands, forcing communities to rely on imported resources.
+          As a result, industries like fisheries and satellite launch sites have become vital for their economies.
+          Despite their beauty and ecological importance, many remote atolls were used as nuclear testing grounds in the 20th century, highlighting the risk their isolated nature presents.
+          Today, efforts are being made to restore these atolls and promote sustainable practices to safeguard their fragile ecosystems.
+      
+          ​</p>
+        <p><span class="smaller">Mooréa Island in French Polynesia. Photo Credit: dany13 | Flickr</span></p>
+        </div>
+        <div class="image-content">
+        <img src="images/atolls.jpg" alt="Mooréa Island in French Polynesia. Photo Credit: dany13 | Flickr" />
+        </div>
+        
+      </article>
+
+      <article class="slide" id="slide-image-first_slide" data-image-src = "images/rim1-sm.jpg" data-image-source="Atolls of the World Dataset / IRD">
+        <h1>Atolls of the World</h1>
+        <p>From the air, they appear as delicate rings of emerald and ivory set upon a canvas of deepest blue - <br>
+        Welcome to the captivating world of atolls, where land and sea dance in perfect harmony.<br>
+        <span class="smaller">Data used in this story map is collected from Atolls of the World Dataset published by Institut de recherche pour le développement(IRD).</span></p>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/index.js" type="module"></script>
+</body>
+</html>
