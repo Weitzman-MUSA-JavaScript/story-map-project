@@ -15,6 +15,7 @@ class SlideDeck {
     this.currentSlideIndex = 0;
   }
 
+
   /**
    * ### updateDataLayer
    *
@@ -40,41 +41,6 @@ class SlideDeck {
   }
 
   /**
-   * Load ArcGIS data from the ArcGIS REST service
-   */
-   async getSlideFeatureCollection(slide) {
-    if (slide.id === 'title-slide') {
-      const featureLayer = L.esri.featureLayer({
-        url: 'https://services7.arcgis.com/iEMmryaM5E3wkdnU/arcgis/rest/services/jpn_Registered_Religious_Buildings/FeatureServer/0',
-        simplifyFactor: 0.5,
-        precision: 5
-      }).addTo(this.map);
-  
-      return featureLayer;
-    } else if (slide.id === 'second-slide') {
-      // 使用空间过滤器获取京都的特定数据
-      const featureLayer = L.esri.featureLayer({
-        url: 'https://services7.arcgis.com/iEMmryaM5E3wkdnU/arcgis/rest/services/jpn_Registered_Religious_Buildings/FeatureServer/0',
-        where: "PREF = '京都府'",
-        simplifyFactor: 0.5,
-        precision: 5
-      }).addTo(this.map);  
-      return featureLayer;
-    } else if (slide.id === 'third-slide') {
-      // 只显示特定寺庙，可以使用过滤器或添加标记
-      const featureLayer = L.esri.featureLayer({
-        url: 'https://services7.arcgis.com/iEMmryaM5E3wkdnU/arcgis/rest/services/jpn_Registered_Religious_Buildings/FeatureServer/0',
-        where: "name IN ('寶積寺三重塔', '平安神宮斎館', '金胎寺多宝塔')", // 只显示特定寺庙
-        simplifyFactor: 0.5,
-        precision: 5
-      }).addTo(this.map);
-  
-      return featureLayer;
-    }
-  }
-
-
-  /**
    * ### getSlideFeatureCollection
    *
    * Load the slide's features from a GeoJSON file.
@@ -82,11 +48,11 @@ class SlideDeck {
    * @param {HTMLElement} slide The slide's HTML element. The element id should match the key for the slide's GeoJSON file
    * @return {object} The FeatureCollection as loaded from the data file
    */
-  // async getSlideFeatureCollection(slide) {
-    // const resp = await fetch(`data/${slide.id}.json`);
-    // const data = await resp.json();
-    // return data;
-  // }
+   async getSlideFeatureCollection(slide) {
+     const resp = await fetch(`data/${slide.id}.geojson`);
+     const data = await resp.json();
+     return data;
+   }
 
   /**
    * ### hideAllSlides
