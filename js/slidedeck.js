@@ -32,11 +32,17 @@ class SlideDeck {
     this.dataLayer.clearLayers();
     const geoJsonLayer = L.geoJSON(data, {
       pointToLayer: (feature, latlng) => {
-        // 使用 SVG 图标
+        // 根据 note 属性选择图标和大小
+        const iconUrl = feature.properties.note === '鳥居' 
+          ? 'pic/birdnest.svg' // 替换为鸟巢 SVG 文件路径
+          : 'pic/shrine.svg'; // 替换为神社 SVG 文件路径
+  
+        const iconSize = feature.properties.note === '鳥居' ? [20, 20] : [30, 30]; // 设置图标大小
+  
         const markerIcon = L.icon({
-          iconUrl: 'pic/pointicon.svg', // 替换为你的 SVG 文件路径
-          iconSize: [30, 30], // 根据需要调整图标大小
-          iconAnchor: [10, 10], // 图标锚点
+          iconUrl: iconUrl,
+          iconSize: iconSize, // 根据 note 属性设置图标大小
+          iconAnchor: [iconSize[0] / 2, iconSize[1] / 2], // 图标锚点
         });
         return L.marker(latlng, { icon: markerIcon });
       },
@@ -60,8 +66,7 @@ class SlideDeck {
     }).addTo(this.dataLayer);
   
     return geoJsonLayer;
-  }
-  
+  }  
   
 
   /**
