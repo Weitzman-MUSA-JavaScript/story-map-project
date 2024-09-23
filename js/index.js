@@ -1,3 +1,7 @@
+/* global L */
+/* global anime */
+
+
 import { SlideDeck } from './slidedeck.js';
 
 const map = L.map('map', {scrollWheelZoom: false}).setView([0, 0], 0);

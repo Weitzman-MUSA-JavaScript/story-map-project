@@ -34,13 +34,13 @@ h2 {
   font-weight: 700; 
 }
 
-.highlight_2{
+.highlight-2{
   color: #A4C2F7;
   font-weight: 700; 
   font-size: 36px;
 }
 
-.highlight_3{
+.highlight-3{
   color: #A4C2F7;
   font-weight: 700; 
   font-size: 24px;
@@ -62,21 +62,23 @@ h2 {
   position: relative;
   font-weight: bold;
   color: #828181; 
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background: linear-gradient(90deg, rgba(255 255 255 / 30%), rgba(255 255 255 / 0%));
   background-clip: text;
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 4px rgba(255 255 255 / 50%);
   animation: sparkle 2s infinite;
 }
 
 @keyframes sparkle {
   0% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 5px rgba(255 255 255 / 50%), 0 0 20px rgba(255 255 255 / 30%);
   }
+
   50% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 10px rgba(255 255 255 / 80%), 0 0 30px rgba(255 255 255 / 50%);
   }
+
   100% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 5px rgba(255 255 255 / 50%), 0 0 20px rgba(255 255 255 / 30%);
   }
 }
 
@@ -108,20 +110,20 @@ h2 {
   color: black;
 }
 
-#slide-image-first_slide {
+#slide-image-first-slide {
   
-  background-color: rgba(255, 255, 255, 0.5); 
-  color: #000000; 
+  background-color: rgba(255 255 255 / 50%); 
+  color: #000; 
   padding: 2vh;
   border: none;
-  border-radius: 0px; 
+  border-radius: 0; 
   text-align: center; 
   width: 80%; 
   margin-left: 10%; 
   margin-right: 10%; 
 }
 
-#slide-image-second_slide {
+#slide-image-second-slide {
   display: grid;
   grid-template-columns: 3fr 2fr; 
   grid-template-rows: auto auto; 
@@ -129,18 +131,18 @@ h2 {
   column-gap: 1vh;
   
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.5); 
-  color: #000000; 
+  background-color: rgba(255 255 255 / 50%); 
+  color: #000; 
   padding: 2vh;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   text-align: left;
   width: 80%; 
   height: 80vh;
   margin: 10% auto;
 }
 
-#slide-image-second_slide .title {
+#slide-image-second-slide .title {
   grid-column: 1 / span 2; 
   text-align: left;
   font-size: 36px;
@@ -148,14 +150,14 @@ h2 {
   padding: 3vh;
 }
 
-#slide-image-second_slide .text-content {
+#slide-image-second-slide .text-content {
   grid-column: 1 / 2; 
   line-height: 1.5;
   padding: 3vh;
   
 }
 
-#slide-image-second_slide .image-content {
+#slide-image-second-slide .image-content {
   grid-column: 2 / 3; 
   display: flex;
   justify-content: center;
@@ -165,13 +167,13 @@ h2 {
   
 }
 
-#slide-image-second_slide img {
+#slide-image-second-slide img {
   max-width: 100%; 
   max-height: 100%; 
   height: auto;
 }
 
-#slide-image-third_slide {
+#slide-image-third-slide {
   display: grid;
   grid-template-columns: 3fr 2fr; 
   grid-template-rows: auto auto; 
@@ -179,18 +181,18 @@ h2 {
   column-gap: 1vh;
   
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.5); 
-  color: #000000; 
+  background-color: rgba(255 255 255 / 50%); 
+  color: #000; 
   padding: 2vh;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   text-align: left;
   width: 85%; 
   height: 80vh;
   margin: 10% auto;
 }
 
-#slide-image-third_slide .title {
+#slide-image-third-slide .title {
   grid-column: 1 / span 2; 
   text-align: left;
   font-size: 36px;
@@ -198,14 +200,14 @@ h2 {
   padding: 3vh;
 }
 
-#slide-image-third_slide .text-content {
+#slide-image-third-slide .text-content {
   grid-column: 1 / 2; 
   line-height: 1.5;
   padding: 3vh;
   
 }
 
-#slide-image-third_slide .image-content {
+#slide-image-third-slide .image-content {
   grid-column: 2 / 3; 
   display: flex;
   justify-content: center;
@@ -215,7 +217,7 @@ h2 {
   
 }
 
-#slide-image-third_slide img {
+#slide-image-third-slide img {
   max-width: 100%; 
   max-height: 100%; 
   height: auto;
@@ -223,11 +225,11 @@ h2 {
 
 #points {
   
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0 0 0 / 50%); 
   color: #fff; 
   padding: 2vh;
   border: none;
-  border-radius: 0px; 
+  border-radius: 0; 
   text-align: left; 
   width: 60%; 
   margin-left: 30%; 
@@ -239,11 +241,11 @@ h2 {
 
   
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0 0 0 / 50%); 
   color: #fff; 
   padding: 2vh;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   text-align: left;
   width: 40%; 
   height: 90vh;
@@ -256,7 +258,7 @@ h2 {
 #maldives img {
   
   
-  padding: 0vh;
+  padding: 0;
   
   max-width: 95%; 
   max-height: 60%; 
@@ -269,11 +271,11 @@ h2 {
 
   
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0 0 0 / 50%); 
   color: #fff; 
   padding: 2vh;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   text-align: left;
   width: 40%; 
   height: 90vh;
@@ -285,7 +287,7 @@ h2 {
 #tuamotu img {
   
   
-  padding: 0vh;
+  padding: 0;
   
   max-width: 95%; 
   max-height: 60%; 
@@ -298,11 +300,11 @@ h2 {
 
   
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0 0 0 / 50%); 
   color: #fff; 
   padding: 2vh;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   text-align: left;
   width: 30%; 
   height: 95vh;
@@ -314,7 +316,7 @@ h2 {
 #chagos img {
   
   
-  padding: 0vh;
+  padding: 0;
   
   max-width: 95%; 
   max-height: 60%; 
@@ -327,11 +329,11 @@ h2 {
 
   
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0 0 0 / 50%); 
   color: #fff; 
   padding: 2vh;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   text-align: left;
   width: 30%; 
   height: 85vh;
@@ -343,7 +345,7 @@ h2 {
 #thilad img {
   
   
-  padding: 0vh;
+  padding: 0;
   
   max-width: 95%; 
   max-height: 60%; 
@@ -356,11 +358,11 @@ h2 {
 
   
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0 0 0 / 50%); 
   color: #fff; 
   padding: 2vh;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   text-align: left;
   width: 30%; 
   height: 85vh;
@@ -372,7 +374,7 @@ h2 {
 #kiriti img {
   
   
-  padding: 0vh;
+  padding: 0;
   
   max-width: 95%; 
   max-height: 60%; 
@@ -422,13 +424,13 @@ h2 {
 
 #image-source {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  background-color: rgba(255, 255, 255, 0.5);
+  top: 0;
+  right: 0;
+  background-color: rgba(255 255 255 / 50%);
   color: black;
   padding: 5px 10px;
   font-size: 8px;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .transparent-icon {

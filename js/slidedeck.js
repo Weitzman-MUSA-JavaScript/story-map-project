@@ -1,6 +1,8 @@
 /**
  * A slide deck object
  */
+/* global L */
+
 class SlideDeck {
   /**
    * Constructor for the SlideDeck object.
