@@ -31,9 +31,10 @@
     this.dataLayer.clearLayers();
     const geoJsonLayer = L.geoJSON(data, {
       pointToLayer: (feature, latlng) => {
-        const iconUrl = feature.properties.note === '鳥居'
-          ? 'pic/birdnest.svg'
-          : 'pic/shrine.svg';
+        const iconUrl =
+          feature.properties.note === '鳥居'
+            ? 'pic/birdnest.svg'
+            : 'pic/shrine.svg';
 
         const iconSize = feature.properties.note === '鳥居' ? [20, 20] : [30, 30];
 
@@ -69,8 +70,8 @@
    *
    * Load the slide's features from a GeoJSON file.
    *
-   * @param {HTMLElement} slide The slide's HTML element. The element id should match the key for the slide's GeoJSON file
-   * @return {object} The FeatureCollection as loaded from the data file
+   * @param {HTMLElement} slide The slide's HTML element. The element id should match the key for the slide's GeoJSON file.
+   * @return {object} The FeatureCollection as loaded from the data file.
    */
   async getSlideFeatureCollection(slide) {
     const resp = await fetch(`data/${slide.id}.geojson`);
@@ -78,12 +79,24 @@
     return data;
   }
 
+  /**
+   * ### hideAllSlides
+   *
+   * Add the hidden class to all slides' HTML elements.
+   */
   hideAllSlides() {
     for (const slide of this.slides) {
       slide.classList.add('hidden');
     }
   }
 
+  /**
+   * ### syncMapToSlide
+   *
+   * Go to the slide that matches the specified ID.
+   *
+   * @param {HTMLElement} slide The slide's HTML element.
+   */
   async syncMapToSlide(slide) {
     const collection = await this.getSlideFeatureCollection(slide);
     const layer = this.updateDataLayer(collection);
@@ -114,11 +127,17 @@
     }
   }
 
+  /**
+   * Show the slide with ID matched by currentSlideIndex.
+   */
   syncMapToCurrentSlide() {
     const slide = this.slides[this.currentSlideIndex];
     this.syncMapToSlide(slide);
   }
 
+  /**
+   * Increment the currentSlideIndex and show the corresponding slide.
+   */
   goNextSlide() {
     this.currentSlideIndex++;
     if (this.currentSlideIndex === this.slides.length) {
@@ -127,6 +146,9 @@
     this.syncMapToCurrentSlide();
   }
 
+  /**
+   * Decrement the currentSlideIndex and show the corresponding slide.
+   */
   goPrevSlide() {
     this.currentSlideIndex--;
     if (this.currentSlideIndex < 0) {
@@ -135,12 +157,20 @@
     this.syncMapToCurrentSlide();
   }
 
+  /**
+   * ### preloadFeatureCollections
+   *
+   * Initiate a fetch on all slide data so that the browser can cache the requests.
+   */
   preloadFeatureCollections() {
     for (const slide of this.slides) {
       this.getSlideFeatureCollection(slide);
     }
   }
 
+  /**
+   * Calculate the current slide index based on the current scroll position.
+   */
   calcCurrentSlideIndex() {
     const scrollPos = window.scrollY;
     const windowHeight = window.innerHeight;
