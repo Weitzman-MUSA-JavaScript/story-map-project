@@ -34,7 +34,7 @@ class SlideDeck {
       pointToLayer: (feature, latlng) => {
         // 使用 SVG 图标
         const markerIcon = L.icon({
-          iconUrl: 'pic/pointicon.svg', // 替换为你的 SVG 文件路径
+          iconUrl: './pic/pointicon.svg', // 替换为你的 SVG 文件路径
           iconSize: [20, 20], // 根据需要调整图标大小
           iconAnchor: [10, 10], // 图标锚点
         });
