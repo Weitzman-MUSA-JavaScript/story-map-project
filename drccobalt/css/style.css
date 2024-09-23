@@ -48,6 +48,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
     padding: 2rem;
     box-sizing: border-box;
 }
@@ -83,6 +85,7 @@
 }
 .intro-gallery {
     flex: 1;
+    padding-top: 1.3rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -102,6 +105,7 @@
     color: #ddd;
     font-size: 0.8rem;
     margin-top: 0.5rem;
+    font-family: "IBM Plex Sans", sans-serif;
 }
 .intro-text {
     flex: 1;
@@ -141,6 +145,10 @@
 
 #sources {
   text-overflow: clip;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
   
   .slide-section {
