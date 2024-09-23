@@ -98,7 +98,7 @@ class SlideDeck {
   async syncMapToSlide(slide) {
     const collection = await this.getSlideFeatureCollection(slide);
     const layer = this.updateDataLayer(collection);
- 
+
     /**
      * Create a bounds object from a GeoJSON bbox array.
      * @param {Array} bbox The bounding box of the collection
