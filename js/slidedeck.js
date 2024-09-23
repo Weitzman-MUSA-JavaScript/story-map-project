@@ -57,10 +57,10 @@ class SlideDeck {
       },
       style: (feature) => {
         return {
-          color: '#843636', // 描边颜色
-          fillColor: 'rgba(132, 54, 54, 0.5)', // 半透明的 #843636 填充
-          fillOpacity: 0.5, // 填充透明度
-          weight: 2, // 边框宽度
+          color: '#843636', 
+          fillColor: 'rgba(132, 54, 54, 0.5)', 
+          fillOpacity: 0.5, 
+          weight: 2, 
         };
       },
     }).addTo(this.dataLayer);
