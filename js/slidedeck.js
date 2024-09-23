@@ -34,8 +34,8 @@ class SlideDeck {
       pointToLayer: (feature, latlng) => {
         // 使用 SVG 图标
         const markerIcon = L.icon({
-          iconUrl: './pic/pointicon.svg', // 替换为你的 SVG 文件路径
-          iconSize: [20, 20], // 根据需要调整图标大小
+          iconUrl: 'pic/pointicon.svg', // 替换为你的 SVG 文件路径
+          iconSize: [30, 30], // 根据需要调整图标大小
           iconAnchor: [10, 10], // 图标锚点
         });
         return L.marker(latlng, { icon: markerIcon });
@@ -51,8 +51,8 @@ class SlideDeck {
       },
       style: (feature) => {
         return {
-          color: 'red', // 描边颜色
-          fillColor: 'rgba(255, 0, 0, 0.5)', // 半透明红色填充
+          color: '#843636', // 描边颜色
+          fillColor: 'rgba(132, 54, 54, 0.5)', // 半透明的 #843636 填充
           fillOpacity: 0.5, // 填充透明度
           weight: 2, // 边框宽度
         };
