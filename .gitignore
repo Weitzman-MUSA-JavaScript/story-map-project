@@ -5,3 +5,4 @@
 
 # Don't ignore any contents of drccobalt
 !/drccobalt/**
+.Rproj.user
