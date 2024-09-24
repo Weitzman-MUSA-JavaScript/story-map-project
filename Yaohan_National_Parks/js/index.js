@@ -14,6 +14,16 @@ const container = document.querySelector('.slide-section');
 const slides = document.querySelectorAll('.slide');
 
 const slideOptions = {
+  'first-slide': {
+    style: (feature) => {
+      return {
+        color: 'red',
+        fillColor: 'green',
+        fillOpacity: 0.5,
+      };
+    },
+  },
+
   'second-slide': {
     style: (feature) => {
       return {
@@ -23,11 +33,32 @@ const slideOptions = {
       };
     },
   },
+
   'third-slide': {
     style: (feature) => {
       return {
         color: 'blue',
         fillColor: 'yellow',
+        fillOpacity: 0.5,
+      };
+    },
+  },
+
+  'fourth-slide': {
+    style: (feature) => {
+      return {
+        color: 'red',
+        fillColor: 'green',
+        fillOpacity: 0.5,
+      };
+    },
+  },
+
+  'fifth-slide': {
+    style: (feature) => {
+      return {
+        color: 'red',
+        fillColor: 'green',
         fillOpacity: 0.5,
       };
     },
