@@ -41,7 +41,7 @@ class SlideDeck {
       style: (feature) => feature.properties.style,
     };
     const geoJsonLayer = L.geoJSON(data, options || defaultOptions)
-        .bindTooltip((l) => l.feature.properties.label)
+        .bindTooltip((l) => l.feature.properties.Name)
         .addTo(this.dataLayer);
 
     return geoJsonLayer;
@@ -107,7 +107,7 @@ class SlideDeck {
     const handleFlyEnd = () => {
       if (slide.showpopups) {
         layer.eachLayer((l) => {
-          l.bindTooltip(l.feature.properties.label, { permanent: true });
+          l.bindTooltip(l.feature.properties.Name, { permanent: true });
           l.openTooltip();
         });
       }
@@ -115,10 +115,35 @@ class SlideDeck {
     };
 
     this.map.addEventListener('moveend', handleFlyEnd);
+    
+    //
+    // Prevent fly movement between the “third-slide” and “fourth-slide” using the same boundary (as referenced in ChatGPT).
+    //
+    let currentBounds;
+    
     if (collection.bbox) {
-      this.map.flyToBounds(boundsFromBbox(collection.bbox));
+      currentBounds = boundsFromBbox(collection.bbox);
     } else {
-      this.map.flyToBounds(layer.getBounds());
+      currentBounds = layer.getBounds();
+    }
+    
+    //
+    // To make the fly animation smoother.
+    //
+    const flyOptions = {
+      duration: 2,
+      easeLinearity: 0.2,
+      noMoveStart: true,
+      maxZoom: 16
+    };
+
+    if (slide.id === "third-slide") {
+      this.thirdSlideBounds = currentBounds;
+      this.map.flyToBounds(this.thirdSlideBounds, flyOptions);
+    } else if (slide.id === "fourth-slide" && this.thirdSlideBounds) {
+      this.map.flyToBounds(this.thirdSlideBounds, flyOptions);
+    } else {
+      this.map.flyToBounds(currentBounds, flyOptions);
     }
   }
 
@@ -180,12 +205,14 @@ class SlideDeck {
     const windowHeight = window.innerHeight;
 
     let i;
-    for (i = 0; i < this.slides.length; i++) {
-      const slidePos =
-        this.slides[i].offsetTop - scrollPos + windowHeight * 0.7;
-      if (slidePos >= 0) {
-        break;
+    for (i = 0; i < this.slides.length - 1; i++) {
+      const nextSlideTop = this.slides[i + 1].offsetTop;
+
+      if (nextSlideTop <= scrollPos + windowHeight * 0.7) {
+        continue;
       }
+      
+      break;
     }
 
     if (i !== this.currentSlideIndex) {
