@@ -285,7 +285,7 @@ map.on("load", function () {
         },
         paint: {
             "line-color": "blue", // this colours the line based on the colour attribute in the geojson
-            "line-width": 3,
+            "line-width": 4,
             "line-opacity":0
         }
     });
@@ -298,7 +298,7 @@ map.on("load", function () {
       },
       paint: {
           "line-color": "purple", // this colours the line based on the colour attribute in the geojson
-          "line-width": 3,
+          "line-width": 4,
           "line-opacity":0
       }
     });
@@ -311,7 +311,7 @@ map.on("load", function () {
       },
       paint: {
           "line-color": "red", // this colours the line based on the colour attribute in the geojson
-          "line-width": 3,
+          "line-width": 4,
           "line-opacity":0
       }
     });
@@ -327,7 +327,7 @@ map.on("load", function () {
         },
         paint: {
             "circle-color": ['get', 'color'], // Replace with the desired color
-            "circle-radius": 2,  // Adjust as needed
+            "circle-radius": 1.4,  // Adjust as needed
             "circle-stroke-color": "transparent",
             "circle-stroke-width": 0,
             "circle-opacity":0
