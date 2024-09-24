@@ -16,31 +16,6 @@ class SlideDeck {
     this.container = document.querySelector('.slide-section');
   }
 
-
-  // Method to calculate current slide index based on scroll
-  calcCurrentSlideIndex() {
-    let index = 0;
-
-    // Loop through each slide to check its visibility in the viewport
-    for (let i = 0; i < this.slides.length; i++) {
-      const slide = this.slides[i];
-      const rect = slide.getBoundingClientRect();
-
-      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-        index = i;
-        break;
-      }
-    }
-
-    this.currentSlideIndex = index;
-
-    // Add this line to print the current slide index in the console
-    console.log("Current Slide Index:", this.currentSlideIndex);
-
-    this.syncMapToCurrentSlide(); // Synchronize the map with the current slide
-  }
- 
-
   /**
    * ### updateDataLayer
    *
