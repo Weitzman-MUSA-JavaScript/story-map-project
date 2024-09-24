@@ -56,7 +56,7 @@ class SlideDeck {
    * @return {object} The FeatureCollection as loaded from the data file
    */
   async getSlideFeatureCollection(slide) {
-    const resp = await fetch(`data/${slide.id}.json`);
+    const resp = await fetch(`data/json/${slide.id}.json`);
     const data = await resp.json();
     return data;
   }
