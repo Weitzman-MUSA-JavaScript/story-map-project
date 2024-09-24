@@ -259,7 +259,7 @@ map.on("load", function () {
       type: "fill",
       source: {
           type: "geojson",
-          data: "data/layers/Prague_landuse.geojson"
+          data: "data/layers/Prague_landuse_crop.geojson"
       },
       paint: {
         "fill-color":['get', 'color'],
