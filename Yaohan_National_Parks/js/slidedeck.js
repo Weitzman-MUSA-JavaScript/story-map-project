@@ -208,7 +208,7 @@ class SlideDeck {
     for (i = 0; i < this.slides.length - 1; i++) {
       const nextSlideTop = this.slides[i + 1].offsetTop;
 
-      if (nextSlideTop <= scrollPos + windowHeight * 0.7) {
+      if (nextSlideTop <= scrollPos + windowHeight * 0.75) {
         continue;
       }
       

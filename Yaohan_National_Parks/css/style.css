@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
   height: 100vh;
 
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #cover-page {
@@ -28,6 +28,10 @@ body {
   z-index: 100;
   pointer-events: none;
   border-bottom: 1px solid rgb(0 0 0 / 10%);
+}
+
+.slide-section h2 {
+  font-family: "Merriweather", serif;
 }
 
 .slide {
@@ -55,6 +59,8 @@ body {
   margin-bottom: 40vh;
 }
 
+
+/* Not used in this project.*/
 .slide-controls {
   display: flex;
   justify-content: space-around;

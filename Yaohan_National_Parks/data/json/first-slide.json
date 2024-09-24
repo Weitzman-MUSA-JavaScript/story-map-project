@@ -1,6 +1,11 @@
 {
   "type": "FeatureCollection",
-  "bbox": [-180, -75, 180, 75],
+  "bbox": [
+    -180,
+    -75,
+    180,
+    75
+  ],
   "features": [
     {
       "type": "Feature",
