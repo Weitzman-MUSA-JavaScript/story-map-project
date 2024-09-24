@@ -7,6 +7,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+#cover-page {
+  height:100vh;
+}
+
 .map-container {
   position: sticky;
   top: 0;
