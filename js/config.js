@@ -63,7 +63,11 @@ This is no easy feat. The coexistence of diverse communities within close quarte
 
 let divChapter7 =`
 <h3>the Bustling and Bussin' Barracks of karlin</h3>
-<p> Enter Karsana Karlin, or <em>Karlin Barracks</em> - one of Prague's most popular culture centers is one of the many contested spaces within Prague. Built in 1848, it has a long history of changing hands between different ministries who all could never quite agree with what to do with the space. This all changed in 2017, when the area was developed into a cultural center, hosting art fairs, live music events, and seasonal open air movie screenings of vignette movies. </p>
+<p> Enter Karsana Karlin, or <em>Karlin Barracks</em> - one of Prague's most popular culture centers is one of the many contested spaces within Prague. Built in 1848, it has a long history of changing hands between different ministries who all could never quite agree with what to do with the space. 
+This all changed in 2017, when the area was developed into a cultural center, hosting art fairs, live music events, and seasonal open air movie screenings of vignette movies. </p>
+<div style="max-width:100%; text-align:center; margin-left:auto; margin-right:auto">
+  <img src="./data/images/karlin.svg" alt="image of Karlin, a rectangle european style building with a central garden event space" style="max-width:100%; height:auto;">
+</div>
 `;
 
 let divChapter8 =`
