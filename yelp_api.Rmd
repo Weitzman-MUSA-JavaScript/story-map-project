@@ -1,0 +1,482 @@
+---
+title: "Data Collection: Yelp Fusion API"
+output: html_document
+theme: "flatly"
+date: "September 9, 2024"
+author: Anna Duan, annaduan@sas.upenn.edu
+---
+# Introduction  
+This markdown gathers business listing data from Yelp Fusion API's Business Search Endpoint. We use OmaymaS's [`yelpr`](https://github.com/OmaymaS/yelpr) package to make the API call itself, and `httr` to parse through the response. We also use `tigris` to generate a list of all ZIP codes in Philadelphia to use as location specifications for the API call, then we later use these boundaries to filter out businesses that are not within the city boundaries.  
+  
+To use [Yelp Fusion API](https://docs.developer.yelp.com/docs/fusion-intro), first register for a Yelp account, then navigate to [manage API access](https://www.yelp.com/login?return_url=/developers/v3/manage_app) to find your API key.  
+  
+## Libraries  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      cache = TRUE,
+                      eval = FALSE)
+# libraries 
+library(devtools)
+library(tigris)
+library(tidyverse)
+library(sf)
+library(httr)
+library(mapview)
+library(wordcloud2)
+library(tm)
+library(yelpr)
+```
+
+## Tigris boundaries 
+Using `tigris`, we access ZIP code boundaries and names from the US Census Bureau. Using the resulting sf object, we create a list of Philadelphia ZIP codes and a unioned Philadelphia boundary object.
+```{r load tigris boundaries}
+options(tigris_use_cache = TRUE) # set cache = TRUE to save time for future calls
+
+zcta <- zctas(year = 2021) %>% # get all ZIPs in US (we can't filter by state unfortunately)
+  rename(zip_code = GEOID20) %>% 
+  filter(substr(ZCTA5CE20, start = 1, stop = 3) == "191") %>%
+  st_transform(4326) 
+
+zip_list <- zcta$ZCTA5CE20 # list of zip codes in Philadelphia
+
+neighs <- st_read("https://raw.githubusercontent.com/opendataphilly/open-geo-data/refs/heads/master/philadelphia-neighborhoods/philadelphia-neighborhoods.geojson") %>%
+  erase_water() %>%
+  st_transform(4326) %>%
+  select(MAPNAME, Shape_Area)
+```
+
+# Yelp Fusion API  
+## Helper function - `get_yelp()`  
+To parse the results of the API call, a JSON file, we use a helper function to extract the fields we need. After creating a list of the specifications for the API call, we use `httr::GET()` to make the call. The result is a JSON file, which we flatten and and parse using `httr::content()`.   
+
+We then retrieve specific columns, such as business name, latitude, longitude, alias, and rating as dataframes which we later concatenate into a larger dataframe.    
+
+```{r get_yelp helper function}
+#### Yelp api call function ####
+url <- "https://api.yelp.com/v3/businesses/search"
+
+get_yelp = function(category, zip_code, offset_num) {
+  # args are category of business, zipcode, and number to offset by
+  
+  queryString = list(
+    location = zip_code,
+    # argument to be filled
+    term = category,
+    # argument to be filled
+    sort_by = "distance",
+    # sort by dist
+    limit = 50,
+    # 50 is the max for yelp fusion api, any higher and it won't work
+    offset = offset_num # argument to be filled
+  )
+  
+  # use "GET" verb to request information from url
+  response <- VERB(
+    "GET",
+    url,
+    query = queryString,
+    add_headers('Authorization' = 'Bearer cFIluAjGm5hAN9V7qJxxCTvN3SKvu6VRjddCEx940h0pzQVNwDIp2VVkd2Sivng2vdVyV6F2zJvdruV6B2sl0IjCSOk4DbLQPzlyDPXnPSoPAzZpquc4e4WXHPVtZXYx'),
+    content_type("application/octet-stream"),
+    accept("application/json")
+  )
+  
+  # turn the response into a json file
+  yelp.json = httr::content(response, "parsed", flatten = TRUE, simplify = TRUE)
+
+  # retrieve columns from json structure
+  biz.name = data.frame(yelp.json$businesses$name)
+  biz.lat = data.frame(yelp.json$businesses$coordinates.latitude)
+  biz.lon = data.frame(yelp.json$businesses$coordinates.longitude)
+  biz.rating = data.frame(yelp.json$businesses$rating)
+  biz.addr = data.frame(yelp.json$businesses$location.address1)
+  
+  # bind the columns into one dataframe
+  yelp.df = cbind(biz.name, biz.rating, biz.addr, biz.lat, biz.lon)  %>%
+    as.data.frame()
+  
+  colnames(yelp.df) <- c("name", "rating", "address", "lat", "lon")
+  
+  # add in category alias/title (this will give us cuisine information)
+  cuisine = yelp.json$businesses$categories
+  
+  cuis.df <- map_dfr(cuisine, function(x) {
+    tibble(
+      alias = paste(x$alias, collapse = ", "),
+      title = paste(x$title, collapse = ", ")) %>%
+      as.data.frame()
+  })
+  
+  yelp.df <- yelp.df %>%
+    cbind(cuis.df)
+  
+  # When creating an empty dataframe, use "" as default value
+  if(nrow(yelp.df) == 0) {
+    yelp.df <- data.frame(name="", rating=numeric(0), address="", lat=numeric(0), lon=numeric(0), alias = "", title = "", stringsAsFactors=FALSE)
+  }
+  
+  return(yelp.df)
+}
+```
+
+## Making the API call  
+To make the API call, we write a nested dataframe to get around the 50 business limit. In order to capture all of the businesses in the city, we iterate through our list of ZIP codes, for which we iterate through offset values 0 to 10. This way, we can capture a maximum of 500 businesses per ZIP code, which is more than enough for most categories. For each loop, we store the output in a nested dataframe.      
+```{r call api}
+# Initialize a named list of empty dataframes
+initialize_named_dfs <- function(zips) { 
+  empty_df <- data.frame(name=character(0), rating=numeric(0),  address=character(0), lat=numeric(0), lon=numeric(0))
+  named_list <- lapply(zips, function(zip) empty_df)
+  names(named_list) <- zips
+  return(named_list)
+}
+
+
+biz_list_0 <- initialize_named_dfs(zip_list) # Initiate list of restaurant dataframes for each offset (since the query limit is 50, offset = 1 would return 51-100)
+biz_list_1 <- initialize_named_dfs(zip_list) # 10 dfs x 50 restaurants each = a 500 restaurant sample per zip code
+biz_list_2 <- initialize_named_dfs(zip_list)
+biz_list_3 <- initialize_named_dfs(zip_list)
+biz_list_4 <- initialize_named_dfs(zip_list)
+biz_list_5 <- initialize_named_dfs(zip_list)
+biz_list_6 <- initialize_named_dfs(zip_list)
+biz_list_7 <- initialize_named_dfs(zip_list)
+biz_list_8 <- initialize_named_dfs(zip_list)
+biz_list_9 <- initialize_named_dfs(zip_list)
+biz_list_10 <- initialize_named_dfs(zip_list)
+biz_list_11 <- initialize_named_dfs(zip_list)
+biz_list_12 <- initialize_named_dfs(zip_list)
+biz_list_13 <- initialize_named_dfs(zip_list)
+biz_list_14 <- initialize_named_dfs(zip_list)
+biz_list_15 <- initialize_named_dfs(zip_list)
+
+
+# master list to store the dataframes
+offset_list <- list(biz_list_0,
+                    biz_list_1,
+                    biz_list_2,
+                    biz_list_3,
+                    biz_list_4,
+                    biz_list_5,
+                    biz_list_6,
+                    biz_list_7,
+                    biz_list_8,
+                    biz_list_9,
+                    biz_list_10,
+                    biz_list_11,
+                    biz_list_12,
+                    biz_list_13,
+                    biz_list_14,
+                    biz_list_15)
+
+# Loop through each offset (think of each offset as a page of results)
+for (i in 1:length(zip_list)) {
+  # initialize zipnum (this is so we know where we're at in the list of zips)
+  zipnum <- 1
+  # initialize offset (so we can pull page 1, then page 2, then page 3, etc)
+  offset <- i - 1
+  
+  # Loop through each zip code
+  for (zip_code in zip_list) {
+    print(paste("batch ", offset + 1, ", ", "zip", zipnum, ": ", zip_code, sep = ""))
+    
+    # Fetch Yelp data for the zip code and store it in the list
+    offset_list[[i]][[as.character(zip_code)]] <- get_yelp("restaurant", as.character(zip_code), offset)
+    
+    zipnum <- zipnum + 1 #iterate zipnum each loop
+  }
+  offset <- offset + 50
+}
+```
+
+# Data preparation    
+## Store response as dataframe   
+In this step, we take the nested dataframe from the last step and bind all of the dataframes inside to create one flattened dataframe. Using the longitude and latitude fields we got earlier, we transform it into a spatial features object with point locations for all of the businesses inside.   
+
+```{r gather data to df}
+# Combine all dataframes into one dataframe and remove duplicates
+restaurants <- map_dfr(offset_list, ~ bind_rows(.x)) %>%
+  unique() %>%
+  filter(!is.na(lat)) %>%
+  st_as_sf(crs = 4326, coords = c("lon", "lat")) %>%
+  st_crop(st_union(zcta)) %>%
+  filter(!is.na(title) | !is.na(alias)) %>%
+   mutate(
+    title = tolower(title),
+    alias = tolower(alias),
+    name = tolower(name)
+  ) 
+
+```
+```{r wordcloud}
+# Title
+text <- restaurants$title
+docs <- Corpus(VectorSource(text)) %>%
+  tm_map(removeNumbers) %>%
+  tm_map(removePunctuation) %>%
+  tm_map(stripWhitespace) %>%
+  tm_map(., content_transformer(tolower)) %>%
+  tm_map(., removeWords, stopwords("english"))
+dtm <- TermDocumentMatrix(docs) 
+matrix <- as.matrix(dtm) 
+words <- sort(rowSums(matrix),decreasing=TRUE) 
+df <- data.frame(word = names(words),freq=words) %>%
+  filter(!word %in% c('food', 'fast', 'restaurants', 'delivery', 'services',
+                      'trucks', 'grocery', 'shops', 'stores', 'sports', 'bars', 
+                      'breakfast', 'brunch', 'new','convenience', 'stands'))
+
+wordcloud2(data = df, size = 0.8, color = "random-light")
+```
+#### Cuisine Mapping #### 
+```{r cuisine groups}
+# Updated and Refined Cuisine Keywords Dictionary
+cuisine_keywords <- list(
+    American = c(
+    "american", "tradamerican", "newamerican", "comfort", "comfortfood", "diners", 
+    "pubs", "buffets", "steakhouses", "gastropubs", "bar", "bars", "sportsbars", "salad", "bakeries",
+    "lounges", "brewpubs", "beergardens", "burger", "diner", "cheesesteaks", "mac and cheese",
+    "luncheonette", "chicken_wings", "hotdogs", "wings", "cheesesteak", "steaks",
+    "bbq", "barbecue", "barbeque", "smoked", "ribs", "pitmaster", "dog", "dogs", "grill",
+    "fastfood", "quickbites", "burgers", "fries", "wraps", "pretzels", "grille", "coffee", "icecream",
+    "deli", "sandwiches", "kosher", "delis", "cafes", "brunch", "hoagie", "brunch", "desserts",
+    "dessert", "rotisserie", "sweetgreen", "crown", "fried chicken", "cafe", "chicken", "sports"
+  ),
+  
+  Italian = c(
+    "italian", "pasta", "lasagna", "trattoria", "pizzeria", "creperies", "pastashops", 
+    "wine_bars", "tapas", "gelato", "risotto", "ristoranti", "ristorante", "pizza", "giuseppe",
+    "trazza", "tuscan"
+  ),
+  
+  United_Kingdom = c(
+    "british", "english", "scottish", "irish", "welsh", "fish and chips", "fish & chips",
+    "pub", "finnigan", "dandelion"),
+  
+  Chinese = c(
+    "chinese", "shanghainese", "cantonese", "dimsum", "szechuan", "noodles", 
+    "hotpot", "panasian", "wok", "china", "garden", "bubble tea", "boba", "dumpling",
+    "wei", "meng", "dragon", "kung", "canton", "mandarin", "oriental", "zheng", "xi", "jiang", "dian",
+    "ho", "lam", "yang", "zhong", "asian", "shing", "east", "pearl", "palace", "chen", "sai", "yong",
+    "hou", "hong", "zhang", "jun", "golden", "kam", "dong", "sheng", "chung",
+    "ping", "kon", "yi", "wah", "lee", "nanchang", "lim", "yoo", "chan"
+  ),
+  
+  Mexican = c(
+    "mexican", "tacos", "texmex", "burritos", "enchiladas", "salsa", "margaritas", 
+    "fajitas", "taqueria", "masa"
+  ),
+  
+  Japanese = c(
+    "japanese", "sushi", "ramen", "teppanyaki", "izakaya", "sashimi", "hibachi", 
+    "omakase", "shabu"
+  ),
+  
+  Korean = c(
+    "korean", "bibimbap", "kimchi", "bulgogi", "kbbq", "koreanbbq", "seung", "kim"
+  ),
+  
+  Middle_Eastern = c(
+    "mideastern", "middle_eastern", "halal", "shawarma", "falafel", "kebab", 
+    "hummus", "arabic", "syrian", "sahara", "afghan", "moroccan", "nile", "istanbul"
+  ),
+  
+  Mediterranean = c(
+    "mediterranean", "lebanese", "spanish", "iberian", "grille", "mezze", "baklava", "greek", "gyro", "souvlaki", "moussaka", "portuguese"
+  ),
+  
+  Soul_Food = c(
+    "soulfood", "southern", "soul", "cajun", "creole", "southern", "soul", "cajun", "creole",
+    "cajuncreole"
+  ),
+    
+  South_Asian = c(
+    "indian", "indpak", "curry", "tandoori", "naan", "masala", "biriyani", "pakistani"
+  ),
+  
+  Thai = c(
+    "thai", "pad_thai", "thaifusion"
+  ),
+  
+  Vietnamese = c("pho", "viet", "vietnamese", "banh_mi", "pho", "bun", "pho", "springrolls",
+                 "trinh", "nguyen"),
+  
+  Ethiopian = c(
+    "ethiopian", "injera", "doro_wot", "tibs"
+  ),
+  
+  Caribbean = c(
+    "caribbean", "jamaican", "trinidadian", "haitian", "puertorican", "soul", 
+    "jerk", "dominican", "borinquen"
+  ),
+  
+  French = c(
+    "french", "crepe", "bistro", "brasserie", "patisserie"
+  ),
+  
+  East_European = c(
+    "russian", "uzbek", "ukrainian", "georgian", "ulfatlar", "khachapuri", "khinkali", "plov", "lagman", "polish"
+  ),
+  
+  Latin_American = c(
+    "latin", "latinamerican", "nicaraguan", "salvadoran", "brazilian", "colombian", "guatemalteco",
+    "guadelupana", "casa", "guadalupana"
+  ),
+  
+  Hawaiian = c(
+    "hawaiian", "poke", "loco_moco", "laulau", "kalua_bbq"
+  ),
+  
+  West_African = c(
+    "african", "senegalese", "nigerian", "ghanaian", "cameroonian", "ivorian", "jollof"
+  ),
+  
+  Cambodian = c(
+    "cambodian", "amok", "lok_lak"
+  ),
+  
+  Seafood = c(
+    "seafood", "crab", "lobster", "oyster", "clam", "shrimp", "fish", "scallops", "mussels", "crab", "lobster", "oyster", "clam", "shrimp", "fish", "scallops", "mussels", "sea food", "surf"
+  )
+)
+
+# Define cuisine priority (from highest to lowest)
+cuisine_priority <- c(
+  "United_Kingdom", "South_Asian", "Thai", "Hawaiian", "West_African", 
+  "Cambodian", "Mexican", "Japanese", "Korean", "Vietnamese", "Ethiopian", 
+  "Soul_Food", "Caribbean", "French", "East_European", 
+  "Chinese", "Middle_Eastern", "Mediterranean",
+  "Latin_American", "Italian", "Seafood", "American"
+)
+
+```
+
+```{r cuisine mapping}
+# Function to assign primary cuisine based on keywords with prioritization
+assign_primary_cuisine <- function(name, title, alias, cuisine_dict, priority_order) {
+  # Replace NA with empty string to avoid issues
+  name <- ifelse(is.na(name), "", name)
+  title <- ifelse(is.na(title), "", title)
+  alias <- ifelse(is.na(alias), "", alias)
+  
+  # Combine name, title, alias for comprehensive search
+  combined_text <- paste(name, title, alias, sep = " ")
+  
+  # Convert to lowercase for case-insensitive matching
+  combined_text <- tolower(combined_text)
+  
+  # Iterate over each cuisine based on priority
+  for (cuisine in priority_order) {
+    keywords <- cuisine_dict[[cuisine]]
+    
+    # Create a regex pattern to match any of the keywords
+    # Use word boundaries to match whole words
+    # Escape any special regex characters in keywords
+    escaped_keywords <- str_replace_all(keywords, "([.|()\\^{}+$*?]|\\[|\\]|\\\\)", "\\\\\\1")
+    pattern <- paste0("\\b(", paste(escaped_keywords, collapse = "|"), ")\\b")
+    
+    # Check if any keyword matches
+    if (grepl(pattern, combined_text, ignore.case = TRUE)) {
+      return(cuisine)
+    }
+  }
+  
+  # If no match found, return NA
+  return("Unknown")
+}
+
+restaurants$cuisine <- mapply(
+  assign_primary_cuisine,
+  name = restaurants$name,
+  title = restaurants$title,
+  alias = restaurants$alias,
+  MoreArgs = list(cuisine_dict = cuisine_keywords, priority_order = cuisine_priority)
+)
+
+# View the first few entries with the assigned cuisine
+restaurants %>%
+  st_drop_geometry() %>%
+  group_by(cuisine) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count)) %>%
+  head(10)
+
+unclassified <- restaurants %>%
+  st_drop_geometry() %>%
+  filter(cuisine == "Unknown") %>%
+  select(name, title, alias)
+
+# Cuisine word cloud
+text <- restaurants$cuisine
+docs <- Corpus(VectorSource(text)) %>%
+  tm_map(removeNumbers) %>%
+  tm_map(removePunctuation) %>%
+  tm_map(stripWhitespace) %>%
+  tm_map(., content_transformer(tolower)) %>%
+  tm_map(., removeWords, stopwords("english"))
+dtm <- TermDocumentMatrix(docs) 
+matrix <- as.matrix(dtm) 
+words <- sort(rowSums(matrix),decreasing=TRUE) 
+df <- data.frame(word = names(words),freq=words) %>%
+  filter(word != "american")
+
+
+set.seed(1234) # for reproducibility 
+wordcloud2(data = df, size = 0.8, color = "random-light")
+```
+
+#### Exploratory Analysis #### 
+```{r cuisine distribution}
+
+# Location of all restaurants
+ggplot() + 
+  geom_sf(data = restaurants, color = "darkcyan", size = 0.5) +
+  labs(
+    title = "Location of Restaurants in Philadelphia",
+  ) +
+  theme_void()
+
+# Plot the distribution of cuisine types, ordered by count
+ggplot() +
+  geom_bar(data = restaurants, aes(x = cuisine), show.legend = FALSE, fill = "darkcyan") +
+  coord_flip() +
+  scale_x_discrete(limits = restaurants %>% filter(cuisine != "American") %>% count(cuisine) %>% arrange(n) %>% pull(cuisine)) +
+  labs(
+    title = "Distribution of Cuisine Types",
+    x = "Cuisine",
+    y = "Restaurants"
+  ) +
+  theme_minimal() 
+```
+
+```{r map all restaurants}
+
+cuisine_neigh <- st_intersection(restaurants, neighs) %>%
+  st_drop_geometry() %>%
+  left_join(neighs, by = "MAPNAME") %>%
+  group_by(cuisine, MAPNAME) %>%
+  summarise(count = n(), .groups = 'drop') %>%
+  group_by(MAPNAME) %>%
+  mutate(pct = 100 * count / sum(count)) %>%
+  ungroup() %>%
+  left_join(neighs, by = "MAPNAME") %>%
+  st_as_sf()
+
+top_ethnic_cuisine_neigh <- cuisine_neigh %>% 
+  filter(cuisine != "American") %>%
+  group_by(MAPNAME) %>% 
+  slice_max(order_by = pct)
+
+# Map most common cuisine in each neighborhood
+ggplot() +
+  geom_sf(data = top_ethnic_cuisine_neigh, aes(fill = cuisine), color = "white") +
+  scale_fill_brewer(palette = "Set3") +
+  labs(
+    title = "Most Common Cuisine in Each Neighborhood",
+    fill = "Cuisine"
+  ) +
+  theme_void()
+
+```
+
+```{r spruce hill}
+spruce_hill_restaurants <- neighs %>%
+  filter(MAPNAME %in% c("Spruce Hill", "Walnut Hill")) %>%
+  st_intersection(restaurants) 
+```
