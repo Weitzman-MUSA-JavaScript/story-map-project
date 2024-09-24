@@ -13,8 +13,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.48.0",
+    "@eslint/js": "^9.11.1",
+    "eslint": "^8.57.1",
     "eslint-config-google": "^0.14.0",
+    "globals": "^15.9.0",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0"
   },
@@ -30,7 +32,9 @@
     "env": {
       "browser": true
     },
-    "ignorePatterns": ["examples/**/*.js"],
+    "ignorePatterns": [
+      "examples/**/*.js"
+    ],
     "globals": {
       "L": "readonly"
     },
@@ -41,7 +45,9 @@
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
-    "ignoreFiles": ["examples/**/*.css"],
+    "ignoreFiles": [
+      "examples/**/*.css"
+    ],
     "rules": {
       "declaration-empty-line-before": null,
       "declaration-block-no-redundant-longhand-properties": null

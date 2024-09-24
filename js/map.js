@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /*
 Welcome to the map.js file
 This file contains all the JavaScript code that will power the storymap.

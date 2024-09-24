@@ -113,7 +113,8 @@ The emotional map of Prague. Panek et al, 2021
 MAP AND TRANSITIONS - THE MAIN CONFIGURATION SECTION
 */
 
-const mapboxStyle = 'xllee/cm0y8m3k400kg01nt0sme38kw';
+
+// eslint-disable-next-line no-unused-vars
 var config = {
     // Change the map style here
     style: "mapbox://styles/xllee/cm0y8m3k400kg01nt0sme38kw",

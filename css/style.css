@@ -58,6 +58,8 @@ body {
 
 /* The footer contains some concluding notes, like attributions to gov.sg */
 #footer {
+    padding-top:10vh;
+    padding-bottom: 10vh;
     min-height: 2vh;
     text-align: center;
     line-height: 25px;
