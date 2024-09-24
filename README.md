@@ -4,6 +4,8 @@ This is a story map on conflicts over usage of spaces in Prague, which highlight
 ## Credits
 "The Sound and the Fury: Reasoned Debate over ‘Social Noise’ in Prague Drowned Out" Jules Eisenchteter. The Balkan Insight. 2024 <br/> 
 The emotional map of Prague. Panek et al, 2021
+<br/> 
+Image from https://kasarnakarlin.cz/
 
 ## Link
- xllee07.github.io/story-map-project/ 
+ xllee07.github.io/story-map-project/ ](https://xllee07.github.io/Mixed-Feelings-Storymap/
