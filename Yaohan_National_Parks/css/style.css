@@ -1,0 +1,231 @@
+/* stylelint-disable font-family-name-quotes */
+body {
+  margin: 0;
+  border-width: 0;
+  box-sizing: border-box;
+  height: 100vh;
+
+  font-family: "Roboto", sans-serif;
+}
+
+/* Cover page
+Some of this chunk of code is referenced from ChatGPT.
+*/
+#cover-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.imageshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.text {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+
+  font-family: "Merriweather", serif
+}
+
+.text h1 {
+  font-size: 5rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+  width: 60vw;
+}
+
+.text p {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Map element
+*/
+.map-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 0;
+}
+
+.map {
+  height: 100%;
+}
+
+/* Whole slide section
+*/
+.slide-section {
+  position: relative;
+  margin-top: -30vh;
+  z-index: 100;
+  pointer-events: none;
+  border-bottom: 1px solid rgb(0 0 0 / 10%);
+}
+
+.slide-section h2 {
+  font-family: "Merriweather", serif;
+}
+
+.slide {
+  margin-top: 90vh;
+  margin-bottom: 90vh;
+  margin-left: auto;
+  margin-right: 2.4rem;
+  padding: 1rem;
+  box-shadow: -0.5rem 0 1rem rgba(0 0 0 / 50%);
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  pointer-events: initial;
+
+  width: 25rem;
+
+  background-color: white;
+  color: black;
+}
+
+.slide:first-child {
+  margin-top: 0;
+}
+
+.slide:last-child {
+  margin-bottom: 40vh;
+}
+
+.slide .resource {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+/* First slide
+*/
+#first-slide > ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 1.5rem;
+}
+
+#first-slide .legend-item {
+  display: flex;
+  align-items: center;
+  margin-top: 0.6rem;
+}
+
+#first-slide .legend-item::before {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 1.4rem;
+  margin-right: 0.8rem;
+}
+
+#first-slide .level-one::before { background-color:rgba(82 91 59 / 75%); }
+#first-slide .level-two::before { background-color: rgba(123 131 102 / 75%); }
+#first-slide .level-three::before { background-color: rgba(165 170 146 / 75%); }
+#first-slide .level-four::before { background-color: rgba(206 210 189 / 75%); }
+#first-slide .level-five::before { background-color: rgba(247 249 232 / 75%); }
+
+/* Third slide
+*/
+#third-slide > img {
+  width: 100%;
+  height: auto;
+}
+
+/* Fourth slide
+*/
+#fourth-slide > ul {
+  padding: 0;
+  margin-left: 1.5rem;
+}
+
+#fourth-slide .legend-item {
+  display: flex;
+  align-items: center;
+  margin-top: 0.6rem;
+}
+
+#fourth-slide .legend-item::before {
+  content: "○";
+  font-size: 1rem;
+  color: black;
+  margin-right: 0.5rem;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+#fourth-slide .visitorCenter-four {
+  font-weight: bold;
+}
+
+/* Fifth slide
+*/
+#fifth-slide > img {
+  width: 100%;
+  height: auto;
+}
+
+/* Modify the tooltip text box style.
+This chunk of code is referenced from ChatGPT.
+*/
+.custom-tooltip {
+  background-color: rgb(255 255 255 / 60%);
+  border-color: rgb(255 255 255 / 60%);
+  box-shadow: none;
+  color: black;
+  font-size: 0.6rem;
+  white-space: nowrap;
+}
+
+.custom-tooltip.leaflet-tooltip-bottom::before {
+  display: none;
+}
+
+.leaflet-tooltip.custom-tooltip {
+  margin-top: 0.75rem;
+}
+
+/* Not used in this project.
+*/
+.slide-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 0.5rem;
+
+  width: 100%;
+}
+
+.slide-nav-button {
+  transition: all 0.1s;
+
+  padding: 0;
+  margin: 1rem;
+  width: 4rem;
+  height: 3rem;
+  border: 1px solid #888;
+  border-radius: 0.25rem;
+
+  background-color: #eee;
+  font-size: 1.5em;
+}
+
+.slide-nav-button:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.slide-nav-select {
+  min-width: 0;
+}
