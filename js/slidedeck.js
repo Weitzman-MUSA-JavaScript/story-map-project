@@ -188,14 +188,14 @@ class SlideDeck {
   getCurrentYear() {
     if (window.scrollY < 1000) {
       return (1937);
-    } else if (window.scrollY < 2400) {
+    } else if (window.scrollY < 2200) {
       return (Math.round((window.scrollY - 1000) / (2400-1000) * (1960-1937)) + 1937);
-    } else if (window.scrollY < 4000) {
-      return (Math.round((window.scrollY - 2400) / (4000-2400) * (1980-1960)) + 1960);
-    } else if (window.scrollY < 5200) {
-      return (Math.round((window.scrollY - 4000) / (5200-4000) * (2000-1980)) + 1980);
+    } else if (window.scrollY < 3600) {
+      return (Math.round((window.scrollY - 2200) / (3600-2200) * (1980-1960)) + 1960);
+    } else if (window.scrollY < 4800) {
+      return (Math.round((window.scrollY - 3600) / (4800-3600) * (2000-1980)) + 1980);
     } else {
-      return (Math.round((window.scrollY - 5200) / (6400-5200) * (2023-2000)) + 2000);
+      return (Math.round((window.scrollY - 4800) / (5700-4800) * (2023-2000)) + 2000);
     }
   }
 }
