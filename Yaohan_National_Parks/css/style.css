@@ -1,3 +1,4 @@
+/* stylelint-disable font-family-name-quotes */
 body {
   margin: 0;
   border-width: 0;
@@ -130,11 +131,11 @@ Some of this chunk of code is referenced from ChatGPT.
   margin-right: 0.8rem;
 }
 
-#first-slide .level-one::before { background-color:rgba(82, 91, 59, 0.75); }
-#first-slide .level-two::before { background-color: rgba(123, 131, 102, 0.75); }
-#first-slide .level-three::before { background-color: rgba(165, 170, 146, 0.75); }
-#first-slide .level-four::before { background-color: rgba(206, 210, 189, 0.75); }
-#first-slide .level-five::before { background-color: rgba(247, 249, 232, 0.75); }
+#first-slide .level-one::before { background-color:rgba(82 91 59 / 75%); }
+#first-slide .level-two::before { background-color: rgba(123 131 102 / 75%); }
+#first-slide .level-three::before { background-color: rgba(165 170 146 / 75%); }
+#first-slide .level-four::before { background-color: rgba(206 210 189 / 75%); }
+#first-slide .level-five::before { background-color: rgba(247 249 232 / 75%); }
 
 /* Third slide
 */
@@ -163,6 +164,7 @@ Some of this chunk of code is referenced from ChatGPT.
   margin-right: 0.5rem;
 }
 
+/* stylelint-disable-next-line selector-class-pattern */
 #fourth-slide .visitorCenter-four {
   font-weight: bold;
 }
@@ -186,7 +188,7 @@ This chunk of code is referenced from ChatGPT.
   white-space: nowrap;
 }
 
-.custom-tooltip.leaflet-tooltip-bottom:before {
+.custom-tooltip.leaflet-tooltip-bottom::before {
   display: none;
 }
 

@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import { SlideDeck } from './slidedeck.js';
 
 //
@@ -30,12 +31,12 @@ const mapboxStyle = 'mapbox/light-v11';
 
 const baseLayer = L.tileLayer(
     `https://api.mapbox.com/styles/v1/${mapboxStyle}/tiles/512/{z}/{x}/{y}{r}?access_token=${mapboxKey}`, {
-  tileSize: 512,
-  zoomOffset: -1,
-  detectRetina: true,
-  maxZoom: 19,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-});
+      tileSize: 512,
+      zoomOffset: -1,
+      detectRetina: true,
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    });
 baseLayer.addTo(map);
 
 //
@@ -85,7 +86,6 @@ const slideOptions = {
   'second-slide': {
     pointToLayer: (feature, latlng) => {
       const name = feature.properties.Name;
-      const area = feature.properties.Other;
 
       // Create a special marker for Yellowstone National Park.
       // Some of this chunk of code is referenced from ChatGPT.
@@ -98,13 +98,13 @@ const slideOptions = {
           fillOpacity: 1,
           className: 'expanding-circle',
         });
-    
+
         let growing = true;
         const minRadius = 8;
         const maxRadius = 16;
         const animationSpeed = 100;
         let animationInterval;
-    
+
         const startAnimation = () => {
           animationInterval = setInterval(() => {
             const currentRadius = animatedCircle.getRadius();
@@ -117,22 +117,22 @@ const slideOptions = {
             }
           }, animationSpeed);
         };
-    
+
         const stopAnimation = () => {
           clearInterval(animationInterval);
         };
-    
+
         map.on('zoomstart', stopAnimation);
         map.on('zoomend', startAnimation);
-    
+
         map.on('movestart', stopAnimation);
         map.on('moveend', startAnimation);
-    
+
         startAnimation();
-    
+
         return animatedCircle;
       }
-      
+
       // Create a default circle marker for other national parks.
       return L.circleMarker(latlng, {
         radius: 6,

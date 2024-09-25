@@ -115,18 +115,18 @@ class SlideDeck {
     };
 
     this.map.addEventListener('moveend', handleFlyEnd);
-    
+
     //
     // Prevent fly movement between the “third-slide” and “fourth-slide” using the same boundary (as referenced in ChatGPT).
     //
     let currentBounds;
-    
+
     if (collection.bbox) {
       currentBounds = boundsFromBbox(collection.bbox);
     } else {
       currentBounds = layer.getBounds();
     }
-    
+
     //
     // To make the fly animation smoother.
     //
@@ -134,13 +134,13 @@ class SlideDeck {
       duration: 2,
       easeLinearity: 0.2,
       noMoveStart: true,
-      maxZoom: 16
+      maxZoom: 16,
     };
 
-    if (slide.id === "third-slide") {
+    if (slide.id === 'third-slide') {
       this.thirdSlideBounds = currentBounds;
       this.map.flyToBounds(this.thirdSlideBounds, flyOptions);
-    } else if (slide.id === "fourth-slide" && this.thirdSlideBounds) {
+    } else if (slide.id === 'fourth-slide' && this.thirdSlideBounds) {
       this.map.flyToBounds(this.thirdSlideBounds, flyOptions);
     } else {
       this.map.flyToBounds(currentBounds, flyOptions);
@@ -211,7 +211,7 @@ class SlideDeck {
       if (nextSlideTop <= scrollPos + windowHeight * 0.75) {
         continue;
       }
-      
+
       break;
     }
 
