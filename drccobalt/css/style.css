@@ -45,7 +45,7 @@
 .cobalt-intro {
   background-image: linear-gradient(rgb(117 100 77 / 80%), rgb(88 90 93 / 80%));
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -161,7 +161,7 @@
   width: 100%;
 }
 
-.slide-section .sourceslide {
+#sources {
   text-overflow: clip;
   overflow-wrap: break-word;
   word-wrap: break-word;
