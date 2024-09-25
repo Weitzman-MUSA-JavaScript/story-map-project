@@ -104,6 +104,11 @@ Some of this chunk of code is referenced from ChatGPT.
   margin-bottom: 40vh;
 }
 
+.slide .resource {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
 /* First slide
 */
 #first-slide > ul {
