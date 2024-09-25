@@ -41,15 +41,19 @@ class SlideDeck {
         });
         return L.marker(latlng, { icon: markerIcon });
       },
+      
       onEachFeature: (feature, layer) => {
-        if (feature.properties && feature.properties.name) {
-          layer.bindTooltip(feature.properties.name, {
-            permanent: false,
-            direction: 'top',
-            opacity: 0.8,
+        if (feature.properties) {
+          let popupContent = feature.properties.name;
+          if (feature.properties["contact:website"]) {
+            popupContent += `<br><a href="${feature.properties["contact:website"]}" target="_blank">Website</a>`;
+          }
+          layer.bindPopup(popupContent, {
+            closeButton: true,
           });
         }
       },
+
       style: (feature) => {
         return {
           color: '#843636',
