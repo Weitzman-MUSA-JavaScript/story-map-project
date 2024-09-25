@@ -30,19 +30,6 @@ library(yelpr)
 ## Tigris boundaries 
 Using `tigris`, we access ZIP code boundaries and names from the US Census Bureau. Using the resulting sf object, we create a list of Philadelphia ZIP codes and a unioned Philadelphia boundary object.
 ```{r load tigris boundaries}
-options(tigris_use_cache = TRUE) # set cache = TRUE to save time for future calls
-
-# zcta <- zctas(year = 2021) %>% # get all ZIPs in US (we can't filter by state unfortunately)
-#   rename(zip_code = GEOID20) %>% 
-#   filter(substr(ZCTA5CE20, start = 1, stop = 3) == "191") %>%
-#   st_transform(4326) 
-# 
-# zip_list <- zcta$ZCTA5CE20 # list of zip codes in Philadelphia
-# zip_coords <- zcta %>% 
-#   st_centroid() %>% 
-#   mutate(lon = st_coordinates(.)[,1], lat = st_coordinates(.)[,2]) %>%
-#   select(lon, lat, ZCTA5CE20)
-
 neighs <- st_read("https://raw.githubusercontent.com/opendataphilly/open-geo-data/refs/heads/master/philadelphia-neighborhoods/philadelphia-neighborhoods.geojson") %>%
   erase_water() %>%
   st_transform(4326) %>%
@@ -51,6 +38,10 @@ neighs <- st_read("https://raw.githubusercontent.com/opendataphilly/open-geo-dat
 neigh_coords <- neighs %>%
   st_centroid() %>% 
   mutate(lon = st_coordinates(.)[,1], lat = st_coordinates(.)[,2])
+
+tracts <- tracts("PA", "Philadelphia") %>%
+  st_transform(4326) %>%
+  select(NAME)
 ```
 
 # Yelp Fusion API  
@@ -63,52 +54,64 @@ We then retrieve specific columns, such as business name, latitude, longitude, a
 #### Yelp api call function ####
 url <- "https://api.yelp.com/v3/businesses/search"
 
-get_yelp = function(category, lat, lon, offset_num) {
-  # args are category of business, zipcode, and number to offset by
+
+# Define the get_yelp function with corrected error handling
+get_yelp <- function(category, lat, lon, offset_num) {
+  # args are category of business, latitude, longitude, and number to offset by
   
-  queryString = list(
+  queryString <- list(
     latitude = lat, 
     longitude = lon,
-    # argument to be filled
     term = category,
-    # argument to be filled
     sort_by = "distance",
-    # radius
-    radius = 800, # 1 mile in meters
-    # sort by dist
-    limit = 50,
-    # 50 is the max for yelp fusion api, any higher and it won't work
-    offset = offset_num # argument to be filled
+    radius = 800,        # 1 mile in meters
+    limit = 50,          # Maximum for Yelp Fusion API
+    offset = offset_num  # Offset for pagination
   )
   
-  # use "GET" verb to request information from url
+  # Use "GET" verb to request information from Yelp API
   response <- VERB(
     "GET",
     url,
     query = queryString,
-    add_headers('Authorization' = 'Bearer 1xwuRlpBtU5ljQte7g0OlCuhdSZYWW8D9s8B0wJqQWNwPgQIb22FmwQ8FYMRo36FNyiMTa9U_ZRf-a58EaVc6YjGVxU3AT8A-KAHXbW6ZwVsu7Zm-QcUiD86fJFCZXYx'),
+    add_headers('Authorization' = 'Bearer u6vZZfFrAnI1IHH0p40WwmEB2W8yp8l-r1m8lmLmoYJCuq8obxrgyNYsgRJXwkqD1E4ceSmLuMEIuKUwF0yvv0Pb1GOO2TwtCaDfKl1DJ_L9xSElW4kCigyWG3tCZXYx'),
     content_type("application/octet-stream"),
     accept("application/json")
   )
   
   print("response received") 
   
-  # turn the response into a json file
-  yelp.json = httr::content(response, "parsed", flatten = TRUE, simplify = TRUE)
+  # Turn the response into a JSON object
+  yelp.json <- httr::content(response, "parsed", flatten = TRUE, simplify = TRUE)
   
   print("yelp.json created") 
   
-  # retrieve columns from json structure
-  biz.name = data.frame(yelp.json$businesses$name)
-  biz.lat = data.frame(yelp.json$businesses$coordinates.latitude)
-  biz.lon = data.frame(yelp.json$businesses$coordinates.longitude)
-  biz.rating = data.frame(yelp.json$businesses$rating)
-  biz.addr = data.frame(yelp.json$businesses$location.address1)
+  # Check if businesses are returned
+  if(is.null(yelp.json$businesses) || length(yelp.json$businesses) == 0) {
+    message("No businesses found for this query.")
+    return(data.frame(
+      name = character(0), 
+      rating = numeric(0),  
+      address = character(0), 
+      lat = numeric(0), 
+      lon = numeric(0),
+      alias = character(0),
+      title = character(0),
+      stringsAsFactors = FALSE
+    ))
+  }
+  
+  # Retrieve columns from JSON structure
+  biz.name <- data.frame(yelp.json$businesses$name, stringsAsFactors = FALSE)
+  biz.rating <- data.frame(yelp.json$businesses$rating, stringsAsFactors = FALSE)
+  biz.addr <- data.frame(yelp.json$businesses$location.address1, stringsAsFactors = FALSE)
+  biz.lat <- data.frame(yelp.json$businesses$coordinates.latitude, stringsAsFactors = FALSE)
+  biz.lon <- data.frame(yelp.json$businesses$coordinates.longitude, stringsAsFactors = FALSE)
   
   print("columns retrieved")
   
-  # bind the columns into one dataframe
-  yelp.df = cbind(biz.name, biz.rating, biz.addr, biz.lat, biz.lon)  %>%
+  # Bind the columns into one dataframe
+  yelp.df <- cbind(biz.name, biz.rating, biz.addr, biz.lat, biz.lon) %>%
     as.data.frame()
   
   print(str(yelp.df))
@@ -117,86 +120,244 @@ get_yelp = function(category, lat, lon, offset_num) {
   
   print("columns renamed")
   
-  # add in category alias/title (this will give us cuisine information)
-  cuisine = yelp.json$businesses$categories
-
-   # print("listings:" + length(yelp.df) + "details:" + length(cuisine))
+  # Add in category alias/title (this will give us cuisine information)
+  cuisine <- yelp.json$businesses$categories
+  
   cuis.df <- map_dfr(cuisine, function(x) {
     tibble(
       alias = paste(x$alias, collapse = ", "),
-      title = paste(x$title, collapse = ", ")) %>%
+      title = paste(x$title, collapse = ", ")
+    ) %>%
       as.data.frame()
   })
-
-  print("cuisines retrieved") # this is the last print statement that works
-
-  yelp.df <- yelp.df %>%
-    cbind(cuis.df)
-
+  
+  print("cuisines retrieved")
+  
+  yelp.df <- cbind(yelp.df, cuis.df)
+  
   print("cuisines added")
-
-  # When creating an empty dataframe, use "" as default value
+  
+  # Ensure that the dataframe has the correct structure
   if(nrow(yelp.df) == 0) {
-    yelp.df <- data.frame(name="", rating=numeric(0), address="", lat=numeric(0), lon=numeric(0), alias = "", title = "", stringsAsFactors=FALSE)
+    yelp.df <- data.frame(
+      name = character(0), 
+      rating = numeric(0),  
+      address = character(0), 
+      lat = numeric(0), 
+      lon = numeric(0),
+      alias = character(0),
+      title = character(0),
+      stringsAsFactors = FALSE
+    )
   }
   
   return(yelp.df)
 }
+
 ```
 
 ## Making the API call  
 To make the API call, we write a nested dataframe to get around the 50 business limit. In order to capture all of the businesses in the city, we iterate through our list of ZIP codes, for which we iterate through offset values 0 to 10. This way, we can capture a maximum of 500 businesses per ZIP code, which is more than enough for most categories. For each loop, we store the output in a nested dataframe.      
 ```{r call api}
+# 
+# # Neighborhood names
+# neigh_list <- neigh_coords$MAPNAME
+# 
+# # Initialize a named list of empty dataframes for each offset
+# initialize_named_dfs <- function(zips) { 
+#   empty_df <- data.frame(
+#     name = character(0), 
+#     rating = numeric(0),  
+#     address = character(0), 
+#     lat = numeric(0), 
+#     lon = numeric(0),
+#     alias = character(0),
+#     title = character(0),
+#     stringsAsFactors = FALSE
+#   )
+#   
+#   named_list <- setNames(
+#     lapply(zips, function(zip) empty_df),
+#     zips
+#   )
+#   
+#   return(named_list)
+# }
+# 
+# # Number of offsets (e.g., 16 offsets for 0 to 750)
+# num_offsets <- 5
+# 
+# # Initialize the master list for all offsets
+# offset_list <- setNames(
+#   lapply(0:(num_offsets - 1), function(x) initialize_named_dfs(neigh_coords$MAPNAME)),
+#   paste0("offset_", 0:(num_offsets - 1))
+# )
+# 
+# # Function to safely fetch Yelp data with error handling
+# safe_get_yelp <- function(category, lat, lon, offset_num) {
+#   tryCatch({
+#     result <- get_yelp(category, lat, lon, offset_num)
+#     
+#     # Check if result has the expected columns
+#     expected_cols <- c("name", "rating", "address", "lat", "lon", "alias", "title")
+#     if(!all(expected_cols %in% colnames(result))) {
+#       stop("Returned dataframe has unexpected columns.")
+#     }
+#     
+#     return(result)
+#     
+#   }, error = function(e) {
+#     # Log the error message
+#     message(paste("Error fetching data for lat:", lat, "lon:", lon, "offset:", offset_num, "-", e$message))
+#     
+#     # Return an empty dataframe to maintain list structure
+#     return(data.frame(
+#       name = character(0), 
+#       rating = numeric(0),  
+#       address = character(0), 
+#       lat = numeric(0), 
+#       lon = numeric(0),
+#       alias = character(0),
+#       title = character(0),
+#       stringsAsFactors = FALSE
+#     ))
+#   })
+# }
+# 
+# # Loop through each offset (think of each offset as a page of results)
+# for (i in seq_along(offset_list)) {
+#   
+#   # Calculate the actual offset value (assuming each i corresponds to an offset increment of 50)
+#   actual_offset <- (i - 1) * 50
+#   
+#   # Loop through each ZIP code
+#   for (j in seq_len(nrow(neigh_coords))) {
+#     
+#     neigh <- neigh_coords$MAPNAME[j]
+#     lat <- neigh_coords$lat[j]
+#     lon <- neigh_coords$lon[j]
+#     
+#     print(paste("Batch", i, ", Neighborhood", j, ": ", neigh, ", Offset: ", actual_offset, sep = " "))
+#     
+#     # Fetch Yelp data safely using error handling
+#     fetched_data <- safe_get_yelp("restaurant", lat, lon, actual_offset)
+#     
+#     # Check if fetched_data has rows
+#     if(nrow(fetched_data) > 0) {
+#       offset_list[[i]][[as.character(neigh)]] <- fetched_data
+#     } else {
+#       message(paste("No data for:", neigh, "Offset:", actual_offset))
+#     }
+#     
+#   }
+#   
+#   Sys.sleep(1) # Pause for 1 second between each offset batch
+# }
+
 # Neighborhood names
 neigh_list <- neigh_coords$MAPNAME
 
-# Initialize a named list of empty dataframes
+# Initialize a named list of empty dataframes for each offset
 initialize_named_dfs <- function(neighs) { 
-  empty_df <- data.frame(name=character(0), rating=numeric(0),  address=character(0), lat=numeric(0), lon=numeric(0))
-  named_list <- lapply(neighs, function(neigh) empty_df)
-  names(named_list) <- neighs
+  empty_df <- data.frame(
+    name = character(0), 
+    rating = numeric(0),  
+    address = character(0), 
+    lat = numeric(0), 
+    lon = numeric(0),
+    alias = character(0),
+    title = character(0),
+    stringsAsFactors = FALSE
+  )
+  
+  named_list <- setNames(
+    lapply(neighs, function(neigh) empty_df),
+    neighs
+  )
+  
   return(named_list)
 }
 
+# Number of offsets (e.g., 5 offsets for 0 to 200)
+num_offsets <- 5
 
-biz_list_0 <- initialize_named_dfs(neigh_list) # Initiate list of restaurant dataframes for each offset (since the query limit is 50, offset = 1 would return 51-100)
-biz_list_1 <- initialize_named_dfs(neigh_list) # 10 dfs x 50 restaurants each = a 500 restaurant sample per zip code
-biz_list_2 <- initialize_named_dfs(neigh_list)
-biz_list_3 <- initialize_named_dfs(neigh_list)
-biz_list_4 <- initialize_named_dfs(neigh_list)
-biz_list_5 <- initialize_named_dfs(neigh_list)
+# Initialize the master list for all offsets
+offset_list <- setNames(
+  lapply(0:(num_offsets - 1), function(x) initialize_named_dfs(neigh_coords$MAPNAME)),
+  paste0("offset_", 0:(num_offsets - 1))
+)
 
-# master list to store the dataframes
-offset_list <- list(biz_list_0,
-                    biz_list_1,
-                    biz_list_2,
-                    biz_list_3,
-                    biz_list_4,
-                    biz_list_5)
+# Function to safely fetch Yelp data with error handling
+safe_get_yelp <- function(category, lat, lon, offset_num) {
+  tryCatch({
+    result <- get_yelp(category, lat, lon, offset_num)
+    
+    # Check if result has the expected columns
+    expected_cols <- c("name", "rating", "address", "lat", "lon", "alias", "title")
+    if(!all(expected_cols %in% colnames(result))) {
+      stop("Returned dataframe has unexpected columns.")
+    }
+    
+    return(result)
+    
+  }, error = function(e) {
+    # Log the error message
+    message(paste("Error fetching data for lat:", lat, "lon:", lon, "offset:", offset_num, "-", e$message))
+    
+    # Return an empty dataframe to maintain list structure
+    return(data.frame(
+      name = character(0), 
+      rating = numeric(0),  
+      address = character(0), 
+      lat = numeric(0), 
+      lon = numeric(0),
+      alias = character(0),
+      title = character(0),
+      stringsAsFactors = FALSE
+    ))
+  })
+}
+
+# Initialize active_neigh vector to track active neighborhoods
+active_neigh <- setNames(rep(TRUE, length(neigh_list)), neigh_list)
 
 # Loop through each offset (think of each offset as a page of results)
-for (i in 1:length(neigh_coords)) {
-  # initialize zipnum (this is so we know where we're at in the list of zips)
-  neighnum <- 1
-  # initialize offset (so we can pull page 1, then page 2, then page 3, etc)
-  offset <- i - 1
+for (i in seq_along(offset_list)) {
   
-  # Loop through each zip code
-  for (neigh in neigh_coords$MAPNAME) {
-    print(paste("batch ", offset + 1, ", ", "neigh ", neighnum, ": ", neigh, sep = ""))
+  # Calculate the actual offset value (assuming each i corresponds to an offset increment of 50)
+  actual_offset <- (i - 1) * 50
+  
+  # Loop through each neighborhood
+  for (j in seq_len(nrow(neigh_coords))) {
     
-    # Get the latitude and longitude for the zip code
-    lat <- neigh_coords$lat[neighnum]
-    lon <- neigh_coords$lon[neighnum]
-    neigh <- neigh_coords$MAPNAME[neighnum]
+    neigh <- neigh_coords$MAPNAME[j]
+    lat <- neigh_coords$lat[j]
+    lon <- neigh_coords$lon[j]
     
-    # Fetch Yelp data for the zip code and store it in the list
-    offset_list[[i]][[as.character(neigh)]] <- get_yelp("restaurant", lat, lon, offset)
+    # Check if the neighborhood is still active
+    if (!active_neigh[neigh]) {
+      next # Skip to the next neighborhood
+    }
     
-    neighnum <- neighnum + 1 #iterate zipnum each loop
+    print(paste("Batch", i, ", Neighborhood", j, ": ", neigh, ", Offset: ", actual_offset, sep = " "))
+    
+    # Fetch Yelp data safely using error handling
+    fetched_data <- safe_get_yelp("restaurant", lat, lon, actual_offset)
+    
+    # Check if fetched_data has rows
+    if (nrow(fetched_data) > 0) {
+      offset_list[[i]][[as.character(neigh)]] <- fetched_data
+    } else {
+      message(paste("No data for:", neigh, "Offset:", actual_offset))
+      # Mark the neighborhood as inactive
+      active_neigh[neigh] <- FALSE
+    }
+    
   }
-  offset <- offset + 50
+  
+  Sys.sleep(1) # Pause for 1 second between each offset batch
 }
+
 ```
 
 # Data preparation    
@@ -209,7 +370,7 @@ restaurants <- map_dfr(offset_list, ~ bind_rows(.x)) %>%
   unique() %>%
   filter(!is.na(lat)) %>%
   st_as_sf(crs = 4326, coords = c("lon", "lat")) %>%
-  st_crop(st_union(zcta)) %>%
+  st_crop(st_union(neighs)) %>%
   filter(!is.na(title) | !is.na(alias)) %>%
    mutate(
     title = tolower(title),
@@ -217,6 +378,7 @@ restaurants <- map_dfr(offset_list, ~ bind_rows(.x)) %>%
     name = tolower(name)
   ) 
 
+st_write(restaurants, "data/restaurants.geojson", driver = "GeoJSON")
 ```
 
 ```{r wordcloud}
@@ -234,7 +396,7 @@ words <- sort(rowSums(matrix),decreasing=TRUE)
 df <- data.frame(word = names(words),freq=words) %>%
   filter(!word %in% c('food', 'fast', 'restaurants', 'delivery', 'services',
                       'trucks', 'grocery', 'shops', 'stores', 'sports', 'bars', 
-                      'breakfast', 'brunch', 'new','convenience', 'stands'))
+                      'breakfast', 'brunch', 'new','convenience', 'stands', 'american'))
 
 wordcloud2(data = df, size = 0.8, color = "random-light")
 ```
@@ -250,7 +412,7 @@ cuisine_keywords <- list(
     "bbq", "barbecue", "barbeque", "smoked", "ribs", "pitmaster", "dog", "dogs", "grill",
     "fastfood", "quickbites", "burgers", "fries", "wraps", "pretzels", "grille", "coffee", "icecream",
     "deli", "sandwiches", "kosher", "delis", "cafes", "brunch", "hoagie", "brunch", "desserts",
-    "dessert", "rotisserie", "sweetgreen", "crown", "fried chicken", "cafe", "chicken", "sports"
+    "dessert", "rotisserie", "sweetgreen", "crown", "fried chicken", "cafe", "chicken", "sports", "donuts", "vegan"
   ),
   
   Italian = c(
@@ -269,17 +431,17 @@ cuisine_keywords <- list(
     "wei", "meng", "dragon", "kung", "canton", "mandarin", "oriental", "zheng", "xi", "jiang", "dian",
     "ho", "lam", "yang", "zhong", "asian", "shing", "east", "pearl", "palace", "chen", "sai", "yong",
     "hou", "hong", "zhang", "jun", "golden", "kam", "dong", "sheng", "chung",
-    "ping", "kon", "yi", "wah", "lee", "nanchang", "lim", "yoo", "chan"
+    "ping", "kon", "yi", "wah", "lee", "nanchang", "lim", "yoo", "chan", "choing", "chuong", "mui", "star", "lui", "yuan", "heng", "kee", "yue", "orient", "ming"
   ),
   
   Mexican = c(
     "mexican", "tacos", "texmex", "burritos", "enchiladas", "salsa", "margaritas", 
-    "fajitas", "taqueria", "masa"
+    "fajitas", "taqueria", "masa", "tex-mex"
   ),
   
   Japanese = c(
     "japanese", "sushi", "ramen", "teppanyaki", "izakaya", "sashimi", "hibachi", 
-    "omakase", "shabu"
+    "omakase", "shabu", "osaka"
   ),
   
   Korean = c(
@@ -301,15 +463,14 @@ cuisine_keywords <- list(
   ),
     
   South_Asian = c(
-    "indian", "indpak", "curry", "tandoori", "naan", "masala", "biriyani", "pakistani"
+    "indian", "indpak", "curry", "tandoori", "naan", "masala", "biriyani", "pakistani", "nepali", "himalayan"
   ),
   
   Thai = c(
     "thai", "pad_thai", "thaifusion"
   ),
   
-  Vietnamese = c("pho", "viet", "vietnamese", "banh_mi", "pho", "bun", "pho", "springrolls",
-                 "trinh", "nguyen"),
+  Vietnamese = c("pho", "viet", "vietnamese", "banh_mi", "pho", "bun", "pho", "springrolls", "trinh", "nguyen", "tran"),
   
   Ethiopian = c(
     "ethiopian", "injera", "doro_wot", "tibs"
@@ -317,11 +478,11 @@ cuisine_keywords <- list(
   
   Caribbean = c(
     "caribbean", "jamaican", "trinidadian", "haitian", "puertorican", "soul", 
-    "jerk", "dominican", "borinquen"
+    "jerk", "dominican", "borinquen", "carribean"
   ),
   
-  French = c(
-    "french", "crepe", "bistro", "brasserie", "patisserie"
+  West_European = c(
+    "french", "crepe", "bistro", "brasserie", "patisserie", "volksfest", "brahaus", "moderneuropean", "european", "german", "scandinavian", "brasseries"
   ),
   
   East_European = c(
@@ -329,8 +490,8 @@ cuisine_keywords <- list(
   ),
   
   Latin_American = c(
-    "latin", "latinamerican", "nicaraguan", "salvadoran", "brazilian", "colombian", "guatemalteco",
-    "guadelupana", "casa", "guadalupana"
+    "latin", "latinamerican", "nicaraguan", "salvadoran", "brazilian", "colombian", "guatemalteco", "guadelupana", "casa", "guadalupana", "cancun", "caldos", "restaurante", "provocan", "de jesus", "honduran", "latinos", "venezuelan"
+
   ),
   
   Hawaiian = c(
@@ -341,8 +502,8 @@ cuisine_keywords <- list(
     "african", "senegalese", "nigerian", "ghanaian", "cameroonian", "ivorian", "jollof"
   ),
   
-  Cambodian = c(
-    "cambodian", "amok", "lok_lak"
+  Southeast_Asian = c(
+    "cambodian", "amok", "lok_lak", "malaysian", "indonesian", "kerala", "filipino"
   ),
   
   Seafood = c(
@@ -353,8 +514,8 @@ cuisine_keywords <- list(
 # Define cuisine priority (from highest to lowest)
 cuisine_priority <- c(
   "United_Kingdom", "South_Asian", "Thai", "Hawaiian", "West_African", 
-  "Cambodian", "Mexican", "Japanese", "Korean", "Vietnamese", "Ethiopian", 
-  "Soul_Food", "Caribbean", "French", "East_European", 
+  "Southeast_Asian", "Mexican", "Japanese", "Korean", "Vietnamese", "Ethiopian", 
+  "Soul_Food", "Caribbean", "West_European", "East_European", 
   "Chinese", "Middle_Eastern", "Mediterranean",
   "Latin_American", "Italian", "Seafood", "American"
 )
@@ -447,10 +608,11 @@ ggplot() +
   theme_void()
 
 # Plot the distribution of cuisine types, ordered by count
+exclude <- c("Unknown", "American", "Seafood")
 ggplot() +
-  geom_bar(data = restaurants, aes(x = cuisine), show.legend = FALSE, fill = "darkcyan") +
+  geom_bar(data = restaurants %>% filter(!cuisine %in% exclude), aes(x = cuisine), show.legend = FALSE, fill = "darkcyan") +
   coord_flip() +
-  scale_x_discrete(limits = restaurants %>% filter(cuisine != "American") %>% count(cuisine) %>% arrange(n) %>% pull(cuisine)) +
+  scale_x_discrete(limits = restaurants %>% filter(!cuisine %in% exclude) %>% count(cuisine) %>% arrange(n) %>% pull(cuisine)) +
   labs(
     title = "Distribution of Cuisine Types",
     x = "Cuisine",
@@ -472,9 +634,25 @@ cuisine_neigh <- st_intersection(restaurants, neighs) %>%
   left_join(neighs, by = "MAPNAME") %>%
   st_as_sf()
 
+cuisine_tract <- st_intersection(restaurants, tracts) %>%
+  st_drop_geometry() %>%
+  left_join(tracts, by = "NAME") %>%
+  group_by(cuisine, NAME) %>%
+  summarise(count = n(), .groups = 'drop') %>%
+  group_by(NAME) %>%
+  mutate(pct = 100 * count / sum(count)) %>%
+  ungroup() %>%
+  left_join(tracts, by = "NAME") %>%
+  st_as_sf()
+
 top_ethnic_cuisine_neigh <- cuisine_neigh %>% 
-  filter(cuisine != "American") %>%
+  filter(! cuisine %in% exclude) %>%
   group_by(MAPNAME) %>% 
+  slice_max(order_by = pct)
+
+top_ethnic_cuisine_tract <- cuisine_tract %>% 
+  filter(! cuisine %in% exclude) %>%
+  group_by(NAME) %>% 
   slice_max(order_by = pct)
 
 # Map most common cuisine in each neighborhood
