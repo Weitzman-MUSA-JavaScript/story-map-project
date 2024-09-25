@@ -1,0 +1,12 @@
+{
+    "eslint.validate": [
+        "vue",
+        "javascript",
+        "javascriptreact",
+        "html"
+    ],
+    "eslint.alwaysShowStatus": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}
