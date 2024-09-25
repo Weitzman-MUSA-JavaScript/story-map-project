@@ -41,12 +41,12 @@ class SlideDeck {
         });
         return L.marker(latlng, { icon: markerIcon });
       },
-      
+
       onEachFeature: (feature, layer) => {
         if (feature.properties) {
           let popupContent = feature.properties.name;
-          if (feature.properties["contact:website"]) {
-            popupContent += `<br><a href="${feature.properties["contact:website"]}" target="_blank">Website</a>`;
+          if (feature.properties['contact:website']) {
+            popupContent += `<br><a href="${feature.properties['contact:website']}" target="_blank">Website</a>`;
           }
           layer.bindPopup(popupContent, {
             closeButton: true,
