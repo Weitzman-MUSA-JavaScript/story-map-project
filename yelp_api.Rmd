@@ -32,17 +32,25 @@ Using `tigris`, we access ZIP code boundaries and names from the US Census Burea
 ```{r load tigris boundaries}
 options(tigris_use_cache = TRUE) # set cache = TRUE to save time for future calls
 
-zcta <- zctas(year = 2021) %>% # get all ZIPs in US (we can't filter by state unfortunately)
-  rename(zip_code = GEOID20) %>% 
-  filter(substr(ZCTA5CE20, start = 1, stop = 3) == "191") %>%
-  st_transform(4326) 
-
-zip_list <- zcta$ZCTA5CE20 # list of zip codes in Philadelphia
+# zcta <- zctas(year = 2021) %>% # get all ZIPs in US (we can't filter by state unfortunately)
+#   rename(zip_code = GEOID20) %>% 
+#   filter(substr(ZCTA5CE20, start = 1, stop = 3) == "191") %>%
+#   st_transform(4326) 
+# 
+# zip_list <- zcta$ZCTA5CE20 # list of zip codes in Philadelphia
+# zip_coords <- zcta %>% 
+#   st_centroid() %>% 
+#   mutate(lon = st_coordinates(.)[,1], lat = st_coordinates(.)[,2]) %>%
+#   select(lon, lat, ZCTA5CE20)
 
 neighs <- st_read("https://raw.githubusercontent.com/opendataphilly/open-geo-data/refs/heads/master/philadelphia-neighborhoods/philadelphia-neighborhoods.geojson") %>%
   erase_water() %>%
   st_transform(4326) %>%
   select(MAPNAME, Shape_Area)
+
+neigh_coords <- neighs %>%
+  st_centroid() %>% 
+  mutate(lon = st_coordinates(.)[,1], lat = st_coordinates(.)[,2])
 ```
 
 # Yelp Fusion API  
@@ -55,15 +63,18 @@ We then retrieve specific columns, such as business name, latitude, longitude, a
 #### Yelp api call function ####
 url <- "https://api.yelp.com/v3/businesses/search"
 
-get_yelp = function(category, zip_code, offset_num) {
+get_yelp = function(category, lat, lon, offset_num) {
   # args are category of business, zipcode, and number to offset by
   
   queryString = list(
-    location = zip_code,
+    latitude = lat, 
+    longitude = lon,
     # argument to be filled
     term = category,
     # argument to be filled
     sort_by = "distance",
+    # radius
+    radius = 800, # 1 mile in meters
     # sort by dist
     limit = 50,
     # 50 is the max for yelp fusion api, any higher and it won't work
@@ -75,14 +86,18 @@ get_yelp = function(category, zip_code, offset_num) {
     "GET",
     url,
     query = queryString,
-    add_headers('Authorization' = 'Bearer cFIluAjGm5hAN9V7qJxxCTvN3SKvu6VRjddCEx940h0pzQVNwDIp2VVkd2Sivng2vdVyV6F2zJvdruV6B2sl0IjCSOk4DbLQPzlyDPXnPSoPAzZpquc4e4WXHPVtZXYx'),
+    add_headers('Authorization' = 'Bearer 1xwuRlpBtU5ljQte7g0OlCuhdSZYWW8D9s8B0wJqQWNwPgQIb22FmwQ8FYMRo36FNyiMTa9U_ZRf-a58EaVc6YjGVxU3AT8A-KAHXbW6ZwVsu7Zm-QcUiD86fJFCZXYx'),
     content_type("application/octet-stream"),
     accept("application/json")
   )
   
+  print("response received") 
+  
   # turn the response into a json file
   yelp.json = httr::content(response, "parsed", flatten = TRUE, simplify = TRUE)
-
+  
+  print("yelp.json created") 
+  
   # retrieve columns from json structure
   biz.name = data.frame(yelp.json$businesses$name)
   biz.lat = data.frame(yelp.json$businesses$coordinates.latitude)
@@ -90,25 +105,36 @@ get_yelp = function(category, zip_code, offset_num) {
   biz.rating = data.frame(yelp.json$businesses$rating)
   biz.addr = data.frame(yelp.json$businesses$location.address1)
   
+  print("columns retrieved")
+  
   # bind the columns into one dataframe
   yelp.df = cbind(biz.name, biz.rating, biz.addr, biz.lat, biz.lon)  %>%
     as.data.frame()
   
+  print(str(yelp.df))
+  
   colnames(yelp.df) <- c("name", "rating", "address", "lat", "lon")
+  
+  print("columns renamed")
   
   # add in category alias/title (this will give us cuisine information)
   cuisine = yelp.json$businesses$categories
-  
+
+   # print("listings:" + length(yelp.df) + "details:" + length(cuisine))
   cuis.df <- map_dfr(cuisine, function(x) {
     tibble(
       alias = paste(x$alias, collapse = ", "),
       title = paste(x$title, collapse = ", ")) %>%
       as.data.frame()
   })
-  
+
+  print("cuisines retrieved") # this is the last print statement that works
+
   yelp.df <- yelp.df %>%
     cbind(cuis.df)
-  
+
+  print("cuisines added")
+
   # When creating an empty dataframe, use "" as default value
   if(nrow(yelp.df) == 0) {
     yelp.df <- data.frame(name="", rating=numeric(0), address="", lat=numeric(0), lon=numeric(0), alias = "", title = "", stringsAsFactors=FALSE)
@@ -121,32 +147,24 @@ get_yelp = function(category, zip_code, offset_num) {
 ## Making the API call  
 To make the API call, we write a nested dataframe to get around the 50 business limit. In order to capture all of the businesses in the city, we iterate through our list of ZIP codes, for which we iterate through offset values 0 to 10. This way, we can capture a maximum of 500 businesses per ZIP code, which is more than enough for most categories. For each loop, we store the output in a nested dataframe.      
 ```{r call api}
+# Neighborhood names
+neigh_list <- neigh_coords$MAPNAME
+
 # Initialize a named list of empty dataframes
-initialize_named_dfs <- function(zips) { 
+initialize_named_dfs <- function(neighs) { 
   empty_df <- data.frame(name=character(0), rating=numeric(0),  address=character(0), lat=numeric(0), lon=numeric(0))
-  named_list <- lapply(zips, function(zip) empty_df)
-  names(named_list) <- zips
+  named_list <- lapply(neighs, function(neigh) empty_df)
+  names(named_list) <- neighs
   return(named_list)
 }
 
 
-biz_list_0 <- initialize_named_dfs(zip_list) # Initiate list of restaurant dataframes for each offset (since the query limit is 50, offset = 1 would return 51-100)
-biz_list_1 <- initialize_named_dfs(zip_list) # 10 dfs x 50 restaurants each = a 500 restaurant sample per zip code
-biz_list_2 <- initialize_named_dfs(zip_list)
-biz_list_3 <- initialize_named_dfs(zip_list)
-biz_list_4 <- initialize_named_dfs(zip_list)
-biz_list_5 <- initialize_named_dfs(zip_list)
-biz_list_6 <- initialize_named_dfs(zip_list)
-biz_list_7 <- initialize_named_dfs(zip_list)
-biz_list_8 <- initialize_named_dfs(zip_list)
-biz_list_9 <- initialize_named_dfs(zip_list)
-biz_list_10 <- initialize_named_dfs(zip_list)
-biz_list_11 <- initialize_named_dfs(zip_list)
-biz_list_12 <- initialize_named_dfs(zip_list)
-biz_list_13 <- initialize_named_dfs(zip_list)
-biz_list_14 <- initialize_named_dfs(zip_list)
-biz_list_15 <- initialize_named_dfs(zip_list)
-
+biz_list_0 <- initialize_named_dfs(neigh_list) # Initiate list of restaurant dataframes for each offset (since the query limit is 50, offset = 1 would return 51-100)
+biz_list_1 <- initialize_named_dfs(neigh_list) # 10 dfs x 50 restaurants each = a 500 restaurant sample per zip code
+biz_list_2 <- initialize_named_dfs(neigh_list)
+biz_list_3 <- initialize_named_dfs(neigh_list)
+biz_list_4 <- initialize_named_dfs(neigh_list)
+biz_list_5 <- initialize_named_dfs(neigh_list)
 
 # master list to store the dataframes
 offset_list <- list(biz_list_0,
@@ -154,33 +172,28 @@ offset_list <- list(biz_list_0,
                     biz_list_2,
                     biz_list_3,
                     biz_list_4,
-                    biz_list_5,
-                    biz_list_6,
-                    biz_list_7,
-                    biz_list_8,
-                    biz_list_9,
-                    biz_list_10,
-                    biz_list_11,
-                    biz_list_12,
-                    biz_list_13,
-                    biz_list_14,
-                    biz_list_15)
+                    biz_list_5)
 
 # Loop through each offset (think of each offset as a page of results)
-for (i in 1:length(zip_list)) {
+for (i in 1:length(neigh_coords)) {
   # initialize zipnum (this is so we know where we're at in the list of zips)
-  zipnum <- 1
+  neighnum <- 1
   # initialize offset (so we can pull page 1, then page 2, then page 3, etc)
   offset <- i - 1
   
   # Loop through each zip code
-  for (zip_code in zip_list) {
-    print(paste("batch ", offset + 1, ", ", "zip", zipnum, ": ", zip_code, sep = ""))
+  for (neigh in neigh_coords$MAPNAME) {
+    print(paste("batch ", offset + 1, ", ", "neigh ", neighnum, ": ", neigh, sep = ""))
+    
+    # Get the latitude and longitude for the zip code
+    lat <- neigh_coords$lat[neighnum]
+    lon <- neigh_coords$lon[neighnum]
+    neigh <- neigh_coords$MAPNAME[neighnum]
     
     # Fetch Yelp data for the zip code and store it in the list
-    offset_list[[i]][[as.character(zip_code)]] <- get_yelp("restaurant", as.character(zip_code), offset)
+    offset_list[[i]][[as.character(neigh)]] <- get_yelp("restaurant", lat, lon, offset)
     
-    zipnum <- zipnum + 1 #iterate zipnum each loop
+    neighnum <- neighnum + 1 #iterate zipnum each loop
   }
   offset <- offset + 50
 }
@@ -205,6 +218,7 @@ restaurants <- map_dfr(offset_list, ~ bind_rows(.x)) %>%
   ) 
 
 ```
+
 ```{r wordcloud}
 # Title
 text <- restaurants$title
