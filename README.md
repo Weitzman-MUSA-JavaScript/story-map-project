@@ -9,6 +9,5 @@ This StoryMap project includes the following features:
     - Historical background
     - Architectural features
     - Visitor tips
-    - Transportation information
 
 *This is the storymap project for CPLN 6920, and the scrollytelly template applied.*
