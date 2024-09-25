@@ -17,15 +17,15 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    background-size: cover;
+    background-image: linear-gradient(rgb(235 199 149 / 80%),rgb(40 43 48 / 80%)), url('../img/img2.jpg');
+    background-size: 100%;
 }
 
   .title-container h1 {
     font-size: 4rem;
-    font-family: sans-serif;
     margin-bottom: 1rem;
     color: aliceblue;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 .title-container h4 {
@@ -43,84 +43,98 @@
 }
 
 .cobalt-intro {
-    background-image: linear-gradient(rgba(117, 100, 77, 0.8), rgba(88, 90, 93, 0.8));
-    min-height: 100%;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 0rem;
-    padding: 2rem;
-    box-sizing: border-box;
+  background-image: linear-gradient(rgb(117 100 77 / 80%), rgb(88 90 93 / 80%));
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-sizing: border-box;
 }
+
 .intro-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
+
 .intro-header {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
+
 .intro-header h1 {
-    font-size: 3rem;
-    font-family: 'Montserrat', sans-serif;
-    color: aliceblue;
-    margin: 0;
-    text-align: center;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+  font-size: 3rem;
+  font-family: Montserrat, sans-serif;
+  color: aliceblue;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .intro-text p {
-    font-size: 1rem;
-    font-family: 'IBM Plex Sans', sans-serif;
-    color: aliceblue;
-    text-align: left;
-    line-height: 1.5;
-    margin-bottom: 2rem;
+  font-size: 1rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: aliceblue;
+  text-align: left;
+  line-height: 1.5;
+  margin-bottom: 2rem;
 }
+
 .two-column-layout {
-    display: flex;
-    flex-grow: 1;
+  display: flex;
+  flex: 1;
 }
+
 .intro-gallery {
-    flex: 1;
-    padding-top: 1.3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-right: 2rem;
+  flex: 1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-right: 2rem;
 }
+
 .gallery-item {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 .gallery-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
 }
+
 .image-credit {
-    color: #ddd;
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-    font-family: "IBM Plex Sans", sans-serif;
+  color: #ddd;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "IBM Plex Sans", sans-serif;
 }
+
 .intro-text {
-    flex: 1;
-    color: aliceblue;
-    overflow-y: auto;
-    height: 100vh;
+  flex: 1;
+  color: aliceblue;
+  overflow-y: auto;
 }
-@media (max-width: 768px) {
-    .two-column-layout {
-        flex-direction: column;
-    }
-    .intro-gallery {
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
+
+@media (width <= 768px) {
+  .two-column-layout {
+      flex-direction: column;
+  }
+
+  .intro-gallery {
+      margin-right: 0;
+      margin-bottom: 1rem;
+  }
+
+  .intro-text {
+      overflow-y: visible;
+  }
 }
   
   .map-container {
@@ -142,14 +156,20 @@
     margin: 0 auto;
 }
 
-#sources {
+.imageslide1 .gallery-img {
+  height: auto;
+  width: 100%;
+}
+
+.slide-section .sourceslide {
   text-overflow: clip;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
   hyphens: auto;
 }
-  
+
+
   .slide-section {
     position: relative;
     margin-top: 100vh;
@@ -169,12 +189,12 @@
     pointer-events: initial;
     z-index: 1;
     width: 25rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(255 255 255 / 50%);
     color: black;
   }
 
   .slide h2{
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
   }
 
   .slide p{
