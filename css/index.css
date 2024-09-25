@@ -97,14 +97,14 @@ h1, h2 {
   margin-left: auto;
   margin-right: 2rem;
   padding: 1rem;
-  box-shadow: -0.5rem 0 1rem rgba(0, 0, 0 / 50%);
+  box-shadow: -0.5rem 0 1rem rgba(0 0 0 / 50%);
   border: 1px solid gray;
   border-radius: 0.5rem;
   pointer-events: initial;
 
   width: 25rem;
 
-  background: linear-gradient(to bottom right, rgba(255 255 255 / 60%), rgba(200 200 200 / 60%));
+  background: linear-gradient(to bottom right, rgba(255 255 255 / 80%), rgba(200 200 200 / 80%));
   color: black;
 }
 
