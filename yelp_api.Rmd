@@ -657,10 +657,22 @@ top_ethnic_cuisine_tract <- cuisine_tract %>%
 
 # Map most common cuisine in each neighborhood
 ggplot() +
-  geom_sf(data = top_ethnic_cuisine_neigh, aes(fill = cuisine), color = "white") +
+  geom_sf(data = st_union(neighs), fill = "gray95", color = "transparent") +
+  geom_sf(data = top_ethnic_cuisine_neigh %>% filter(count > 10), aes(fill = cuisine), color = "white") +
   scale_fill_brewer(palette = "Set3") +
   labs(
     title = "Most Common Cuisine in Each Neighborhood",
+    fill = "Cuisine"
+  ) +
+  theme_void()
+
+# Map most common cuisine in each census tract
+ggplot() +
+  geom_sf(data = st_union(neighs), fill = "gray95", color = "transparent") +
+  geom_sf(data = top_ethnic_cuisine_tract %>% filter(count > 3), aes(fill = cuisine), color = "white") +
+  scale_fill_brewer(palette = "Set3", direction = 1) +
+  labs(
+    title = "Census tracts with more than 30% of an ethnic cuisine",
     fill = "Cuisine"
   ) +
   theme_void()
@@ -669,6 +681,17 @@ ggplot() +
 
 ```{r spruce hill}
 spruce_hill_restaurants <- neighs %>%
-  filter(MAPNAME %in% c("Spruce Hill", "Walnut Hill")) %>%
+  filter(MAPNAME %in% c("Spruce Hill")) %>%
   st_intersection(restaurants) 
+
+# Plot and color by cuisine
+ggplot() +
+  geom_sf(data = spruce_hill_restaurants, aes(color = cuisine)) +
+  scale_color_brewer(palette = "Set3") +
+  labs(
+    title = "Restaurants in Spruce Hill",
+    fill = "Cuisine"
+  ) +
+  theme_void()
+
 ```
