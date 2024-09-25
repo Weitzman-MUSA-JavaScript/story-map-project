@@ -1,0 +1,249 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-09-24T21:49:30Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/105817561",
+        "addr:block_number": "2",
+        "addr:city": "京都市",
+        "addr:country": "JP",
+        "addr:postcode": "606-8402",
+        "addr:province": "京都府",
+        "addr:quarter": "銀閣寺町",
+        "addr:suburb": "左京区",
+        "alt_name": "Higashiyama Jisho-ji",
+        "amenity": "place_of_worship",
+        "contact:phone": "+81 0757715725",
+        "contact:tripadvisor": "321398",
+        "contact:website": "http://www.shokoku-ji.jp/g_about.html",
+        "denomination": "rinzai",
+        "denomination:ja": "臨済宗",
+        "heritage": "1",
+        "heritage:operator": "whc",
+        "historic": "heritage",
+        "landuse": "religious",
+        "name": "銀閣寺",
+        "name:en": "Ginkakuji",
+        "name:es": "Ginkaku-ji",
+        "name:fr": "Temple du pavillon d'argent",
+        "name:ja-Hira": "ぎんかくじ",
+        "name:ja-Latn": "Ginkaku-ji",
+        "name:ko": "지쇼지",
+        "name:ru": "Гинкакудзи",
+        "name:th": "วัดกิงกะกุ",
+        "name:vi": "Ginkakuji",
+        "name:zh": "慈照寺",
+        "note": "創建1490年 足利義政",
+        "official_name": "慈照寺",
+        "official_name:en": "Jishō Temple",
+        "official_name:fr": "Temple Jishō",
+        "official_name:ja-Hira": "じゅしょうじ",
+        "official_name:ja-Latn": "Jishō-ji",
+        "official_name:ru": "Дзисёдзи",
+        "ref:whc": "688-014",
+        "religion": "buddhist",
+        "whc:criteria": "(ii),(iv)",
+        "whc:inscription_date": "1994",
+        "wikidata": "Q257473",
+        "wikimedia_commons": "Category:Ginkaku-ji",
+        "wikipedia": "ja:慈照寺"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7977102,
+              35.0274233
+            ],
+            [
+              135.7977094,
+              35.0272177
+            ],
+            [
+              135.79766,
+              35.0272182
+            ],
+            [
+              135.7976613,
+              35.0271912
+            ],
+            [
+              135.7974803,
+              35.0271899
+            ],
+            [
+              135.7974852,
+              35.0271095
+            ],
+            [
+              135.7974896,
+              35.0270591
+            ],
+            [
+              135.7975065,
+              35.0269567
+            ],
+            [
+              135.7975172,
+              35.0268293
+            ],
+            [
+              135.7974904,
+              35.0266844
+            ],
+            [
+              135.7975025,
+              35.0265022
+            ],
+            [
+              135.7975118,
+              35.0263769
+            ],
+            [
+              135.7974518,
+              35.0262969
+            ],
+            [
+              135.7974075,
+              35.0261388
+            ],
+            [
+              135.7974598,
+              35.0260301
+            ],
+            [
+              135.7975617,
+              35.0260075
+            ],
+            [
+              135.7976878,
+              35.0259686
+            ],
+            [
+              135.7978018,
+              35.0259433
+            ],
+            [
+              135.7981609,
+              35.0259947
+            ],
+            [
+              135.7983991,
+              35.0259709
+            ],
+            [
+              135.7986652,
+              35.0259727
+            ],
+            [
+              135.7988905,
+              35.0261001
+            ],
+            [
+              135.7990783,
+              35.0262802
+            ],
+            [
+              135.799207,
+              35.0264471
+            ],
+            [
+              135.799207,
+              35.0266404
+            ],
+            [
+              135.7992338,
+              35.0268425
+            ],
+            [
+              135.7992231,
+              35.0271017
+            ],
+            [
+              135.7993374,
+              35.0274343
+            ],
+            [
+              135.7994498,
+              35.027791
+            ],
+            [
+              135.7991951,
+              35.0278414
+            ],
+            [
+              135.7991591,
+              35.0278363
+            ],
+            [
+              135.7991394,
+              35.027849
+            ],
+            [
+              135.7989654,
+              35.0278712
+            ],
+            [
+              135.7988151,
+              35.0278766
+            ],
+            [
+              135.7985232,
+              35.0278812
+            ],
+            [
+              135.7983546,
+              35.0278593
+            ],
+            [
+              135.7982369,
+              35.0278537
+            ],
+            [
+              135.7981341,
+              35.0278145
+            ],
+            [
+              135.7979885,
+              35.0277632
+            ],
+            [
+              135.7978333,
+              35.0277594
+            ],
+            [
+              135.7976981,
+              35.0277606
+            ],
+            [
+              135.7975579,
+              35.0277174
+            ],
+            [
+              135.7975574,
+              35.0275585
+            ],
+            [
+              135.797659,
+              35.0275576
+            ],
+            [
+              135.7976603,
+              35.0274261
+            ],
+            [
+              135.7977102,
+              35.0274233
+            ]
+          ]
+        ]
+      },
+      "id": "way/105817561"
+    }
+  ]
+}

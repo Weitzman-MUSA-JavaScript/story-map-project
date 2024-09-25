@@ -33,7 +33,7 @@ class SlideDeck {
     const geoJsonLayer = L.geoJSON(data, {
       pointToLayer: (feature, latlng) => {
         const iconUrl = feature.properties.note === '鳥居' ? 'pic/birdnest.svg' : 'pic/shrine.svg';
-        const iconSize = feature.properties.note === '鳥居' ? [20, 20] : [30, 30];
+        const iconSize = feature.properties.note === '鳥居' ? [40, 40] : [40, 40];
         const markerIcon = L.icon({
           iconUrl: iconUrl,
           iconSize: iconSize,

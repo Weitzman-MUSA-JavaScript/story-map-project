@@ -1,0 +1,30 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-09-24T21:49:30Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6222358081",
+        "board_type": "history",
+        "information": "board",
+        "name": "高台寺",
+        "name:en": "Kodai-ji",
+        "name:fr": "Kōdai-ji",
+        "name:ja-Hira": "こうだいじ",
+        "name:ja-Latn": "Kōdai-ji",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7799597,
+          35.0005089
+        ]
+      },
+      "id": "node/6222358081"
+    }
+  ]
+}

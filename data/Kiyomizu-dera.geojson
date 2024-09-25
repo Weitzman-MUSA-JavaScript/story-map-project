@@ -1,0 +1,208 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-09-24T21:46:26Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/336641107",
+        "alt_name:fr": "Temple de l'eau pure",
+        "amenity": "place_of_worship",
+        "charge": "400 JPY",
+        "contact:facebook": "Kiyomizudera.Kyoto",
+        "contact:instagram": "feel_kiyomizudera",
+        "contact:phone": "+81-75-551-1234",
+        "contact:tripadvisor": "https://www.tripadvisor.com/Attraction_Review-g298564-d321401-Reviews-Kiyomizu_dera_Temple-Kyoto_Kyoto_Prefecture_Kinki.html",
+        "contact:website": "https://www.kiyomizudera.or.jp/",
+        "contact:youtube": "https://www.youtube.com/channel/UCBFW3Al5zoKJOVJaLcDUL9Q",
+        "denomination": "yogacara",
+        "denomination:ja": "北法相宗",
+        "fee": "yes",
+        "heritage": "1",
+        "heritage:operator": "whc",
+        "historic": "yes",
+        "landuse": "religious",
+        "name": "清水寺",
+        "name:cs": "Chrám Kijomizu-dera",
+        "name:de": "Kiyomizu-dera",
+        "name:en": "Kiyomizu-dera Temple",
+        "name:es": "Kiyomizu-dera",
+        "name:fr": "Temple Kiyomizu",
+        "name:ja-Hira": "きよみずでら",
+        "name:ja-Latn": "Kiyomizu-dera",
+        "name:ko": "기요미즈데라",
+        "name:ru": "Киёмидзу-дэра",
+        "name:th": "วัดน้ำใส",
+        "name:zh": "清水寺",
+        "opening_hours": "Mo-Su 06:00-18:00",
+        "ref:whc": "688-004",
+        "religion": "buddhist",
+        "source": "Bing, 2007-12",
+        "tourism": "attraction",
+        "whc:criteria": "(ii),(iv)",
+        "whc:inscription_date": "1994",
+        "wikidata": "Q221716",
+        "wikimedia_commons": "Category:Kiyomizu-dera",
+        "wikipedia": "ja:清水寺"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7829414,
+              34.9960082
+            ],
+            [
+              135.7829636,
+              34.9954831
+            ],
+            [
+              135.7827778,
+              34.9954816
+            ],
+            [
+              135.7827804,
+              34.9953402
+            ],
+            [
+              135.7827824,
+              34.9952312
+            ],
+            [
+              135.7828159,
+              34.9952306
+            ],
+            [
+              135.7828156,
+              34.9951869
+            ],
+            [
+              135.7828151,
+              34.9950958
+            ],
+            [
+              135.782792,
+              34.9950793
+            ],
+            [
+              135.7828372,
+              34.9950302
+            ],
+            [
+              135.7827879,
+              34.9949843
+            ],
+            [
+              135.782719,
+              34.9949202
+            ],
+            [
+              135.7826888,
+              34.9947301
+            ],
+            [
+              135.7827029,
+              34.9945265
+            ],
+            [
+              135.7828426,
+              34.9940795
+            ],
+            [
+              135.7830974,
+              34.9936251
+            ],
+            [
+              135.7838999,
+              34.9930032
+            ],
+            [
+              135.7841507,
+              34.9928088
+            ],
+            [
+              135.7844989,
+              34.992539
+            ],
+            [
+              135.7854195,
+              34.992607
+            ],
+            [
+              135.7854527,
+              34.9926094
+            ],
+            [
+              135.7855326,
+              34.9926153
+            ],
+            [
+              135.7856014,
+              34.9926204
+            ],
+            [
+              135.7859218,
+              34.9938885
+            ],
+            [
+              135.7862131,
+              34.9945475
+            ],
+            [
+              135.7862762,
+              34.9946154
+            ],
+            [
+              135.7856742,
+              34.9958187
+            ],
+            [
+              135.7853932,
+              34.9961083
+            ],
+            [
+              135.7849827,
+              34.996234
+            ],
+            [
+              135.7849288,
+              34.9962444
+            ],
+            [
+              135.7847288,
+              34.9962831
+            ],
+            [
+              135.7847207,
+              34.9962847
+            ],
+            [
+              135.7846911,
+              34.9962904
+            ],
+            [
+              135.784596,
+              34.9963088
+            ],
+            [
+              135.7834329,
+              34.9962356
+            ],
+            [
+              135.783262,
+              34.9959933
+            ],
+            [
+              135.7829414,
+              34.9960082
+            ]
+          ]
+        ]
+      },
+      "id": "way/336641107"
+    }
+  ]
+}

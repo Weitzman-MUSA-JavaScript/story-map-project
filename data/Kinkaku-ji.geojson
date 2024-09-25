@@ -1,0 +1,200 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-09-24T21:46:26Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/98115917",
+        "addr:block_number": "1",
+        "addr:city": "京都市",
+        "addr:country": "JP",
+        "addr:postcode": "603-8361",
+        "addr:province": "京都府",
+        "addr:quarter": "金閣寺町",
+        "addr:suburb": "北区",
+        "alt_name": "鹿苑寺",
+        "alt_name:de": "Rehgarten-Tempel (Rokuon-ji)",
+        "alt_name:en": "Rokuon-ji",
+        "alt_name:fr": "Rokuon-ji",
+        "amenity": "place_of_worship",
+        "denomination": "rinzai",
+        "denomination:ja": "臨済宗",
+        "heritage": "1",
+        "heritage:operator": "whc",
+        "historic": "heritage",
+        "is_in:city": "Kyoto",
+        "is_in:country": "Japan",
+        "is_in:country_code": "JP",
+        "is_in:iso_3166_2": "JP-26",
+        "is_in:province": "Kyoto Prefecture",
+        "landuse": "religious",
+        "name": "金閣寺",
+        "name:de": "Goldener-Pavillon-Tempel (Kinkaku-ji)",
+        "name:en": "Kinkaku-ji (Golden Pavilion Temple)",
+        "name:es": "Kinkaku-ji",
+        "name:fr": "Temple du Pavillon d’or (Kinkaku-ji)",
+        "name:he": "המקדש המוזהב",
+        "name:ja": "金閣寺",
+        "name:ja_kana": "きんかくじ",
+        "name:ja_rm": "Kinkaku-ji",
+        "name:ko": "금각사",
+        "name:ru": "Кинкаку-дзи",
+        "name:th": "วัดทอง",
+        "name:uk": "Монастир Кінкаку",
+        "name:vi": "Kinkakuji",
+        "name:zh": "鹿苑寺",
+        "official_name": "鹿苑寺",
+        "official_name:en": "Rokuon-ji",
+        "official_name:ja": "鹿苑寺",
+        "official_name:ja_kana": "ろくおんじ",
+        "ref:whc": "688-013",
+        "religion": "buddhist",
+        "website": "https://www.shokoku-ji.jp/",
+        "whc:criteria": "(ii),(iv)",
+        "whc:inscription_date": "1994",
+        "wikidata": "Q270983",
+        "wikipedia": "ja:鹿苑寺",
+        "wikipedia:en": "Kinkaku-ji"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7318691,
+              35.0407558
+            ],
+            [
+              135.7319127,
+              35.0410415
+            ],
+            [
+              135.7317622,
+              35.0412605
+            ],
+            [
+              135.7311273,
+              35.0408016
+            ],
+            [
+              135.7304674,
+              35.0405073
+            ],
+            [
+              135.7300597,
+              35.0405161
+            ],
+            [
+              135.7294833,
+              35.0407951
+            ],
+            [
+              135.7280483,
+              35.0407571
+            ],
+            [
+              135.7276028,
+              35.0403185
+            ],
+            [
+              135.7270998,
+              35.0397542
+            ],
+            [
+              135.7273605,
+              35.0393641
+            ],
+            [
+              135.7280303,
+              35.038275
+            ],
+            [
+              135.7281661,
+              35.0380729
+            ],
+            [
+              135.7282372,
+              35.0380324
+            ],
+            [
+              135.7284397,
+              35.0380049
+            ],
+            [
+              135.7284464,
+              35.0382575
+            ],
+            [
+              135.7293777,
+              35.0382618
+            ],
+            [
+              135.7293747,
+              35.0380999
+            ],
+            [
+              135.7297959,
+              35.038111
+            ],
+            [
+              135.7299236,
+              35.0380704
+            ],
+            [
+              135.729928,
+              35.03791
+            ],
+            [
+              135.7308717,
+              35.0379236
+            ],
+            [
+              135.7309357,
+              35.0379482
+            ],
+            [
+              135.7316956,
+              35.0387673
+            ],
+            [
+              135.7317263,
+              35.0388102
+            ],
+            [
+              135.7317671,
+              35.0389369
+            ],
+            [
+              135.7317884,
+              35.0390288
+            ],
+            [
+              135.7318147,
+              35.0392022
+            ],
+            [
+              135.7318169,
+              35.0392565
+            ],
+            [
+              135.7318289,
+              35.0396944
+            ],
+            [
+              135.7318407,
+              35.0398536
+            ],
+            [
+              135.7318691,
+              35.0407558
+            ]
+          ]
+        ]
+      },
+      "id": "way/98115917"
+    }
+  ]
+}

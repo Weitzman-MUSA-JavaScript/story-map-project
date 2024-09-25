@@ -1,0 +1,164 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-09-24T21:50:28Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/218470281",
+        "alt_name": "苔寺",
+        "alt_name:en": "Kokedera Moss Temple",
+        "alt_name:fr": "Temple de la mousse",
+        "alt_name:ja-Latn": "Koke-dera",
+        "alt_name:ja_kana": "こけでら",
+        "alt_name:ru": "Кокэдэра",
+        "amenity": "place_of_worship",
+        "charge": "3000 ¥",
+        "contact:website": "https://intosaihoji.com/en/booking/nichinichi",
+        "denomination": "rinzai",
+        "denomination:ja": "臨済宗",
+        "fee": "yes",
+        "heritage": "1",
+        "heritage:operator": "whc",
+        "historic": "heritage",
+        "landuse": "religious",
+        "leisure": "park",
+        "name": "西芳寺",
+        "name:en": "Saihoji Temple",
+        "name:fr": "Temple Saihō",
+        "name:ja-Hira": "さいほうじ",
+        "name:ja-Latn": "Saihō-ji",
+        "name:ko": "사이호지",
+        "name:ru": "Сайходзи",
+        "name:zh": "西芳寺",
+        "ref:whc": "688-011",
+        "religion": "buddhist",
+        "reservation": "only",
+        "start_date": "1339",
+        "whc:criteria": "(ii),(iv)",
+        "whc:inscription_date": "1994",
+        "wikidata": "Q1516753",
+        "wikimedia_commons": "Category:Saihouji",
+        "wikipedia": "ja:西芳寺"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.6852449,
+              34.9924246
+            ],
+            [
+              135.6851033,
+              34.9926094
+            ],
+            [
+              135.6849622,
+              34.9927173
+            ],
+            [
+              135.6848055,
+              34.9928892
+            ],
+            [
+              135.6847131,
+              34.9929603
+            ],
+            [
+              135.6843949,
+              34.9931944
+            ],
+            [
+              135.684037,
+              34.9930915
+            ],
+            [
+              135.6836701,
+              34.9929529
+            ],
+            [
+              135.6833347,
+              34.9928212
+            ],
+            [
+              135.6831399,
+              34.9925563
+            ],
+            [
+              135.6829523,
+              34.9925136
+            ],
+            [
+              135.682669,
+              34.9924447
+            ],
+            [
+              135.6823407,
+              34.9924186
+            ],
+            [
+              135.6821429,
+              34.9923558
+            ],
+            [
+              135.6819608,
+              34.9921944
+            ],
+            [
+              135.6819852,
+              34.9918933
+            ],
+            [
+              135.6820954,
+              34.9916243
+            ],
+            [
+              135.6821451,
+              34.9914507
+            ],
+            [
+              135.6828102,
+              34.9914986
+            ],
+            [
+              135.6833328,
+              34.9914587
+            ],
+            [
+              135.6835004,
+              34.9915043
+            ],
+            [
+              135.6838433,
+              34.9916527
+            ],
+            [
+              135.6844682,
+              34.9917117
+            ],
+            [
+              135.6848823,
+              34.991901
+            ],
+            [
+              135.6849536,
+              34.991998
+            ],
+            [
+              135.6850928,
+              34.9922311
+            ],
+            [
+              135.6852449,
+              34.9924246
+            ]
+          ]
+        ]
+      },
+      "id": "way/218470281"
+    }
+  ]
+}

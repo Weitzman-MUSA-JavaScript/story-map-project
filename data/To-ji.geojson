@@ -1,0 +1,151 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-09-24T21:51:30Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/359896810",
+        "amenity": "place_of_worship",
+        "contact:tripadvisor": "1310392",
+        "contact:website": "https://toji.or.jp/",
+        "denomination": "shingon_shu",
+        "denomination:ja": "真言宗",
+        "heritage": "1",
+        "heritage:operator": "whc",
+        "historic": "heritage",
+        "landuse": "religious",
+        "name": "東寺",
+        "name:en": "East Temple",
+        "name:fr": "Temple de l'Est",
+        "name:ja-Hira": "とうじ",
+        "name:ja-Latn": "Tō-ji",
+        "name:lzh": "東寺",
+        "name:ru": "Тодзи",
+        "name:zh": "东寺",
+        "name:zh-Hans": "东寺",
+        "name:zh-Hant": "東寺",
+        "official_name": "教王護国寺",
+        "official_name:en": "Kyōōgokoku-ji",
+        "official_name:ja-Hira": "きょうおうごこくじ",
+        "official_name:ja-Latn": "Kyō-ō-gokoku-ji",
+        "official_name:ru": "Кёогококу-дзи",
+        "ref:whc": "688-003",
+        "religion": "buddhist",
+        "source": "Bing",
+        "whc:criteria": "(ii),(iv)",
+        "whc:inscription_date": "1994",
+        "wheelchair": "limited",
+        "wikidata": "Q1046403",
+        "wikimedia_commons": "Category:Toji",
+        "wikipedia": "ja:東寺"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7476171,
+              34.9823488
+            ],
+            [
+              135.7462607,
+              34.9823508
+            ],
+            [
+              135.7463098,
+              34.9793877
+            ],
+            [
+              135.7463445,
+              34.9793582
+            ],
+            [
+              135.7470631,
+              34.9794055
+            ],
+            [
+              135.7477673,
+              34.9794146
+            ],
+            [
+              135.7490397,
+              34.9794651
+            ],
+            [
+              135.7491393,
+              34.979557
+            ],
+            [
+              135.7491592,
+              34.9817052
+            ],
+            [
+              135.7490788,
+              34.9817052
+            ],
+            [
+              135.7490779,
+              34.981798
+            ],
+            [
+              135.7491387,
+              34.9817995
+            ],
+            [
+              135.7491422,
+              34.9821351
+            ],
+            [
+              135.7490275,
+              34.9821366
+            ],
+            [
+              135.7490296,
+              34.9822909
+            ],
+            [
+              135.748929,
+              34.982293
+            ],
+            [
+              135.7489338,
+              34.9828108
+            ],
+            [
+              135.7487268,
+              34.9828148
+            ],
+            [
+              135.7487252,
+              34.9828514
+            ],
+            [
+              135.7484535,
+              34.9828505
+            ],
+            [
+              135.7484289,
+              34.9829824
+            ],
+            [
+              135.7483923,
+              34.9830199
+            ],
+            [
+              135.7476108,
+              34.9830135
+            ],
+            [
+              135.7476171,
+              34.9823488
+            ]
+          ]
+        ]
+      },
+      "id": "way/359896810"
+    }
+  ]
+}

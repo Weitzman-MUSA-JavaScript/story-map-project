@@ -1,0 +1,156 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-09-24T21:48:15Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/31842037",
+        "addr:full": "京都市東山区三十三間堂廻り町657",
+        "addr:housenumber": "657",
+        "addr:street": "京都市東山区三十三間堂迴り",
+        "amenity": "place_of_worship",
+        "contact:instagram": "sanjusangendo_temple",
+        "contact:phone": "+81-075-561-0467",
+        "contact:tripadvisor": "321411",
+        "contact:website": "https://www.sanjusangendo.jp/",
+        "fee": "yes",
+        "name": "三十三間堂",
+        "name:en": "Sanjūsangen-dō",
+        "name:fr": "Pavillon des trente-trois intervalles",
+        "name:it": "Sanjusangen-do (Rengeo-in)",
+        "name:ja-Hira": "さんじゅうさんげんどう",
+        "name:ja-Latn": "Sanjūsangen-dō",
+        "name:zh": "三十三間堂",
+        "official_name": "蓮華王院",
+        "official_name:fr": "Temple Rengeō",
+        "official_name:ja-Hira": "れんげおういん",
+        "official_name:ja-Latn": "Rengeō-in",
+        "opening_hours": "Apr 01-Nov 15 Mo-Su 08:30-17:00; Nov 16-Mar 31 Mo-Su 09:00-16:00",
+        "religion": "buddhist",
+        "start_date": "1165",
+        "wikidata": "Q653319",
+        "wikimedia_commons": "Category:Sanjūsangen-dō",
+        "wikipedia": "ja:三十三間堂"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7712639,
+              34.9890499
+            ],
+            [
+              135.7712372,
+              34.9886436
+            ],
+            [
+              135.7712322,
+              34.9885047
+            ],
+            [
+              135.7711254,
+              34.986986
+            ],
+            [
+              135.7711226,
+              34.9869325
+            ],
+            [
+              135.7711545,
+              34.9869059
+            ],
+            [
+              135.7716746,
+              34.9869126
+            ],
+            [
+              135.7721958,
+              34.9869131
+            ],
+            [
+              135.7724433,
+              34.9869114
+            ],
+            [
+              135.7724443,
+              34.9870376
+            ],
+            [
+              135.772234,
+              34.9870406
+            ],
+            [
+              135.7722448,
+              34.9872144
+            ],
+            [
+              135.7722902,
+              34.9872128
+            ],
+            [
+              135.772318,
+              34.9877359
+            ],
+            [
+              135.7723278,
+              34.9877358
+            ],
+            [
+              135.7723313,
+              34.9878451
+            ],
+            [
+              135.7723636,
+              34.9884998
+            ],
+            [
+              135.7723721,
+              34.9884995
+            ],
+            [
+              135.7723894,
+              34.9888243
+            ],
+            [
+              135.7723647,
+              34.9888252
+            ],
+            [
+              135.7723696,
+              34.9889184
+            ],
+            [
+              135.7723959,
+              34.9889172
+            ],
+            [
+              135.772403,
+              34.9890409
+            ],
+            [
+              135.7713291,
+              34.9890793
+            ],
+            [
+              135.771301,
+              34.9890703
+            ],
+            [
+              135.771271,
+              34.9890557
+            ],
+            [
+              135.7712639,
+              34.9890499
+            ]
+          ]
+        ]
+      },
+      "id": "way/31842037"
+    }
+  ]
+}
