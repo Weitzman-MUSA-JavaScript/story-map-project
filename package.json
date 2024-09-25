@@ -8,7 +8,8 @@
     "example": "examples"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "author": "",
   "license": "ISC",
@@ -53,4 +54,5 @@
       "declaration-block-no-redundant-longhand-properties": null
     }
   }
+  
 }
