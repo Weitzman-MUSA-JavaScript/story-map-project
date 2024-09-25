@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Story</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <main>
+    <div class="map-container">
+      <div class="map" id="map"></div>
+    </div>
+    <section class="slide-section">
+      <article class="slide" id="title-slide">
+        <h1>The History of Singapore's Public Housing</h1>
+        <p> A brief story map on where it all began and how its deveveloped. </p>
+      </article>
+
+      <article class="slide" id="second-slide">
+        <h2>The Beginning</h2>
+        <p>The first public housing in Singapore was built before the country's independence, finished in 1937. It was constructed by the British Colonial government at the time and overseen by the Singapore Improvement Trust. (SIT) </p>
+        <img src="img/sit-logo.png" alt="Logo of the Singapore Improvement Trust" class="center">  
+        <p>The iniative began as an attempt to demolish and replace unsanitary buildings. However, WWII and the occuptation of Singapore by invading Japanese forces put these constructions to a quick halt. </p>
+      </article>
+      
+      <article class="slide" id="third-slide">
+        <h2>The Housing Development Board</h2>
+        <p>Following the end of WWII and the Japanese occupation, SIT, as a for-profit entity, couldn't maintain its homes due to low rents. Thus, the early government decided that housing was too important to leave to a private entity and so scrapped the trust, handing over its responsibilities a new board.  </p>
+        <img src="img/first-hdb-logo.png" alt="First Logo of the Housing Development Board" class="center">  
+        <p>The Housing Development Board's (HDB) primary mission was to construct low cost public housing that would be affordable and sanitary. This was reflected in the design of early flats: cheap, practical, and fast.  </p>
+        
+        <p>While it began offering houses for sale in 1964, few were able to afford them. However, the government soon allowed citizens to draw on their state-mandated retirement savings accounts to pay for these homes and that opened the door for many more people to afford these homes.</p>
+      </article>
+
+      <article class="slide" id="fourth-slide">
+        <h2>Better Quality Homes</h2>
+        <p>With the increasing take-up rate of these homes, the portion of the population living in public housing in Singapore grew ever greater and HDB kept building more homes. By 1976, more than half of all Singaporeans lived in a HDB home. Gradually, public housing in Singapore was no longer seen as just homes for the poor but instead as homes for a growing middle-class.
+
+        HDB began designing estates with more amenities and public facilities. It looked at how it could create homes that were not just for living in, but also for building a community and raising a family. To reflect this softening of approach, HDB also redid its logo in 1980:</p>
+        <img src="img/current-hdb-logo.png" alt="Current Logo of the Housing Development Board" class="center">  
+      </article>
+
+      <article class="slide" id="fifth-slide">
+        <h2>Build-To-Order</h2>
+        <p>By the end of the 20th Century, HDB housing had become a ubiquitous part of Singaporean life and a new generation of Singaporeans had grown up in these public flats. However, there were concerns of whether or not HDB could continue to survive in the early 2000s. For a few years, a shortage of demand and excess flats going unsold led to HDB a build-to-order (BTO) scheme.
+
+        This BTO scheme would evolve to become how many Singaporeans today buy their first homes.
+        </p>
+      </article>
+
+      <article class="slide" id="fifth-slide">
+        <h2>COVID and the Modern Day</h2>
+        <p>After the Global Financial Crisis in 2008, Singapore's housing market crashed. However, while demand quickly picked back up, supply was lagging far behind. This was compounded by the arrival of COVID in 2020, which halted many existing constructions projects. Today, 77% of all Singaporeans live in HDB housing and the country has one of the highest home-ownership rates in the world (87%) mostly due to the success of this housing effort.</p>
+      </article>
+
+    </section>
+
+    
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/index.js" type="module"></script>
+</body>
+</html>
