@@ -1,7 +1,5 @@
 import { SlideDeck } from './slidedeck.js';
 
-// const map = L.map('map', {scrollWheelZoom: false}).setView([0, 0], 0);
-
 const mapElement = document.querySelector('#map');
 const map = L.map(mapElement, {maxZoom: 18, zoomsnap: 0, scrollWheelZoom: false}).setView([1.3521, 103.8198], 12);
 const mapboxKey = 'pk.eyJ1Ijoic2Vhbm1rb2giLCJhIjoiY20weGI2bm8zMGJmOTJqcHEzeTRnZXEwcCJ9.8OStU7WetpCxZ9YiUCiigA';
