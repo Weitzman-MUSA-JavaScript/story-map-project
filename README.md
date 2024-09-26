@@ -1,51 +1,37 @@
-## Samples from previous years
+# Template for story map!
 
-* [_What's in a Vacant Lot_](examples/Vacant_Lots_AdrianLeon/), Adrián León, Max Masuda-Farkas, and Xuezhu Zhao
-* [_Surveillance in New Orleans_](examples/NoLA_Surveillance_BrianaCervantes/), Briana Cervantes
-* [_A Spatial History of House Music_](examples/House_Music_MarlanaZink/), Marlana Zink
+Template adapted from pointsunknown:
+https://pointsunknown.nyc/web%20mapping/mapbox/2021/07/20/11A_MapboxStorytelling.html
 
-## Samples from elsewhere on the internet
+## User guide
 
-* [_How the Air Campaign Against ISIS Grew_](http://www.nytimes.com/interactive/2014/12/31/world/middleeast/isis-airstrikes-map.html), New York Times
-* [_Philly’s Chinatown: 150 years of development, displacement, and resilience_](https://www.inquirer.com/history/inq2/chinatown-history-timeline-development-arena-20231128.html)
+You can fork this project and customise it with your own map data (e.g. `.geojson` files) and narrative (in chapters)
 
-## Instructions
+### What do I have to change?
 
-### Step 1: Choose a topic
+Quick start approach - to stick to the defaults and minimise customisation, you only need to change the following:
 
-Choose a topic that is fruitfully explained with some combination of narrative and geographic elements. Think about what data you want to tell a story about. Whatever data you use, **be sure to include citations somewhere in your app interface**. You can choose a dataset from any of a number of sources, for example:
+Mapbox access token
+- Go to https://account.mapbox.com/ (make an account if you haven't)
+- Then go to https://account.mapbox.com/access-tokens/ to create a token
+- Copy the token code into `accessToken` in `config.js` (ctrl+f to search for `accessToken`)
 
-* Use data you've been working with for another class
-* Create your own dataset (check out [geojson.io](https://geojson.io))
-* Find data from an open data repository...
+`style.css`
+- No need change anything
 
-#### OpenDataPhilly.org
-
-OpenDataPhilly has lots of Philadelphia-specific data, like:
-
-- [Neighborhood Boundaries](https://opendataphilly.org/dataset/philadelphia-neighborhoods)
-- Historic [Streets](https://opendataphilly.org/dataset/historic-streets), [Districts](https://opendataphilly.org/dataset/philadelphia-registered-historic-districts), or [Properties](https://opendataphilly.org/dataset/philadelphia-registered-historic-sites)
-- [School Information](https://opendataphilly.org/dataset/school-information-data)
-- [PA Horticultural Society Land Care](https://opendataphilly.org/dataset/land-care)
-
-#### Other open data portals
-
-Many other cities, counties, states, and countries have dedicated data portals as well. Here are a couple of lists of state-sponsored open data sites:
-
-- [Data.gov - Open Government](https://data.gov/open-gov/)
-- [Open Knowledge Foundation - DataPortals.org](https://dataportals.org/)
-
-#### Independently compiled data sources
-
-Sources like [Stop Demolishing Philly](https://www.stopdemolishingphilly.com/map/) or other privately compiled data sources.
+`map.js`
+- You only need to replace the `map.addLayer({...})` part with your own map layers and id names. Customise how they appear (colour etc.).
+  
+`config.js`
+- This file needs the most modification
+- Modify the `HEADER SECTION` - the introduction bit
+- Modify `CHAPTERS` - the actual text / image etc. content of your chapters
+- Modify the `FOOTER SECTION` - the conclusion bit
+- Modify `MAP AND TRANSITIONS - THE MAIN CONFIGURATION SECTION` - where you toggle layers on (1) or off (0) upon entering and exiting each chapter, how much to zoom, where a chapter is centered etc.
+- You can consider adding more chapters. For instance to create chapter 4, create the variable let `divChapter4 =...` in config.js and add to the `chapters` part in `var config = { accordingly` (which layers to toggle, which place to zoom to etc.)
 
 
-Use one of the template story maps in the _templates/_ folder, modified as you see fit, to explain your topic. For example, open [templates/scrollytelly/](templates/scrollytelly/) and copy the contents to the root folder in this repository. You can then modify the HTML, CSS, JavaScript, and data to suit your needs.
+### What else can I change?
+If you don't like the Roboto font from Google, you can change to another Google font https://fonts.google.com/selection. Pick a font, press the shopping bag, get embed code, and change the embed code at `index.html`, and the font name from 'Roboto' to your preferred font name in `map.js`, `config.js` and `style.css`.
 
-### Step 2: Think About Slide Content
-
-Your story will have multiple slides, each with a title, some additional text, maybe images, and geographic data. Your slide content will go straight into your HTML, and your map features will go in to separate GeoJSON files in the [data/](data/) folder.
-
-### Step 3: Submit your story map
-
-Commit your code and push it to your repository on GitHub. Set up GitHub pages on the repository and submit a new pull request into the original project repository in the class organization.
+There are many, many options for customisation (change mapbox style, change interactions and animations etc.)
