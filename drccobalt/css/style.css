@@ -18,7 +18,9 @@
     position: relative;
     overflow: hidden;
     background-image: linear-gradient(rgb(235 199 149 / 80%),rgb(40 43 48 / 80%)), url('../img/img2.jpg');
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
   .title-container h1 {
