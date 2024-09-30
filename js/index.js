@@ -19,14 +19,14 @@ const slides = document.querySelectorAll('.slide');
 // ## The SlideDeck object
 // ## Icons and Styling Options
 const fridgeIcon = L.icon({
-  iconUrl: '/data/fridgeicon.png',
+  iconUrl: 'data/fridgeicon.png',
   iconSize: [20, 20],
   iconAnchor: [15, 15],
   popupAnchor: [0, -15],
 });
 
 const shelterIcon = L.icon({
-  iconUrl: '/data/sheltericon.png',
+  iconUrl: 'data/sheltericon.png',
   iconSize: [20, 20],
   iconAnchor: [15, 15],
   popupAnchor: [0, -15],
