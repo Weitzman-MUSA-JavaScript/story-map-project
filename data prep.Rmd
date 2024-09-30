@@ -36,12 +36,12 @@ tracts <- tigris::tracts(state = "PA", county = "Philadelphia", year = 2018) %>%
 cuisine_keywords <- list(
   American = c( "american", "tradamerican", "newamerican", "comfort",
                 "comfortfood", "diners", "pubs", "buffets", "steakhouses", 
-                "gastropubs", "bar", "bars", "sportsbars", "salad", "bakeries",
+                "gastropubs", "bars", "sportsbars", "salad", "bakeries",
                 "lounges", "brewpubs", "beergardens", "burger", "diner",
                 "cheesesteaks", "mac and cheese", "luncheonette", "chickenshop",
                 "chicken_wings", "hotdogs", "wings", "cheesesteak", "steaks",
                 "bbq", "barbecue", "barbeque", "smoked", "ribs", "pitmaster",
-                "dog", "dogs", "grill", "fastfood", "quickbites", "burgers",
+                "dog", "dogs", "fastfood", "quickbites", "burgers",
                 "fries", "wraps", "pretzels", "grille", "coffee", "icecream",
                 "deli", "sandwiches", "kosher", "delis", "cafes", "brunch",
                 "hoagie", "brunch", "desserts", "pizza", "pizzeria",
@@ -130,8 +130,7 @@ cuisine_keywords <- list(
 
 # Define cuisine priority (from highest to lowest)
 cuisine_priority <- c(
-  "Middle_Eastern", "South_Asian", "Thai", "West_African", "West_European", "East_European", "Ethiopian", "Southeast_Asian", "Vietnamese", "Japanese", "Korean", "Caribbean", "Mediterranean", "Latin_American", "Chinese", "Mexican",
-"Italian", "American"
+  "Middle_Eastern", "South_Asian", "Thai", "West_African", "West_European", "East_European", "Ethiopian", "Southeast_Asian", "Vietnamese", "Japanese", "Korean", "Caribbean", "Mediterranean", "Latin_American", "Italian", "Mexican", "American", "Chinese"
 )
 
 ```
@@ -183,17 +182,14 @@ restaurants %>%
   arrange(desc(count)) %>%
   head(15)
 
-unclassified <- restaurants %>%
-  st_drop_geometry() %>%
-  filter(cuisine == "Unknown") %>%
-  select(name, title, alias)
-
-italian <- restaurants %>% filter(cuisine == "Italian")
-chinese <- restaurants %>% filter(cuisine == "Chinese")
-mexican <- restaurants %>% filter(cuisine == "Mexican")
+# Remove fastfood
+restaurants <- restaurants %>% filter(! name %in% c("mcdonald's", "popeye's", "kfc", "wendy's", "subway", "qdoba", "chipotle", "taco bell", "panda express", "chick fil-a"))
 ```
 
 ```{r write files}
+
+exclude <- c("American", "Seafood", "Unknown")
+
 cuisine_neigh <- st_intersection(restaurants, neighs) %>%
   st_drop_geometry() %>%
   left_join(neighs, by = "MAPNAME") %>%
@@ -237,12 +233,36 @@ st_write(top_cuisine_neigh, "data/top_cuisine_neigh.geojson", driver = "GeoJSON"
 st_write(top_cuisine_tract, "data/top_cuisine_tract.geojson", driver = "GeoJSON")
 st_write(spruce_hill_rest, "data/spruce_hill_restaurants.geojson", driver = "GeoJSON")
 
-for (cuisine in unique(restaurants$cuisine)) {
-  cuisine_name <- tolower(gsub(" ", "_", cuisine))
-  cuisine_data <- restaurants %>%
-    filter(cuisine == cuisine)
+# Cuisine groupings
+east_asian <- restaurants %>% filter(cuisine %in% c("Chinese", "Japanese", "Korean"))
+latin_am <- restaurants %>% filter(cuisine %in% c("Latin_American", "Mexican"))
+mid_east <- restaurants %>% filter(cuisine %in% c("Middle_Eastern"))
+mediterranean <- restaurants %>% filter(cuisine %in% c("Mediterranean"))
+caribbean <- restaurants %>% filter(cuisine %in% c("Caribbean"))
+se_asian <- restaurants %>% filter(cuisine %in% c("Southeast_Asian", "Vietnamese", "Thai"))
+south_asian <- restaurants %>% filter(cuisine %in% c("South_Asian"))
+european <- restaurants %>% filter(cuisine %in% c("Italian", "West_European", "East_European"))
+african <- restaurants %>% filter(cuisine %in% c("Ethiopian", "West_African"))
+
+# Create a named list where the names are the strings you want for the file names
+cuisine_groups <- list(
+  east_asian = east_asian, 
+  latin_am = latin_am, 
+  mid_east = mid_east, 
+  mediterranean = mediterranean, 
+  caribbean = caribbean, 
+  se_asian = se_asian, 
+  south_asian = south_asian, 
+  european = european, 
+  african = african
+)
+
+# Loop through the named list
+for (cuisine_name in names(cuisine_groups)) {
+  cuisine_group <- cuisine_groups[[cuisine_name]]
   
-  st_write(cuisine_data, paste0("data/", cuisine_name, ".geojson"), driver = "GeoJSON")
+  # Write the data to a GeoJSON file using the name of the list
+  st_write(cuisine_group, paste0("data/", cuisine_name, ".json"), driver = "GeoJSON")
 }
 
 ```
