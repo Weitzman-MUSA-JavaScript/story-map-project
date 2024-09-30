@@ -1,0 +1,15 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "2901 W Hunting Park Ave, Philadelphia, PA 19129"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-75.1776119, 40.0061575]
+        }
+      }
+    ]
+  }
