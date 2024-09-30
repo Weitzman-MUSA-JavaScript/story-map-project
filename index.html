@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Story</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <main>
+    <div class="map-container">
+      <div class="map" id="map"></div>
+    </div>
+    <section class="slide-section">
+      <article class="slide" id="1-PA-slide">
+        <h2>Food Insecurity in Philadelphia, Pennsylvania</h2>
+        <p>Food insecurity is defined by the US Department of Agriculture as “the lack of access, at times, to enough food for an active, healthy life”. This storymap examines food insecurity in <span style="color: blue">Philadelphia</span>. The food insecurity rate in Philadelphia was 15.2% in 2022, the third highest level across the entire state of Pennsylvania. Having access to food is a basic human right, yet many in the city are still struggling to access sufficient, affordable, and healthful food. Scroll down to learn more about how this issue varies across the different neighborhoods of Philadelphia, and what you can do to help.</p>
+        <p><i>Data source: Feeding America</i></p>
+      </article>
+
+      <article class="slide" id="2-Poverty-slide">
+        <h2>Factors affecting food insecurity: Poverty </h2>
+        <p>What exactly are the factors that contribute to food insecurity? This map shows the percentage of households whose income was below the poverty level in 2022. Poverty is one of the main drivers of food insecurity, as limited income affects one's ability to purchase sufficient food, or nutritious food which tends to be more expensive. Low-income households may opt for cheaper processed foods over fresh fruits or vegetables, which can lead to poor nutrition. The north and west regions of Philadelphia experience comparatively greater levels of poverty.</p>
+        <p><i>Data source: American Community Survey 2022 5-year estimates</i></p>
+      </article>
+      
+      <article class="slide" id="3-CB-slide">
+        <h2>Factors affecting food insecurity: Rent Cost-Burden</h2>
+        <p>Another huge contributor to food insecurity is housing cost-burden. Households are cost-burdened if housing costs take up at least 30% of their entire household income. This reduces  the disposable income remaining to spend on food. With such a large percentage of their income going into paying for rent, these households are sometimes forced to sacrifice food on the table for a roof over their heads. Cost-burdened households generally correlate with poverty levels, with higher percentages in north and west Philadelphia.</p>
+        <p><i>Data source: American Community Survey 2022 5-year estimates</i></p>
+      </article>
+
+      <article class="slide" id="4-Access-slide">
+        <h2>Factors affecting food insecurity: Access to Healthy Foods</h2>
+        <p>Another factor that contributes to food insecurity is the geographical accessibility to cost-friendly nutritional food. ‘Food deserts’ are geographic areas where there is limited access to affordable and healthful food options. This map shows the relative access within a half-mile walking distance to high-produce supply stores, which generally offer more healthy and fresh produce. While there is high access to such stores in center city, there are less stores in the far north and south regions. </p>
+        <p><i>Data source: Neighborhood Food Retail 2019</i></p>
+      </article>
+
+      <article class="slide" id="5-FS-slide">
+        <h2>Supplemental Nutrition Assistance Program (SNAP) in Philadelphia</h2>
+        <p>To tackle this issue, the government in the US provides households with food benefits under the Supplemental Nutrition Assistance Program, which support low-income households in affording groceries. The percentage of households in Philadelphia receiving SNAP food benefits corresponds greatly to relative poverty levels. However, critics have pointed out that the program provides insufficient benefits and has failed to offer households nutritional food, with SNAP beneficiaries having poorer diets than non-SNAP households.</p>
+        <p><i>Data source: American Community Survey 2022 5-year estimates.</i></p>
+      </article>
+
+      <article class="slide" id="6-ShareFood-slide">
+        <h2>Taking Action: Share Food Program's North Philadelphia Warehouse </h2>
+        <p> To complement government benefits, there are many community initiatives all over the city working hard to fight against food poverty and insecurity, providing free food to those who may not be able to access it. One of these programs is the <a href="https://www.sharefoodprogram.org/" target="_blank">Share Food Program</a>. The organization operates a huge warehouse in Hunting Park, North Philadelphia, where volunteers sort food that is then distributed to food pantries all over Philadelphia.</p>
+        <img src="https://claudlow.github.io/story-map-project/data/ShareFoodWarehouse.png" alt="Hunting Park Warehouse" style="width:50vh;height:26vh;">
+      </article>
+
+      <article class="slide" id="7-HomelessShelter-slide">
+        <h2>Taking Action: Serving Meals in Homeless Shelters </h2>
+        <p> Aside from food sorting and packing, a different type of volunteering to combat food insecurity are present in homeless shelters. Homelessness and food insecurity are inextricably linked, with many homeless individuals not having a stable or sufficient income, nor having access to food storage and preparation facilities. There are several shelters located in central Philadelphia, and they provide meal services to guests and walk-ins. These shelters also rely on the help and time of volunteers who serve these meals, warming up both the stomachs and their hearts of beneficiaries.</p>
+        <img src="https://claudlow.github.io/story-map-project/data/BroadStreetLove.jpg" alt="Broad Street Love Meal Service" style="width:50vh;height:28vh;">
+      </article>
+
+       <article class="slide" id="8-SouthPhilly-slide">
+          <h2>Taking Action: South Philadelphia's Community Fridges</h2>
+         <p>There are also smaller scale community-based initiatives such as <a href="https://southphillyfridge.com/" target="_blank">South Philly Community Fridges</a>, a mutual aid group, where volunteers stock fridges with surplus food from grocers, restaurants and community members that would otherwise be wasted.</p>
+         <img src="https://claudlow.github.io/story-map-project/data/CommunityFridge.png" alt="Community Fridge" style="width:50vh;height:28vh;">
+         <p>While understanding the severity of the problem of food insecurity in Philadelphia, it is important to acknowledge the great work being done on the ground to drive hunger out of communities. If you would like to get involved and join the fight against food insecurity, there are plenty of opportunities to volunteer, all around the city. Here are even more organizations with volunteering opportunities that one can check out:</p> 
+          <p><a href="https://www.philabundance.org/volunteer-opportunities/" target="_blank"> Volunteer with Philabundance</a> </p> 
+          <p><a href="https://turningpointsforchildren.phmc.org/programs/fawn" target="_blank"> Volunteer with Food and Wellness Network</a> </p>  
+          <p><a href="https://www.mamateefridge.com/volunteer" target="_blank"> Volunteer with Mama-Tee Community Fridge </a> </p>    
+        <p>Larger, structural changes are definitely crucial to addressing food security, such as improving financial security, employment levels and rent affordability. However, we can all also still play a part in combating food insecurity, wherever you stay in Philadelphia.</p>
+        </article> 
+      </article>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/index.js" type="module"></script>
+</body>
+</html>

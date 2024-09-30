@@ -1,0 +1,36 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Bethesda Project"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-75.1690906, 39.9477684]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Broad Street Love"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-75.1672813, 39.9461306]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Philly House"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-75.162976, 39.9581738]
+        }
+      }
+    ]
+  }
+  

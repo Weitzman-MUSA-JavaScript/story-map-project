@@ -1,0 +1,66 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-75.158536, 39.9348731]
+        },
+        "properties": {
+          "name": "The People's Kitchen"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-75.1563207, 39.9200913]
+        },
+        "properties": {
+          "name": "Mifflin Square Park"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-75.1799541, 39.9389317]
+        },
+        "properties": {
+          "name": "Porco's"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-75.1873188, 39.9345248]
+        },
+        "properties": {
+          "name": "Growing Together Garden"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-75.1749545, 39.9378615]
+        },
+        "properties": {
+          "name": "LUHV Vegan Bistro"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-75.159828, 39.9252954]
+        },
+        "properties": {
+          "name": "BOK Kitchen"
+        }
+      }
+    ]
+  }
+  
