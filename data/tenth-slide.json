@@ -1,7 +1,7 @@
 {
 "type": "FeatureCollection",
 "name": "european",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"bbox": [-75.28027, 39.867, -74.95576, 40.13799],
 "features": [
 { "type": "Feature", "properties": { "name": "old english pizza", "rating": 2.2, "address": "2765 Orthodox St", "alias": "pizza", "title": "pizza", "cuisine": "West_European" }, "geometry": { "type": "Point", "coordinates": [ -75.07341, 39.99754 ] } },
 { "type": "Feature", "properties": { "name": "irish eyes social pub & restaurant", "rating": 3.7, "address": "4742 Richmond St", "alias": "bars, tradamerican", "title": "bars, american", "cuisine": "West_European" }, "geometry": { "type": "Point", "coordinates": [ -75.06632, 40.00124 ] } },

@@ -1,6 +1,7 @@
 {
 "type": "FeatureCollection",
 "name": "east_asian",
+"bbox": [-75.28027, 39.867, -74.95576, 40.13799],
 "features": [
 { "type": "Feature", "properties": { "name": "szechuan garden", "rating": 4.5, "address": "2700 Bridge St", "alias": "szechuan, cantonese", "title": "szechuan, cantonese", "cuisine": "Chinese" }, "geometry": { "type": "Point", "coordinates": [ -75.066235349586194, 40.001890285844205 ] } },
 { "type": "Feature", "properties": { "name": "momoka ramen & skewers", "rating": 4.3, "address": "1619 Grant Ave", "alias": "ramen, asianfusion, bubbletea", "title": "ramen, asian fusion, bubble tea", "cuisine": "Japanese" }, "geometry": { "type": "Point", "coordinates": [ -75.039557245135356, 40.087695440655793 ] } },

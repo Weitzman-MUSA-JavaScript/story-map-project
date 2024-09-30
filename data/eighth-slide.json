@@ -1,6 +1,7 @@
 {
 "type": "FeatureCollection",
 "name": "caribbean",
+"bbox": [-75.28027, 39.867, -74.95576, 40.13799],
 "features": [
 { "type": "Feature", "properties": { "name": "paradise jamaican restaurant", "rating": 1.7, "address": "1530 Wadsworth Ave", "alias": "fooddeliveryservices, caribbean", "title": "food delivery services, caribbean", "cuisine": "Caribbean" }, "geometry": { "type": "Point", "coordinates": [ -75.17313, 40.07951 ] } },
 { "type": "Feature", "properties": { "name": "cherish philly", "rating": 4.9, "address": "7060 Germantown Ave", "alias": "caribbean, cafes, breakfast_brunch", "title": "caribbean, cafes, breakfast & brunch", "cuisine": "Caribbean" }, "geometry": { "type": "Point", "coordinates": [ -75.189372, 40.058235 ] } },

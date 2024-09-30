@@ -1,6 +1,7 @@
 {
 "type": "FeatureCollection",
 "name": "latin_am",
+"bbox": [-75.28027, 39.867, -74.95576, 40.13799],
 "features": [
 { "type": "Feature", "properties": { "name": "masa", "rating": 4.4, "address": "1555 Wadsworth Ave", "alias": "seafood", "title": "seafood", "cuisine": "Mexican" }, "geometry": { "type": "Point", "coordinates": [ -75.17317, 40.08038 ] } },
 { "type": "Feature", "properties": { "name": "el limon chestnut hill", "rating": 4.4, "address": "8612 Germantown Ave", "alias": "mexican", "title": "mexican", "cuisine": "Mexican" }, "geometry": { "type": "Point", "coordinates": [ -75.2081358, 40.076851959570533 ] } },

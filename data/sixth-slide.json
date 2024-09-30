@@ -1,6 +1,7 @@
 {
 "type": "FeatureCollection",
 "name": "mid_east",
+"bbox": [-75.28027, 39.867, -74.95576, 40.13799],
 "features": [
 { "type": "Feature", "properties": { "name": "philly halal kitchen", "rating": 3.5, "address": "1437 Vernon Rd", "alias": "pizza, cheesesteaks, halal", "title": "pizza, cheesesteaks, halal", "cuisine": "Middle_Eastern" }, "geometry": { "type": "Point", "coordinates": [ -75.16715, 40.07372 ] } },
 { "type": "Feature", "properties": { "name": "little istanbul", "rating": 4.0, "address": "11728 Bustleton Ave", "alias": "turkish", "title": "turkish", "cuisine": "Middle_Eastern" }, "geometry": { "type": "Point", "coordinates": [ -75.01797067, 40.11981967 ] } },

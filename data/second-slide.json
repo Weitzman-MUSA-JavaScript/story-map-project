@@ -1,5 +1,6 @@
 {
 "type": "FeatureCollection",
+"bbox": [-75.28027, 39.867, -74.95576, 40.13799],
 "features": [
 { "type": "Feature", "properties": { "name": "old english pizza", "rating": 2.2, "address": "2765 Orthodox St", "alias": "pizza", "title": "pizza", "cuisine": "West_European" }, "geometry": { "type": "Point", "coordinates": [ -75.07341, 39.99754 ] } },
 { "type": "Feature", "properties": { "name": "renzi's pizzeria", "rating": 3.2, "address": "2728 Orthodox St", "alias": "pizza", "title": "pizza", "cuisine": "American" }, "geometry": { "type": "Point", "coordinates": [ -75.0744267, 39.99804 ] } },

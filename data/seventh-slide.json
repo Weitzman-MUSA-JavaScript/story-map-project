@@ -1,6 +1,7 @@
 {
 "type": "FeatureCollection",
 "name": "mediterranean",
+"bbox": [-75.28027, 39.867, -74.95576, 40.13799],
 "features": [
 { "type": "Feature", "properties": { "name": "fiesta pizza iii", "rating": 2.6, "address": "8339 Germantown Ave", "alias": "pizza, greek, breakfast_brunch", "title": "pizza, greek, breakfast & brunch", "cuisine": "Mediterranean" }, "geometry": { "type": "Point", "coordinates": [ -75.20457, 40.07522 ] } },
 { "type": "Feature", "properties": { "name": "toska restaurant & brewery", "rating": 3.9, "address": "7136 Germantown Ave", "alias": "pizza, mediterranean, gastropubs", "title": "pizza, mediterranean, gastropubs", "cuisine": "Mediterranean" }, "geometry": { "type": "Point", "coordinates": [ -75.1904446, 40.059184636547116 ] } },

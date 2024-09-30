@@ -1,6 +1,7 @@
 {
 "type": "FeatureCollection",
 "name": "se_asian",
+"bbox": [-75.28027, 39.867, -74.95576, 40.13799],
 "features": [
 { "type": "Feature", "properties": { "name": "thai kuu restaurant", "rating": 3.7, "address": "35 Bethlehem Pike", "alias": "thai, italian, seafood", "title": "thai, italian, seafood", "cuisine": "Thai" }, "geometry": { "type": "Point", "coordinates": [ -75.208561, 40.077987 ] } },
 { "type": "Feature", "properties": { "name": "saigon noodle bar", "rating": 4.1, "address": "8221 Germantown Ave", "alias": "vietnamese, noodles, bubbletea", "title": "vietnamese, noodles, bubble tea", "cuisine": "Vietnamese" }, "geometry": { "type": "Point", "coordinates": [ -75.202862237036996, 40.074102292873697 ] } },
