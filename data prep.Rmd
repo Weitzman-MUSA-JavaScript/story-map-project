@@ -1,0 +1,249 @@
+---
+title: "philly cuisine analysis"
+author: "Anna Duan"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Setup 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tigris)
+library(tidyverse)
+library(sf)
+library(mapview)
+
+restaurants <- st_read("working data/restaurants_raw.geojson")
+
+neighs <- st_read("working data/phl_neighs.geojson") %>%
+  st_transform(4326) %>%
+  select(MAPNAME, Shape_Area) %>%
+  st_make_valid()
+
+neigh_coords <- neighs %>%
+  st_centroid() %>% 
+  mutate(lon = st_coordinates(.)[,1], lat = st_coordinates(.)[,2])
+
+tracts <- tigris::tracts(state = "PA", county = "Philadelphia", year = 2018) %>%
+  st_transform(4326) %>%
+  select(NAME)
+```
+
+
+# Cuisine Mapping
+```{r cuisine groups}
+# Updated and Refined Cuisine Keywords Dictionary
+cuisine_keywords <- list(
+  American = c( "american", "tradamerican", "newamerican", "comfort",
+                "comfortfood", "diners", "pubs", "buffets", "steakhouses", 
+                "gastropubs", "bar", "bars", "sportsbars", "salad", "bakeries",
+                "lounges", "brewpubs", "beergardens", "burger", "diner",
+                "cheesesteaks", "mac and cheese", "luncheonette", "chickenshop",
+                "chicken_wings", "hotdogs", "wings", "cheesesteak", "steaks",
+                "bbq", "barbecue", "barbeque", "smoked", "ribs", "pitmaster",
+                "dog", "dogs", "grill", "fastfood", "quickbites", "burgers",
+                "fries", "wraps", "pretzels", "grille", "coffee", "icecream",
+                "deli", "sandwiches", "kosher", "delis", "cafes", "brunch",
+                "hoagie", "brunch", "desserts", "pizza", "pizzeria",
+                "pasta", "lasagna", "dessert", "rotisserie", "sweetgreen",
+                "crown", "fried chicken", "cafe", "chicken", "donuts",
+                "chickenwings", "fastfood", "sports", "donuts", "vegan",
+                "soulfood", "southern", "soul", "cajun", "creole", "southern",
+                "soul", "cajun", "creole", "cajuncreole"
+  ),
+  
+  Italian = c("italian", "trattoria", "pastashops", "wine_bars",
+              "gelato", "risotto", "ristoranti", "ristorante", "giuseppe",
+              "trazza", "tuscan"
+              ),
+  Chinese = c("chinese", "shanghainese", "cantonese", "dimsum", "szechuan",
+              "noodles", "hotpot", "panasian", "wok", "china", "garden", 
+              "bubble tea", "boba", "dumpling", "wei", "meng", "dragon", "kung", 
+              "canton", "mandarin", "oriental", "zheng", "xi", "jiang", "dian",
+              "ho", "lam", "yang", "zhong", "asian", "shing", "east", "pearl",
+              "palace", "chen", "sai", "yong", "hou", "hong", "zhang", "jun",
+              "golden", "kam", "dong", "sheng", "chung", "ping", "kon", "yi",
+              "wah", "lee", "nanchang", "lim", "yoo", "chan", "choing", "chuong",
+              "mui", "star", "lui", "yuan", "heng", "kee", "yue", "orient","ming"
+              ),
+  
+  Mexican = c("mexican", "tacos", "texmex", "burritos", "enchiladas", "salsa", "margaritas", "fajitas", "taqueria", "masa", "tex-mex"
+              ),
+  
+  Japanese = c("japanese", "sushi", "ramen", "teppanyaki", "izakaya", "sashimi", "hibachi", "omakase", "shabu", "osaka"
+               ),
+  
+  Korean = c("korean", "bibimbap", "kimchi", "bulgogi", "kbbq", "koreanbbq", "seung", "kim"
+             ),
+  
+  Middle_Eastern = c("mideastern", "middle_eastern", "halal", "shawarma",
+                     "falafel", "kebab", "hummus", "arabic", "syrian", "sahara",
+                     "afghan", "moroccan", "nile", "istanbul"
+                     ),
+  
+  Mediterranean = c("mediterranean", "lebanese", "spanish", "iberian", "grille", 
+                    "mezze", "baklava", "greek", "gyro", "souvlaki", "moussaka",
+                    "portuguese", "tapas"),
+  
+  South_Asian = c("indian", "indpak", "curry", "tandoori", "naan", "masala",
+                  "biriyani", "pakistani", "nepali", "himalayan"
+                  ),
+  
+  Thai = c("thai", "pad_thai", "thaifusion"
+           ),
+  
+  Vietnamese = c("pho", "viet", "vietnamese", "banh_mi", "pho", "bun", "pho",
+                 "springrolls", "trinh", "nguyen", "tran"),
+  
+  Ethiopian = c("ethiopian", "injera", "doro_wot", "tibs"
+                ),
+  
+  Caribbean = c("caribbean", "jamaican", "trinidadian", "haitian", "puertorican",
+                "jerk", "dominican", "borinquen", "carribean"
+                ),
+  
+  West_European = c("french", "crepe", "bistro", "brasserie", "patisserie",
+                    "volksfest", "brahaus", "moderneuropean", "european",
+                    "german", "scandinavian", "brasseries", "british", "english",
+                    "scottish", "irish", "welsh", "fish and chips", 
+                    "fish & chips", "pub", "finnigan", "dandelion"
+                    ),
+  
+  East_European = c("russian", "uzbek", "ukrainian", "georgian", "ulfatlar",
+                    "khachapuri", "khinkali", "plov", "lagman", "polish"
+                    ),
+  
+  Latin_American = c("latin", "latinamerican", "nicaraguan", "salvadoran",
+                     "brazilian", "colombian", "guatemalteco", "guadelupana",
+                     "casa", "guadalupana", "cancun", "caldos", "restaurante",
+                     "provocan", "de jesus", "honduran", "latinos", "venezuelan"
+                     ),
+  
+  West_African = c("african", "senegalese", "nigerian", "ghanaian",
+                   "cameroonian", "ivorian", "jollof"
+                   ),
+  
+  Southeast_Asian = c("cambodian", "amok", "lok_lak", "malaysian", "indonesian",
+                      "kerala", "filipino"
+                      )
+)
+
+# Define cuisine priority (from highest to lowest)
+cuisine_priority <- c(
+  "Middle_Eastern", "South_Asian", "Thai", "West_African", "West_European", "East_European", "Ethiopian", "Southeast_Asian", "Vietnamese", "Japanese", "Korean", "Caribbean", "Mediterranean", "Latin_American", "Chinese", "Mexican",
+"Italian", "American"
+)
+
+```
+
+```{r cuisine mapping}
+# Function to assign primary cuisine based on keywords with prioritization
+assign_primary_cuisine <- function(name, title, alias, cuisine_dict, priority_order) {
+  # Replace NA with empty string to avoid issues
+  name <- ifelse(is.na(name), "", name)
+  title <- ifelse(is.na(title), "", title)
+  alias <- ifelse(is.na(alias), "", alias)
+  
+  # Combine name, title, alias for comprehensive search
+  combined_text <- paste(name, title, alias, sep = " ")
+  
+  # Convert to lowercase for case-insensitive matching
+  combined_text <- tolower(combined_text)
+  
+  # Iterate over each cuisine based on priority
+  for (cuisine in priority_order) {
+    keywords <- cuisine_dict[[cuisine]]
+    
+    escaped_keywords <- str_replace_all(keywords, "([.|()\\^{}+$*?]|\\[|\\]|\\\\)", "\\\\\\1")
+    pattern <- paste0("\\b(", paste(escaped_keywords, collapse = "|"), ")\\b")
+    
+    # Check if any keyword matches
+    if (grepl(pattern, combined_text, ignore.case = TRUE)) {
+      return(cuisine)
+    }
+  }
+  
+  # If no match found, return NA
+  return("Unknown")
+}
+
+restaurants$cuisine <- mapply(
+  assign_primary_cuisine,
+  name = restaurants$name,
+  title = restaurants$title,
+  alias = restaurants$alias,
+  MoreArgs = list(cuisine_dict = cuisine_keywords, priority_order = cuisine_priority)
+)
+
+# View the first few entries with the assigned cuisine
+restaurants %>%
+  st_drop_geometry() %>%
+  group_by(cuisine) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count)) %>%
+  head(15)
+
+unclassified <- restaurants %>%
+  st_drop_geometry() %>%
+  filter(cuisine == "Unknown") %>%
+  select(name, title, alias)
+
+italian <- restaurants %>% filter(cuisine == "Italian")
+chinese <- restaurants %>% filter(cuisine == "Chinese")
+mexican <- restaurants %>% filter(cuisine == "Mexican")
+```
+
+```{r write files}
+cuisine_neigh <- st_intersection(restaurants, neighs) %>%
+  st_drop_geometry() %>%
+  left_join(neighs, by = "MAPNAME") %>%
+  group_by(cuisine, MAPNAME) %>%
+  summarise(count = n(), .groups = 'drop') %>%
+  group_by(MAPNAME) %>%
+  mutate(pct = 100 * count / sum(count)) %>%
+  ungroup() %>%
+  left_join(neighs, by = "MAPNAME") %>%
+  st_as_sf()
+
+cuisine_tract <- st_intersection(restaurants, tracts) %>%
+  st_drop_geometry() %>%
+  left_join(tracts, by = "NAME") %>%
+  group_by(cuisine, NAME) %>%
+  summarise(count = n(), .groups = 'drop') %>%
+  group_by(NAME) %>%
+  mutate(pct = 100 * count / sum(count)) %>%
+  ungroup() %>%
+  left_join(tracts, by = "NAME") %>%
+  st_as_sf()
+
+
+top_cuisine_neigh <- cuisine_neigh %>% 
+  filter(! cuisine %in% exclude) %>%
+  group_by(MAPNAME) %>% 
+  slice_max(order_by = pct)
+
+top_cuisine_tract <- cuisine_tract %>% 
+  filter(! cuisine %in% exclude) %>%
+  group_by(NAME) %>% 
+  slice_max(order_by = pct)
+
+spruce_hill_rest <- neighs %>%
+  filter(MAPNAME %in% c("Spruce Hill")) %>%
+  st_intersection(restaurants) %>%
+  st_as_sf()
+
+st_write(restaurants, "data/restaurants_final.geojson", driver = "GeoJSON")
+st_write(top_cuisine_neigh, "data/top_cuisine_neigh.geojson", driver = "GeoJSON")
+st_write(top_cuisine_tract, "data/top_cuisine_tract.geojson", driver = "GeoJSON")
+st_write(spruce_hill_rest, "data/spruce_hill_restaurants.geojson", driver = "GeoJSON")
+
+for (cuisine in unique(restaurants$cuisine)) {
+  cuisine_name <- tolower(gsub(" ", "_", cuisine))
+  cuisine_data <- restaurants %>%
+    filter(cuisine == cuisine)
+  
+  st_write(cuisine_data, paste0("data/", cuisine_name, ".geojson"), driver = "GeoJSON")
+}
+
+```
+

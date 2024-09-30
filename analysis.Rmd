@@ -1,5 +1,5 @@
 ---
-title: "philly cuisine analysis"
+title: "analysis and viz"
 author: "Anna Duan"
 date: "`r Sys.Date()`"
 output: html_document
@@ -7,19 +7,30 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(tigris)
+
 library(tidyverse)
 library(sf)
-library(mapview)
 library(wordcloud2)
 library(tm)
+library(tigris)
 
-restaurants <- st_read("data/restaurants_raw.geojson")
+
+neighs <- st_read("data/phl_neighs.geojson") %>%
+  st_transform(4326) %>%
+  select(MAPNAME, Shape_Area)
+
+restaurants <- st_read("data/restaurants_final.geojson")
+top_cuisine_tract <- st_read("data/top_cuisine_tract.geojson")
+top_cuisine_neigh <- st_read("data/top_cuisine_neigh.geojson")
+
+exclude <- c("Unknown", "American", "Seafood")
+
+cuisine_colors <- c("Caribbean" = "cyan", "Chinese" = "goldenrod2", "East_European" = "dodgerblue3", "Japanese" = "darkcyan",  "Korean" = "orchid1", "Latin_American" = "pink2", "Mediterranean" = "olivedrab2", "Mexican" = "gold1", "Middle_Eastern" = "salmon1",  "Soul_Food" = "lightblue1", "South_Asian" = "olivedrab4", "Thai" = "tan", "United_Kingdom" = "orchid3",  "Vietnamese" = "salmon3", "West_African" = "darkslategray")
 ```
 
-
-```{r wordcloud}
-# Title
+# Wordclouds 
+```{r wordclouds}
+# Yelp description
 text <- restaurants$title
 docs <- Corpus(VectorSource(text)) %>%
   tm_map(removeNumbers) %>%
@@ -35,184 +46,9 @@ df <- data.frame(word = names(words),freq=words) %>%
                       'trucks', 'grocery', 'shops', 'stores', 'sports', 'bars', 
                       'breakfast', 'brunch', 'new','convenience', 'stands', 'american'))
 
-wordcloud2(data = df, size = 0.8, color = "random-light")
-```
-#### Cuisine Mapping #### 
-```{r cuisine groups}
-# Updated and Refined Cuisine Keywords Dictionary
-cuisine_keywords <- list(
-    American = c(
-    "american", "tradamerican", "newamerican", "comfort", "comfortfood", "diners", 
-    "pubs", "buffets", "steakhouses", "gastropubs", "bar", "bars", "sportsbars", "salad", "bakeries",
-    "lounges", "brewpubs", "beergardens", "burger", "diner", "cheesesteaks", "mac and cheese",
-    "luncheonette", "chicken_wings", "hotdogs", "wings", "cheesesteak", "steaks",
-    "bbq", "barbecue", "barbeque", "smoked", "ribs", "pitmaster", "dog", "dogs", "grill",
-    "fastfood", "quickbites", "burgers", "fries", "wraps", "pretzels", "grille", "coffee", "icecream",
-    "deli", "sandwiches", "kosher", "delis", "cafes", "brunch", "hoagie", "brunch", "desserts", "pizza", "pizzeria",
-    "pasta", "lasagna", "dessert", "rotisserie", "sweetgreen", "crown", "fried chicken", "cafe", "chicken",
-    "sports", "donuts", "vegan"
-  ),
-  
-  Italian = c(
-    "italian", "trattoria", "pastashops", 
-    "wine_bars", "tapas", "gelato", "risotto", "ristoranti", "ristorante", "giuseppe",
-    "trazza", "tuscan"
-  ),
-  
-  United_Kingdom = c(
-    "british", "english", "scottish", "irish", "welsh", "fish and chips", "fish & chips",
-    "pub", "finnigan", "dandelion"),
-  
-  Chinese = c(
-    "chinese", "shanghainese", "cantonese", "dimsum", "szechuan", "noodles", 
-    "hotpot", "panasian", "wok", "china", "garden", "bubble tea", "boba", "dumpling",
-    "wei", "meng", "dragon", "kung", "canton", "mandarin", "oriental", "zheng", "xi", "jiang", "dian",
-    "ho", "lam", "yang", "zhong", "asian", "shing", "east", "pearl", "palace", "chen", "sai", "yong",
-    "hou", "hong", "zhang", "jun", "golden", "kam", "dong", "sheng", "chung",
-    "ping", "kon", "yi", "wah", "lee", "nanchang", "lim", "yoo", "chan", "choing", "chuong", "mui", "star", "lui",
-    "yuan", "heng", "kee", "yue", "orient", "ming"
-  ),
-  
-  Mexican = c(
-    "mexican", "tacos", "texmex", "burritos", "enchiladas", "salsa", "margaritas", 
-    "fajitas", "taqueria", "masa", "tex-mex"
-  ),
-  
-  Japanese = c(
-    "japanese", "sushi", "ramen", "teppanyaki", "izakaya", "sashimi", "hibachi", 
-    "omakase", "shabu", "osaka"
-  ),
-  
-  Korean = c(
-    "korean", "bibimbap", "kimchi", "bulgogi", "kbbq", "koreanbbq", "seung", "kim"
-  ),
-  
-  Middle_Eastern = c(
-    "mideastern", "middle_eastern", "halal", "shawarma", "falafel", "kebab", 
-    "hummus", "arabic", "syrian", "sahara", "afghan", "moroccan", "nile", "istanbul"
-  ),
-  
-  Mediterranean = c(
-    "mediterranean", "lebanese", "spanish", "iberian", "grille", "mezze", "baklava", "greek", "gyro", "souvlaki", "moussaka", "portuguese"
-  ),
-  
-  Soul_Food = c(
-    "soulfood", "southern", "soul", "cajun", "creole", "southern", "soul", "cajun", "creole",
-    "cajuncreole"
-  ),
-    
-  South_Asian = c(
-    "indian", "indpak", "curry", "tandoori", "naan", "masala", "biriyani", "pakistani", "nepali", "himalayan"
-  ),
-  
-  Thai = c(
-    "thai", "pad_thai", "thaifusion"
-  ),
-  
-  Vietnamese = c("pho", "viet", "vietnamese", "banh_mi", "pho", "bun", "pho", "springrolls", "trinh", "nguyen", "tran"),
-  
-  Ethiopian = c(
-    "ethiopian", "injera", "doro_wot", "tibs"
-  ),
-  
-  Caribbean = c(
-    "caribbean", "jamaican", "trinidadian", "haitian", "puertorican", "soul", 
-    "jerk", "dominican", "borinquen", "carribean"
-  ),
-  
-  West_European = c(
-    "french", "crepe", "bistro", "brasserie", "patisserie", "volksfest", "brahaus", "moderneuropean", "european", "german", "scandinavian", "brasseries"
-  ),
-  
-  East_European = c(
-    "russian", "uzbek", "ukrainian", "georgian", "ulfatlar", "khachapuri", "khinkali", "plov", "lagman", "polish"
-  ),
-  
-  Latin_American = c(
-    "latin", "latinamerican", "nicaraguan", "salvadoran", "brazilian", "colombian", "guatemalteco", "guadelupana", "casa", "guadalupana", "cancun", "caldos", "restaurante", "provocan", "de jesus", "honduran", "latinos", "venezuelan"
+wordcloud2(data = df, size = 3, color = "random-light")
 
-  ),
-  
-  Hawaiian = c(
-    "hawaiian", "poke", "loco_moco", "laulau", "kalua_bbq"
-  ),
-  
-  West_African = c(
-    "african", "senegalese", "nigerian", "ghanaian", "cameroonian", "ivorian", "jollof"
-  ),
-  
-  Southeast_Asian = c(
-    "cambodian", "amok", "lok_lak", "malaysian", "indonesian", "kerala", "filipino"
-  ),
-  
-  Seafood = c(
-    "seafood", "crab", "lobster", "oyster", "clam", "shrimp", "fish", "scallops", "mussels", "crab", "lobster", "oyster", "clam", "shrimp", "fish", "scallops", "mussels", "sea food", "surf"
-  )
-)
-
-# Define cuisine priority (from highest to lowest)
-cuisine_priority <- c(
-  "United_Kingdom", "South_Asian", "Thai", "Hawaiian", "West_African", 
-  "West_European", "East_European", "Ethiopian", "Southeast_Asian", "Middle_Eastern", 
-  "Mexican", "Vietnamese", "Japanese", "Korean", "Soul_Food", "Caribbean", 
-  "Chinese", "Mediterranean", "Latin_American", "Seafood", "American", "Italian"
-)
-
-```
-
-```{r cuisine mapping}
-# Function to assign primary cuisine based on keywords with prioritization
-assign_primary_cuisine <- function(name, title, alias, cuisine_dict, priority_order) {
-  # Replace NA with empty string to avoid issues
-  name <- ifelse(is.na(name), "", name)
-  title <- ifelse(is.na(title), "", title)
-  alias <- ifelse(is.na(alias), "", alias)
-  
-  # Combine name, title, alias for comprehensive search
-  combined_text <- paste(name, title, alias, sep = " ")
-  
-  # Convert to lowercase for case-insensitive matching
-  combined_text <- tolower(combined_text)
-  
-  # Iterate over each cuisine based on priority
-  for (cuisine in priority_order) {
-    keywords <- cuisine_dict[[cuisine]]
-    
-    escaped_keywords <- str_replace_all(keywords, "([.|()\\^{}+$*?]|\\[|\\]|\\\\)", "\\\\\\1")
-    pattern <- paste0("\\b(", paste(escaped_keywords, collapse = "|"), ")\\b")
-    
-    # Check if any keyword matches
-    if (grepl(pattern, combined_text, ignore.case = TRUE)) {
-      return(cuisine)
-    }
-  }
-  
-  # If no match found, return NA
-  return("Unknown")
-}
-
-restaurants$cuisine <- mapply(
-  assign_primary_cuisine,
-  name = restaurants$name,
-  title = restaurants$title,
-  alias = restaurants$alias,
-  MoreArgs = list(cuisine_dict = cuisine_keywords, priority_order = cuisine_priority)
-)
-
-# View the first few entries with the assigned cuisine
-restaurants %>%
-  st_drop_geometry() %>%
-  group_by(cuisine) %>%
-  summarise(count = n()) %>%
-  arrange(desc(count)) %>%
-  head(10)
-
-unclassified <- restaurants %>%
-  st_drop_geometry() %>%
-  filter(cuisine == "Unknown") %>%
-  select(name, title, alias)
-
-# Cuisine word cloud
+# Cuisine
 text <- restaurants$cuisine
 docs <- Corpus(VectorSource(text)) %>%
   tm_map(removeNumbers) %>%
@@ -223,27 +59,27 @@ docs <- Corpus(VectorSource(text)) %>%
 dtm <- TermDocumentMatrix(docs) 
 matrix <- as.matrix(dtm) 
 words <- sort(rowSums(matrix),decreasing=TRUE) 
+
 df <- data.frame(word = names(words),freq=words) %>%
-  filter(word != "american")
+  filter(! word %in% exclude)
 
 
-set.seed(1234) # for reproducibility 
-wordcloud2(data = df, size = 0.8, color = "random-light")
+wordcloud2(data = df, size = 3, color = "random-light")
 ```
-
-#### Exploratory Analysis #### 
+# Cuisine dist
 ```{r cuisine distribution}
 
 # Location of all restaurants
 ggplot() + 
-  geom_sf(data = restaurants, color = "darkcyan", size = 0.5) +
+ # geom_sf(data = st_union(neighs), fill = "gray90", color = "transparent") +
+  geom_sf(data = restaurants, color = "darkcyan", size = 0.5, alpha = 0.2) +
   labs(
-    title = "Location of Restaurants in Philadelphia",
+    title = "Philadelphia Restaurants",
+    subtitle = "n = 5,176"
   ) +
   theme_void()
 
-# Plot the distribution of cuisine types, ordered by count
-exclude <- c("Unknown", "American", "Seafood")
+
 ggplot() +
   geom_bar(data = restaurants %>% filter(!cuisine %in% exclude), aes(x = cuisine), show.legend = FALSE, fill = "darkcyan") +
   coord_flip() +
@@ -257,44 +93,11 @@ ggplot() +
 ```
 
 ```{r map all restaurants}
-
-cuisine_neigh <- st_intersection(restaurants, neighs) %>%
-  st_drop_geometry() %>%
-  left_join(neighs, by = "MAPNAME") %>%
-  group_by(cuisine, MAPNAME) %>%
-  summarise(count = n(), .groups = 'drop') %>%
-  group_by(MAPNAME) %>%
-  mutate(pct = 100 * count / sum(count)) %>%
-  ungroup() %>%
-  left_join(neighs, by = "MAPNAME") %>%
-  st_as_sf()
-
-cuisine_tract <- st_intersection(restaurants, tracts) %>%
-  st_drop_geometry() %>%
-  left_join(tracts, by = "NAME") %>%
-  group_by(cuisine, NAME) %>%
-  summarise(count = n(), .groups = 'drop') %>%
-  group_by(NAME) %>%
-  mutate(pct = 100 * count / sum(count)) %>%
-  ungroup() %>%
-  left_join(tracts, by = "NAME") %>%
-  st_as_sf()
-
-top_ethnic_cuisine_neigh <- cuisine_neigh %>% 
-  filter(! cuisine %in% exclude) %>%
-  group_by(MAPNAME) %>% 
-  slice_max(order_by = pct)
-
-top_ethnic_cuisine_tract <- cuisine_tract %>% 
-  filter(! cuisine %in% exclude) %>%
-  group_by(NAME) %>% 
-  slice_max(order_by = pct)
-
 # Map most common cuisine in each neighborhood
 ggplot() +
-  geom_sf(data = st_union(neighs), fill = "gray95", color = "transparent") +
-  geom_sf(data = top_ethnic_cuisine_neigh %>% filter(count > 10), aes(fill = cuisine), color = "white") +
-  scale_fill_brewer(palette = "Set3") +
+  #geom_sf(data = st_union(neighs), fill = "gray95", color = "transparent") +
+  geom_sf(data = top_cuisine_neigh %>% filter(count > 2), aes(fill = cuisine), color = "white") +
+  scale_fill_manual(values = cuisine_colors) +
   labs(
     title = "Most Common Cuisine in Each Neighborhood",
     fill = "Cuisine"
@@ -303,11 +106,10 @@ ggplot() +
 
 # Map most common cuisine in each census tract
 ggplot() +
-  geom_sf(data = st_union(neighs), fill = "gray95", color = "transparent") +
-  geom_sf(data = top_ethnic_cuisine_tract %>% filter(count > 3), aes(fill = cuisine), color = "white") +
-  scale_fill_brewer(palette = "Set3", direction = 1) +
+  geom_sf(data = top_cuisine_tract %>% filter(count > 2), aes(fill = cuisine), color = "white") +
+  scale_fill_manual(values = cuisine_colors) +
   labs(
-    title = "Census tracts with more than 30% of an ethnic cuisine",
+    title = "Most Common Cuisine in Each Tract",
     fill = "Cuisine"
   ) +
   theme_void()
@@ -315,14 +117,8 @@ ggplot() +
 ```
 
 ```{r spruce hill}
-spruce_hill_restaurants <- neighs %>%
-  filter(MAPNAME %in% c("Spruce Hill")) %>%
-  st_intersection(restaurants) 
-
-# Plot and color by cuisine
 ggplot() +
-  geom_sf(data = spruce_hill_restaurants, aes(color = cuisine)) +
-  scale_color_brewer(palette = "Set3") +
+  geom_sf(data = spruce_hill_restaurants, aes(color = mid_east)) +
   labs(
     title = "Restaurants in Spruce Hill",
     fill = "Cuisine"

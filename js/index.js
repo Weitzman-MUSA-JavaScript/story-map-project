@@ -1,23 +1,21 @@
 import { SlideDeck } from './slidedeck.js';
 
-const map = L.map('map', {scrollWheelZoom: false}).setView([0, 0], 0);
+const map = L.map('map', {scrollWheelZoom: false}).setView([39.95, -75.16], 12);
+const Mapboxkey = 'pk.eyJ1IjoibWp1bWJlLXRlc3QiLCJhIjoiY2w3ZTh1NTIxMTgxNTQwcGhmODU2NW5kaSJ9.pBPd19nWO-Gt-vTf1pOHBA';
+const Mapboxstyle = 'mapbox/light-v11';
 
-// ## The Base Tile Layer
-const mapboxKey = 'pk.eyJ1IjoibWp1bWJlLXRlc3QiLCJhIjoiY2w3ZTh1NTIxMTgxNTQwcGhmODU2NW5kaSJ9.pBPd19nWO-Gt-vTf1pOHBA';
-const mapboxStyle = 'mapbox/dark-v11';
-
-const baseTileLayer = L.tileLayer(`https://api.mapbox.com/styles/v1/${mapboxStyle}/tiles/512/{z}/{x}/{y}?access_token=${mapboxKey}`, {
+const baseTileLayer = L.tileLayer(`https://api.mapbox.com/styles/v1/${Mapboxstyle}/tiles/512/{z}/{x}/{y}{r}?access_token=${Mapboxkey}`, {
   maxZoom: 16,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
 
 baseTileLayer.addTo(map);
 
 // ## Interface Elements
+const container = document.querySelector('.slide-section');
 const slides = document.querySelectorAll('.slide');
 
 // ## The SlideDeck object
-const deck = new SlideDeck(slides, map);
+const deck = new SlideDeck(container, slides, map);
 
 document.addEventListener('scroll', () => deck.calcCurrentSlideIndex());
 

@@ -7,7 +7,8 @@ class SlideDeck {
    * @param {NodeList} slides A list of HTML elements containing the slide text.
    * @param {L.map} map The Leaflet map where data will be shown.
    */
-  constructor(slides, map) {
+  constructor(container, slides, map) {
+    this.container = container;
     this.slides = slides;
     this.map = map;
 
@@ -29,9 +30,18 @@ class SlideDeck {
    */
   updateDataLayer(data) {
     this.dataLayer.clearLayers();
+
     const geoJsonLayer = L.geoJSON(data, {
-      pointToLayer: (p, latlng) => L.marker(latlng),
-      style: (feature) => feature.properties.style,
+      pointToLayer: (feature, latlng) => {
+        return L.circleMarker(latlng, {
+          radius: 4,
+          fillColor: 'white',
+          color: 'gray',
+          weight: 2,
+          opacity: 1,
+          fillOpacity: 1,
+        });
+      }
     })
         .bindTooltip((l) => l.feature.properties.label)
         .addTo(this.dataLayer);

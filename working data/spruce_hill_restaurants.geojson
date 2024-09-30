@@ -1,5 +1,7 @@
 {
 "type": "FeatureCollection",
+"name": "spruce_hill_restaurants",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "MAPNAME": "Spruce Hill", "Shape_Area": 9214557.7503200006, "name": "doro bet", "rating": 4.0, "address": "4533 Baltimore Ave", "alias": "ethiopian, gluten_free, chicken_wings", "title": "ethiopian, gluten-free, chicken wings" }, "geometry": { "type": "Point", "coordinates": [ -75.214385837316513, 39.949145026063434 ] } },
 { "type": "Feature", "properties": { "MAPNAME": "Spruce Hill", "Shape_Area": 9214557.7503200006, "name": "gojjo bar & restaurant", "rating": 3.3, "address": "4540 Baltimore Ave", "alias": "ethiopian, african, newamerican", "title": "ethiopian, african, new american" }, "geometry": { "type": "Point", "coordinates": [ -75.214103698730511, 39.948631286621101 ] } },
