@@ -28,26 +28,77 @@ class SlideDeck {
    * @return {L.GeoJSONLayer} The new GeoJSON layer that has been added to the
    *                          data layer group.
    */
+
+
   updateDataLayer(data) {
     this.dataLayer.clearLayers();
 
-    const geoJsonLayer = L.geoJSON(data, {
-      pointToLayer: (feature, latlng) => {
-        return L.circleMarker(latlng, {
-          radius: 4,
-          fillColor: 'white',
-          color: 'gray',
-          weight: 2,
-          opacity: 1,
-          fillOpacity: 1,
-        });
-      }
-    })
-        .bindTooltip((l) => l.feature.properties.label)
-        .addTo(this.dataLayer);
 
+    // Fill aesthetics
+    function getColor(cuisine) {
+      switch (cuisine) {
+        case "Caribbean": return "cyan";
+        case "Chinese": return "gold";
+        case "East_European": return "skyblue";
+        case "Japanese": return "darkcyan";
+        case "Korean": return "salmon";
+        case "Latin_American": return "orange";
+        case "Mediterranean": return "lightpink";
+        case "Mexican": return "paleturquoise";
+        case "Middle_Eastern": return "plum";
+        case "South_Asian": return "olivedrab";
+        case "Thai": return "skyblue";
+        case "Italian": return "gold";
+        case "West_European": return "orchid";
+        case "Vietnamese": return "mistyrose";
+        case "Ethiopian": return "indianred";
+        case "West_African": return "cadetblue";
+        default: return "white"; // Default color if cuisine is not found
+      }
+    }
+
+  // County poly style function
+  function stylePoint(feature) {
+    const cuisine = feature.properties.cuisine;
+    const color = getColor(cuisine); 
+  
+    return {
+      fillColor: color,
+      weight: 1,
+      color: 'white',
+      fillOpacity: 0.7, 
+      interactive: true
+    };
+  }
+  
+  const geoJsonLayer = L.geoJSON(data, {
+    style: stylePoint, // Apply style to points
+    pointToLayer: (feature, latlng) => {
+      const color = getColor(feature.properties.cuisine);
+      return L.circleMarker(latlng, {
+        radius: 4,
+        fillColor: color, 
+        color: 'white', 
+        weight: 2,
+        opacity: 0.2,
+        fillOpacity: 5,
+      });
+    }
+  })
+    .addTo(this.dataLayer);
+
+    geoJsonLayer.bindTooltip((layer) =>{
+      const restaurant = layer.feature.properties.name;
+      const cuisine = layer.feature.properties.cuisine;
+      const cuisine_group = data.name;
+      return `${restaurant} - ${cuisine} - ${cuisine_group}`
+      })
+    
+      
     return geoJsonLayer;
   }
+
+  
 
   /**
    * ### getSlideFeatureCollection

@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "east_asian",
+"name": "East Asian",
 "bbox": [-75.28027, 39.867, -74.95576, 40.13799],
 "features": [
 { "type": "Feature", "properties": { "name": "szechuan garden", "rating": 4.5, "address": "2700 Bridge St", "alias": "szechuan, cantonese", "title": "szechuan, cantonese", "cuisine": "Chinese" }, "geometry": { "type": "Point", "coordinates": [ -75.066235349586194, 40.001890285844205 ] } },
