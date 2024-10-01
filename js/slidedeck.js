@@ -16,6 +16,8 @@ class SlideDeck {
     this.currentSlideIndex = 0;
   }
 
+
+    
   /**
    * ### updateDataLayer
    *
@@ -28,8 +30,6 @@ class SlideDeck {
    * @return {L.GeoJSONLayer} The new GeoJSON layer that has been added to the
    *                          data layer group.
    */
-
-
   updateDataLayer(data) {
     this.dataLayer.clearLayers();
 
@@ -71,6 +71,7 @@ class SlideDeck {
     };
   }
   
+
   const geoJsonLayer = L.geoJSON(data, {
     style: stylePoint, // Apply style to points
     pointToLayer: (feature, latlng) => {
@@ -94,11 +95,38 @@ class SlideDeck {
       return `${restaurant} - ${cuisine} - ${cuisine_group}`
       })
     
-      
     return geoJsonLayer;
+    
   }
 
-  
+    
+  // Function to create and add the legend
+  addLegend() {
+    const legend = L.control({ position: 'bottomright' });
+
+    legend.onAdd = () => {
+      const div = L.DomUtil.create('div', 'info legend');
+      const cuisines = [
+        "Caribbean", "Chinese", "East_European", "Japanese", "Korean", 
+        "Latin_American", "Mediterranean", "Mexican", "Middle_Eastern", 
+        "South_Asian", "Thai", "Italian", "West_European", 
+        "Vietnamese", "Ethiopian", "West_African"
+      ];
+
+      // Legend header
+      div.innerHTML += '<h4>Cuisine</h4>';
+
+      // Color boxes for cuisines
+      cuisines.forEach(cuisine => {
+        div.innerHTML += `<i style="background:${getColor(cuisine)}; width: 18px; height: 18px; display: inline-block;"></i> ${cuisine}<br>`;
+      });
+
+      return div;
+    };
+
+    legend.addTo(this.map);
+  }
+}
 
   /**
    * ### getSlideFeatureCollection

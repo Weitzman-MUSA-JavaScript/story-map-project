@@ -23,6 +23,7 @@ restaurants <- st_read("data/restaurants_final.geojson")
 top_cuisine_tract <- st_read("data/top_cuisine_tract.geojson")
 top_cuisine_neigh <- st_read("data/top_cuisine_neigh.geojson")
 
+
 exclude <- c("Unknown", "American", "Seafood")
 
 cuisine_colors <- c("Caribbean" = "cyan", "Chinese" = "goldenrod2", "East_European" = "dodgerblue3", "Japanese" = "darkcyan",  "Korean" = "orchid1", "Latin_American" = "pink2", "Mediterranean" = "olivedrab2", "Mexican" = "gold1", "Middle_Eastern" = "salmon1",  "Soul_Food" = "lightblue1", "South_Asian" = "olivedrab4", "Thai" = "tan", "United_Kingdom" = "orchid3",  "Vietnamese" = "salmon3", "West_African" = "darkslategray")
