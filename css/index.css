@@ -53,7 +53,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh; 
-  background: url('https://frankc9912/story-map-project/image/background.jpg') no-repeat center fixed;
+  background: url('../image/background.jpg') no-repeat center fixed;
   color: white;
   text-align: center;
   font-family: Lato, sans-serif;
@@ -97,7 +97,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh; 
-  background: url('https://frankc9912/story-map-project/image/intro.jpg') no-repeat center fixed;
+  background: url('../image/intro.jpg') no-repeat center fixed;
   color: white;
   text-align: center;
   font-family: Lato, sans-serif;
