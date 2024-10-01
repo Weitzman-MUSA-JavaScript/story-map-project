@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Story</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <section class="title">
+      <div>
+          <h1>Foot Traffic Through Time</h1>
+          <p>How the Pandemic Changed the Philadelphia Life</p>
+      </div>
+  </section>
+
+  <section class="intro">
+      <div>
+        <h1>Introduction of Foot Traffic</h1>
+        <p>Foot traffic refers to the movement of pedestrians from place to place. It can also provides visibility into the behavior and characteristics of visitors to various locations during a specified period of time. This story map uses foot traffic data to show how the population moves between different areas, in terms of both volume and frequency in Philadelphia.</p>
+      </div>
+  </section>
+
+  <section class="intro">
+    <div>
+      <h1>About Data</h1>
+      <p>Advan Neighborhood Patterns dataset contains footfall data aggregated by census block group (CBG) over the course of a month. This contains aggregated raw counts of visits to POIs from a panel of mobile devices, answering how often people visit, how long they stay, where they came from, where else they go, and more. Data is anonymized and aggregated to provide insights into the volume of visitors to certain locations and overall behavioral patterns.</p>
+    </div>
+  </section>
+  
+  <section class="slide-section">
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
+  
+    <div id="text" class="slide" data-year="2018">
+      <h2>Foot Traffic in 2018</h2>
+      <p>In July of 2018, Philadelphia witnessed a total of 12,776,058 stops, underscoring a vibrant urban pulse.</p>
+      <p>Notable concentrations of activity can be observed in the center city area, as well as around Philadelphia International Airport.</p>
+      <p>Click on individual census block groups for more detailed information.</p>
+    </div>
+  
+    <div id="text" class="slide" data-year="2019">
+      <h2>Foot Traffic in 2019</h2>
+      <p>There are 10,237,448 counts of stops in Philadelphia in total in July, 2019.</p>
+      <p>While core areas like the center city and the airport maintained their popularity, a slight decline in foot traffic was observed in surrounding regions.</p>
+    </div>
+  
+    <div id="text" class="slide" data-year="2020">
+      <h2>Foot Traffic in 2020</h2>
+      <p>The global pandemic dramatically altered foot traffic patterns, with total stops plummeting to 4,784,786.</p>
+      <p>This great reduction reflects the widespread impact of health regulations and social distancing measures imposed citywide.</p>
+    </div>
+
+    <div id="text" class="slide" data-year="2021">
+      <h2>Foot Traffic in 2021</h2>
+      <p>Continuing the trend, 2021 saw slightly reduced foot traffic at 4,552,370 stops.</p> 
+      <p>Although traditional hotspots like the center city and airport areas saw some recovery, almost doubling compared to 2020. The surrounding areas lagged and still suffering from the pandemic's long-term effects.</p>
+    </div>
+
+    <div id="text" class="slide" data-year="2022">
+      <h2>Foot Traffic in 2022</h2>
+      <p>By July 2022, some evidence of revival can be found by the 6,193,219 recorded stops.</p> 
+      <p>The center city area's foot traffic returned to 35% of its pre-pandemic level, while the airport area achieved a more robust recovery at 55%.</p>
+    </div>
+
+    <div id="text" class="slide" data-year="2023">
+      <h2>Foot Traffic in 2023</h2>
+      <p>There was a continued upward trend with 7,679,843 stops in July 2023.</p> 
+      <p>The airport area showed a full rebound by notably surpassing pre-pandemic levels. However, the center city area remained at approximately 55% of its former vibrancy.</p>
+    </div>
+
+    <div id="text" class="slide" data-year="2024">
+      <h2>Foot Traffic in 2024</h2>
+      <p>As of July 2024, there are 6,999,189 counts of stops in Philadelphia in total in July.</p>
+      <p>This seems to mark a new normal at 30% below pre-pandemic levels. The center city area continues to remain at 55% of its former vibrancy, indicating lasting changes in urban activity patterns post-pandemic.</p>
+    </div>
+  </section>
+  
+  <section class="intro">
+    <div>
+      <h2>Findings</h2>
+      <p>Overall, Philadelphia's foot traffic volume has decreased by approximately 30% compared to pre-pandemic years, reflecting enduring changes in urban life and mobility.</p>
+    </div>
+  </section>
+
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/index.js" type="module"></script>
+  <script src="js/vismap.js" type="module"></script>  
+  <script src="js/effect.js"></script>  
+</body>
+</html>
