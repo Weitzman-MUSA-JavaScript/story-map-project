@@ -7,10 +7,11 @@ class SlideDeck {
    * @param {NodeList} slides A list of HTML elements containing the slide text.
    * @param {L.map} map The Leaflet map where data will be shown.
    */
-  constructor(container, slides, map) {
+  constructor(container, slides, map, legend) {
     this.container = container;
     this.slides = slides;
     this.map = map;
+    this.legend = legend;
 
     this.dataLayer = L.layerGroup().addTo(map);
     this.currentSlideIndex = 0;
@@ -57,7 +58,20 @@ class SlideDeck {
       }
     }
 
-  // County poly style function
+
+  // Legend styling
+  // Get unique cuisine values for each geojson
+  const cuisines = data.features.map(feature => feature.properties.cuisine);
+  const uniqueCuisines = [...(new Set(cuisines))];
+  
+  this.legend.div.innerHTML = "";
+  for (const cuisine of uniqueCuisines) {
+    this.legend.div.innerHTML +=
+        '<i style="background:' + getColor(cuisine) + '"></i> ' +
+        cuisine + '<br>';
+}
+
+  // Style point
   function stylePoint(feature) {
     const cuisine = feature.properties.cuisine;
     const color = getColor(cuisine); 
@@ -71,6 +85,7 @@ class SlideDeck {
     };
   }
   
+
 
   const geoJsonLayer = L.geoJSON(data, {
     style: stylePoint, // Apply style to points
@@ -95,38 +110,10 @@ class SlideDeck {
       return `${restaurant} - ${cuisine} - ${cuisine_group}`
       })
     
+      
     return geoJsonLayer;
-    
   }
 
-    
-  // Function to create and add the legend
-  addLegend() {
-    const legend = L.control({ position: 'bottomright' });
-
-    legend.onAdd = () => {
-      const div = L.DomUtil.create('div', 'info legend');
-      const cuisines = [
-        "Caribbean", "Chinese", "East_European", "Japanese", "Korean", 
-        "Latin_American", "Mediterranean", "Mexican", "Middle_Eastern", 
-        "South_Asian", "Thai", "Italian", "West_European", 
-        "Vietnamese", "Ethiopian", "West_African"
-      ];
-
-      // Legend header
-      div.innerHTML += '<h4>Cuisine</h4>';
-
-      // Color boxes for cuisines
-      cuisines.forEach(cuisine => {
-        div.innerHTML += `<i style="background:${getColor(cuisine)}; width: 18px; height: 18px; display: inline-block;"></i> ${cuisine}<br>`;
-      });
-
-      return div;
-    };
-
-    legend.addTo(this.map);
-  }
-}
 
   /**
    * ### getSlideFeatureCollection
