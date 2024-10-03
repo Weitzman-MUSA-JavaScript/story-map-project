@@ -36,45 +36,71 @@ class SlideDeck {
 
 
     // Fill aesthetics
-    function getColor(cuisine) {
-      switch (cuisine) {
-        case "Caribbean": return "cyan";
-        case "Chinese": return "gold";
-        case "East_European": return "skyblue";
-        case "Japanese": return "darkcyan";
-        case "Korean": return "salmon";
-        case "Latin_American": return "orange";
-        case "Mediterranean": return "lightpink";
-        case "Mexican": return "paleturquoise";
-        case "Middle_Eastern": return "plum";
-        case "South_Asian": return "olivedrab";
-        case "Thai": return "skyblue";
-        case "Italian": return "gold";
-        case "West_European": return "orchid";
-        case "Vietnamese": return "mistyrose";
-        case "Ethiopian": return "indianred";
-        case "West_African": return "cadetblue";
-        default: return "white"; // Default color if cuisine is not found
+    function getColor(rank) {
+      switch (rank) {
+        case 1: return "salmon";
+        case 2: return "gold";
+        case 3: return "olivedrab";
+        case 4: return "darkcyan";
+        case 5: return "navy";
+        case 6: return "purple";
+        case 7: return "orchid";
+        case 8: return "skyblue";
+        case 9: return "plum";
+        case 10: return "lightpink";
+        default: return "gray"; // Default color if cuisine is not found
       }
     }
 
 
-  // Legend styling
+/*   // Legend styling
   // Get unique cuisine values for each geojson
   const cuisines = data.features.map(feature => feature.properties.cuisine);
   const uniqueCuisines = [...(new Set(cuisines))];
-  
+  const rank = data.features.map(feature => feature.properties.rank);
+
   this.legend.div.innerHTML = "";
   for (const cuisine of uniqueCuisines) {
     this.legend.div.innerHTML +=
-        '<i style="background:' + getColor(cuisine) + '"></i> ' +
+        '<i style="background:' + getColor(rank) + '"></i> ' +
         cuisine + '<br>';
-}
+} */
+
+  // Extract cuisines and ranks from the GeoJSON data
+const cuisines = data.features.map(feature => feature.properties.cuisine);
+const uniqueCuisines = [...new Set(cuisines)];
+
+// Create a mapping from cuisine to its rank
+const cuisineToRank = {};
+
+// Populate the mapping (assuming each cuisine has a unique rank)
+data.features.forEach(feature => {
+    const cuisine = feature.properties.cuisine;
+    const rank = feature.properties.rank;
+    // If a cuisine appears multiple times, ensure the rank is consistent
+    if (!(cuisine in cuisineToRank)) {
+        cuisineToRank[cuisine] = rank;
+    }
+});
+
+// Initialize the legend content
+this.legend.div.innerHTML = "";
+
+// Iterate over each unique cuisine to add to the legend
+uniqueCuisines.forEach(cuisine => {
+    const rank = cuisineToRank[cuisine];
+    const color = getColor(rank);
+    
+    // Append the legend item
+    this.legend.div.innerHTML +=
+        `<i style="background:${color}; width: 18px; height: 18px; display: inline-block; margin-right: 8px;"></i> ${cuisine}<br>`;
+});
+
 
   // Style point
   function stylePoint(feature) {
-    const cuisine = feature.properties.cuisine;
-    const color = getColor(cuisine); 
+    const rank = feature.properties.rank;
+    const color = getColor(rank); 
   
     return {
       fillColor: color,
@@ -90,7 +116,7 @@ class SlideDeck {
   const geoJsonLayer = L.geoJSON(data, {
     style: stylePoint, // Apply style to points
     pointToLayer: (feature, latlng) => {
-      const color = getColor(feature.properties.cuisine);
+      const color = getColor(feature.properties.rank);
       return L.circleMarker(latlng, {
         radius: 4,
         fillColor: color, 

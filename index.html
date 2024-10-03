@@ -21,59 +21,76 @@
         <h1>Philadelphia Ethnic Food Clusters</h1>
         <p>Moving off of the University of Pennsylvania's campus during the Covid-19 pandemic, I found myself in a drastically different food environment.</p>
         <p>In my new neighborhood of Spruce Hill, Philadelphia, I discovered the succulent chicken sandwiches at Saad's Halal Restaurant, the tender lamb leg at Hadramout, and discovered a wealth of other middle eastern and halal eateries.</p>
-        <p>As a spatial data enthusiast, this led me to wonder how the food landscape of Philadelphia varies across geographies.</p>
+        <p>As a spatial data enthusiast, this led me to wonder how the ethnic food landscape of Philadelphia varies across geographies.</p>
         <p>This storymap documents what I've found through a year of research and data collection from Yelp's Fusion API and the Encyclopedia of Greater Philadelphia.</p>
+        <img src="www/cuisine keywords.png" alt="Food"/>
       </article>
 
       <article class="slide" id="second-slide">
         <h2>Philadelphia Restaurants, according to Yelp</h2>
         <p>I identified Yelp as the most up-to-date and granular source of information on open restaurants, due to the business incentive for restaurants to keep their listings current. Yelp also relies on crowdsourcing to verify whether businesses are still open.</p>
-        <p>In total, there are ---- total restaurants in Philadelphia based on Yelp's Fusion API. Using their description fields and names, I keyword mapped cuisines for restaurants.</p>
+        <p>In total, there are 2,288 total ethnic restaurants in Philadelphia based on Yelp's Fusion API. Using their description fields and names, I keyword mapped cuisines for restaurants.</p>
+        <p>Following is the frequency of the cuisine categories in the city.</p>
+        <img src="www/cuisine group bar.png" alt="Top 10 cuisines in Philadelphia"/>
       </article>
 
       <article class="slide" id="third-slide">
-        <h2>Third slide title</h2>
-        <p>These are the most common cuisines in Philadelphia by census tract. While such maps are interesting to look at, we lose out on granularity.</p>
+        <h2>Top cuisine by census tract</h2>
+        <p>Aggregated to the tract level, we see that the most common cuisine in East Asian. It is difficult, however, to see the distribution of other cuisine groups due to the sheer number of East Asian restaurants.</p>
+        <p>Scroll down to see the spatial distribution of the 9 major cuisine groups in Philadelphia.</p>
       </article>
 
-      <article class="slide" id="fourth-slide">
+      <article class="slide" id="eastasian">
         <h2>East Asian</h2>
-        <p>East asian food is found in ......</p>
+        <p>East Asian cuisine is the most common ethnic cuisine category in Philadelphia. The most common sub-category is Chinese, followed by Japanese.</p>
+        <p>These cuisines generally cluster in Center City and University City, close to Chinatown and the University of Pennsylvania, although Chinese restaurants spread throughout the city.</p>
       </article>
 
-      <article class="slide" id="fifth-slide">
-        <h2>Latin American</h2>
-        <p>Latin american food.....</p>
-      </article>
-
-      <article class="slide" id="sixth-slide">
-        <h2>Middle Eastern</h2>
-        <p>Halal food.....</p>
-      </article>
-
-      <article class="slide" id="seventh-slide">
+      <article class="slide" id="mediterranean">
         <h2>Mediterranean</h2>
-        <p>Mediterranean food.....</p>
+        <p>The primary types of mediterranean food in the city are Italian and Greek.</p>
+        <p>Most restaurants in this category are clustered in Center City and parts of South Philadelphia, although there are pockets of Italian food in Northeast Philadelphia.</p>
       </article>
 
-      <article class="slide" id="eighth-slide">
-        <h2>Caribbean</h2>
-        <p>Caribbean food.....</p>
+      <article class="slide" id="latin">
+        <h2>Latin American</h2>
+        <p>Latin American food in Philadelphia is dominated by Mexican restaurants, followed by unspecified Latin American and Brazilian restaurants.</p>
+        <p>There are clusters in South, West, and North Philadelphia east of Broad Street.</p>
       </article>
 
-      <article class="slide" id="ninth-slide">
+
+      <article class="slide" id="southeastasian">
         <h2>Southeast Asian</h2>
-        <p>Southeast asian food.....</p>
+        <p>Southeast Asian food clusters primarily in South Philadelphia and Center City, East of Broad Street.</p>
+        <p>The primary cuisines are Thai and Vietnamese.</p>
       </article>
 
-      <article class="slide" id="tenth-slide">
+      <article class="slide" id="caribbean">
+        <h2>Caribbean</h2>
+        <p>Caribbean food in Philadelphia is predominantly in West, Southwest, and North Philadelphia west of Broad street.</p>
+        <p>The primary cuisine is Jamaican, followed by restaurants that are a mix of Caribbean cuisines.</p>
+      </article>
+
+      <article class="slide" id="european">
         <h2>European</h2>
-        <p>European food.....</p>
+        <p>The main European cuisines are British and Irish. Most of these restaurants cluster in Center City.</p>
       </article>
 
-      <article class="slide" id="eleventh-slide">
+      <article class="slide" id="middleeastern">
+        <h2>Middle Eastern</h2>
+        <p>Middle Eastern food clusters mainly in Center City and West Philadelphia.</p>
+        <p>Compared to the other cuisine groups, there is substantial overlap between sub-groups, with the majority of restaurants lacking cuisine-specific details.</p>
+      </article>
+
+      <article class="slide" id="southasian">
+        <h2>South Asian</h2>
+        <p>South Asian food in Philadelphia is primarily Indian, with a strong presence in West Philadelphia.</p>
+      </article>
+
+      <article class="slide" id="african">
         <h2>African</h2>
-        <p>African food.....</p>
+        <p>Most African restaurants in Philadelphia are not specific to one country.</p>
+        <p>The most prevalent single cuisine is Ethiopian, which has a strong presence in West Philadelphia. </p>
       </article>
 
     </section>

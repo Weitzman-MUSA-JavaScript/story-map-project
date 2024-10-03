@@ -15,7 +15,7 @@ library(tm)
 library(tigris)
 
 
-neighs <- st_read("data/phl_neighs.geojson") %>%
+neighs <- st_read("working data/phl_neighs.geojson") %>%
   st_transform(4326) %>%
   select(MAPNAME, Shape_Area)
 
@@ -23,8 +23,6 @@ restaurants <- st_read("data/restaurants_final.geojson")
 top_cuisine_tract <- st_read("data/top_cuisine_tract.geojson")
 top_cuisine_neigh <- st_read("data/top_cuisine_neigh.geojson")
 
-
-exclude <- c("Unknown", "American", "Seafood")
 
 cuisine_colors <- c("Caribbean" = "cyan", "Chinese" = "goldenrod2", "East_European" = "dodgerblue3", "Japanese" = "darkcyan",  "Korean" = "orchid1", "Latin_American" = "pink2", "Mediterranean" = "olivedrab2", "Mexican" = "gold1", "Middle_Eastern" = "salmon1",  "Soul_Food" = "lightblue1", "South_Asian" = "olivedrab4", "Thai" = "tan", "United_Kingdom" = "orchid3",  "Vietnamese" = "salmon3", "West_African" = "darkslategray")
 ```
@@ -61,9 +59,7 @@ dtm <- TermDocumentMatrix(docs)
 matrix <- as.matrix(dtm) 
 words <- sort(rowSums(matrix),decreasing=TRUE) 
 
-df <- data.frame(word = names(words),freq=words) %>%
-  filter(! word %in% exclude)
-
+df <- data.frame(word = names(words),freq=words)
 
 wordcloud2(data = df, size = 3, color = "random-light")
 ```
@@ -75,28 +71,28 @@ ggplot() +
  # geom_sf(data = st_union(neighs), fill = "gray90", color = "transparent") +
   geom_sf(data = restaurants, color = "darkcyan", size = 0.5, alpha = 0.2) +
   labs(
-    title = "Philadelphia Restaurants",
-    subtitle = "n = 5,176"
+    title = "Philadelphia Ethnic Restaurants",
+    subtitle = "n = 2,288"
   ) +
   theme_void()
 
 
 ggplot() +
-  geom_bar(data = restaurants %>% filter(!cuisine %in% exclude), aes(x = cuisine), show.legend = FALSE, fill = "darkcyan") +
+  geom_bar(data = restaurants, aes(x = cuisine_group), show.legend = FALSE, fill = "darkcyan") +
   coord_flip() +
-  scale_x_discrete(limits = restaurants %>% filter(!cuisine %in% exclude) %>% count(cuisine) %>% arrange(n) %>% pull(cuisine)) +
+  scale_x_discrete(limits = restaurants%>% count(cuisine_group) %>% arrange(n) %>% pull(cuisine_group)) +
   labs(
-    title = "Distribution of Cuisine Types",
-    x = "Cuisine",
-    y = "Restaurants"
+    x = "Cuisine group",
+    y = "Number of restaurants"
   ) +
-  theme_minimal() 
+  theme_minimal() +
+  theme(text = element_text(color = "gray20"))
 ```
 
 ```{r map all restaurants}
 # Map most common cuisine in each neighborhood
 ggplot() +
-  #geom_sf(data = st_union(neighs), fill = "gray95", color = "transparent") +
+  geom_sf(data = st_union(neighs), fill = "gray95", color = "transparent") +
   geom_sf(data = top_cuisine_neigh %>% filter(count > 2), aes(fill = cuisine), color = "white") +
   scale_fill_manual(values = cuisine_colors) +
   labs(
