@@ -1,3 +1,5 @@
+import L from 'leaflet';
+
 /**
  * A slide deck object
  */
@@ -16,8 +18,6 @@ class SlideDeck {
     this.dataLayer = L.layerGroup().addTo(map);
     this.currentSlideIndex = 0;
   }
-
-
     
   /**
    * ### updateDataLayer

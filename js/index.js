@@ -1,4 +1,5 @@
 import { SlideDeck } from './slidedeck.js';
+import L from 'leaflet';
 
 const map = L.map('map', {scrollWheelZoom: false}).setView([39.95, -75.16], 13);
 
@@ -14,7 +15,7 @@ baseTileLayer.addTo(map);
 
 // Legend
 var legend = L.control({position: 'bottomleft'});
-legend.onAdd = function (map) {
+legend.onAdd = function () {
 
   var div = L.DomUtil.create('div', 'info legend');
   legend.div = div;
