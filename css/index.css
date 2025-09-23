@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    border-width: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(3, 0, 156);
+}
+
+.intro{
+    height: 122vh;
+    position: relative;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.IntroTitle{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 10px; 
+}
+
+.IntroSubtitle {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 10px; 
+  }
+  
+.IntroText{
+    margin-top: 5vh;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+#MapBox{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 0;
+    width: 70%;
+}
+
+.slide-section {
+    position: relative;
+    margin-top: -30vh;
+    z-index: 100;
+    pointer-events: none;
+  }
+  
+  .slide {
+    margin-top: 90vh;
+    margin-bottom: 110vh;
+    margin-left: auto;
+    margin-right: 2rem;
+    padding: 1rem;
+    pointer-events: initial;
+    width: 25rem;
+    color: #ffffff;
+  }
+  
+  .slide:first-child {
+    margin-top: 0;
+  }
+  
+  .slide:last-child {
+    margin-bottom: 40vh;
+  }
+  
+  .slide-image{
+    display: block;
+    margin: 20px 0;
+    width: 80%;
+
+  }
+
+  .legend {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #f9f9f93b;
+    max-width: 100%;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+  
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  
+  .slide-controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 0.5rem;
+  
+    width: 100%;
+  }
+  
+  .slide-nav-button {
+    transition: all 0.1s;
+  
+    padding: 0;
+    margin: 1rem;
+    width: 4rem;
+    height: 3rem;
+    border: 1px solid #888;
+    border-radius: 0.25rem;
+  
+    background-color: #eee;
+    font-size: 1.5em;
+  }
+  
+  .slide-nav-button:hover {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .slide-nav-select {
+    min-width: 0;
+  }
+  

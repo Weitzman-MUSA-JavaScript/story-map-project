@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Basic Map on a Page</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    
+</head>
+
+<body>
+    <main>
+        <div class="intro">
+            <img src="Copenhagen.jpg" style="width: 100%;height: 100vh;">
+            <div class="IntroTitle">Start Your Own Creative Business in COPENHAGEN</div>
+            <div class="IntroSubtitle">A rising beautiful city in Denmark.</div>
+            <div class="IntroText">This is a school work. All the data were accessed on Oct 2024. </div>
+            <div class="IntroText">Data Sources: City of Copenhagen: Statbank; Copenhagen Municiple Plan2019</div>
+          </div>
+        
+        <div class = "map-container" id="MapBox"></div>
+        <div class="map leaflet-container leaflet-touch leaflet-retina leaf-fade-anim leaflet-grab
+                    leaflet-touch-drag leaflet-touch-zoom" id="map" tabindex="0" style="position:relative;"></div>
+
+        
+        <section class="slide-section">
+            <article class="slide" id="title-slide" data-color-field="kp15_ramme">
+              <h2>Getting know about the land use in Copenhagen.</h2>
+              <p>The land use and zoning for most blocks are housing, services, institutions, and leisure purposes.</p>
+              <p>Legal Effects: Although the municipal plan does not directly bind property owners, it obliges the municipality to follow it when making decisions.</p>
+              <p>The distribution of the commercial area largely overlaps with the Finger Plan and major transportation routes.</p>
+              <div class="legend">
+                <div class="legend-item"><span class="legend-color" style="background-color: #FEDCBC; width: 30px; height: 15px"></span> Residential (B) (Low Density)</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #FEBC7A; width: 30px; height: 15px"></span> Residential (B) (High Density)</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #BC5F5F; width: 30px; height: 15px"></span> Residential and Service Industry (C)</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #FE7A59; width: 30px; height: 15px"></span> Service Industry (S)</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #D5B3D5; width: 30px; height: 15px"></span> Mixed Profession (E)</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #B0ACD3; width: 30px; height: 15px"></span> Industrial (J)</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #9BACD3; width: 30px; height: 15px"></span> Port Purpose (H)</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #BCBCBC; width: 30px; height: 15px"></span> Technical Facilities (T)</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #DCFE9B; width: 30px; height: 15px"></span> Institutions (O)</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #BEE8FF; width: 30px; height: 15px"></span> Leisure Purpose (O)</div>
+              </div>
+              
+            </article>
+      
+            <article class="slide" id="second-slide" data-color-field="fod_7_19">
+              <h2>Transit Count - Pedestrains</h2>
+              <p>Here is a map showing all the pedestrain transit counts from 7a.m. to 7p.m..</p>
+              <p>On foot is one of the most popular ways of shopping.</p>
+              <div class="legend">
+                <div class="legend-item"><span class="legend-color" style="background-color: #D3E5FF; width: 30px; height: 15px"></span> Pedestrain Count <= 500</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #BDD7E7; width: 30px; height: 15px"></span> 500 &lt; Pedestrian Count &le; 800</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #6BAED6; width: 30px; height: 15px"></span> 800 &lt; Pedestrian Count &le; 1100</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #3182BD; width: 30px; height: 15px"></span> 1100 &lt; Pedestrian Count &le; 1400</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #08519C; width: 30px; height: 15px"></span> 1400 &lt; Pedestrian Count &le; 1700</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #003062; width: 30px; height: 15px"></span> 1700 &lt; Pedestrian Count</div>
+              </div>
+            </article>
+      
+            <article class="slide" id="third-slide" data-color-field="cykler_7_19">
+
+            </article>
+
+            <article class="slide" id="forth-slide" data-color-field="Pop">
+              <h2>Population Comparison</h2>
+              <p>You might want to know where people live.</p>
+              <p>Most people live in Nerrebro and Amager Vest.</p>
+              <div class="legend">
+                <div class="legend-item"><span class="legend-color" style="background-color: #E0BBE4; width: 30px; height: 15px"></span> Population <= 6000</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #C37DCE; width: 30px; height: 15px"></span> 6000 &lt; Population &le; 20000</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #9C4E9B; width: 30px; height: 15px"></span> 20000 &lt; Population &le; 30000</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #6A1B76; width: 30px; height: 15px"></span> 30000 &lt; Population &le; 45000</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #4A0072; width: 30px; height: 15px"></span> 45000 &lt; Population</div>
+              </div>
+            </article>
+
+            <article class="slide" id="fifth-slide" data-color-field="Id">
+              <h2>A New Island: Refshaleoen</h2>
+              <p>There is a rising island on the east of Copenhagen that you might want to take a look.</p>
+              <p>There are lots of art studios, cafes and informal creative activities on this island. The government is planning to put 1.5 million square meters building area on this island. The island is still expanding towards the north.</p>
+              <img src="reffen1.png" class='slide-image'>
+              <img src="reffen2.png" class='slide-image'>
+              <img src="reffen3.png" class='slide-image'>
+            </article>
+
+          </section>
+
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <script type = "module" src="js/main.js"></script>
+
+
+
+
+    
+</body>
+
+
+</html>
