@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Philadelphia Vacant Lots Transform into Green Spaces</title> 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/> 
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/style.css"> 
+</head> 
+<body> 
+  <main> 
+    <article class="cover-slide" id="cover"> 
+      <h1>Philadelphia Vacant Lots Transform into Green Spaces</h1> 
+      <h3>by Meixi Chai</h3> 
+      <p class="sources">
+        Data sources: 
+        <a href="https://circularphiladelphia.org/staging/wp-content/uploads/2024/02/Temporary-Vacant-Land-Activation-in-Philadelphia-FINAL.pdf" target="_blank">Circular Philadelphia</a>, 
+        <a href="https://mwfhe.org/what-we-do/the-philadelphia-landcare-program/" target="_blank">Men & Women for Human Excellence</a>, 
+        <a href="https://ai-analytics.wharton.upenn.edu/impact-analytics/landcare-pays-dividends/" target="_blank">Wharton AI & Analytics Initiative</a>, 
+        <a href="https://phsonline.org/for-gardeners/gardeners-blog/philadelphia-vacant-lots-green-community-spaces" target="_blank">Pennsylvania Horticultural Society</a>, 
+        <a href="https://opendataphilly.org" target="_blank">OpenDataPhilly</a>.
+      </p>
+    </article> 
+
+    <div class="map-container"> 
+      <div
+        class="map" 
+        id="map" 
+        role="img" 
+        aria-label="Interactive map of Philadelphia showing vacant lots and greening sites. Red dots represent vacant lots; green areas represent PHS LandCare parcels."
+      ></div>
+
+      <div class="slide2-overlay" id="slide2-overlay">
+        <div class="image-section">
+          <img src="images/phs.jpg" alt="PHS LandCare" class="slide-image">
+          <p class="image-caption">PHS LandCare transforms vacant lots into green spaces</p>
+        </div>
+        <div class="text-section">
+          <h2>Introducing PHS: A Citywide Greening Leader</h2>
+          <div class="text-content">
+            <p>The Pennsylvania Horticultural Society’s (PHS) Philadelphia LandCare Program is a nationally recognized model of landscape treatment and urban revitalization that addresses the widespread challenge of land vacancy in the city’s neighborhoods. Through partnerships with community-based organizations and city agencies, PHS transforms tens of thousands of abandoned parcels across Philadelphia into attractive, well-maintained micro-parks through a process known as “greening”.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="slide-section">
+      <article class="slide" id="slide1">
+        <h2>The Problem of Vacancy</h2>
+        <p> Philadelphia has approximately 40,000 vacant lots, which contribute to weakened economic opportunities and higher crime rates. Long-term vacancy often involves complex legal or financial entanglements that create barriers to redevelopment. These properties are linked to increased gun violence, reduced neighborhood safety, and difficulty attracting investment. Prolonged vacancy often results from policy misalignment, flawed incentives, or deliberate choices.</p>
+        <p><strong>Map:</strong> Red areas on the map show all vacant lots in Philadelphia. Click any red area to see details about that lot.</p>
+      </article>
+
+      <article class="slide" id="slide2">
+        <div style="height: 200px;"></div>
+      </article>
+
+      <article class="slide" id="slide3">
+        <h2>The LandCare Intervention: Cleaning & Greening Philadelphia</h2>
+        <p>There are 12,000 vacant lots across the city that have been stabilized through the PHS Philadelphia LandCare Program’s “Clean and Green” initiative and are currently maintained under contract with the Pennsylvania Horticultural Society, funded by the City of Philadelphia’s Division of Housing and Community Development. Each spring and fall, additional vacant parcels are stabilized and added to the maintenance inventory for the following year.</p>
+        <p><strong>Map:</strong> Green areas on the map show PHS LandCare sites transformed from vacant lots into maintained green spaces. Click any green area to view details.</p> 
+      </article>
+
+      <article class="slide" id="slide4"> 
+        <h2>Targeting High-Need Areas for Transformation</h2> 
+        <p>The Pennsylvania Horticultural Society (PHS), in partnership with the City of Philadelphia’s Division of Housing and Community Development, prioritizes vacant lots for greening based on factors such as proximity to transit, schools, and business corridors, as well as high-crime, high-density, and low-income areas with poor health outcomes. Lot selection comes through requests from residents, city departments, and council offices, with final approval by the Community Life Program (CLIP).</p>
+        <div class="legend">
+          <h4>Map Legend:</h4>
+          <div class="legend-item legend-primary"><span class="legend-color" style="background-color: #2e7d32;"></span> <strong>PHS LandCare Sites</strong></div>
+          <div class="legend-item legend-secondary"><span class="legend-color" style="background-color: #ffcc80;"></span> Commercial Corridors</div>
+          <div class="legend-item legend-secondary"><span class="legend-color" style="background-color: #90caf9;"></span> Schools</div>
+          <div class="legend-item legend-secondary"><span class="legend-color" style="background-color: #9c27b0;"></span> Bus Transit Shelters</div>
+          <div class="legend-item legend-secondary"><span class="legend-color" style="background-color: #e91e63;"></span> Trolley Stations</div>
+        </div>
+      </article> 
+
+      <article class="slide" id="slide5"> 
+        <h2>Community Voices: Residents Respond to Greening</h2> 
+        <p>The impact of PHS greening projects goes beyond visual improvements. Community members have shared how these transformations have influenced their daily lives and enhanced neighborhood safety.</p>
+        
+        <div class="case-study-box">
+          <h4>📍 4300 Block of Wayne Avenue</h4>
+          <p>The Nicetown greening plan is the result of many hours of community-driven work to articulate a shared green vision for the Nicetown neighborhoods, rooted in the aspirations of community members themselves. PHS and Nicetown CDC led the planning process, and with feedback from more than 400 residents, the community identified four key priorities: reducing trash and litter, increasing access to fresh and healthy food, reducing crime, and creating more job opportunities.</p>
+        </div>
+
+        <div class="resident-testimonial">
+          <div class="quote-icon">💬</div>
+          <blockquote>
+            "I would like to thank the Nicetown CDC for helping us clean up our block. Our block is primarily senior citizens, so the large pieces of debris we had trouble removing ourselves, but the Same Day Work and Pay participants were very helpful, and we appreciate you all. This is a very good program, and we all hope that you continue the program throughout the summer."
+          </blockquote>
+          <cite>- Local Resident, Wayne Avenue</cite>
+        </div>
+
+        <p><strong>Map:</strong> Click the Wayne Avenue marker to read the full resident testimonial and learn more about this community transformation.</p>
+      </article> 
+    </section> 
+  </main> 
+
+        
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
+  <script src="js/index.js" type="module"></script> 
+</body> 
+</html>
