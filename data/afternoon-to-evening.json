@@ -1,0 +1,42 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Chinatown",
+        "address": "Arch St &, N 10th St, Philadelphia, PA 19107"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.15619196262854, 39.95392218369031]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Betsy Ross House",
+        "address": "239 Arch St, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.14453408290949, 39.95244053699293]
+      }
+    },
+    {
+      "type": "Feature",
+    "properties": {
+      "label": "Chinatown to Betsy Ross Housevf"
+    },
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [-75.15621450296152, 39.953602118428876],
+        [-75.14479692487105, 39.95216869861463],
+        [-75.14476321245834, 39.95237599406164],
+        [-75.14480122817882, 39.9521743811915]
+      ]
+    }
+  }
+  ]
+}

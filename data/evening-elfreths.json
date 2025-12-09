@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Elfreth's Alley",
+        "address": "126 Elfreth's Alley, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.14243373563225, 39.952923411022056]
+      }
+    }
+  ]
+}

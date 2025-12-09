@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Betsy Ross House",
+        "address": "239 Arch St, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.14453408290949, 39.95244053699293]
+      }
+    }
+  ]
+}

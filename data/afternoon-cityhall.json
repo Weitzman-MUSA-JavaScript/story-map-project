@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "City Hall",
+        "address": "1400 John F Kennedy Blvd, Philadelphia, PA 19107"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.16361185014377, 39.952931444096926]
+      }
+    }
+  ]
+}

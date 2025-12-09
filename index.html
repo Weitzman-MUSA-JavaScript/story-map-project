@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A One Day Guide to Philadelphia</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <main>
+    <!-- The map container, used by Leaflet -->
+    <div class="map" id="map"></div>
+
+    <!-- The slides container -->
+    <section class="slide-section">
+      <article class="slide" id="title-slide">
+        <h1>A One Day Guide for First-Time Travelers to Philadelphia</h1>
+        <p>Hi there! Are you planning for a one day trip to Philadelphia for the first time? Or Perhaps you're bringing friends or family around the city for the first time. Well, if so you've come to the right place. </p> 
+        <p>This is my one day waking guide to Philadelphia, where I map out a few of my favorite spots to bring friends to in the city. This guide will start out at the Philadelphia William H. Gray III 30th Street Station for visitors coming into the city via Amtrak, SEPTA Regional Rail, and NJ Transit (or even by bus!).</p>      
+        <div class="title-image">
+          <img src="img/philly-skyline-schuylkill.jpg" alt="Philadelphia Skyline"/>
+          <p class="image-source">
+            Source: <a href="https://www.visitphilly.com/features/lonely-planet-2024/" target="_blank">Elevated Angles</a>
+          </p>
+        </div>
+      </article>
+
+      <!--All Stops Overview-->
+      <article class="slide hidden" id="all-stops-overview">
+        <h2>Overview of the itinerary</h2>
+        <p>
+          This map shows all the stops in the one day itinerary, starting from your arrival at 30th Street Station, through Center City, Chinatown, and into historic Old City. This itinerary is split into 3 sections: morning, afternoon, and evening!
+        </p>
+        <p>I've also mapped out my recommended walking path to get from location to location. Not only will you get to visit some icononic Philadelphia spots, but you will also get to experience the city by walking through some beautiful neighborhoods and parks!</p>
+      </article>
+      
+
+      <!-- Morning Overview -->
+      <article class="slide" id="morning-overview">
+        <h2>Morning in Philly</h2>
+        <p>Starting out in at the train station, there are three main spots on the morning itinerary: </p>  
+        <ul>
+          <li>The Schuykill River Trail,</li>
+          <li>The icononic Rocky Steps and Statue, and</li> 
+          <li>Breakfast at the Barnes Foundation.</li>
+        </ul>
+      </article>
+
+      <!-- Morning stops, detailed description -->
+      <article class="slide" id="morning-30th">
+        <h2>Start: 30th Street Station</h2>
+        <p>Welcome to Philadelphia! 30th Street Station, officially known as the William H. Gray Station, is a major intermodal transit hub in Philadelphia's University City neighborhood, serving Amtrak, SEPTA Regional Rail, and NJ TRANSIT. </p> 
+        
+        <p>If you're into architecture, this will be a treat for you. The beautiful station was opened in 1933, the station is an example of Neoclassical and Art Deco architecture, listed on the National Register of Historic Places.</p>
+        <div class="title-image">
+          <img src="img/30th-street-station.webp" alt="30th Street Station">
+          <p class="image-source">
+            Source: <a href="https://www.reddit.com/r/philadelphia/comments/rntte9/phillys_30th_street_station_looking_like_an_art/" target="_blank">Reddit</a>
+          </p>
+        </div>
+        
+      </article>
+
+      <article class="slide" id="morning-schuykill">
+        <h2>Stop 1: Schuykill River Trail</h2>
+        <p>First stretch your legs and enjoy the morning views! 30th Street Station is adjacent to the Schuykill River. Exit from the 30th St exit and walk towards Chestnut Street to get down to the Schuykill River Trail.</p>
+        <p>Walk North, towards the Philadelphia Art Museum, where our next stop is at.</p>
+        <div class="title-image">
+          <img src="img/schuylkill-river.png" alt="Schuykill River Trail">
+          <p class="image-source">
+            Source: <a>Lu Yii Wong</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="slide hidden" id="morning-rocky">
+        <h2>Stop 2: Rocky Statue and Steps</h2>
+        <p>
+          Are you perhaps a fan of the film <em>Rocky</em>, starring Sylvester Stallone? 
+          Our second stop of the day is at the Philadelphia Museum of Art, home of the 
+          iconic Rocky Statue and Rocky Steps. It's a fun spot for a photo op and the 
+          perfect moment to recreate the famous "Rocky Run."
+        </p>
+        <div class="title-image">
+          <img src="img/RockyStatue.jpg" alt="Rocky Statue">
+          <p class="image-source">
+            Source: <a href="https://www.visitphilly.com/things-to-do/attractions/the-rocky-statue-and-the-rocky-steps/" target="_blank">J. Fusco</a>
+          </p>
+        </div>      
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/_YYmfM2TfUA?start=115"
+            title="Rocky Steps Scene"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </article>
+      
+
+      <article class="slide hidden" id="morning-barnes">
+        <h2>Stop 3: Breakfast at The Garden (Barnes Foundation)</h2>
+        <p>Perhaps after your Rocky Run moment, you've finally worked up an appetite. I'd recommend checking out a nearby spot for breakfast to refuel for the rest of the day. Before leaving the Museum District, check out the The Garden Restuarant at the Barnes Foundation. They serve new American cuisine, prepared with locally sourced and seaonsal ingredients. A great spot for a moderately priced breakfast with a beautiful view of their garden.</p>
+
+        <p>
+          You can check their operating hours here: 
+          <a href="https://share.google/W0GfnrYnEKdFaWFDC" target="_blank" rel="noopener">
+            Hours & Info
+          </a>.
+        </p>
+
+        <div class="title-image">
+          <img src="img/the-garden-barnes.png" alt="The Garden Restaurant">
+          <p class="image-source">
+            Source: <a href="https://www.instagram.com/p/Cx74nhEuWRH/" target="_blank">The Garden via Instagram</a>
+          </p>
+        </div> 
+        <div class="title-image">
+          <img src="img/barnes-restaurant-food.png" alt="Food at The Garden">
+          <p class="image-source">
+            Source: <a>Lu Yii Wong</a>
+          </p>
+        </div> 
+      </article>
+    
+      <!-- Afternoon Overview + stops -->
+      <article class="slide hidden" id="afternoon-overview">
+        <h2>Afternoon in Philly</h2>
+        <p>After a satisfactory breakfast, you'll be ready to head on to Center City for more sightseeing. The stops for the afternoon are the following</p>  
+        <ul>
+          <li>The LOVE Park,</li>
+          <li>City Hall,</li> 
+          <li>Reading Terminal, and</li>
+          <li>Chinatown.</li>
+        </ul>
+      </article>
+      
+      <!-- Transition: morning → afternoon -->
+      <article class="slide hidden" id="morning-to-afternoon">
+        <h2>Getting to Center City</h2>
+        <p>To get to the LOVE Park from The Garden Restaurant is only a 15-minute walk. Walk along the Benjamin Franklin Pathway and through Logan Square, enjoying the walk down a historic boulevard modeled after Paris's Champs-Élysées, as you head towards your next destination.</p>
+        <div class="title-image">
+          <img src="img/benjamin-parkway.jpg" alt="Benjamin Parkway">
+          <p class="image-source">
+            Source: <a href="https://www.visitphilly.com/articles/philadelphia/benjamin-franklin-parkway-top-attractions/" target="_blank">B. Krist</a>
+          </p>
+        </div> 
+      </article>
+
+      <!-- Afternoon Stops -->
+      <article class="slide hidden" id="afternoon-love">
+        <h2>Stop 4: LOVE Park</h2>
+        <p>The LOVE Park, officially known as the John F. Kennedy Plaza, is a public park located in Center City. It's a great chance to see Robert Indiana's iconic LOVE Sculpture.</p>
+        <div class="title-image">
+          <img src="img/LOVE-sculpture.jpg" alt="LOVE Sculpture">
+          <p class="image-source">
+            Source: <a href="https://www.visitphilly.com/things-to-do/attractions/love-park/" target="_blank">Visit Philadelphia</a>
+          </p>
+        </div> 
+      </article>
+
+      <article class="slide hidden" id="afternoon-cityhall">
+        <h2>Stop 5: City Hall</h2>
+        <p> Philadelphia City Hall, completed in 1901, is another significant piece of architecture in Philadelphia. It is the world’s largest masonry load-bearing building, constructed using over 88 million bricks, without a steel frame!</p>
+      
+        <p> At the very top stands a 37-foot bronze statue of William Penn, which remained the tallest point in Philadelphia for almost a century. City Hall is also a major civic space where you’ll often find seasonal markets, public art installations, and local events happening around Dilworth Park, just outside the building. So definitely check out what events might be taking place before you visit! You can check upcoming events here: 
+          <a href="http://centercityphila.org/parks/events" target="_blank" rel="noopener">
+            Center City District Park
+          </a>
+        </p>
+        <div class="title-image">
+          <img src="img/city-hall.jpg" alt="City Hall">
+          <p class="image-source">
+            Source: <a href="https://en.wikipedia.org/wiki/Philadelphia_City_Hall" target="_blank">via wikipedia</a>
+          </p>
+        </div> 
+      </article>
+      
+      <article class="slide hidden" id="afternoon-reading">
+        <h2>Stop 6: Reading Terminal Market</h2>
+        <p> Reading Terminal Market, opened in 1893, is one of the oldest continuously operating public markets in the United States. It’s a beloved food hall filled with Amish vendors, bakeries, produce stands, and some of the city’s most iconic casual eats.
+        </p>
+      
+        <p>Here are a few classics worth trying:</p>
+        <ul>
+          <li><strong>Miller’s Twist</strong> — soft, buttery Pennsylvania-Dutch pretzels.</li>
+          <li><strong>Beiler’s Donuts</strong> — Amish-style donuts made fresh throughout the day.</li>
+          <li><strong>Hershel’s East Side Deli</strong> — hand-carved pastrami and matzo ball soup.</li>
+        </ul>
+      
+        <div class="title-image">
+          <img src="img/reading-terminal.jpg" alt="Reading Termianl">
+          <p class="image-source">
+            Source: <a href="https://www.visitphilly.com/things-to-do/food-drink/reading-terminal-market/" target="_blank">R. Kennedy</a>
+          </p>
+        </div> 
+      </article>
+
+      <article class="slide hidden" id="afternoon-chinatown">
+        <h2>Stop 7: Chinatown Lunch</h2>
+        <p>Philadelphia’s Chinatown is compact but full of incredible food options, ranging from Chinese cuisines to bubble tea, bakeries, and quick noodle shops. It's a great lunch stop in the middle of your day.
+        </p>
+      
+        <p>Here are a few of my top recommendations:</p>
+        <ul>
+          <li><strong>Emei</strong> — my favorite Sichuan restaurants in the city.</li>
+          <li><strong>Love Noodles</strong> — a great spot serving Yunnan-style rice noodles with piping hot and comforting broths.</li>
+          <li><strong>Chi Cha San Chen</strong> — a Taiwanese chain famous for freshly brewed bubble tea using Michelin Star tea leaves.</li>
+        </ul>
+
+        <div class="title-image">
+          <img src="img/chinatown-arch.jpg" alt="Chinatown Friendship Arch">
+          <p class="image-source">
+            Source: <a href="https://www.associationforpublicart.org/artwork/the-china-gate/" target="_blank">Alec Rogers</a>
+          </p>
+        </div> 
+      </article>
+
+      <!-- Evening overview + stops -->
+      <article class="slide hidden" id="evening-overview">
+        <h2>Evening in Philly</h2>
+        <p>Perhaps, after a late lunch or snack in Chinatown, you're ready to move head out to the next area in Phialdelphia. The following places are on the evening's itinerary:</p>  
+        <ul>
+          <li>The Betsy Ross House,</li>
+          <li>Elfreth's Alley,</li> 
+          <li>Philly Cheesesteak,</li>
+          <li>Independence Hall, and</li>
+          <li>Liberty Bell.</li>
+        </ul>
+      </article>
+      
+      <!-- Transition: afternoon → evening -->
+      <article class="slide hidden" id="afternoon-to-evening">
+        <h2>Heading to Old City</h2>
+        <p>Chinatwon is located not too far away from our first stop in Old City. From the Frienship Arch, it is only a 15-minute walk to the Betsy Rosee House. Just walk along Arch Street from 10th street to 3rd street and you'll be at your destination.</p>
+      </article>
+    
+     <article class="slide hidden" id="evening-betsyross">
+        <h2>Stop 8: Betsy Ross House & Garden</h2>
+        <p>The Betsy Ross House is a charming historic site believed to be the home of Betsy Ross, the upholsterer who is often credited with sewing the first American flag. While the historical debate continues, the home offers a glimpse into 18th-century Philadelphia life and early American craftsmanship.</p>
+        <p>One of the nicest features here is the quiet little garden courtyard just outside the house. If the weather is nice, this is a perfect spot to take a break. I recommend grab a coffee from a nearby shop or continue sipping on your bubble tea from Chinatown and enjoy a few peaceful minutes off your feet after a long day of walking.
+        </p>
+        <div class="title-image">
+          <img src="img/Betsy_Ross_House.jpg" alt="Betsy Ross House">
+          <p class="image-source">
+            Source: <a href="https://en.wikipedia.org/wiki/Betsy_Ross_House" target="_blank">via wikipedia</a>
+          </p>
+        </div> 
+      </article> 
+      
+      <article class="slide hidden" id="evening-elfreths">
+        <h2>Stop 9: Elfreth's Alley</h2>
+        <p>Elfreth’s Alley is often called “the oldest continuously inhabited residential streets in the United States,” dating back to 1703. The narrow, cobblestone lane lined with Federal and Georgian-style rowhouses is a beautifully preserved reminder of early Philadelphia.</p>
+        <p> I highly recommend checking out the Elfreth’s Alley Museum, located in houses 124 and 126, as it offers a deeper look into the lives of the working-class families who lived here over the last three centuries. Even if the museum is closed, the alley itself is a wonderful place for an evening stroll and photos.
+        </p>
+        <div class="title-image">
+          <img src="img/elfreth-alley.jpg" alt="Elfreth’s Alley">
+          <p class="image-source">
+            Source: <a href="https://www.tripadvisor.com/Attraction_Review-g60795-d138249-Reviews-Elfreth_s_Alley-Philadelphia_Pennsylvania.html" target="_blank">via Trip Advisor</a>
+          </p>
+        </div> 
+      </article>
+      
+      <article class="slide hidden" id="evening-cheesesteak">
+        <h2>Stop 10: Cheesesteak</h2>
+        <p>While you’re in Old City, this is a convenient opportunity to try a classic Philadelphia cheesesteak. The spots in this area may not be the most famous in the city, but they’re great for visitors who want the experience without traveling far out of the way.
+        </p>
+        <p>Whether you order it “whiz wit” or with provolone and fried onions, grabbing a quick Philly cheesesteak here is a fun and iconic way to fuel up before your last historic stops of the evening. Here are some highly rate spots around the area:
+          <ul>
+            <li>Oh Brother Philly</li>
+            <li>Nick's Bar and Grill</li> 
+            <li>Campo's Philly Cheesesteak, and</li>
+            <li>Sony's Famous Steaks.</li>
+        </ul>
+        </p>
+        <div class="title-image">
+          <img src="img/philly-cheesesteak.jpg" alt="Philly Cheesesteak">
+          <p class="image-source">
+            Source: <a href="https://cooking.nytimes.com/recipes/1024855-philly-cheesesteak" target="_blank">Christopher Testani</a>
+          </p>
+        </div> 
+      </article>
+    
+      <article class="slide hidden" id="evening-independence">
+        <h2>Stop 11: Independence Hall</h2>
+        <p>Independence Hall is the birthplace of the United States. This is where both the     Declaration of Independence (might be of interest to Natural Treasure or Nicholas Cage fans) and the U.S. Constitution were debated and signed. The red-brick Georgian building remains one of the most important symbols of American democracy.</p>
+        <p> In the evening, even if the interior is closed, the exterior and the surrounding grounds are beautifully lit and peaceful. If you still have energy and are interested, <a href="https://www.visitphilly.com/articles/philadelphia/the-top-tours-of-philadelphia/" target="_blank" rel="noopener">Visit Philadelphia</a>, sometimes offers evening tours around the Historic District. I think visiting Independence Hall is meaningful final stop that ties together Philadelphia’s deep historical roots.
+        </p>
+        <div class="title-image">
+          <img src="img/independence-hall.jpg" alt="Independence Hall">
+          <p class="image-source">
+            Source: <a href="https://www.nps.gov/inde/planyourvisit/independencehall.htm" target="_blank">NPS Photo</a>
+          </p>
+        </div> 
+      </article>
+
+      <article class="slide hidden" id="evening-libertybell">
+        <h2>Stop 11: The Liberty Bell</h2>
+        <p>Lastly, while you're in the area, check out the Liberty Bell! The Liberty Bell is a powerful symbol of American freedom, known worldwide for its distinctive crack and its role in abolitionist and civil rights movements. Today, it sits in the Liberty Bell Center across from Independence Hall, framed by big glass windows with a perfect view of the historic grounds.</p>
+        <p>The exhibit is free to visit during the day, but even after hours you can still see the bell through the large front windows. It's a reflective and inspiring final stop to end your one-day tour of Philadelphia.</p>
+        <div class="title-image">
+          <img src="img/Libery-Bell.webp" alt="Liberty Bell">
+          <p class="image-source">
+            Source: <a href="https://www.nps.gov/inde/planyourvisit/libertybellcenter.htm" target="_blank">NPS Photo</a>
+          </p>
+        </div> 
+      </article>
+
+      <!-- Conclusion Slide -->
+      <article class="slide" id="conclusion-slide">
+        <h1>Thank You for Checking Out my One-Day Guide to Philadelphia!</h1>
+        <p>Phildalphie is such an iconic US city. In just one day, you’ve experienced some of the city’s most iconic locations — from the riverside views of the Schuylkill Banks to the historic heart of Old City. Whether you came for the culture, the architecture, the food, or simply to wander, this guide highlights just a glimpse of what makes Philadelphia special! </p>
+        <p> I hope this itinerary inspired your travel plans, or helped you fall in love with the city! There is so much left for you to discover in Philadelphia, including many galleries and hidden cafés to neighborhood parks, murals, and local businesses that give the city its character. Safe travels, and enjoy discovering your own favorite moments in the City of Brotherly Love.</p>  
+        <h2>Sources & Data</h2>  
+        <ul class="citation-list">
+          <li>All location coordinates obtained via Google Maps (accessed 2025).</li>
+          <li>Walking path GeoJSON linework created manually using <a href="https://geojson.io" target="_blank" rel="noopener">geojson.io</a>.</li>    
+          <li>Image sources and photo credits linked on each slide, where applicable.</li>
+       </ul>
+        <p></p>  
+        <div class="title-image">
+          <img src="img/philadelphia-conclusion.jpg" alt="Philadelphia Skyline"/>
+          <p class="image-source">
+            Source: <a href="https://cz.usembassy.gov/philadelphia-one-of-the-most-historic-cities-in-the-u-s/" target="_blank">US Embassy</a>
+          </p>
+        </div>
+      </article>
+
+      <div class="slide-controls">
+        <button class="slide-nav-button" id="prev-slide">⧏</button>
+        <button class="slide-nav-button" id="next-slide">⧐</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/index.js" type="module"></script>
+</body>
+</html>

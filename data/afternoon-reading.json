@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Reading Terminal Market",
+        "address": "1136 Arch St, Philadelphia, PA 19107"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.15910376445923, 39.953323787806035]
+      }
+    }
+  ]
+}

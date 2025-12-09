@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "30th Street Station",
+        "address": "2955 Market St, Philadelphia, PA 19104"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.18197248236983, 39.95588260052245]
+      }
+    }
+  ]
+}

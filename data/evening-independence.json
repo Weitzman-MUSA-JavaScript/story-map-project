@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Independence Hall",
+        "address": "520 Chestnut St, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.15004562895713, 39.94917669629378]
+      }
+    }
+  ]
+}

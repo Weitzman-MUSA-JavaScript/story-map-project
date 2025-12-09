@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Philly Cheese Steak",
+        "address": "206 Market St, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.14417180709368, 39.949814506324344]
+      }
+    }
+  ]
+}

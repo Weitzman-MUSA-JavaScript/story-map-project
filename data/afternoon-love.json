@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "LOVE Park",
+        "address": "1501 John F Kennedy Blvd, Philadelphia, PA 19102"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.16554304059103, 39.954428273570635]
+      }
+    }
+  ]
+}

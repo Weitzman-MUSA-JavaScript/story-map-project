@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "The Garden Restaurant Cafe at the Barnes Foundation",
+        "address": "2025 Benjamin Franklin Pkwy, Philadelphia, PA 19130"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.17258503378102, 39.96104749270321]
+      }
+    }
+  ]
+}

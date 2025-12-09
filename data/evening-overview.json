@@ -1,0 +1,91 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Elfreth's Alley",
+        "address": "126 Elfreth's Alley, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.14243373563225, 39.952923411022056]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Philly Cheese Steak",
+        "address": "206 Market St, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.14417180709368, 39.949814506324344]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Betsy Ross House",
+        "address": "239 Arch St, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.14453408290949, 39.95244053699293]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Independence Hall",
+        "address": "520 Chestnut St, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.15004562895713, 39.94917669629378]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Liberty Bell",
+        "address": "526 Market St, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.15028189745958, 39.94966351596981]
+      }
+    },
+    {
+      "type": "Feature",
+    "properties": {
+      "label": "Evening Route"
+    },
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [-75.15621450296152, 39.953602118428876],
+        [-75.14479692487105, 39.95216869861463],
+        [-75.14476321245834, 39.95237599406164],
+        [-75.14480122817882, 39.9521743811915],
+        [-75.14321878527535, 39.9519775198394],
+        [-75.14303573634332, 39.952856270882705],
+        [-75.14224736866466, 39.95276189817744],
+        [-75.14316573288589, 39.95287389672157],
+        [-75.14384279336788, 39.94983675825756],
+        [-75.14411292651445, 39.94987330282507],
+        [-75.14648031610756, 39.9501686240927],
+        [-75.14679880998143, 39.94879005418255],
+        [-75.14681457221702, 39.94867360721793],
+        [-75.14698051021685, 39.94801144823873],
+        [-75.1494055508763, 39.94830909943374],
+        [-75.14937372619654, 39.94845548466478],
+        [-75.1495901340195, 39.9485335566597],
+        [-75.14957740414758, 39.94883608479884],
+        [-75.14948829504426, 39.949163008864815],
+        [-75.15010569383276, 39.94972414354399]
+      ]
+    }
+  }
+  ]
+}

@@ -41,7 +41,7 @@ class SlideDeck {
         if (feature.properties && feature.properties.label) {
           layer.bindTooltip(feature.properties.label);
         }
-      }
+      },
     };
     const geoJsonLayer = L.geoJSON(data, options || defaultOptions)
         .addTo(this.dataLayer);

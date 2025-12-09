@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Chinatown",
+        "address": "Arch St &, N 10th St, Philadelphia, PA 19107"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.15619196262854, 39.95392218369031]
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Schuylkill Banks",
+        "address": "2501 Walnut St, Philadelphia, PA 19103"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.17943300253746, 39.9550899034558]
+      }
+    }
+  ]
+}
