@@ -182,7 +182,7 @@ class SlideDeck {
     let i;
     for (i = 0; i < this.slides.length; i++) {
       const slidePos =
-        this.slides[i].offsetTop - scrollPos + windowHeight * 0.7;
+        this.slides[i].offsetTop - scrollPos + windowHeight * 0.5;
       if (slidePos >= 0) {
         break;
       }
