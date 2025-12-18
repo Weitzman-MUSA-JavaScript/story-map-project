@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","crs":{"type":"name","properties":{"name":"EPSG:4269"}},"features":[{"type":"Feature","id":3,"geometry":{"type":"Point","coordinates":[-110.16915994776883,35.809820381915983]},"properties":{"OBJECTID":3,"FDate":-2209161600000,"Resolution":0,"GNIS_ID":" ","GNIS_Name":" ","ReachCode":" ","FType":0,"FCode":0,"Permanent_":" ","ObjectID_1":" "}}]}

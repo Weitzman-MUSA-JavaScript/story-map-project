@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hopi Ties To Spring</title>
+  <meta name="Xiaoyou Guo" content="A storytelling map exploring Hopi people's relationship with water.">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+      crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hopi, Plants, And The Land">
+  <meta property="og:description" content="A storytelling map exploring Hopi people's relationship with plants and land.">
+  <meta property="og:image" content="img/Spring drawing.jpg">
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <main>
+    <div class="insert">
+    <div class="section">
+
+    <div class="title-container">
+      <h1 id="title">HOPI TIES TO WATER</h1>
+      <h4 id="subtitle">Tracing the Ties Between Hopi People, Spring and Public Spaces</h4>
+      <h5 id="author">Xiaoyou Guo</h5>
+      <h5 id="author">xiaoyou@upenn.edu</h5>
+    </div>
+
+    <div class="map-container">
+      <div class="map" id="map"></div>
+    </div>
+
+    <section class="slide-section">
+      <article class="slide" id="title-slide">
+        <h1>Hopi Reservations</h1>
+        <p>The Hopi Reservation (Hopi: Hopitutskwa) is a Native American reservation for the Hopi and Arizona Tewa people, surrounded entirely by the Navajo Nation.</p>
+        <p>Located in northeastern Arizona, the Hopi Reservation is defined by an arid climate with scarce and unpredictable precipitation. Agriculture remains central to how Hopi people sustain life and maintain their relationship with the land, practiced through both dry farming reliant on rainfall and spring-irrigated gardens. Beyond rainfall, springs serve as the most critical and dependable water source for the Hopi.</p>
+        <div class="carousel-container">
+            <div class="carousel-track">
+             <div class="carousel-item"><img src="img/cornfield.jpg" alt="Image 1"></div>
+             <div class="carousel-item"><img src="img/mia_SlideScan_004023_800.jpg" alt="Image 2"></div>
+            </div>
+        </div>
+      </article>
+
+      <article class="slide image-slide" id="image-slide-1">
+        <img src="img/34.jpg" alt="Spring collage">
+      </article>
+
+      <article class="slide" id="second-slide">
+        <h2>The Vanishing Voice Of Hopi Springs</h2>
+        <p>The Hopi mesas have long been shaped by water, with springs serving as essential sources of life, ceremony, and settlement. These water points not only sustain daily living but also anchor cultural practices and collective memory across generations. Understanding the distribution of springs offers insight into the environmental and social landscape that has guided the Hopi people for centuries.</p>
+        <p>The map below traces both the historical and present-day locations of springs across the mesas, revealing a pattern of loss and fragmentation. Yet the remaining springs remain vital markers of cultural memory and living connections between the Hopi people and water.</p>
+      </article>
+
+      <article class="slide image-slide" id="image-slide-1">
+        <img src="img/古今spring对比.jpg" alt="Cultivated Land">
+      </article>
+
+      <article class="slide" id="third-slide">
+        <h2>Three Springs, Three Stories</h2>
+        <p>These three typical yet distinct Hopi springs were selected to tell the story of Hopi water sources across different landscapes. Tawapa Spring and Coyote Spring, both on First Mesa, reveal water-holding points that help construct community life on the mesa; they are accessible, culturally central, and closely tied to community rituals. Pipe Spring, located in the more remote and lush Keams Canyon, represents a very different type of water source and the landscape it nourishes. Together, these springs illustrate the diversity of Hopi water sources and cultural values, offering a window into how people interact with and adapt to the landscape.</p>
+      </article>
+
+      <article class="slide" id="fourth-slide">
+        <h2>Tawapa Spring: Gathering Center</h2>
+        <p>Tawapa Spring exemplifies a typical Hopi spring, traditionally serving as a site for ceremonies and communal gatherings. Located on First Mesa near the old day school, the spring now sits beside an open, vacant ground that remains quiet yet central, preserving the memory of past gatherings. The surrounding area includes a terrace garden, play facilities, and is in close proximity to the community center. Today, while the spring no longer provides water for drinking or irrigation, it continues to mark an important cultural and social landmark within the community.</p>
+       <div class="carousel-container">
+            <div class="carousel-track">
+             <div class="carousel-item"><img src="img/DSCF1161.JPG" alt="Image 3"></div>
+             <div class="carousel-item"><img src="img/tawapa1.jpg" alt="Image 4"></div>
+           </div>
+       </div>
+      </article>
+      
+<article class="slide wide-carousel">
+    <div class="carousel-track">
+      <div class="carousel-item"><img src="img/DSCF1427.JPG" alt="Image 5"></div>
+      <div class="carousel-item"><img src="img/微信图片_20251016155530.png" alt="Image 6"></div>
+      <div class="carousel-item"><img src="img/DSCF1171.JPG" alt="Image 7"></div>
+      <div class="carousel-item"><img src="img/DSCF1172.JPG" alt="Image 8"></div>
+      <div class="carousel-item"><img src="img/DSCF1189.JPG" alt="Image 9"></div>
+      <div class="carousel-item"><img src="img/DSCF1194.JPG" alt="Image 10"></div>
+      <div class="carousel-item"><img src="img/DSCF1204.JPG" alt="Image 11"></div>
+    </div>
+</article>
+    
+
+      <article class="slide" id="fifth-slide">
+        <h2>Coyote Spring: The Sacred Water With Eroding Edges</h2>
+        <p>Coyote Spring is a unique underground spring located on First Mesa, near a sharply eroding water channel. Its entrance is marked by a stone structure, with numerous feathers placed at the doorway to signify its sacred importance. The spring’s immediate surroundings form a fragile boundary, where exposed soil and fading vegetation reflect ongoing erosion that threatens both the site’s physical stability and its cultural significance. Despite these vulnerabilities, Coyote Spring remains an important marker of spiritual and communal life, connecting the landscape with Hopi traditions.</p>
+         <div class="carousel-container">
+            <div class="carousel-track">
+             <div class="carousel-item"><img src="img/DSCF1127.JPG" alt="Image 12"></div>
+             <div class="carousel-item"><img src="img/DSCF1128.JPG" alt="Image 13"></div>
+             <div class="carousel-item"><img src="img/DSCF1129.JPG" alt="Image 14"></div>
+           </div>
+       </div>
+      </article>
+
+      <article class="slide" id="sixth-slide">
+        <h2>Keams Canyon Pipe Spring: Hidden Life Source Beneath the Lush</h2>
+        <p>Keams Canyon Pipe Spring lies deep within Keams Canyon, far from First Mesa and the Hopi villages. The canyon’s higher moisture levels support particularly lush vegetation, creating a vibrant landscape around the spring. Accessing the site requires driving into the canyon and then following the wetland slope fed by the spring, tracing the stream uphill through winding paths. The spring emerges from beneath the rocks in a small, secluded space, offering a hidden and tranquil setting. Few people visit this site regularly, though ceremonies continue to be held there. The dense vegetation and tree cover create a cool, shaded environment, making the spring’s small space well-suited for reflection and meditation.</p>
+         <div class="carousel-container">
+            <div class="carousel-track">
+             <div class="carousel-item"><img src="img/6.JPG" alt="Image 15"></div>
+             <div class="carousel-item"><img src="img/DSCF1401.JPG" alt="Image 16"></div>
+             <div class="carousel-item"><img src="img/DSCF1402.JPG" alt="Image 17"></div>
+           </div>
+       </div>
+      </article>
+
+      <article class="slide wide-carousel">
+    <div class="carousel-track">
+      <div class="carousel-item"><img src="img/canyon.JPG" alt="Image 18"></div>
+      <div class="carousel-item"><img src="img/Impoundment upstream of Beaver Dam.jpg" alt="Image 19"></div>
+      <div class="carousel-item"><img src="img/3.JPG" alt="Image 20"></div>
+      <div class="carousel-item"><img src="img/DSCF1400.JPG" alt="Image 21"></div>
+      <div class="carousel-item"><img src="img/DSCF1406.JPG" alt="Image 22"></div>
+      <div class="carousel-item"><img src="img/DSCF1417.JPG" alt="Image 23"></div>
+      <div class="carousel-item"><img src="img/DSCF1402.JPG" alt="Image 24"></div>
+    </div>
+</article>
+
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/index.js" type="module"></script>
+</body>
+</html>
