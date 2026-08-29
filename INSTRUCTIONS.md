@@ -10,7 +10,12 @@ This project will be our focus for the first four weeks of the course -- in week
 
 ### Step 1: Choose a topic and data source(s)
 
-Choose a topic that is fruitfully explained with some combination of narrative and geographic elements. Think about what data you want to tell a story about. Whatever data you use, **be sure to include citations somewhere in your app interface**. You can choose a dataset from any of a number of sources, for example:
+Choose a topic that is fruitfully explained with some combination of narrative and geographic elements. To guide your choice of topic, finish one of the following statements:
+
+* **The story I want to tell is...**, or
+* **The question(s) I want to answer is(/are)...**
+
+Think about what data you want to use to tell your story or explore your question. Whatever data you use, **be sure to include citations somewhere in your app interface**. You can choose a dataset from any of a number of sources, for example:
 
 * Use data you've been working with for another class
 * Create your own dataset (check out [geojson.io](https://geojson.io))
