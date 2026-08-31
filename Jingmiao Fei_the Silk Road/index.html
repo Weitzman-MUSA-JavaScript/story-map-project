@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Story</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header>
+    <!-- Cover Section -->
+    <section class="cover-section">
+      <div class="cover-image-container">
+        <img src="data/image/cover.jpg" alt="Silk Road Cover Image" class="cover-image">
+        <div class="cover-text">
+          <h1 class="cover-title">The Silk Road</h1>
+          <p class="cover-intro">An ancient corridor connecting East and West,<br> a mysterious journey of adventure.</p>
+          <p class="cover-author"><br>By: Jingmiao Fei</p>
+          <p class="cover-date">Oct 26, 2024</p>
+        </div>
+        <p class="cover-footer">(Cover Attribution: <a href="https://news.cgtn.com/news/3d3d674d7759444e33457a6333566d54/index.html">CGTN</a>)</p>
+      </div>
+    </section>
+    
+  </header>
+
+  <main>
+    <div class="map-sticky-wrapper" id="map-section-0">
+      <div class="map-container">
+        <div class="map" id="map-0"></div>
+      </div>
+      <section class="slide-section">
+        <article class="slide" id="shoppingAroundWorld">
+          <h1>Imagine this senario...</h1>
+          <p> You're sitting in a classroom at UPenn, browsing Amazon casually. You decide to buy some snacks sold in China, located 11,000 km away, and a koala plushie from Australia, located 15,000 km away. Despite these immense distances — spanning half the globe — all it takes is a simple click on "purchase," and amazingly, the items will arrive at your doorstep within just a few days.</br></br>But, thousands of years ago, in a world without the internet or airplanes, how did people scattered across different continents meet and engage in trade?</p>
+          
+        </article>        
+      </section>
+    </div>
+
+    <section class="intro-section">
+      <h1 class="intro-title"><br>————————————<br><br>The History of the Silk Road</h1>
+      <p class="intro-text">In 202 BC, China was under the Han Dynasty, and Emperor Wu of Han ascended the throne, initiating a policy of external expansion. To seek military alliances, Emperor Wu sent Zhang Qian as an envoy to the Western Regions. Zhang discovered much larger, stronger and faster horses in the West, which played a crucial role in helping Emperor Wu counter external invasions.</br></br>This success greatly impressed Emperor Wu, prompting him to take a step further, which is the official start of the Silk Road. This ancient trade route connected the East to the West, stretching approximately 4,000 miles from eastern China to the tips of Europe.  
+
+      </br></br>For a more detailed story, please watch the video below.</p>
+      <div class="intro-video-container">
+        
+        <!--I used lfs to upload the video to Github (because its too large), but the page generated in github doesn't display the video correctly. 
+        However, when I preview locally, the video plays normally.-->
+        
+        <!-- <video controls class="intro-video">
+          <source src="data/video/video1.mp4" type="video/mp4">
+        </video>     -->
+        <iframe src="https://drive.google.com/file/d/15k1gfMCr9Ex9Ea-iEAkyark1_8zdbpB8/preview" 
+                width="100%" height="100%" frameborder="0" allowfullscreen title="Introduction Video"></iframe>
+      </div>
+    
+      <p class="intro-source-text">(Source:<a href="https://www.youtube.com/watch?v=J-pfeFbssMw">How did The Silk Road Actually Work?</a>)</p>
+      <p class="intro-text">Next, let's take a closer look at the route of the Silk Road.</p>
+      
+    </section>
+
+    <div class="map-sticky-wrapper" id="map-section-1">
+      <div class="map-container">
+        <div class="map" id="map-1"></div>
+      </div>
+      <section class="slide-section">
+        <article class="slide" id="silkroad city">
+          <h1>An Overview of the Silk Road Route</h1>
+          <p>The map shows the main cities along the Silk Road. </br></br>The Silk Road was used in a few manners, with the main of being commercial trade. Initially, silk only came out of China. it is the Silk Road that brought silk and the technology of sericulture and silk making to the West. </br></br>Silk was not the only popular export along the Silk Road. Additionally, products like teas, dyes, spices, porcelain, paper, gunpowder and medicine were all frequently traded. And Western merchants would also sell goods like glassware, textiles, animal furs, certain foods such as fruits or honey and armor to the east.</p>
+        <p class="slide-source-text">(Excerpted from: <a href="https://www.youtube.com/watch?v=J-pfeFbssMw">How did The Silk Road Actually Work?</a>)</P>
+        </article>        
+      </section>
+
+      <section class="slide-section">
+        <article class="slide" id="silkroad city">
+          <h1>An Overview of the Silk Road Route</h1>
+          <p>The silk road not only spread goods from west to east and east to west, but also brought culture and new ideas to each state that it touched.</br></br> For example, Buddhism was mainly introduced to China from the West through the Silk Road, and Arab mathematics, music and dance, European astronomy and other scientific knowledge were also introduced to China. Chinese papermaking, printing and gunpowder and other technologies were spread to the West through the Silk Road. </br></br>This exchange of religion, science and art played a symphony of human civilization across time and space.</p>
+          <p class="slide-source-text">(Excerpted from: <a href="https://mp.weixin.qq.com/s/s3F-7aiOSG6UwV0mhC7WJQ">Magazine: Civilization</a>)</P>
+        </article>        
+      </section>
+    </div>
+
+    <section class="intro-section">
+      <h1 class="intro-title"><br>———————————<br><br>Historical Cities/Countries along the Silk Road</h1>
+      <p class="intro-text">Today, many cities along the Silk Road are world-famous tourist destinations. They are not only a piece of land, but also carry the footprints of people for thousands of years. History is like a carving knife. Although time passes, it leaves deep marks in people's memory, and brings valuable cultural heritage. </br></br>If you want to walk the Silk Road again and listen to the voice of history, you can refer to the following introduction.</p>
+      
+    </section>
+
+    <div class="map-sticky-wrapper" id="map-section-2">
+      <div class="map-container">
+        <div class="map" id="map-2"></div>
+      </div>
+      <section class="slide-section">
+        <article class="slide" id="Shanxi China">
+          <h1 class="cityname-title">Xi'an, China</h1>
+          <div class="city-image-container">
+            <img src="data/image/xian.jpeg" alt="city image 1" class="city-image">                        
+          </div>
+          <p>Xi'an, which was called Chang'an in ancient times, is the capital city of China's Shaanxi Province and the largest designated central city in Northwest China. </br></br>As the picture shows, the Bell Tower and Drum Tower are definitely cultural landmark buildings of Xi'an. The Bell Tower was built in 1384, functioned as an emergency alarm and time-telling device. It  is typical of the artistic style of architecture of the Ming Dynasty; with a triple-eaved pyramidal roof, it fully embodies the imperial magnificence.</p>
+          <pre class="slide-source-text">(Source: <a href="https://www.chinaservicesinfo.com/s/201812/21/WS5c1ca458498ee2f0291e455c/bell-tower-drum-tower.html">Bell Tower, Drum Tower, Xi'an - ChinaDaily</a></br>              <a href="https://govt.chinadaily.com.cn/s/201812/21/WS5c1ca080498ee2f0291e4553/xian-an-ancient-capital-and-modern-city.html">Xi'an, an ancient capital and modern city - ChinaDaily</a>)</pre>
+        </article>
+
+        <article class="slide" id="Gansu China">
+          <h1 class="cityname-title">Gansu, China</h1>
+          <div class="city-image-container">
+            <img src="data/image/gansu.png" alt="city image 1" class="city-image">                        
+          </div>
+          <p>Gansu, located in northwest China, is a key region along the ancient Silk Road, serving as a vital link between China and Central Asia for centuries. Known for its rich history, the province is home to the stunning Mogao Caves in Dunhuang, a UNESCO World Heritage Site featuring thousands of Buddhist murals and sculptures. </br></br>Visitors can also explore the breathtaking Zhangye Danxia Landform, famed for its rainbow-colored mountains, and immerse themselves in the unique cultural heritage shaped by the diverse influences of the Silk Road.</p>
+          <p class="slide-source-text">(Source: <a href="https://www.chinaservicesinfo.com/regional/jiuquan/attractions">Crescent Moon Spring, Dunhuang - ChinaDaily</a>)</p>
+        </article>
+
+        <article class="slide" id="Xinjiang China">
+          <h1 class="cityname-title">Xinjiang, China</h1>
+          <div class="city-image-container">
+            <img src="data/image/xinjiang.jpeg" alt="city image 1" class="city-image">                        
+          </div>
+          <p>Xinjiang, China's largest province, lies at the crossroads of East and West, making it a crucial hub along the ancient Silk Road. Visitors are drawn to its natural wonders, including the majestic Tianshan Mountains and the golden sands of the Taklamakan Desert, as well as its vibrant Uyghur culture and flavorful cuisine.</p>
+          <p class="slide-source-text">(Source: <a href="https://www.chinaservicesinfo.com/s/201812/28/WS5d2bec9c498e054923eaff2a/baisha-lake-xinjiang.html">Baisha Lake, Xinjiang - ChinaDaily</a>)</p>
+        </article>
+
+        <article class="slide" id="silkroad other countries">
+          <h1 class="cityname-title">Other countries</h1>
+          <p>The Middle Eastern countries along the Silk Road include Uzbekistan, Turkmenistan, Iran, Iraq, Syria and Turkey. They all have rich and unique culture.</p>
+          <div class="city-image-container">
+            <img src="data/image/Istanbul.jpg" alt="city image 1" class="city-image">                        
+          </div>
+          <p>The picture above is the blue mosque located in Istanbul, Turkey, which is a popular and historic tourist site. The mosque is also known as the Sultan Ahmed mosque, since it was built between years 1609 and 1616, in the reign of Ahmed I. The mosque remains open for visitors and tourists except for the congregation time, for about half an hour for each prayer.</p>
+          <div class="city-image-container">
+            <img src="data/image/Iraq.jpg" alt="city image 1" class="city-image">                        
+          </div>
+          <p>The Great Mosque of Samarrais a mosque from the 9th century CE located in Samarra, Iraq. At the time of construction, it was the world's largest mosque. It is known for its 52 metres high minaret encircled by a spiral ramp. The mosque is located within the 15,058-hectare Samarra Archaeological City UNESCO World Heritage Site, listed in 2007.</p>
+          <p class="slide-source-text">(Image Source: <a href="https://www.islamicfinder.org/news/famous-mosques-around-the-world/"> Istanbul</a>,<a href="https://www.westend61.de/images/0001589660pw/spiral-minaret-of-the-great-mosque-of-samarra-unesco-world-heritage-site-samarra-iraq-middle-east-RHPLF20485.jpg?epik=dj0yJnU9bUFza3RXdnd2V2w5SXp3Y0E4RVBqQnZmZTlQMkNvNEgmcD0wJm49YW1sWWdQZldmcm1nclFyZWg0bzZ3QSZ0PUFBQUFBR2RreUNn"> Iraq</a>)</p>  
+          <p class="slide-source-text">(Article Source: <a href="https://www.islamicfinder.org/news/famous-mosques-around-the-world/"> Istanbul</a>,<a href="https://en.wikipedia.org/wiki/Great_Mosque_of_Samarra"> Iraq</a>)</p>  
+
+        </article>
+      </section>
+    </div>
+
+    <section class="intro-section">
+      <h1 class="intro-title"><br>——————————<br><br>The Modern Silk Road</h1>
+      <p class="intro-text">Spanning thousands of miles and years, the ancient silk routes were not only routes for trade but also roads for cultural exchanges. They made a great contribution to human progress. In the 1980s, the United Nations and some countries began to envisage the Eurasian Land Bridge, the Silk Road Initiative, and other plans, reflecting a common wish to engage in communication and cooperation.</p>
+      <p class="intro-text">In March 2013, President of China, Xi Jinping proposed the vision of a global community of shared future; in September and October that year, he raised the initiatives of joining with others to build a Silk Road Economic Belt and a 21st Century Maritime Silk Road (Belt and Road Initiative, or BRI). The Belt and Road Initiative is a creative development that takes on and carries forward the spirit of the ancient silk routes — two of the great achievements in human history and civilization. It enriches the ancient spirit with the zeitgeist and culture of the new era, and provides a platform for building a global community of shared future.</p>
+      <p class="intro-text">The BRI is founded on the principles of extensive consultation, joint contribution, and shared benefits. It advocates win-win cooperation in pursuit of the greater good and shared interests. It emphasizes that all countries are equal participants, contributors and beneficiaries, and encourages economic integration, interconnected development, and the sharing of achievements.</p>
+      <div class="intro-image-container">
+        <img src="data/image/beltnroad.png" alt="intro image 1" class="intro-image">                        
+      </div>
+      <p class="intro-text">The picture shows the Chinese instructor Jiang Liping (right) and apprentice Horace Owiti walk past a train carriage on the Mombasa-Nairobi Railway in Nairobi, Kenya, in May. The 592-kilometer railway is hailed as a result of the Belt and Road Initiative and a route of friendship and win-win cooperation. WANG GUANSEN/XINHUA</p>
+      <p class="intro-source-text">(Excerpted from: <a href="https://www.chinadaily.com.cn/a/202310/11/WS6525de2ba31090682a5e7d01.html"> The Belt and Road Initiative: A Key Pillar of the Global Community of Shared Future</a>)</p>  
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Typography Inspiration: ArcGIS Online, Storymap - Theme "Mesa"</p>
+    <p>Author: Jingmiao Fei</p>
+    <p>Created for MUSA 6110.</p>
+  </footer>
+ 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/index.js" type="module"></script>
+</body>
+</html>

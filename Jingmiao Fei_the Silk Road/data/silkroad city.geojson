@@ -1,0 +1,23 @@
+{
+"type": "FeatureCollection",
+"name": "silkroad city",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1.0, "old_name": "Chang'an", "label": "Xi’an, China", "type": "Silk Road city", "lat": 34.277216, "lon": 108.892783 }, "geometry": { "type": "Point", "coordinates": [ 108.892783, 34.277216 ] } },
+{ "type": "Feature", "properties": { "id": 2.0, "old_name": "Kashgar (Kashi)", "label": "Kashgar (Kashi), China", "type": "Silk Road city", "lat": 39.443688, "lon": 76.031204 }, "geometry": { "type": "Point", "coordinates": [ 76.031204, 39.443688 ] } },
+{ "type": "Feature", "properties": { "id": 3.0, "old_name": "Maracanda", "label": "Samarqand, Uzbekistan", "type": "Silk Road city", "lat": 39.630758, "lon": 66.975378 }, "geometry": { "type": "Point", "coordinates": [ 66.975378, 39.630758 ] } },
+{ "type": "Feature", "properties": { "id": 4.0, "old_name": "Merv (Alexandria Margiana)", "label": "Mary, Turkmenistan", "type": "Silk Road city", "lat": 37.565051, "lon": 61.838353 }, "geometry": { "type": "Point", "coordinates": [ 61.838353, 37.565051 ] } },
+{ "type": "Feature", "properties": { "id": 5.0, "old_name": "Nineveh", "label": "Mosul, Iraq", "type": "Silk Road city", "lat": 36.296579, "lon": 43.157478 }, "geometry": { "type": "Point", "coordinates": [ 43.157478, 36.296579 ] } },
+{ "type": "Feature", "properties": { "id": 6.0, "old_name": "Constantinople", "label": "Istanbul, Turkey", "type": "Silk Road city", "lat": 40.973588, "lon": 29.03614 }, "geometry": { "type": "Point", "coordinates": [ 29.03614, 40.973588 ] } },
+{ "type": "Feature", "properties": { "id": 7.0, "old_name": "Turfan", "label": "Turpan, China", "type": "Silk Road city", "lat": 42.911248, "lon": 89.129809 }, "geometry": { "type": "Point", "coordinates": [ 89.129809, 42.911248 ] } },
+{ "type": "Feature", "properties": { "id": 8.0, "old_name": "Aksu", "label": "Aksu, China", "type": "Silk Road city", "lat": 41.129413, "lon": 80.208743 }, "geometry": { "type": "Point", "coordinates": [ 80.208743, 41.129413 ] } },
+{ "type": "Feature", "properties": { "id": 9.0, "old_name": "Bukhara", "label": "Bukhara, Uzbekistan", "type": "Silk Road city", "lat": 39.734468, "lon": 64.468855 }, "geometry": { "type": "Point", "coordinates": [ 64.468855, 39.734468 ] } },
+{ "type": "Feature", "properties": { "id": 10.0, "old_name": "Dunhuang", "label": "Dunhuang, China", "type": "Silk Road city", "lat": 40.106533, "lon": 94.708845 }, "geometry": { "type": "Point", "coordinates": [ 94.708845, 40.106533 ] } },
+{ "type": "Feature", "properties": { "id": 11.0, "old_name": "Hami", "label": "Hami, China", "type": "Silk Road city", "lat": 42.792695, "lon": 93.522963 }, "geometry": { "type": "Point", "coordinates": [ 93.522963, 42.792695 ] } },
+{ "type": "Feature", "properties": { "id": 12.0, "old_name": "Khotan", "label": "Hotan, China", "type": "Silk Road city", "lat": 37.073788, "lon": 79.912272 }, "geometry": { "type": "Point", "coordinates": [ 79.912272, 37.073788 ] } },
+{ "type": "Feature", "properties": { "id": 13.0, "old_name": "Lanzhou", "label": "Lanzhou, China", "type": "Silk Road city", "lat": 36.058119, "lon": 103.790266 }, "geometry": { "type": "Point", "coordinates": [ 103.790266, 36.058119 ] } },
+{ "type": "Feature", "properties": { "id": 14.0, "old_name": "Rhagae", "label": "Tehran, Iran", "type": "Silk Road city", "lat": 35.654461, "lon": 51.402592 }, "geometry": { "type": "Point", "coordinates": [ 51.402592, 35.654461 ] } },
+{ "type": "Feature", "properties": { "id": 15.0, "old_name": "Loulan", "label": "Loulan, China", "type": "Silk Road city", "lat": 40.551157, "lon": 89.993865 }, "geometry": { "type": "Point", "coordinates": [ 89.993865, 40.551157 ] } },
+{ "type": "Feature", "properties": { "id": 16.0, "old_name": "Palmyra", "label": "Palmyra, Syria", "type": "Silk Road city", "lat": 34.541153, "lon": 38.235709 }, "geometry": { "type": "Point", "coordinates": [ 38.235709, 34.541153 ] } }
+]
+}

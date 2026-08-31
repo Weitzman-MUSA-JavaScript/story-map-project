@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "shoppingAroundWorld",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "NoteType": 0, "country": "China", "city": "Beijing", "created_us": "费靖淼", "created_da": "2024-11-12", "last_edite": "费靖淼", "last_edi_1": "2024-11-12", "Lat": 40, "Lon": 116 }, "geometry": { "type": "Point", "coordinates": [ 116.3909262, 39.8945795, 0.0 ] } },
+{ "type": "Feature", "properties": { "NoteType": 0, "country": "Australia", "city": "Sydney", "created_us": "费靖淼", "created_da": "2024-11-12", "last_edite": "费靖淼", "last_edi_1": "2024-11-12", "Lat": -34, "Lon": 151 }, "geometry": { "type": "Point", "coordinates": [ 151.1531317, -33.7496129, 0.0 ] } },
+{ "type": "Feature", "properties": { "NoteType": 0, "country": "Vietnam", "city": "Hanoi", "created_us": "费靖淼", "created_da": "2024-11-12", "last_edite": "费靖淼", "last_edi_1": "2024-11-12", "Lat": 21, "Lon": 106 }, "geometry": { "type": "Point", "coordinates": [ 105.8959478, 21.0233239, 0.0 ] } },
+{ "type": "Feature", "properties": { "NoteType": 0, "country": "America", "city": "NewYork", "created_us": "费靖淼", "created_da": "2024-11-12", "last_edite": "费靖淼", "last_edi_1": "2024-11-12", "Lat": 41, "Lon": -74 }, "geometry": { "type": "Point", "coordinates": [ -73.9779433, 40.7219824, 0.0 ] } },
+{ "type": "Feature", "properties": { "NoteType": 0, "country": "UK", "city": "London", "created_us": "费靖淼", "created_da": "2024-11-12", "last_edite": "费靖淼", "last_edi_1": "2024-11-12", "Lat": 52, "Lon": 0 }, "geometry": { "type": "Point", "coordinates": [ -0.1278, 51.5074, 0.0 ] } },
+{ "type": "Feature", "properties": { "NoteType": 0, "country": "Canada", "city": "Victoria", "created_us": "费靖淼", "created_da": "2024-11-12", "last_edite": "费靖淼", "last_edi_1": "2024-11-12", "Lat": 48, "Lon": -123 }, "geometry": { "type": "Point", "coordinates": [ -123.3656, 48.4284, 0.0 ] } }
+]
+}

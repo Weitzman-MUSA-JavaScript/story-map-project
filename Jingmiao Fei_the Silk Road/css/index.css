@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  border-width: 0;
+  box-sizing: border-box;
+  height: 100vh;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+header, section {
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid rgb(0 0 0 / 20%);
+}
+
+footer{
+  min-height: 50vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #faf2e6;
+}
+
+h1{
+  font-family:'Times New Roman', Times, serif;
+  font-size: larger;
+  color: #5d2521;
+
+}
+
+p{
+  font-family:'Times New Roman', Times, serif;
+  font-size: medium;
+  color: #5d2521;
+
+}
+
+/* Cover Section */
+.cover-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.cover-image-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the full container without stretching */
+}
+
+
+.cover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: none;
+  white-space: nowrap; /* Prevents line breaks due to spaces */
+}
+
+.cover-title {
+  font-size: 5em; 
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+
+}
+
+.cover-intro{
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.5em; 
+  color: #fff;
+
+}
+
+.cover-author{
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+.cover-date{
+  color:#fff
+}
+
+.cover-footer{
+  font-weight: bold;
+  color: #fff;
+  position: fixed; /* 固定在页面特定位置 */
+  bottom: 10px; /* 距离页面底部 10px */
+  right: 50px; /* 距离页面右侧 10px */
+  
+}
+
+/*****************************************************/
+.intro-section{
+  background-color: #faf2e6;
+}
+
+.intro-title{
+  display: block;       
+  margin: 2% 20%;
+  color: #5d2521;
+  font-family:'Times New Roman', Times, serif;
+  font-size: x-large;
+}
+
+.intro-text{
+  display: block;       
+  margin: 2% 20%; 
+  color: #5d2521;
+  font-family:'Times New Roman', Times, serif;
+  font-size: large;
+}
+
+.intro-image-container {
+    text-align: center;  
+}
+
+.intro-image {
+  display: block;       /* 使图片成为块级元素 */
+  margin: 20px auto;       /* 水平居中 */
+  width: 60%;           /* 图片宽度为页面宽度的 80% */
+  max-width: 100%;      /* 确保图片不会超过容器宽度 */
+}
+
+.intro-source-text{
+  display: block;       
+  margin: 2% 20%; 
+  color: #5d2521;
+  font-family:'Times New Roman', Times, serif;
+  font-size: smaller;
+}
+
+.slide-source-text{
+  display: block;       
+  margin: 1% ; 
+  color: #5d2521;
+  font-family:'Times New Roman', Times, serif;
+  font-size: smaller;
+}
+
+.cityname-title{
+  text-align: center; /* 水平居中对齐 */
+  margin: 0 auto; /* 确保容器的外边距自动调整 */
+  margin: 2%;
+}
+
+.intro-video-container {
+  position: relative;
+  width: 60%; /* 设置容器宽度为 60% */
+  padding-top: 34.2857%; /* 16:9 宽高比 (9 / 16 * 100 = 56.25%)，这里相当于 16:9 */
+  margin: 0 auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: #000; /* 设置背景颜色，防止没有视频时显示空白 */
+}
+
+.intro-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* 去除 iframe 默认的边框 */
+  border-radius: 10px; /* 可选：设置 iframe 圆角 */
+}
+
+
+
+
+/*****************************************************/
+.city-image-container {
+  text-align: center;  
+}
+
+.city-image {
+display: block;       /* 使图片成为块级元素 */
+margin: auto;       /* 水平居中 */
+width: 80%;           /* 图片宽度为页面宽度的 80% */
+max-width: 100%;      /* 确保图片不会超过容器宽度 */
+}
+/******************************************************/
+
+.label-tooltip {
+  background-color: rgba(255, 255, 255, 0); /* 背景颜色 */
+  color: #333333; /* 文字颜色 */
+  border: 1px solid #888888; /* 边框 */
+  padding: 5px; /* 内边距 */
+  border-radius: 5px; /* 圆角 */
+  font-size: 12px; /* 字体大小 */
+}
+
+/*****************************************************/
+.map-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 0;
+}
+
+.map {
+  height: 100%;
+}
+
+.slide-section {
+  position: relative;
+  margin-top: -30vh;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.slide {
+  margin-top: 0;
+  margin-bottom: 90vh;
+  margin-left: auto;
+  margin-right: 2rem;
+  padding: 1rem;
+  box-shadow: -0.5rem 0 1rem rgba(0 0 0 / 50%);
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  pointer-events: initial;
+
+  width: 25rem;
+
+  background-color: #faf2e6;
+  color: black;
+}
+
+.slide:first-child {
+  margin-top: 0;
+}
+
+.slide:last-child {
+  margin-bottom: 90vh;
+}
+
+.slide-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 0.5rem;
+
+  width: 100%;
+}
+
+.slide-nav-button {
+  transition: all 0.1s;
+
+  padding: 0;
+  margin: 1rem;
+  width: 4rem;
+  height: 3rem;
+  border: 1px solid #888;
+  border-radius: 0.25rem;
+
+  background-color: #eee;
+  font-size: 1.5em;
+}
+
+.slide-nav-button:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.slide-nav-select {
+  min-width: 0;
+}
