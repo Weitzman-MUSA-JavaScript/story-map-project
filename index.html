@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Story</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<div id="media-modal" class="media-modal is-hidden" aria-hidden="true">
+  <div class="media-backdrop" id="media-backdrop"></div>
+
+  <div class="media-card" role="dialog" aria-modal="true">
+    <button class="media-close" id="media-modal-close" aria-label="Close">×</button>
+    <div class="media-content" id="media-modal-content"></div>
+  </div>
+</div>
+
+<body>
+  <main>
+    <!-- The map container, used by Leaflet -->
+    <div class="map" id="map">
+      <div id="media-modal" class="media-modal is-hidden" aria-hidden="true">
+        <div class="media-backdrop" id="media-backdrop"></div>
+
+        <div class="media-card" role="dialog" aria-modal="true">
+          <button class="media-close" id="media-modal-close" aria-label="Close">×</button>
+          <div class="media-content" id="media-modal-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The slides container -->
+    <section class="slide-section">
+      <article class="slide" id="maritime_silk_road">
+        <h1>Maritime Silk Road</h1>
+        <p>The Maritime Silk Road is the maritime section of the historic Silk Road that connected Southeast Asia, East Asia, and the Indian subcontinent, the Arabian Peninsula, eastern Africa, and Europe.</p>
+        <p>Started by the 2nd century BCE and flourished until the 15th century CE, the Maritime Silk Road was used by Persian, Arab and Chinese to trade.</p>
+      </article>
+
+      <article class="slide" id="east_asia_legend">
+        <h2>East Asia Legend</h2>
+        <p>An important chapter of the East Asian Maritime Silk Road is the Ming dynasty voyages of Zheng He and his enormous ships. Advances in shipbuilding technology made it possible to trade both farther and on a much larger scale.</p>
+        <p>These enormous vessels, known as treasure ships, were constructed in the shipyard that became the very starting point of Zheng He’s voyages.</p>
+      </article>
+
+      <article class="slide" id="constructions">
+        <h2>Constructions Along the Voyages</h2>
+        <p>Surrounding the treasure shipyard, a range of affiliated structures arose, together forming the broader landscape of the Maritime Silk Road. Temples were built nearby to host prayers before each departure; marketplaces and commercial quarters reflected the hope for prosperous trade; and along Zheng He’s routes, shipyards and repair workshops appeared in many harbors to maintain the fleet. Collectively, these constructions illustrate how the great voyages left a lasting imprint on port cities across the region.</p>
+      </article>
+
+        <article class="slide" id="shipyard">
+        <h2>The Treasure Shipyard</h2>
+        <p> Temples were built nearby to host prayers before each departure; marketplaces and commercial quarters reflected the hope for prosperous trade; and along Zheng He’s routes, shipyards and repair workshops appeared in many harbors to maintain the fleet. Collectively, these constructions illustrate how the great voyages left a lasting imprint on port cities across the region.</p>
+        <figure class="slide-figure">
+          <img class="slide-img" src="picutures/1.png" alt="Treasure shipyard illustration">
+          <figcaption class="slide-caption">Figure 1: Treasure Shipyard</figcaption>
+        </figure>
+      </article>
+
+      <article class="slide" id="tianfei_palace">
+      <h2>Tianfei Palace</h2>
+      <p> Tianfei Palace was built to honor Mazu, the sea goddess worshipped by sailors and merchants for protection during long and dangerous voyages. Before setting sail, Zheng He’s fleet is believed to have conducted rituals here, seeking safe passage and favorable winds. The presence of this temple highlights the spiritual dimension of the Maritime Silk Road, where maritime trade was closely intertwined with religious belief and ritual practice.
+      </p>
+      <figure class="slide-figure">
+        <img class="slide-img js-open-media" data-img="2" src="picutures/2.png" alt="Tianfei Palace (replace later)">
+        <figcaption class="slide-caption">Figure 2. Tianfei Palace</figcaption>
+      </figure>
+    </article>
+
+      <article class="slide" id="jingjue_temple">
+      <h2>Jingjue Temple</h2>
+      <p>Jingjue Temple stands as an important religious site reflecting the cultural diversity fostered by the Maritime Silk Road. As maritime exchange intensified, Buddhism continued to spread alongside goods, technologies, and ideas. The temple illustrates how port cities became spaces of cultural and religious convergence, shaped by continuous interaction between travelers, merchants, and local communities.
+      </p>
+
+      <figure class="slide-figure">
+        <img class="slide-img js-open-media" data-img="3" src="picutures/3.png" alt="Jingjue Temple (replace later)">
+        <figcaption class="slide-caption">Figure 3. Jingjue Temple</figcaption>
+      </figure>
+    </article>
+
+      <div class="slide-controls">
+        <button class="slide-nav-button" id="prev-slide">⧏</button>
+        <button class="slide-nav-button" id="next-slide">⧐</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/index.js" type="module"></script>
+</body>
+</html>

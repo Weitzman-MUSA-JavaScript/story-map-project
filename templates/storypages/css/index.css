@@ -68,3 +68,12 @@ main {
 .slide-nav-select {
   min-width: 0;
 }
+
+@media screen and(width <= 480px) {
+  main{
+    flex-direction: column;
+  }
+  .slide-section{
+  width: 100%;
+  box-sizing: border-box;}
+}
