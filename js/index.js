@@ -40,6 +40,93 @@ const slideOptions = {
       layer.bindTooltip(feature.properties.label);
     },
   },
+  'hawker_maxwell': {
+    pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
+      radius: 7,
+      color: '#ffffff',
+      weight: 2,
+      fillColor: '#f08a24',
+      fillOpacity: 0.9,
+    }),
+
+    onEachFeature: (feature, layer) => {
+      const name = feature.properties.NAME;
+      const url = feature.properties.PHOTOURL?.replace(/^http:/, 'https:')
+      const address = feature.properties.ADDRESS_MYENV;
+      const addressMarkup = address
+        ? `<h2>${address}</h2>`
+        : '';
+
+      layer.bindTooltip(`<div class="tooltip-content">
+                <img class="hawker-photo" src="${url}" alt="">
+                <h1>${name}</h1>
+                ${addressMarkup}
+            </div>
+        `, {
+        direction: 'top',
+        sticky: true,
+        className: 'hawker-tooltip',
+      });
+    },
+  },
+  'hawker_1970s': {
+    pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
+      radius: 7,
+      color: '#ffffff',
+      weight: 2,
+      fillColor: '#f08a24',
+      fillOpacity: 0.9,
+    }),
+
+    onEachFeature: (feature, layer) => {
+      const name = feature.properties.NAME;
+      const url = feature.properties.PHOTOURL?.replace(/^http:/, 'https:')
+      const address = feature.properties.ADDRESS_MYENV;
+      const addressMarkup = address
+        ? `<h2>${address}</h2>`
+        : '';
+
+      layer.bindTooltip(`<div class="tooltip-content">
+                <img class="hawker-photo" src="${url}" alt="">
+                <h1>${name}</h1>
+                ${addressMarkup}
+            </div>
+        `, {
+        direction: 'top',
+        sticky: true,
+        className: 'hawker-tooltip',
+      });
+    },
+  },
+  'hawker_present': {
+    pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
+      radius: 7,
+      color: '#ffffff',
+      weight: 2,
+      fillColor: '#f08a24',
+      fillOpacity: 0.9,
+    }),
+
+    onEachFeature: (feature, layer) => {
+      const name = feature.properties.NAME;
+      const url = feature.properties.PHOTOURL?.replace(/^http:/, 'https:')
+      const address = feature.properties.ADDRESS_MYENV;
+      const addressMarkup = address
+        ? `<h2>${address}</h2>`
+        : '';
+
+      layer.bindTooltip(`<div class="tooltip-content">
+                <img class="hawker-photo" src="${url}" alt="">
+                <h1>${name}</h1>
+                ${addressMarkup}
+            </div>
+        `, {
+        direction: 'top',
+        sticky: true,
+        className: 'hawker-tooltip',
+      });
+    },
+  },
 };
 
 // ## The SlideDeck object

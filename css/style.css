@@ -108,6 +108,34 @@ body {
   font-size: 0.7rem
 }
 
+.tooltip-content {
+  text-align: center;
+}
+
+.hawker-photo {
+  display: block;
+  width: 400px;
+  max-height: 300px;
+  object-fit: cover;
+  margin: 0 auto 0.5rem;
+}
+
+.tooltip-content h1 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.tooltip-content h2 {
+  font-size: 0.8rem;
+  margin: 4px 0 10px;
+  line-height: 1;
+}
+
+.leaflet-tooltip.hawker-tooltip {
+  background: #000;
+  color: #fff;
+}
+
 .leaflet-tooltip {
   padding: 0.45rem 0.7rem;
   border: 0;
@@ -118,6 +146,12 @@ body {
 
   font-size: 0.8rem;
   font-weight: 600;
+
+  animation-name: tooltip-fade-up;
+    animation-duration: 250ms;
+    animation-timing-function: ease-out;
+    animation-delay: 300ms;
+    animation-fill-mode: both;
 }
 
 /* Global tooltip arrow */
@@ -136,4 +170,16 @@ body {
 
 .leaflet-tooltip.is-fading-out {
   opacity: 0;
+}
+
+@keyframes tooltip-fade-up {
+  from {
+    opacity: 0;
+    margin-top: 8px;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
 }

@@ -65,6 +65,13 @@ class SlideDeck {
           });
           }
         });
+    geoJsonLayer.eachLayer((layer) => {
+      const path = layer.getElement();
+
+      if (path) {
+        path.classList.add('marker-fade-in');
+      }
+    });
     return geoJsonLayer;
   }
 
