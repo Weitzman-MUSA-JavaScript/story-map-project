@@ -40,30 +40,6 @@ const slideOptions = {
       layer.bindTooltip(feature.properties.label);
     },
   },
-  'mrt-nsl': {
-    className: 'mrt-line',
-      style: (feature) => ({
-        color: feature.properties.line_color,
-        weight: 5,
-        opacity: 1,
-    }),
-  },
-  'mrt-ewl': {
-    className: 'mrt-line',
-      style: (feature) => ({
-        color: feature.properties.line_color,
-        weight: 5,
-        opacity: 1,
-    }),
-  },
-  'mrt-nel': {
-    className: 'mrt-line',
-      style: (feature) => ({
-        color: feature.properties.line_color,
-        weight: 5,
-        opacity: 1,
-    }),
-  },
 };
 
 // ## The SlideDeck object

@@ -37,7 +37,13 @@ class SlideDeck {
     this.dataLayer.clearLayers();
 
     const defaultOptions = {
-      pointToLayer: (p, latlng) => L.marker(latlng),
+      pointToLayer: (p, latlng) => L.circleMarker(latlng, {
+        radius: 7,
+        color: '#ffffff',
+        weight: 2,
+        fillColor: '#f08a24',
+        fillOpacity: 0.9,
+      }),
       style: (feature) => feature.properties.style,
       onEachFeature: (feature, layer) => {
         if (feature.properties && feature.properties.label) {
@@ -59,6 +65,7 @@ class SlideDeck {
           });
           }
         });
+    return geoJsonLayer;
   }
 
   /**
@@ -99,6 +106,7 @@ class SlideDeck {
     const collection = await this.getSlideFeatureCollection(slide);
     const options = this.slideOptions[slide.id];
     const layer = this.updateDataLayer(collection, options);
+    
 
     /**
      * Create a bounds object from a GeoJSON bbox array.

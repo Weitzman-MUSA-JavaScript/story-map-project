@@ -1,0 +1,45 @@
+{
+    "type": "FeatureCollection",
+    "name": "hawker_maxwell",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "bbox": [103.8440, 1.275, 103.8455, 1.285],
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 119469,
+                "LANDXADDRESSPOINT": 29271.915798450002,
+                "LANDYADDRESSPOINT": 29198.067094009999,
+                "ADDRESSBUILDINGNAME": "MAXWELL FOOD CENTRE",
+                "ADDRESSPOSTALCODE": "069184",
+                "ADDRESSSTREETNAME": "Kadayanallur Street",
+                "DESCRIPTION": "Upgraded prior to HUP",
+                "NAME": "Maxwell Food Centre (Kim Hua Market)",
+                "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155734465.jpg",
+                "ADDRESSBLOCKHOUSENUMBER": "1",
+                "STATUS": "Existing",
+                "AWARDED_DATE": null,
+                "IMPLEMENTATION_DATE": null,
+                "INFO_ON_CO_LOCATORS": null,
+                "ADDRESS_MYENV": "1, Kadayanallur Street, Singapore 069184",
+                "EST_ORIGINAL_COMPLETION_DATE": "1935",
+                "HUP_COMPLETION_DATE": null,
+                "NUMBER_OF_COOKED_FOOD_STALLS": 103,
+                "INC_CRC": "53F6851F17ED3342",
+                "FMEL_UPD_D": "20241211100036"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.844747227493002,
+                    1.280331427325956
+                ]
+            }
+        }
+    ]
+}
