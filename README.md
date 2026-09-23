@@ -1,1 +1,1 @@
-Add a readme for your story map here. Include content overview, data citations, and any relevant technical details.
+[The final repo for this project is located here.](https://github.com/michaeljpincus/js-project1)
