@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  border-width: 0;
+  box-sizing: border-box;
+  height: 100vh;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.map-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 0;
+}
+
+.map {
+  height: 100%;
+}
+
+.slide-section {
+  position: relative;
+  margin-top: -30vh;
+  z-index: 100;
+  pointer-events: none;
+  border-bottom: 1px solid rgb(0 0 0 / 10%);
+}
+
+.slide {
+  margin-top: 90vh;
+  margin-bottom: 90vh;
+  margin-left: auto;
+  margin-right: 2rem;
+  padding: 1rem;
+  box-shadow: -0.5rem 0 1rem rgb(0 0 0 / 50%);
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  pointer-events: initial;
+
+  width: 25rem;
+
+  background-color: white;
+  color: black;
+}
+
+.slide:first-child {
+  margin-top: 0;
+}
+
+.slide:last-child {
+  margin-bottom: 40vh;
+}
+
+.slide-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 0.5rem;
+
+  width: 100%;
+}
+
+.slide-nav-button {
+  transition: all 0.1s;
+
+  padding: 0;
+  margin: 1rem;
+  width: 4rem;
+  height: 3rem;
+  border: 1px solid #888;
+  border-radius: 0.25rem;
+
+  background-color: #eee;
+  font-size: 1.5em;
+}
+
+.slide-nav-button:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.slide-nav-select {
+  min-width: 0;
+}
+
+.slide-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5%;
+}
+
+.slide figure {
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.slide figcaption {
+  text-align: left;
+  margin-top: 0.6rem;
+  font-size: 0.8rem
+}
+
+.slide p.source {
+  font-size: 0.7rem
+}
+
+.tooltip-content {
+  text-align: center;
+}
+
+.hawker-photo {
+  display: block;
+  width: 400px;
+  max-height: 300px;
+  object-fit: cover;
+  margin: 0 auto 0.5rem;
+}
+
+.tooltip-content h1 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.tooltip-content h2 {
+  font-size: 0.8rem;
+  margin: 4px 0 10px;
+  line-height: 1;
+}
+
+.leaflet-tooltip.hawker-tooltip {
+  background: #000;
+  color: #fff;
+}
+
+.leaflet-tooltip {
+  padding: 0.45rem 0.7rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background: #20252b;
+  color: white;
+  box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 35%);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  animation-name: tooltip-fade-up;
+    animation-duration: 250ms;
+    animation-timing-function: ease-out;
+    animation-delay: 300ms;
+    animation-fill-mode: both;
+}
+
+/* Global tooltip arrow */
+.leaflet-tooltip-top::before {
+  border-top-color: #20252b;
+}
+
+.leaflet-interactive {
+  transition: opacity 400ms ease, fill-opacity 400ms ease;
+}
+
+.leaflet-interactive.is-fading-out {
+  opacity: 0;
+  fill-opacity: 0;
+}
+
+.leaflet-tooltip.is-fading-out {
+  opacity: 0;
+}
+
+@keyframes tooltip-fade-up {
+  from {
+    opacity: 0;
+    margin-top: 8px;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}

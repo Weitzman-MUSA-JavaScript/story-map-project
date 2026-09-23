@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Story</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <div class="map-container">
+      <div class="map" id="map"></div>
+    </div>
+    <section class="slide-section">
+
+      <article class="slide" id="hawker">
+        <h1>History of the The Singaporean Hawker Center</h1>
+        <p>From unlicensed street vendors to a UNESCO Intangible Heritage Culture, scroll down to learn more about the history of Singapore's Hawker Centers.</p>
+  
+      </article>
+
+      <article class="slide" id="hawker_maxwell">
+        <h1>The Beginnings: Street Vendors</h1>
+        <p>While Hawker Centers today are known for world-renound food quality at relatively affordable prices, these open-air, market-style buildings were created as a response to a growing problem of unlicensed street vendoring. </p>
+        <p>Maxwell Road Food Center is known as one of the oldest Hawker Centers. It began as a wet market in 1929 and formally introduced the concept of having cooked food stalls and eating tables under one roof in 1935. While this initially faced challenges due to the lack of enforcement for street vendors gathering directly outside the Hawker Center, it laid the foundation for what we understand as the Hawker Center Today. </p>
+        <figure>
+          <img 
+            class="slide-image"
+            src="/data/img/maxwell-food-centre-resized.jpg"
+            alt="Maxwell Food Center">
+            <figcaption>Maxwell Food Center in 1980 after full food center conversion</figcaption>
+        </figure>
+        <p class="source">Source: <a href="https://www.roots.gov.sg/stories-landing/stories/Hawker-Centres/Maxwell-Road-Food-Centre">National Heritage Board</a></p>
+      </article>
+
+      <article class="slide" id="hawker_1970s">
+        <h2>Mid-1960s to Late-1970s</h2>
+        <p>Following Singapore's independence from Malaysia in 1965, the newly established government set out to expand the hawker center program. Through an island-wide registration of street hawkers, the government began clamping down on illegal hawkering to ensure the hawkers were properly regulated and located within the newly established hawker centers. In the short span of 5 years (1974-1979), around 54 hawker centers were constructed all across the island to ensure good access to affordable food options for all residential estates.</p>
+        <figure>
+          <img 
+            class="slide-image"
+            src="/data/img/kallang.jpg"
+            alt="The Old Kalling Airport Hawker Center">
+            <figcaption>The Old Kallang Airport Hawker Center in 1983. Source: National Archives of Singapore</figcaption>
+        </figure>
+      <p class="source">Source: <a href="https://www.roots.gov.sg/stories-landing/stories/Serving-Up-a-Legacy">National Heritage Board</a></p>
+      </article>
+
+      <article class="slide" id="hawker_present">
+        <h2>1980s to Present</h2>
+        <p>The growth of Hawker Centers continued through the 1980s to the present. With the growing need to densify urban areas due to land scarcity, newer hawker centers were built with improved designs, and older hawker centers were renovated. Hawker Centers were also recognized as a UNESCO Intangible Cultural Heritage in 2020, marking another step forward in preserving heritage and ensuring that the culinary culture continues into the future generations.</p>
+        <figure>
+          <img 
+            class="slide-image"
+            src="/data/img/bpj.png"
+            alt="The Eco-Friendly Bukit Panjang Hawker Center">
+            <figcaption>Bukit Panjang Hawker Center was one of the many new-generation Hawker Centers that featured an eco-friendly and sustainability focused design philosophy that incorporated green elements, multiple floors, and higher ceilings to reduce energy usage and maintain a smaller urban footprint.</figcaption>
+        </figure>
+        <p class="source">Source: <a href="https://www.roots.gov.sg/stories-landing/stories/Serving-Up-a-Legacy">National Heritage Board</a></p>
+      </article>
+
+      <article class="slide" id="hawker">
+        <h2>The Future</h2>
+        <p>As the country continues to grow, so does its need for affordable food options in newer suburban areas. Within the next 3 years, 6 more Hawker Centers will be completed, thus bringing greater accessibility to residents and workers in the surrounding areas.</p>
+        <p>Despite the growth in infrastructure, there have been concerns that the lack of talent renewal in the hawker space would result in the loss of Hawker culture on a whole. While many current Hawkers do not want their children to follow in their footsteps due to the intense labour and tough margins, some have still chosen to join the trade in an effort to keep the culture alive.</p>
+        <img 
+            class="slide-image"
+            src="/data/img/younghawkers.jpg"
+            alt="Picture of three younger hawkers who are carrying on the tradition of hawker culture">
+            <figcaption>Three young Hawkers (Andre, Jolene, and Lincoln) featured in Tatler Asia are just a few of the many who have stepped up to learn the craft and carry the flame. </figcaption>
+        </figure>
+        <p class="source">Source: <a href="https://www.tatlerasia.com/dining/food/young-hawkers-preserving-local-food-heritage">Tatler Asia</a></p>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/index.js" type="module"></script>
+</body>
+</html>
