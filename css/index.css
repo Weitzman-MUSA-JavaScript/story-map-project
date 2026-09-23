@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  border-width: 0;
+  box-sizing: border-box;
+  height: 100vh;
+
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.map-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 0;
+}
+
+.map {
+  height: 100%;
+}
+
+.slide-section {
+  position: relative;
+  margin-top: -30vh;
+  z-index: 100;
+  pointer-events: none;
+  border-bottom: 1px solid rgb(0 0 0 / 10%);
+}
+
+.slide {
+  margin-top: 85vh;
+  margin-bottom: 85vh;
+  margin-left: auto;
+  margin-right: 1.5rem;
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+
+  width: 25rem;
+
+  background-color: rgb(255 255 255 / 92%);
+  box-shadow: 0 15px 35px rgb(45 12 19 / 15%), 0 5px 15px rgb(0 0 0 / 5%);
+  color: black;
+  border-top: 4px solid #722f37;
+  pointer-events: initial;
+}
+
+.slide h1, .slide h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #4a1521; 
+  margin-top: 0;
+  letter-spacing: 0.5px;
+}
+
+
+.slide:first-child {
+  margin-top: 0;
+}
+
+.slide:last-child {
+  margin-bottom: 40vh;
+}
+
+.slide-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 0.5rem;
+
+  width: 100%;
+}
+
+.slide-nav-button {
+  transition: all 0.1s;
+
+  padding: 0;
+  margin: 1rem;
+  width: 4rem;
+  height: 3rem;
+  border: 1px solid #888;
+  border-radius: 0.25rem;
+
+  background-color: #eee;
+  font-size: 1.5em;
+}
+
+.slide-nav-button:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.slide-nav-select {
+  min-width: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+  transition: transform 0.3s ease;
+}
+
+/* Use AI for this part */
+.scroll-hint {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #722f37;
+  text-align: center;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-5px); }
+  60% { transform: translateY(-2px); }
+}
+
+
+@media screen and (width < 960px) {
+  .slide{
+    width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}
