@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Story</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <main>
+ 
+  <div class="map" id="map"></div>
+
+ 
+  <aside class="side-panel hidden" id="side-panel">
+    <div class="slide-content" id="slide-content">
+      
+    </div>
+    <div class="slide-controls">
+      <button class="slide-nav-button" id="prev-slide">⧏</button>
+      <button class="slide-nav-button" id="next-slide">⧐</button>
+    </div>
+  </aside>
+
+  
+  <section class="slide-section" id="hero-section">
+    <article class="slide hero-overlay" id="title-slide">
+      <img src="images/cover.png" alt="Philadelphia Public Art" class="hero-bg">
+      <div class="hero-text">
+        <h1>Philadelphia Public Art & Community Interaction</h1>
+        <p>Explore how Philadelphia’s public art interacts with urban communities</p>
+        <button class="btn" id="start-btn">Start</button>
+      </div>
+    </article>
+  </section>
+  
+</main>
+
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/index.js" type="module"></script>
+</body>
+</html>
