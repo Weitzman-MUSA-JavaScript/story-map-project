@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Philly Streetlight Improvement Project</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/@tabler/icons-webfont/dist/tabler-icons.min.css" />
+</head>
+<body>
+  <main>
+    <div class="map-container">
+      <div class="map" id="map"></div>
+      <div class="cover-image" id="cover-image"></div>
+    </div>
+    <section class="slide-section">
+
+      <article class="slide" id="title-intro">
+        <h1>Philly Streetlight Improvement Project (PSIP)</h1>
+        <p> Replacing and connecting 130,000+ streetlights with more efficient LED lights for all Philadelphians.</p>
+      </article>
+
+      <article class="slide" id="psip-overview">
+        <h2>What is the Philly Streetlight Improvement Project?</h2>
+        <p>PSIP is the City's largest energy conservation effort to date. Working together, the City of Philadelphia, the Philadelphia Energy Authority, and contractor Ameresco have replaced roughly 130,000 aging high-pressure sodium streetlights with networked LED fixtures. 
+          <p></p>The $91.2 million project is structured to pay for itself through a 20-year guaranteed energy savings agreement.</p>
+      </article>
+
+
+      <article class="slide" id="why-led">
+        <h2>Why LED?</h2>
+        <p>LED (Light Emitting Diode) lights are more energy-efficient than traditional high-pressure sodium lights. 
+          <p></p>LEDs use less electricity to produce the same amount of light and last longer, which helps in reducing maintenance costs and the frequency of replacements. Additionally, LED lights can be dimmed or brightened as needed for better control over lighting levels in different areas.</p>
+        <p></p>A 2025 University of Pennsylvania Crime and Justice Policy Lab study found that nighttime gun violence crimes dropped by 21% in neighborhoods where the new LED lights went in. 
+        <p></p>Later, we'll explore how this impacts four Philadelphia neighborhoods ranking highest in reported aggravated assaults and robberies with firearms for 2025. </p>
+      </article>
+
+
+      <article class="slide" id="psip-highlights">
+        <h2>Program Highlights</h2>
+        <div class="icon-grid" id="highlights-grid"></div>
+        <div class="icon-desc-panel" id="highlights-desc">Click an icon to see its description.</div>
+      </article>
+
+      <article class="slide" id="psip-stats">
+        <div class="stat-row">
+        <div class="stat"><span class="stat-number">$8M</span><span class="stat-label">Annual energy & operational savings</span></div>
+        <div class="stat"><span class="stat-number">~10%</span><span class="stat-label">Reduction in municipal carbon emissions</span></div>
+        <div class="stat"><span class="stat-number">200+</span><span class="stat-label">Employed through Future Track</span></div>
+        <div class="stat"><span class="stat-number">1,800+</span><span class="stat-label">Alleyways cleared</span></div>
+      </div>
+    </article>
+
+      <article class="slide" id="streets-owners">
+        <h2>What does the Streets Department oversee?</h2>
+        <p>The Department of Streets designs, builds, and maintains Philadelphia's roadways, bridges, and streetlights. However, not every pole on the street belongs to the City. 
+        <p></p> Hover over any pie chart icon to see each neighborhood's share of City-owned streetlight poles.  The rest are split among a patchwork of other owners, from PECO and PennDOT to SEPTA, the Housing Authority, and even private property owners.</p>
+        <p></p><span class="text-blue">Blue shading</span> indicates percentage of City-owned streetlight poles.</p> 
+      </article>
+
+      <article class="slide" id="richmond">
+        <h2>Richmond</h2>
+        <p>Richmond recorded more firearm-related aggravated assaults and robberies than any other neighborhood in OpenDataPhilly's 2025 Crime Incidents dataset. 
+        <p></p>Of its 4,612 street poles, 1,632 carry no verified PSIP status in the City's records.</p>
+        <p></p> Click on a point to see more information: 
+        <p></p><span class="text-red">Red</span> indicates no verified PSIP status and suggests a gap in data coverage of updated streetlights from PSIP implementation.
+        <p></p><span class = "text-yellow">Yellow</span> indicates verified PSIP status.</p>
+      </article>
+
+      <article class="slide" id="upper-kensington">
+        <h2>Upper Kensington</h2>
+        <p>Upper Kensington ranks second citywide for firearm-related violent crime in 2025. Nearly a third of its 2,433 streetlight poles have no confirmed conversion status on file.</p>
+      </article>
+
+      <article class="slide" id="north-central">
+        <h2>North Central</h2>
+        <p> For North Central, 678 of its 2,097 street poles remain unverified in the City's PSIP records.</p>
+      </article>
+
+      <article class="slide" id="frankford">
+        <h2>Frankford</h2>
+        <p>Frankford rounds out the four neighborhoods with more than a third of its 3,383 poles missing a recorded status update.</p>
+      </article>
+
+      <article class="slide" id="conclusion">
+        <h2>How You Can Help</h2>
+        <p>If a streetlight near you is out or flickering, please file a request through <a href="https://www.phila.gov/services/property-lots-housing/submit-a-service-request-with-311/">Philadelphia's 311 portal</a> or emailing <a href="mailto:ledstreetlighting@phila.gov">ledstreetlighting@phila.gov</a> 
+        <p> </p>This helps us add a verified record to the same public dataset used throughout this story. More reports help create a clearer picture for City decision-makers, and stronger evidence for fellow residents advocating for their own neighborhoods.</p>
+      </article>
+
+    </section>
+
+    <footer class="story-footer">
+      <p>Data: <a href="https://opendataphilly.org/datasets/street-poles/">Street Poles</a> and
+         <a href="https://opendataphilly.org/datasets/crime-incidents/">Crime Incidents</a>, OpenDataPhilly.
+         Project background: <a href="https://www.phillystreetlightimprovement.com/">Philly Streetlight Improvement Project</a>.
+         Thanks to Juan Francisco Saldarriaga (PointsUnknown) for the storymap template: https://github.com/PointsUnknown/PointsUnknown.github.io 
+    </footer>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/index.js" type="module"></script>
+</body>
+</html>
