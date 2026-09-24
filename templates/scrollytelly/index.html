@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Story</title>
+  <title>Houston Transit and Opportunity</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -16,26 +16,172 @@
     <div class="map-container">
       <div class="map" id="map"></div>
     </div>
+    <div class="legend" id="legend" aria-live="polite" hidden></div>
     <section class="slide-section">
-      <article class="slide" id="title-slide">
-        <h1>Story Map title</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie hendrerit quam, efficitur vestibulum justo vehicula a.</p>
-        <p>Nullam et metus eu eros facilisis commodo. Vivamus elementum nulla nisi, eget fermentum mauris placerat sed.</p>
+
+      <article class="slide" id="intro">
+        <h1>Who can reach life's necessities?</h1>
+        <p>In 2015, Houston METRO redrew its bus map, prioritizing a more efficient grid system. In a city that is very vehicle-centric and sprawled, proximity to basic necessities, such as job access, grocery availability, and childcare options, is crucial.</p>
       </article>
 
-      <article class="slide" id="second-slide">
-        <h2>Second slide title</h2>
-        <p>Nunc dapibus arcu vel sapien rutrum rhoncus. Pellentesque dignissim, nisi ac pellentesque egestas, urna risus varius leo, eget efficitur risus tortor vel magna.</p>
-        <p>Suspendisse sed posuere velit, ac gravida elit. Nam viverra vehicula nisl ut gravida.</p>
+      <article class="slide" id="methods">
+        <h2>How do we figure this out?</h2>
+        <p>The base unit is the census block group, a neighborhood of roughly 1,000 to 3,000 residents (2,144 of them across Harris County). For each one, EPA's Smart Location Database counts the jobs one could reach within a set amount of travel time on the Houston METRO schedule, and the Census Bureau's American Community Survey (ACS) gives the share of households without a car and their income. Grocery and childcare data are only published at the larger census tract, which groups several block groups together, so those two questions are answered at that level.</p>
+        <p>Why 45 minutes? It is about as long a one-way trip as many people will make for work or an errand, and a standard threshold in transit-access research (and is EPA-endorsed).</p>
       </article>
 
-      <article class="slide" id="third-slide">
-        <h2>Third slide title</h2>
-        <p>Pellentesque nunc tellus, euismod sed mauris vitae, volutpat viverra metus. Nunc vel nisl massa. Nunc ullamcorper interdum vehicula. Ut at mi congue, lacinia eros eget, gravida libero. Vivamus et cursus lorem. Nulla elementum neque a nunc sollicitudin, eget maximus turpis egestas. In hac habitasse platea dictumst. Maecenas aliquet nibh tempor leo pretium, vel congue dui malesuada. Sed non felis porttitor, laoreet ante ac, volutpat nibh. Sed tincidunt eleifend felis, et porttitor dui interdum scelerisque. Mauris eget eros pharetra, pretium justo nec, commodo tellus. Duis orci sem, vehicula a leo eget, lacinia venenatis neque. Duis purus enim, volutpat dapibus arcu eget, aliquam malesuada nulla. Duis nisi eros, semper eu bibendum condimentum, vehicula vel felis. Integer a lacus dictum, tempor nulla at, ornare ante.</p>
+      <article class="slide" id="need">
+        <h2>Some neighborhoods depend on transit more than others.</h2>
+        <p>In the most transit-reliant block groups, up to 61% of households have no car.</p>
+        <p>Where fewer people own a car, the bus is a necessity. These are the places where living close to transit matters most.</p>
+        <p class="method"><b>Method:</b> Shading is the share of households with no vehicle available, per block group (ACS 2019 5-year).</p>
+      </article>
+
+      <article class="slide" id="jobs">
+        <h2>Job access is uneven across the city.</h2>
+        <p>Within the area transit serves, the typical block group can reach about 204,000 jobs in 45 minutes. The best-connected reach nearly 700,000; the worst can only access a few thousand.</p>
+        <p class="method"><b>Method:</b> Color is the number of jobs reachable within 45 minutes on the METRO schedule (EPA Smart Location Database). Grey block groups fall outside the area the data covers.</p>
+      </article>
+
+      <article class="slide" id="gap">
+        <h2>The outer ring of the urban core, who most need transit, often have the least access.</h2>
+        <p>High transit need and low job access each say little on their own. Where they overlap are the neighborhoods that depend on the bus the most and get the least from it, cutting residents off from jobs and weighing on the local economy.</p>
+        <p>181 block groups mostly on the outer ring of the urban core tell a story of being stranded, having the highest need for transit (higher shares of car-free households) and lowest job access.</p>
+        <p class="method"><b>Method:</b> Highlighted block groups rank in the top third for car-free households and the bottom third for 45-minute job access.</p>
+      </article>
+
+      <article class="slide panel-left" id="stranded">
+        <h2>And some households have no transit at all.</h2>
+        <p>Groups across the region, equalling about 57,000 people, show at least 15% of households own no car and the nearest transit stop sits more than half a mile away. College campuses are left out, since students there tend not to own cars because of student life.</p>
+        <div class="risk-table-wrap" role="region" aria-label="Transit-dependent block groups with no nearby stop, ordered by distance" tabindex="0">
+          <table class="risk-table">
+            <thead>
+              <tr>
+                <th scope="col">Block group</th>
+                <th scope="col">Car-free</th>
+                <th scope="col">Median income</th>
+                <th scope="col">Nearest stop</th>
+              </tr>
+            </thead>
+            <tbody id="stranded-rows"></tbody>
+          </table>
+        </div>
+        <p class="method"><b>Method:</b> Block groups where at least 15% of households own no car and the nearest stop is over half a mile away (college campuses are excluded).</p>
+      </article>
+      <article class="slide" id="deserts-food">
+        <h2>Jobs aren't the only necessary destination.</h2>
+        <p>338 census tracts, each made up of several block groups, are both low-income and far from a grocery store.</p>
+        <p>For a car-free household, whether the nearest supermarket is one bus ride away or several compounds the risk to food security.</p>
+        <p class="method"><b>Method:</b> USDA flags a tract when it is low-income and a meaningful share of its residents live more than half a mile from a supermarket. Because it counts residents, a store near the center of a tract does not clear it if the edges are still far (Food Access Research Atlas, 2019).</p>
+      </article>
+
+      <article class="slide" id="food-carless">
+        <h2>Take away the car as well.</h2>
+        <p>54 of those 338 grocery deserts are considered transit-dependent groups: at least 15% of households own no car. This accounts for a population of about 227,000 people. Here, the nearest supermarket is far, and driving to it is not an option for many.</p>
+        <p>These tracts having a bus route is crucial. Rather than a bus route being a convenience, it becomes the line between food being on the dinner table or not.</p>
+        <p class="method"><b>Method:</b> Grocery-desert tracts where at least 15% of households also own no car.</p>
+      </article>
+
+      <article class="slide" id="deserts-childcare">
+        <h2>Childcare is also very scarce.</h2>
+        <p>595 tracts are childcare deserts, and 370 have no licensed slots at all.</p>
+        <p>Even if one has a job they can reach, it does not help if there is nowhere to leave the kids on the way.</p>
+        <p class="method"><b>Method:</b> A tract is flagged when it has children under 5 but more than three of them for every licensed child-care slot, or no licensed slots at all (Texas HHSC licensing, 2026; under-5 population from ACS 2020 to 2024).</p>
+      </article>
+
+      <article class="slide panel-left" id="triple-risk">
+        <h2>Sixty-six tracts are highlighted in every analysis.</h2>
+        <p>These tracts land on all three maps, meaning they have less job access, live in a grocery desert, and also live in a childcare desert. About 334,000 people live in them.</p>
+        <p>Here the hardships stack together: the same means-tested households absorb a hard commute, a distant grocery run, and a scramble for childcare all at once.</p>
+        <div class="risk-table-wrap" role="region" aria-label="Tracts flagged for job, grocery, and childcare access, ordered by car-free share" tabindex="0">
+          <table class="risk-table">
+            <thead>
+              <tr>
+                <th scope="col">Tract</th>
+                <th scope="col">Residents</th>
+                <th scope="col">Median income</th>
+                <th scope="col">Car-free</th>
+              </tr>
+            </thead>
+            <tbody id="triple-rows"></tbody>
+          </table>
+        </div>
+        <p class="method"><b>Method:</b> Each of these tracts contains at least one of the 181 highest-need, lowest-access block groups and is also a grocery desert and a childcare desert. Grocery and job data use the 2010 census tract boundaries and childcare the 2020 boundaries.</p>
+      </article>
+
+      <article class="slide has-figure" id="redlining">
+        <h2>Some of these disadvantages were created almost 100 years ago.</h2>
+        <p>Many of the neighborhoods that now fail all three access tests were graded "D, Hazardous" (red) or "C, Definite Declining" (yellow) on Houston's Depression-era redlining map, marked too risky for mortgage lending largely because of who lived there.</p>
+        <figure class="hist-figure">
+          <span class="img-wrap">
+            <img class="zoomable" src="img/redlining.jpg" alt="A 1930s Home Owners' Loan Corporation residential security map of Houston, grading neighborhoods from A (best, green) through D (hazardous, red)." loading="lazy" tabindex="0" role="button" aria-label="Enlarge the 1930s Houston redlining map">
+            <span class="pin-dot map-pin" aria-hidden="true"></span>
+          </span>
+          <figcaption>Grades of Security, City of Houston. Green A "Best" through red D "Hazardous." The starred navy dot marks Rice Institute (now Rice University); it is the reference point for orienting this historic map against the live map, which carries the same marker. Click to enlarge and pan. Source: Library of Congress, via the Houston Chronicle.</figcaption>
+        </figure>
+        <p>These communities were denied investment then, and are denied amenities and quality of life now. Rather than coincidence, this spatial pattern is the consequence of decisions made nearly a century ago, and a choice to not undo the injustices since.</p>
+        <p class="method"><b>Method:</b> The tracts that fail all three tests today, shown beside Houston's 1930s residential security map from the federal Home Owners' Loan Corporation (HOLC).</p>
+      </article>
+
+      <article class="slide" id="action">
+        <h2>Where would better bus service help the most?</h2>
+        <p>Two fixes stand out. In the 181 neighborhoods that need transit most but reach the fewest jobs, buses already run, so run them more often. In the 33 car-free neighborhoods with no stop within half a mile, buses do not reach at all, so they have to start getting there.</p>
+        <p>Concluding, this map shows where the buses go, who they reach, and who they miss.</p>
+      </article>
+
+            <article class="slide" id="citations">
+        <h2>Sources</h2>
+        <p>Every layer on this map is public data and was sourced by a Fable 5.1 deep research agent for me. Full citations below.</p>
+        <ol class="cite-list">
+          <li>
+            <b class="cite-src">EPA Smart Location Database, v3.0</b>
+            U.S. Environmental Protection Agency. Jobs reachable within a 45-minute transit ride (field D5BR) and the share of zero-vehicle households (Pct_AO0). 2010 census block groups.
+            <span class="cite-meta">geodata.epa.gov</span>
+          </li>
+          <li>
+            <b class="cite-src">American Community Survey, 2019 5-year (2015 to 2019)</b>
+            U.S. Census Bureau. Median household income (table B19013), on 2010 census block groups to align with the Smart Location Database. Vehicle counts (table B25044) were used as a cross-check.
+            <span class="cite-meta">census.gov</span>
+          </li>
+          <li>
+            <b class="cite-src">Food Access Research Atlas, 2019</b>
+            U.S. Department of Agriculture, Economic Research Service. Low-income, low-access (food desert) tract flags. 2010 census tracts.
+            <span class="cite-meta">ers.usda.gov</span>
+          </li>
+          <li>
+            <b class="cite-src">Child Care Licensing operations data, 2026</b>
+            Texas Health and Human Services Commission, via the Texas Open Data Portal (dataset bc5r-88dy). Licensed child-care capacity. Under-5 population from ACS 2020 to 2024 5-year (table B01001). 2020 census tracts.
+            <span class="cite-meta">data.texas.gov</span>
+          </li>
+          <li>
+            <b class="cite-src">Residential Security Map, City of Houston, 1930s</b>
+            Home Owners' Loan Corporation (HOLC). Digitized image held by the Library of Congress, obtained via the Houston Chronicle.
+            <span class="cite-meta">loc.gov</span>
+          </li>
+          <li>
+            <b class="cite-src">Houston METRO GTFS (static schedule)</b>
+            Metropolitan Transit Authority of Harris County (RideMETRO). Feed version August2026IVOMS_20260828. Bus and rail stops, routes, and the frequent-network subset.
+            <span class="cite-meta">ridemetro.org</span>
+          </li>
+          <li>
+            <b class="cite-src">TIGER/TIGERweb boundary geometry</b>
+            U.S. Census Bureau. Block group and tract polygons, 2010 and 2020 vintages.
+            <span class="cite-meta">census.gov</span>
+          </li>
+        </ol>
       </article>
     </section>
-  </main>
 
+  </main>
+    <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="1930s Houston redlining map, drag to pan">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close">&times;</button>
+    <div class="lightbox-stage" id="lightbox-stage">
+      <span class="img-wrap">
+        <img class="lightbox-img" src="img/redlining.jpg" alt="Full-size 1930s HOLC residential security map of Houston.">
+        <span class="pin-dot map-pin map-pin-lg" aria-hidden="true"></span>
+      </span>
+    </div>
+  </div>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/index.js" type="module"></script>
 </body>
