@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Philadelphia's Rising Waterfront</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <main>
+    <div class="map-container">
+      <div class="map" id="map"></div>
+    </div>
+    <section class="slide-section">
+      <article class="slide" id="title-slide">
+        <h1>Philadelphia's Rising Waterfront</h1>
+        <p>  Exploring how six sea-level rise scenarios could transform
+  Philadelphia's Delaware River waterfront.</p>
+        <p>Scroll to examine potential inundation from 1 to 6 feet
+  above Mean Higher High Water.</p>
+      </article>
+
+      <article class="slide" id="rise-1ft">
+        <h2>1 Foot Above MHHW</h2>
+        <p>At one foot above Mean Higher High Water, inundation begins spreading across low-lying areas along Philadelphia's Deleware and Schuylkill River edges.</p>
+        <p>This is a water-level scenario rather than a prodiction for specific year.</p>
+      </article>
+
+      <article class="slide" id="rise-2ft">
+        <h2>2 Foot Above MHHW</h2>
+        <p>At two feet, inundation spreads beyond the immediate river edge
+    and reaches more low-lying land along the Delaware and Schuylkill
+    Rivers.
+  </p>
+</article>
+
+<article class="slide" id="rise-3ft">
+        <h2>3 Foot Above MHHW</h2>
+        <p>At three feet, previously separated areas of inundation begin to
+    connect, creating a more continuous zone of exposure along the
+    waterfront.
+  </p>
+</article>
+
+<article class="slide" id="rise-4ft">
+        <h2>4 Foot Above MHHW</h2>
+        <p>At four feet, inundation extends farther inland and affects a
+    larger portion of Philadelphia's waterfront, including industrial
+    land, infrastructure, and riverfront open spaces.
+  </p>
+</article>
+
+      <article class="slide" id="rise-5ft">
+        <h2>5 Feet Above MHHW</h2>
+        <p>
+          At five feet, Inundation expands substantially across low-lying waterfront
+      areas and infrastructure along both rivers.
+    </p>
+      </article>
+
+      <article class="slide" id="rise-6ft">
+        <h2>6 Foot Above MHHW</h2>
+        <p>At six feet, the inundation footprint reaches its greatest extent in this
+      story, substantially transforming the relationship between
+      Philadelphia and its rivers.
+  </p>
+</article>   
+
+<article class="slide" id="comparison">
+  <h2>Comparing 1–6 Feet Above MHHW</h2>
+  <p>
+    This map combines all six inundation scenarios to show how exposure
+    expands with each additional foot above Mean Higher High Water.
+  </p>
+
+  <div class="legend">
+    <div><span style="background:#d6e6f2;"></span>1 foot</div>
+    <div><span style="background:#b8d5e8;"></span>2 feet</div>
+    <div><span style="background:#8ebbd7;"></span>3 feet</div>
+    <div><span style="background:#609cc6;"></span>4 feet</div>
+    <div><span style="background:#397cad;"></span>5 feet</div>
+    <div><span style="background:#174f87;"></span>6 feet</div>
+  </div>
+</article>
+
+<article class="slide" id="conclusion">
+        <h2>Planning for a Changing Waterfront</h2>
+        <p>The six scenarios show that sea-level rise would not affect the
+    waterfront all at once. Exposure expands gradually, but each
+    additional foot places more land, infrastructure, and public space
+    within the potential inundation area.
+  </p>
+
+   <p>These maps can help identify where adaptation strategies including
+    wetlands, floodable parks, elevated infrastructure, and protected
+    evacuation routes may be most important.
+  </p>
+
+   <p>
+    <small>
+    Data source:
+    <a
+      href="https://coast.noaa.gov/digitalcoast/data/slr.html"
+      target="_blank"
+      rel="noopener"
+    > NOAA Office for Coastal Management, Sea Level Rise Inundation
+  </a>.
+  </small>
+  </p>
+
+</article>   
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/index.js" type="module"></script>
+</body>
+</html>
