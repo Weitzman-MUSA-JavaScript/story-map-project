@@ -1,0 +1,351 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#header .intro-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#header .intro-copy {
+  flex: 1 1 60%;
+}
+
+#main-img {
+  flex: 0 0 45=0%;
+  width: 40%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+#map {
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}
+.reset-view-button {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 1000;
+  min-width: 100px;
+  height: 36px;
+  padding: 0 10px;
+  color: #202623;
+  background: #fff;
+  border: 1px solid #69756e;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 25%);
+  font: 600 14px 'Roboto Condensed', sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.map-tools-hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+.reset-view-button:focus-visible {
+  outline: 3px solid #e96138;
+  outline-offset: 2px;
+}
+.zoom-controls {
+  position: fixed;
+  top: 58px;
+  right: 12px;
+  z-index: 1000;
+  display: grid;
+  overflow: hidden;
+  border: 1px solid #69756e;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 25%);
+}
+.zoom-controls button {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  color: #202623;
+  background: #fff;
+  border: 0;
+  font: 600 22px/1 'Roboto Condensed', sans-serif;
+  cursor: pointer;
+}
+.zoom-controls button + button {
+  border-top: 1px solid #d6ddd8;
+}
+.zoom-controls button:hover {
+  background: #f2f5f2;
+}
+.zoom-controls button:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 3px solid #e96138;
+  outline-offset: -3px;
+}
+.restaurant-search-control {
+  position: fixed;
+  top: 12px;
+  right: 124px;
+  z-index: 1000;
+  display: grid;
+  gap: 6px;
+  box-sizing: border-box;
+  width: min(280px, calc(100vw - 24px));
+  padding: 10px;
+  color: #202623;
+  background: #fff;
+  border: 1px solid #69756e;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 25%);
+  font: 14px 'Roboto Condensed', sans-serif;
+}
+@media (max-width: 750px) {
+  .restaurant-search-control {
+    top: 140px;
+    right: 12px;
+  }
+}
+.restaurant-search-control label {
+  font-weight: 600;
+}
+.restaurant-search-row {
+  display: flex;
+  gap: 6px;
+}
+.restaurant-search-row input {
+  flex: 1;
+  min-width: 0;
+  height: 34px;
+  padding: 0 8px;
+  border: 1px solid #69756e;
+  border-radius: 2px;
+  font: inherit;
+}
+.restaurant-search-row button {
+  padding: 0 9px;
+  color: #202623;
+  background: #f2f5f2;
+  border: 1px solid #69756e;
+  border-radius: 2px;
+  font: inherit;
+  cursor: pointer;
+}
+.restaurant-search-row :disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+.restaurant-search-control :focus-visible {
+  outline: 3px solid #e96138;
+  outline-offset: 2px;
+}
+.rent-change-legend {
+  position: fixed;
+  right: 12px;
+  bottom: 42px;
+  z-index: 1000;
+  display: grid;
+  gap: 5px;
+  box-sizing: border-box;
+  width: min(270px, calc(100vw - 24px));
+  padding: 10px 12px;
+  color: #202623;
+  background: #fff;
+  border: 1px solid #69756e;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 25%);
+  font: 13px 'Roboto Condensed', sans-serif;
+}
+.rent-change-legend > span {
+  color: #4b554f;
+  font-size: 12px;
+}
+.rent-change-ramp {
+  height: 12px;
+  background: linear-gradient(90deg, #2166ac, #92c5de, #f7f7f2, #f4a582, #b2182b);
+  border: 1px solid rgb(32 38 35 / 15%);
+}
+.rent-price-ramp {
+  height: 12px;
+  background: linear-gradient(90deg, #fff4cc, #fdb863, #e8753b, #bd3b32, #772b3a);
+  border: 1px solid rgb(32 38 35 / 15%);
+}
+.rent-change-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  font-size: 11px;
+}
+.rent-change-labels span:nth-child(2) {
+  text-align: center;
+}
+.rent-change-labels span:last-child {
+  text-align: right;
+}
+#header {
+  margin: auto;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  padding: 2vh 0vh 5vh 0vh;
+  background-color: #394053;
+  text-align: left;
+}
+
+#features {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+@media (max-width: 750px) {
+  #features {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+#footer {
+  min-height: 2vh;
+  text-align: left;
+  line-height: 25px;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+#header h1 {
+    font-weight: 900;
+    font-size: 2.75rem;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 1200px;
+    
+}
+#header h2 {
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    font-family: 'Merriweather', serif;
+    text-align:  left;
+    margin: 0.5em auto 0.8em auto;
+    max-width: 1200px;
+}
+#header h4 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    max-width: 600px;
+}
+#header p.byline {
+    font-weight: 300;
+    font-size: 0.9em;
+    margin: 0.5em auto 0.8em auto;
+}
+#header p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 1em auto 1em auto;
+}
+#features h3 {
+    font-weight: 700;
+    font-size:1.5rem;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    text-align: left;
+    max-width: 50vw;
+}
+#features p {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: left;
+    font-size: 1.2em;
+    max-width: 50vw;
+}
+#features .imageCredit {
+  font-size: 0.9em;
+  margin-top: -5px;
+}
+#footer p {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.9em;
+  max-width: 600px;
+  padding: 0.75em 0em;
+  margin: 0px auto;
+}
+a, a:hover, a:visited {
+  color: #e96138;
+}
+.hidden {
+  visibility: hidden;
+}
+.centered {
+  width: 50vw;
+  margin: 0 auto;
+}
+.lefty {
+  width: 33vw;
+  margin-left: 5vw;
+}
+.righty {
+  width: 33vw;
+  margin-left: 62vw;
+}
+.fully {
+  width: 100%;
+  margin: auto;
+}
+.light {
+  color: #444;
+  background-color: #ffffff;
+}
+.dark {
+  color: #fafafa;
+  background-color: #444;
+}
+.step .dark {
+  color: #000;
+  background-color: #ffffff;
+}
+.step {
+  padding-bottom: 50vh;
+  opacity: 0.15;
+}
+.step.active {
+  opacity: 0.99;
+}
+.step div {
+  padding: 25px 50px;
+  line-height: 25px;
+  font-size: 13px;
+}
+.step img {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+@media (max-width: 750px) {
+  .centered, .lefty, .righty, .fully {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+/* .image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+} */
+/* Fix issue on mobile browser where scroll breaks  */
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan, 
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
+  touch-action: unset;
+}
