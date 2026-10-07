@@ -86,12 +86,12 @@ body {
 
 .scenario-panel {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  bottom: 2rem;
+  left: 2rem;
   background-color: white;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 30%);
   z-index: 1000; /* Keeps it above the map tiles */
   width: 16rem;
   display: flex;
@@ -101,12 +101,11 @@ body {
 }
 
 .scenario-panel.hidden {
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 
 .scenario-panel h3 {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem;
   font-size: 1.1rem;
 }
 
