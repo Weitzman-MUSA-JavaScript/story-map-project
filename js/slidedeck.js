@@ -60,7 +60,11 @@ class SlideDeck {
    * @return {object} The FeatureCollection as loaded from the data file
    */
   async getSlideFeatureCollection(slide) {
-    const resp = await fetch(`data/${slide.id}.json`);
+    if (slide.id === 'title-slide') {
+      return { type: "FeatureCollection", features: [] };
+    }
+    
+    const resp = await fetch(`data/${slide.id}.geojson`);
     const data = await resp.json();
     return data;
   }
@@ -89,6 +93,8 @@ class SlideDeck {
     const collection = await this.getSlideFeatureCollection(slide);
     const options = this.slideOptions[slide.id];
     const layer = this.updateDataLayer(collection, options);
+    const erosionPanel = document.getElementById('erosion-panel');
+    let shorelineLayer = null;
 
     /**
      * Create a bounds object from a GeoJSON bbox array.
@@ -119,10 +125,37 @@ class SlideDeck {
     };
 
     this.map.addEventListener('moveend', handleFlyEnd);
-    if (collection.bbox) {
+
+    if (collection.bbox && collection.bbox.length === 4) {
       this.map.flyToBounds(boundsFromBbox(collection.bbox));
-    } else {
+    } 
+    else if (slide.id === 'LULC') {
+      erosionPanel.classList.remove('hidden');
+      if (!shorelineLayer) {
+        const resp = await fetch('data/Shoreline_Public_Access.geojson');
+        const data = await resp.json();
+        shorelineLayer = L.geoJSON(data, {
+          pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
+            pane: 'markerPane',
+            radius: 6,
+            fillColor: '#ff9900',
+            weight: 2,
+            fillOpacity: 1
+          })
+        });
+        shorelineLayer.addTo(this.map);
+      }
+    } else if (layer.getLayers().length > 0 && layer.getBounds().isValid()) {
       this.map.flyToBounds(layer.getBounds());
+    } else {
+      this.map.flyTo([21.316903, -157.858093], 10);
+      erosionPanel.classList.add('hidden');
+      erosionPanel.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        if (cb.checked) {
+          cb.checked = false;
+          cb.dispatchEvent(new Event('change')); 
+        }
+      })
     }
   }
 
