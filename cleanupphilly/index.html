@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Clean Up Philly</title>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <main>
+    <button class="info-button" aria-label="Map zoom instructions" style = "font-family: Didot, serif;">
+      i
+      <span class="info-tooltip">Click twice or use + or - to zoom into the map</span>
+    </button>
+    <select id="neighborhood-select" style = "font-family: Didot, serif;">
+    <option value="">Select your neighborhood</option>
+    </select>
+    <div class="map-container">
+      <div class="map" id="map"></div>
+      <img id="fifth-slide-image" src="data/illegal_dumping-image.jpeg" alt = "Illegal Dumpsite">
+    </div>
+    <section class="slide-section">
+      <article class="slide" id="title-slide">
+        <h1>Clean up your Philadelphia</h1>
+        <p><i>Narrative guide to exploring excess waste in Philly neighborhoods.</i></p>
+        <p>Chloe Alimurong MUSA 6110</p>
+        
+      </article>
+
+      <article class="slide" id="second-slide">
+        <img src="data/illegal_dumping-title-image.jpeg" alt="Illegal Dumpsite from Office of Clean and Green" class="slide-image">
+        <h2>There's a lot of waste in Philly</h2>
+        <p>The most pressing issue of excess waste in Philadelphia appears to be illegal dumping. Christy Brady, the City Controller of Philadelphia, released a report on September 15, 2026 detailing the cost of illegal dumping in the city. It costs <strong>$619 per ton to clean up</strong> illegal dumping. 
+          According to the report, <strong>14,000 tons are dumped annually</strong>, totaling to over $8 million. 
+          The city implemented an Illegal Dumping Task force in 2025 to target illegal dumpers by imposing fines and installing surveillance cameras. </p>
+        <p>However, excess waste in Philadelphia neighborhoods goes beyond illegal dump sites and also expresses itself as any form of waste on our streets and not in properly designated bins/areas.</p>
+        <p>In this narrative story map, we will explore the spatial extent of <strong>excess</strong> waste on the surrounding neighborhoods.</p>
+      </article>
+
+      <article class="slide" id="third-slide">
+        <h2>Illegal Dumping in Hexagons</h2>
+        <p>Residents are encouraged to report illegal dumping by calling 311 or filling out a form on the city of Philadelphia website. Each response records the location of illegal dump.</p>
+        <p>The hexagons on the map display these records group these incidents into small hexagons a few city blocks wide. As the color grows to a <strong>darker</strong> green, the more incidents that occur in that particular area. <strong>Scroll closer</strong>, and you can see the hexagons by neighborhood boundaries.</p>
+      </article>
+
+      <article class = "slide" id = "fourth-slide">
+        <h2>Zip Code: 19134</h2>
+        <p><strong>Kensington, Juniata Park and Port Richmond</strong> are neighborhoods with the highest number of reports for 2025 at 17,359 out of 207,000. This zipcode is also recorded to have the <strong>highest</strong> proportion of people living in poverty at 41.2%.</p>
+      </article>
+
+      <article class="slide" id="fifth-slide">
+        <h2>Where the waste comes from</h2>
+        <p>In 2022, Nick Russo explains in an article for The Philadelphia Citizen, a system of <strong>contractors dumping waste from construction sites</strong> into neighborhoods without sufficient patrolling. In our previous slide, neighborhoods like Kensington are known to have underlying issues with poverty rates and drug abuse, making it easier for illegal dumping activities to fall under the radar. Additionally, repeated littering and dumping of <strong>household items like furniture and mattresses</strong> are another major problem for underserved neighborhoods. A group called "Trash Academy" advocates for accounting these repeated records of waste through a crowd-source map you can find <a href="https://www.trashacademy.org/dumpsitemapping">here.</a> </p>
+        <p>Since we can't exactly pin the source of waste on a specific group of individuals or corporate entities, we can look at the alternatives for waste in place.</p>
+      </article>
+
+      <article class="slide" id="sixth-slide">
+        <h2>Is waste disposal accessible and what are our options?</h2>
+        <p>Designated landfills, transfer stations, and recycling centers are the recommended sites for dumping large amounts of waste, they also charge these entities per ton. This adds on to the inaccessibility driving construction companies to throw where it's convenient and under the radar. For everyday citizens, we can also see this as an opportunity for more sites to be designated and to prevent extra waste in landfills by recycling.</p>
+        <p>The layers you see populated on the map are: </p>
+        <p><strong>Sanitation Convenience Centers as brown trash bags</strong>, places where residents can drop off household trash and recycling.</p>
+        <p><strong>Permitted Landfills as black trash cans</strong>, places designated by the PA Dept. of Environmental Protection where municipal and/or residual waste disposal is permitted in facility or on land.</p>
+        <p><strong>Recycling resources as purple recycle symbols</strong>, places to donate or recycle items.</p>
+        <p>As you <strong>zoom closer</strong>, Which neighborhoods have the most access, which dont?</p>
+      </article>
+
+      <article class="slide" id="seventh-slide">
+        <h2>How does your neighborhood take care of waste?</h2>
+        <p>As residents, we share a responsibility to keep Philadelphia clean. That includes where our waste goes and with proper designation. The map now shows the recycling diversion rate for 2025. The <strong>darker</strong> blue the neighborhood is, the higher recycle score and less waste sent to landfills.</p>
+      </article>
+
+      <article class="slide" id="last-slide">
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="https://controller.phila.gov/philadelphia-reports/september-2026-municipal-money-matters/">Philadelphia Controller: September 2026 Municipal Money Matters</a></li>
+          <li><a href="https://metadata.phila.gov/#home/datasetdetails/5543864d20583086178c4e98/representationdetails/675a0c767cd90802cb96d76e/">Illegal Dumping by Hex Bins</a></li>
+          <li><a href="https://www.phila.gov/services/trash-recycling-city-upkeep/report-a-problem-with-trash-recycling-or-city-upkeep/report-illegal-dumping/">Report Illegal Dumping Form</a></li>
+          <li><a href="https://www.phillyvoice.com/illegal-dumpsites-cleanup-cost-philadelphia-taxpayers/">Illegal Dumpsites Cleanup Cost Philadelphia Taxpayers</a></li>
+          <li><a href="https://thephiladelphiacitizen.org/how-philly-fights-illegal-dumping/">How Philly Fights Illegal Dumping</a></li>
+          <li><a href="https://zipatlas.com/us/pa/philadelphia/zip-code-comparison/highest-poverty.htm">Poverty by Zip Code in Philadelphia</a></li>
+          <li><a href="https://opendataphilly.org/datasets/recycling-donations-resources/">Recycling Sites</a></li>
+          <li><a href="https://opendataphilly.org/datasets/recycling-diversion-rate/">Recycling Diversion Rate</a></li>
+          <li><a href="https://opendataphilly.org/datasets/sanitation-convenience-centers/">Sanitation Convenience Centers</a></li>
+          <li><a href="https://services1.arcgis.com/Nifc7wlHaBPig3Q3/arcgis/rest/services/Permitted_Landfills/FeatureServer">Permitted Landfills</a></li>
+          <li><a href="https://www.audacy.com/kywnewsradio/news/local/philadelphia-illegal-dump-sites-map">Second Slide Image</a></li>
+          <li><a href="https://philly-stat-360-phl.hub.arcgis.com/pages/illegal-dumping">Fifth Slide Image</a></li>
+          <li><a href="https://pointsunknown.nyc/web%20mapping/mapbox/2021/07/20/11A_MapboxStorytelling.html">Mapbox Storytelling tutorial</a></li>
+        </ul>
+        <p>Color inspiration from <a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">Color Brewer</a>. AI (Claude, Sonnet 5) was used to debug code in this storymap.</p>
+      </article>
+    </section>
+  </main>
+
+    <script src="./map.js" type="module"></script>
+</body>
+</html>
