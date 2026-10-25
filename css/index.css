@@ -1,0 +1,325 @@
+body {
+  margin: 0;
+  border-width: 0;
+  box-sizing: border-box;
+  height: 100vh;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+button {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #155e75;
+  border-radius: 4px;
+  background: #fff;
+  color: #123e4a;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  color: #505050;
+  border-color: #777;
+  cursor: default;
+}
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 1000;
+  padding: 12px;
+  background: #fff;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.map-covered {
+  visibility: hidden;
+}
+
+.map-status {
+  position: fixed;
+  top: 12px;
+  left: 60px;
+  z-index: 200;
+  max-width: min(24rem, calc(100% - 90px));
+  padding: 10px;
+  border-radius: 4px;
+  background: #fff;
+  color: #111;
+}
+
+.map-status p {
+  margin: 0 0 8px;
+}
+
+.animation-note {
+  font-size: 0.85rem;
+}
+
+.map-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 0;
+}
+
+.map {
+  height: 100%;
+}
+
+.slide-section {
+  position: relative;
+  margin-top: -100vh;
+  z-index: 100;
+  pointer-events: none;
+  border-bottom: 1px solid rgb(0 0 0 / 10%);
+}
+
+
+.slide {
+  margin-top: 90vh;
+  margin-bottom: 90vh;
+  margin-left: auto;
+  margin-right: 1rem;
+  padding: 1rem;
+  box-shadow: -0.5rem 0 1rem rgb(0 0 0 / 50%);
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  pointer-events: initial;
+
+  box-sizing: border-box;
+  width: calc(100% - 2rem);
+  max-width: 25rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+
+  background-color: rgb(243 238 182);
+  color: black;
+}
+
+.slide:first-child {
+  margin-top: 0;
+}
+
+.slide:last-child {
+  margin-bottom: 40vh;
+}
+
+.slide-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 0.5rem;
+
+  width: 100%;
+}
+
+.slide-nav-button {
+  transition: all 0.1s;
+
+  padding: 0;
+  margin: 1rem;
+  width: 4rem;
+  height: 3rem;
+  border: 1px solid #888;
+  border-radius: 0.25rem;
+
+  background-color: #eee;
+  font-size: 1.5em;
+}
+
+.slide-nav-button:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.slide-nav-select {
+  min-width: 0;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.comparison-table caption {
+  margin-bottom: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1px solid #767676;
+  text-align: right;
+}
+
+.accessibility-page th,
+.accessibility-page td {
+  overflow-wrap: anywhere;
+}
+
+.comparison-table th:first-child {
+  text-align: left;
+}
+
+/* A shared legend for the road and drone overview cards. */
+.time-legend {
+  list-style: none;
+  padding: 0;
+}
+
+.time-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.25rem 0;
+}
+
+.time-dot {
+  display: inline-block;
+  flex-shrink: 0;
+  border: 1px solid #333;
+  border-radius: 50%;
+}
+
+.time-30 {
+  width: 8px;
+  height: 8px;
+  background: #eff3ff;
+}
+
+.time-60 {
+  width: 10px;
+  height: 10px;
+  background: #bdd7e7;
+}
+
+.time-120 {
+  width: 12px;
+  height: 12px;
+  background: #6baed6;
+}
+
+.time-long {
+  width: 14px;
+  height: 14px;
+  background: #2171b5;
+}
+
+summary {
+  cursor: pointer;
+}
+
+a:focus-visible,
+summary:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #155e75;
+  outline-offset: 3px;
+}
+
+/* Plain text alternative to the map, on accessibility-table.html. */
+.accessibility-page {
+  max-width: 55rem;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+.accessibility-page table {
+  font-size: 0.9rem;
+}
+
+
+/* Matching full-width opening and closing slides. */
+#title-slide,
+#conclusion {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  padding: 4rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Leave room to see Rwanda before the closing panel covers the map. */
+#conclusion {
+  margin-top: 90vh;
+}
+
+/* Keep long paragraphs from stretching across the screen. */
+.intro-content {
+  width: 100%;
+  max-width: 46rem;
+}
+
+.intro-content h1,
+.intro-content h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.15;
+}
+
+/* Keep the map above the text on phones rather than behind an opaque card. */
+@media (width <= 760px) {
+  .map-container {
+    height: 40vh;
+    height: 40svh;
+    z-index: 150;
+    background: #262626;
+    border-bottom: 2px solid #555;
+  }
+
+  .slide-section {
+    margin-top: 0;
+  }
+
+  .slide,
+  #title-slide,
+  #conclusion {
+    width: calc(100% - 2rem);
+    min-height: 0;
+    margin: 2rem 1rem 40vh;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    scroll-margin-top: calc(40svh + 16px);
+  }
+
+  .slide :is(a, summary, button, h1, h2) {
+    scroll-margin-top: calc(40svh + 16px);
+    scroll-margin-bottom: 16px;
+  }
+
+  #title-slide {
+    margin-top: 1rem;
+  }
+
+  #conclusion {
+    margin-bottom: 2rem;
+  }
+
+  .map .leaflet-tooltip {
+    font-size: 11px;
+    padding: 3px 5px;
+  }
+}
