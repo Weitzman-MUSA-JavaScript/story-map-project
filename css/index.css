@@ -7,6 +7,65 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+[hidden] {
+  display: none !important;
+}
+
+button {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #155e75;
+  border-radius: 4px;
+  background: #fff;
+  color: #123e4a;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  color: #505050;
+  border-color: #777;
+  cursor: default;
+}
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 1000;
+  padding: 12px;
+  background: #fff;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.map-covered {
+  visibility: hidden;
+}
+
+.map-status {
+  position: fixed;
+  top: 12px;
+  left: 60px;
+  z-index: 200;
+  max-width: min(24rem, calc(100% - 90px));
+  padding: 10px;
+  border-radius: 4px;
+  background: #fff;
+  color: #111;
+}
+
+.map-status p {
+  margin: 0 0 8px;
+}
+
+.animation-note {
+  font-size: 0.85rem;
+}
+
 .map-container {
   position: sticky;
   top: 0;
@@ -165,7 +224,9 @@ summary {
 }
 
 a:focus-visible,
-summary:focus-visible {
+summary:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
   outline: 3px solid #155e75;
   outline-offset: 3px;
 }
@@ -217,4 +278,48 @@ summary:focus-visible {
 .intro-content h2 {
   font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1.15;
+}
+
+/* Keep the map above the text on phones rather than behind an opaque card. */
+@media (width <= 760px) {
+  .map-container {
+    height: 40vh;
+    height: 40svh;
+    z-index: 150;
+    background: #262626;
+    border-bottom: 2px solid #555;
+  }
+
+  .slide-section {
+    margin-top: 0;
+  }
+
+  .slide,
+  #title-slide,
+  #conclusion {
+    width: calc(100% - 2rem);
+    min-height: 0;
+    margin: 2rem 1rem 40vh;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    scroll-margin-top: calc(40svh + 16px);
+  }
+
+  .slide :is(a, summary, button, h1, h2) {
+    scroll-margin-top: calc(40svh + 16px);
+    scroll-margin-bottom: 16px;
+  }
+
+  #title-slide {
+    margin-top: 1rem;
+  }
+
+  #conclusion {
+    margin-bottom: 2rem;
+  }
+
+  .map .leaflet-tooltip {
+    font-size: 11px;
+    padding: 3px 5px;
+  }
 }

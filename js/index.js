@@ -88,9 +88,14 @@ const journeyOptions = {
 
   onEachFeature: (feature, layer) => {
     if (feature.geometry.type === 'Point') {
-      layer.bindTooltip(feature.properties.label, {
-        permanent: false,
-        direction: feature.properties.labelDirection || 'right',
+      const label = feature.properties.kind === 'origin'
+        ? feature.properties.label.replace(' (departure point)', '')
+        : feature.properties.label;
+      layer.bindTooltip(label, {
+        permanent: true,
+        direction: feature.properties.kind === 'origin'
+          ? 'right'
+          : feature.properties.labelDirection || 'right',
       });
     }
   },
@@ -158,19 +163,16 @@ const slideOptions = {
 // ## The SlideDeck object
 const deck = new SlideDeck(container, slides, map, slideOptions);
 
-async function startStory() {
-  await deck.preloadFeatureCollections();
+for (const slide of slides) slide.querySelector('h1, h2').tabIndex = -1;
 
+document.addEventListener('scroll', () => deck.calcCurrentSlideIndex(), { passive: true });
+window.addEventListener('resize', () => deck.calcCurrentSlideIndex(true));
+document.querySelector('#retry-map').addEventListener('click', () => {
   deck.syncMapToCurrentSlide();
-
-  document.addEventListener('scroll', () => {
-    deck.calcCurrentSlideIndex();
-  });
-
-  // Account for a page opened partway down.
-  deck.calcCurrentSlideIndex();
-}
-
-startStory().catch((error) => {
-  console.error('Could not load the story map:', error);
 });
+document.querySelector('.skip-link').addEventListener('click', () => {
+  document.querySelector('#story-heading').focus();
+});
+
+// Start the current scene immediately; later scenes load only when needed.
+deck.calcCurrentSlideIndex(true);

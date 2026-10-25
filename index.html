@@ -12,14 +12,19 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+  <a class="skip-link" href="#story-heading">Skip to story</a>
   <main>
-    <div class="map-container">
-      <div class="map" id="map"></div>
+    <div class="map-container" inert>
+      <div class="map" id="map" role="region" aria-label="Map for the current story scene"></div>
+    </div>
+    <div id="map-status" class="map-status">
+      <p id="map-status-message" role="status" tabindex="-1">Loading the story map…</p>
+      <button id="retry-map" type="button" hidden>Retry map scene</button>
     </div>
     <section class="slide-section">
       <article class="slide" id="title-slide">
         <div class="intro-content">
-          <h1>When blood takes a shortcut</h1>
+          <h1 id="story-heading" tabindex="-1">When blood takes a shortcut</h1>
           <p>By Freddie</p>
           <p>
             A study of drone blood delivery in Rwanda found a
@@ -43,6 +48,7 @@
             </p>
           </details>
           <p><strong>Scroll to follow the journey.</strong></p>
+          <p><a href="accessibility-table.html">Read the travel-time table without using the map</a>.</p>
         </div>
       </article>
 
@@ -115,6 +121,7 @@
           Follow the solid line from the distribution center to the facility.
           What would change if the delivery could take a more direct route?
         </p>
+        <p class="animation-note">The drawing reveals the route; its speed does not represent travel time.</p>
         <details>
           <summary>How this journey was estimated</summary>
           <p>
@@ -143,6 +150,7 @@
           Both journeys start at Muhanga. The solid road stays visible as
           the dashed flight path takes a more direct course toward Ruli.
         </p>
+        <p class="animation-note">The drawing reveals the route; its speed does not represent travel time.</p>
         <details>
           <summary>About the flight estimate</summary>
           <p>
@@ -150,6 +158,9 @@
             2026, not a recorded flight. The estimate covers travel only,
             excluding preparation, waiting and return travel.
           </p>
+          <p>Flight time = supplied planned-path distance in meters ÷ 28.7 meters per second ÷ 60.
+            This assumes a constant speed of about 103 km/h. It uses the supplied
+            three-dimensional route distance, not the simplified line displayed on this map.</p>
         </details>
       </article>
 
@@ -174,6 +185,9 @@
         <p><a href="accessibility-table.html">Compare both times for every site</a>.</p>
         <details>
           <summary>Reading the comparison</summary>
+          <p>Flight time = mean outbound route distance in meters ÷ 28.7 meters per second ÷ 60.
+            This is a constant-speed estimate, not a measured delivery time. The six close-up
+            examples instead use the distance of each selected planned route.</p>
           <p>
             Both estimates start at each site's assigned distribution center.
             These are modeled travel times, not complete delivery times or
@@ -192,6 +206,7 @@
           All six comparisons start at Muhanga.
         </p>
         <p>Solid lines show roads. Dashed lines show planned flights.</p>
+        <p class="animation-note">Roads draw first, then flights. Drawing speed does not represent travel time.</p>
         <table class="comparison-table">
     <caption>
       Estimated one-way travel from Muhanga, in minutes
@@ -247,7 +262,7 @@
 
       <article class="slide" id="conclusion">
         <div class="intro-content">
-          <h2>A shorter journey. A better chance.</h2>
+          <h2 tabindex="-1">A shorter journey. A better chance.</h2>
           <p>
             Faster delivery can help care teams get blood when it matters.
             The next question is where services should be located so more
