@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A short story map about student homelessness and educational continuity in New York City.">
+  <title>A Stable Home, A School to Keep · Thomas Hagos</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <a class="skip-link" href="#story">Skip to the story</a>
+  <header class="masthead"><a href="#introduction">A school to keep <span>/ NYC</span></a><a href="data.html">Data &amp; sources ↗</a></header>
+  <main>
+    <div class="map-container">
+      <div id="map" role="region" aria-label="Map of NYC reporting districts and CUNY institutions. Data tables are available on the data and sources page."></div>
+      <div class="map-caption"><span id="map-title">NYC · student homelessness</span></div>
+      <aside class="legend" aria-label="Map legend"><strong id="legend-title">Reported students</strong><div id="legend-items"></div><p id="map-note">Reporting districts, not student home locations.</p></aside>
+      <p id="map-status" role="status" aria-live="polite">Loading map…</p>
+      <p id="map-selection" class="visually-hidden" role="status" aria-live="polite"></p>
+    </div>
+    <section id="story" class="slide-section" aria-label="Student homelessness in New York City">
+      <article class="slide introduction" id="introduction" data-metric="homeless_2023_24" data-year="2023–24">
+        <p class="eyebrow">Housing stability / New York City</p>
+        <h1>A stable <em>home.</em><br>A school to <em>keep.</em></h1>
+        <p class="standfirst">A school offers continuity. Housing helps determine whether a student can hold on to it.</p>
+        <p>More than <strong>154,000 NYC public school students—nearly one in seven—experienced homelessness in 2024–25</strong>. Nearly 65,000 spent time in City shelters; more than 82,000 temporarily shared someone else’s housing. <a href="https://advocatesforchildren.org/wp-content/uploads/2025/student_homelessness_2024-25.pdf">[1]</a></p>
+        <p id="definitions" class="definition">Here, homelessness includes temporarily sharing housing because of housing loss or economic hardship, as well as shelters and other unstable sleeping arrangements.</p>
+        <blockquote>“Without stable shelter, everything else falls apart.”<cite>— Matthew Desmond · <a href="https://www.habitat.org/stories/a-conversation-with-matthew-desmond">interview</a></cite></blockquote>
+        <p class="byline">Thomas Hagos</p><p class="reading-note">Scroll to follow the story. Select a district or campus for its figures.</p>
+      </article>
+      <article class="slide" id="baseline" data-metric="homeless_2021_22" data-year="2021–22">
+        <p class="eyebrow">01 / Before the headline</p><h2>Start with<br><em>the school districts.</em></h2>
+        <p>The map begins in <strong>2021–22</strong>. Each circle represents the number of students identified as homeless by a geographic-district reporting agency. Larger circles mean larger reported counts.</p>
+        <p>District 24 in Queens reported <strong>7,388 students</strong>. <a href="data.html#source-school">[2]</a></p>
+        <p class="definition">These records describe reporting agencies, not student residences. The map uses 2026 reference boundaries; historical consistency has not been established.</p>
+      </article>
+      <article class="slide" id="latest" data-metric="homeless_2023_24" data-year="2023–24">
+        <p class="eyebrow">02 / Two school years later</p><h2>The same city.<br><em>Larger reported counts.</em></h2>
+        <p>By <strong>2023–24</strong>, all 32 reporting districts recorded an increase. The circles use the same size scale as before.</p>
+        <p>District 24 reported <strong>11,702 students</strong>, compared with 7,388 two years earlier. The records do not explain how much of the change reflects housing conditions, enrollment, student movement, or identification. <a href="data.html#source-school">[2]</a></p>
+        <p class="definition">The opening’s citywide headline is from 2024–25. These district maps cover the earlier 2021–24 workbook.</p>
+      </article>
+      <article class="slide" id="east-harlem" data-metric="homeless_2023_24" data-year="2023–24" data-district="4">
+        <p class="eyebrow">03 / A closer look</p><h2>East Harlem.<br><em>District 4.</em></h2>
+        <div class="stat">4,351<span>students reported in 2023–24</span></div>
+        <p>The district reported 1,961 students in 2021–22, 3,045 in 2022–23, and 4,351 in 2023–24—an increase of about <strong>122%</strong> from the first year. <a href="data.html#source-school">[2]</a></p>
+        <figure class="simple-trend"><figcaption>District 4 · reported count</figcaption><div><span>2021–22</span><strong>1,961</strong></div><div><span>2022–23</span><strong>3,045</strong></div><div><span>2023–24</span><strong>4,351</strong></div></figure>
+        <p>Housing instability also places pressure on attendance. A separate citywide AFC brief reports 2022–23 chronic absence of <strong>67% for students in shelter</strong>, compared with <strong>34% for permanently housed students</strong>. These are separate findings, not outcomes calculated from the district map. <a href="https://advocatesforchildren.org/wp-content/uploads/2024/sth_edu_indicators_2023.pdf">[3]</a></p>
+      </article>
+      <article class="slide" id="colleges" data-layer="colleges" data-metric="homelessness_pct" data-year="Spring 2024">
+        <p class="eyebrow">04 / Beyond the school gates</p><h2>College begins.<br><em>Housing uncertainty can remain.</em></h2>
+        <p>CUNY’s published 2024 survey estimate is <strong>5% reporting homelessness</strong> in the past 12 months. The map shows institution locations, with campus figures available for 19 of the 26 records. <a href="data.html#source-cuny">[4]</a></p>
+        <p>At Queensborough, the published figure is <strong>4%</strong>; at LaGuardia, <strong>5%</strong>. These are weighted survey estimates, not administrative counts. Small differences should not be read as campus rankings.</p>
+        <p class="definition">K–12 and college data describe different student populations; they do not follow the same people over time. Hollow points have no separate undergraduate survey result. Points show institutions, not student homes.</p>
+      </article>
+      <article class="slide" id="questions" data-metric="homeless_2023_24" data-year="2023–24">
+        <p class="eyebrow">05 / Educational continuity</p><h2>An address changes.<br><em>A school can remain.</em></h2>
+        <p>A classroom offers a place to return to. Housing and transportation help determine whether a student can get there.</p>
+        <p><a href="https://www.schools.nyc.gov/school-life/special-situations/students-in-temporary-housing/">NYC Public Schools describes enrollment, school-continuity, and transportation support</a>. <a href="https://www.cuny.edu/about/administration/offices/student-affairs/programs-services/cuny-resource-centers/">CUNY resource centers describe housing referrals and basic-needs assistance</a>. These resources do not establish current capacity for every student.</p>
+        <p class="standfirst">When a student’s address changes, how can the city help preserve the continuity of their education?</p>
+        <p>That is the question this map begins to ask. Understanding the barriers requires listening to students, families, and the people who support them.</p>
+      </article>
+      <article class="slide sources" id="sources" data-metric="homeless_2023_24" data-year="2023–24">
+        <p class="eyebrow">06 / Data and sources</p><h2>Behind<br><em>the numbers.</em></h2>
+        <ol class="short-sources"><li><a href="https://advocatesforchildren.org/wp-content/uploads/2025/student_homelessness_2024-25.pdf">AFC · Student Homelessness in NYC, 2024–25</a>. Citywide context; includes NYCPS and charter students.</li><li><a href="https://www.nysteachs.org/data-on-student-homelessness">NYSED SIRS / NYS-TEACHS · 2021–24 workbook</a>. Reporting-agency counts; not unique residential totals.</li><li><a href="https://advocatesforchildren.org/wp-content/uploads/2024/sth_edu_indicators_2023.pdf">AFC · Educational indicators, 2022–23</a>. Separate NYCPS attendance findings; excludes charter schools.</li><li><a href="https://insights.cuny.edu/t/CUNYGuest/views/2026StudentExperienceSurvey/Intro">CUNY · Student Experience Survey</a>, filtered to 2024. Undergraduate self-reports about the preceding 12 months.</li></ol>
+        <p>District boundaries come from <a href="https://data.cityofnewyork.us/City-Government/School-Districts/8ugf-3d8u">NYC DCP</a>; institution points come from <a href="https://data.ny.gov/d/irqs-74ez">NYS Open Data</a>. Original sources and documented geometry repairs remain available.</p>
+        <a class="evidence-link" href="data.html">Full sources, tables &amp; methods ↗</a>
+        <p class="footer-note">Thomas Hagos · New York City</p>
+      </article>
+    </section>
+  </main>
+  <noscript><style>.map-container{display:none}.slide-section{width:100%;margin:0}.slide{max-width:760px;margin:auto}</style><p class="noscript">The story remains readable without JavaScript. <a href="data.html">Open the data tables and sources.</a></p></noscript>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="js/index.js"></script>
+</body>
+</html>

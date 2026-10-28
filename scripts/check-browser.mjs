@@ -1,0 +1,81 @@
+import { existsSync } from 'node:fs';
+import { mkdtemp } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root = fileURLToPath(new URL('../', import.meta.url));
+const chromePath = process.env.CHROME_BIN || ['/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', '/usr/bin/google-chrome', '/usr/bin/chromium'].find(existsSync);
+if (!chromePath) throw new Error('Install Chrome/Chromium or set CHROME_BIN.');
+const profile = await mkdtemp(join(tmpdir(), 'story-map-browser-'));
+const server = spawn('python3', ['-m', 'http.server', '8765', '--bind', '127.0.0.1'], { cwd: root, stdio: 'ignore' });
+import { spawn } from 'node:child_process'; import { writeFile, mkdir, readdir, readFile } from 'node:fs/promises'; import assert from 'node:assert/strict';
+const pause = (ms) => new Promise((r) => setTimeout(r, ms)); const chrome = spawn(chromePath, ['--headless', '--no-first-run', '--remote-debugging-port=9229', `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' }); let socket;
+try {
+  let tabs; for (let i = 0; i < 40; i++) { try { tabs = await (await fetch('http://127.0.0.1:9229/json')).json(); break; } catch { await pause(200); } }
+  socket = new WebSocket(tabs.find((t) => t.type === 'page').webSocketDebuggerUrl); await new Promise((r) => socket.addEventListener('open', r, { once: true })); let id = 0; const pending = new Map(), errors = [];
+  socket.addEventListener('message', (e) => { const m = JSON.parse(e.data); if (m.method === 'Runtime.exceptionThrown')errors.push(m.params.exceptionDetails.text); if (pending.has(m.id)) { const p = pending.get(m.id); pending.delete(m.id); m.error ? p.reject(m.error) : p.resolve(m.result); } });
+  const call = (method, params = {}) => new Promise((resolve, reject) => { const key = ++id; pending.set(key, { resolve, reject }); socket.send(JSON.stringify({ id: key, method, params })); });
+  const ev = async (expression) => { const r = await call('Runtime.evaluate', { expression, returnByValue: true, awaitPromise: true }); if (r.exceptionDetails) throw new Error(r.exceptionDetails.exception?.description ?? r.exceptionDetails.text); return r.result.value; };
+  const wait = async (expression) => { for (let i = 0; i < 80; i++) { if (await ev(expression)) return; await pause(100); } throw new Error('Timed out: ' + expression); };
+  const input = async (id, value) => ev(`document.querySelector('#${id}').value=${JSON.stringify(value)};document.querySelector('#${id}').dispatchEvent(new Event('input',{bubbles:true}))`);
+  await call('Page.enable'); await call('Runtime.enable'); await call('Emulation.setDeviceMetricsOverride', { width: 1440, height: 1050, deviceScaleFactor: 1, mobile: false });
+
+  await call('Page.navigate', { url: 'http://127.0.0.1:8765' });
+  await wait("document.body.dataset.chapter==='introduction' && document.querySelector('#map-status').textContent===''");
+  assert.equal(await ev("document.querySelectorAll('.slide').length"), 7);
+  assert.equal(await ev("document.querySelectorAll('form,select,dialog').length"), 0);
+  const scroll = async (chapter) => {
+    await ev(`document.querySelector('#${chapter}').scrollIntoView({behavior:'instant'})`);
+    await wait(`document.body.dataset.chapter==='${chapter}'`);
+    await pause(900);
+  };
+  await scroll('baseline');
+  assert.equal(await ev("document.querySelector('#map-title').textContent.includes('2021–22')"), true);
+  assert.equal(await ev("document.querySelectorAll('#map path.leaflet-interactive').length>=64"), true);
+  await ev("document.querySelectorAll('#map path.leaflet-interactive')[32].dispatchEvent(new MouseEvent('click',{bubbles:true}))");
+  assert.equal(await ev("document.querySelector('.leaflet-popup-content').textContent.includes('2021–22')"), true);
+  assert.equal(await ev("document.querySelector('.leaflet-popup-content a').getAttribute('href')"), 'data.html#source-school');
+  await scroll('latest');
+  assert.equal(await ev("document.querySelector('#map-title').textContent.includes('2023–24')"), true);
+  await scroll('east-harlem');
+  assert.equal(await ev("document.querySelector('#east-harlem').textContent.includes('4,351')"), true);
+  const desktop = await call('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
+  await writeFile('/private/tmp/simple-story-desktop.png', Buffer.from(desktop.data, 'base64'));
+  await scroll('colleges');
+  assert.equal(await ev("document.querySelector('#map-title').textContent.includes('CUNY')"), true);
+  assert.equal(await ev("document.querySelectorAll('#map path.leaflet-interactive').length"), 25);
+  await ev("[...document.querySelectorAll('#map path.leaflet-interactive')].find(e=>e.getAttribute('stroke-dasharray')).dispatchEvent(new MouseEvent('click',{bubbles:true}))");
+  await wait("document.querySelectorAll('.shared-campus-choice').length===2");
+  await ev("[...document.querySelectorAll('.shared-campus-choice')].find(b=>b.textContent==='The City College of New York').click()");
+  assert.equal(await ev("document.querySelector('.leaflet-popup-content').textContent.includes('4% reported homelessness')"), true);
+  await ev("[...document.querySelectorAll('.shared-campus-choice')].find(b=>b.textContent==='School of Medicine').click()");
+  assert.equal(await ev("document.querySelector('.leaflet-popup-content').textContent.includes('does not mean zero')"), true);
+  await scroll('questions'); await scroll('sources');
+  assert.equal(await ev("performance.getEntriesByType('resource').filter(e=>e.name.endsWith('nyc-district-display.geojson.gz')).length"), 1);
+  await call('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
+  for (const chapter of ['introduction', 'latest', 'colleges', 'sources']) {
+    await scroll(chapter);
+    assert.equal(await ev('document.documentElement.scrollWidth<=390'), true, chapter);
+    assert.equal(await ev("document.querySelector('.map-container').getBoundingClientRect().height>200"), true);
+  }
+  await scroll('introduction');
+  const mobile = await call('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
+  await writeFile('/private/tmp/simple-story-mobile.png', Buffer.from(mobile.data, 'base64'));
+  await call('Page.navigate', { url: 'http://127.0.0.1:8765/data.html' });
+  await wait("document.querySelectorAll('#campus-table tr').length===26");
+  assert.equal(await ev("document.querySelectorAll('#district-table tr').length"), 32);
+  assert.equal(await ev("document.querySelectorAll('script').length"), 0);
+  await ev("document.querySelector('#campus-table').closest('details').open=true");
+  assert.equal(await ev('document.documentElement.scrollWidth<=390'), true);
+  await call('Emulation.setScriptExecutionDisabled', { value: true });
+  await call('Page.navigate', { url: 'http://127.0.0.1:8765' }); await pause(800);
+  assert.equal(await ev("document.querySelectorAll('.slide').length"), 7);
+  assert.equal(await ev("getComputedStyle(document.querySelector('.map-container')).display"), 'none');
+  await call('Emulation.setScriptExecutionDisabled', { value: false }); await call('Network.enable');
+  await call('Network.setBlockedURLs', { urls: ['*leaflet.js'] });
+  await call('Page.navigate', { url: 'http://127.0.0.1:8765' });
+  await wait("document.querySelector('#map-status').textContent.includes('could not load')");
+  assert.equal(await ev("document.querySelectorAll('.slide').length"), 7);
+  assert.equal(errors.length, 0, JSON.stringify(errors));
+  console.log('PASS: seven scrolling chapters; no dashboard controls; correct years and district popups; proportional circles; both co-located campuses; one shared geometry request; desktop/mobile layout; separate 32-district/26-institution evidence tables; no-JavaScript and map-library failure fallbacks; no uncaught exceptions.');
+} finally { socket?.close(); chrome.kill(); server.kill(); }
