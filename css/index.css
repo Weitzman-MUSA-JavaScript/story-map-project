@@ -1,0 +1,186 @@
+/* page setup and layout- copy pasted from scrollytelly template and then adapted for my use */
+
+body {
+  margin: 0;
+  border-width: 0;
+  box-sizing: border-box;
+  height: 100vh;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* making sure map stays in place while my slides glide through */
+.map-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 0;
+}
+
+/* map fills whole page */
+.map {
+  height: 100%;
+}
+
+/* slide on top of map */
+.slide-section {
+  position: relative;
+  margin-top: -30vh;
+  z-index: 100;
+  pointer-events: none;
+  border-bottom: 1px solid rgb(0 0 0 / 10%);
+}
+
+/* each slide is a gray box */
+.slide {
+  margin-top: 90vh;
+  margin-bottom: 90vh;
+  margin-left: auto;
+  margin-right: 2rem;
+  padding: 1rem;
+  border: 3px solid darkgray;
+  border-radius: 4rem;
+  pointer-events: initial;
+
+  width: 25rem;
+
+  background-color: lightgray;
+  color: darkslategray;
+}
+
+.slide:first-child {
+  margin-top: 0;
+}
+
+.slide:last-child {
+  margin-bottom: 2rem;
+}
+
+.slide-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 0.5rem;
+
+  width: 100%;
+}
+
+.slide-nav-button {
+  transition: all 0.1s;
+
+  padding: 0;
+  margin: 1rem;
+  width: 4rem;
+  height: 3rem;
+  border: 1px solid #888;
+  border-radius: 0.25rem;
+
+  background-color: #eee;
+  font-size: 1.5em;
+}
+
+
+
+.slide-nav-select {
+  min-width: 0;
+}
+
+/* keeping images inside the box - chat gpt assisted code */
+.slide img {
+  width: 100%;
+}
+
+/* Legend: adapted from the professor's custom_semantics example self and ChatGPT assisted */
+.legend {
+  margin: 1rem 0;
+  border: 1px solid black;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+  border-radius: 0.5rem;
+  width: fit-content;
+}
+
+/* legend title */
+.legend h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* removing bullet points */
+.legend ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* adding legend codes before  the word */
+.legend-item::before {
+  content: "";
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1px solid rgb(0 0 0 / 25%);
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+
+/* assigning legend colors and shapes */
+.city::before {background-color: orange;}
+.strong::before { background-color: gold; }
+.middle::before { background-color: white; }
+.weak::before { background-color: lightgoldenrodyellow; }
+.vacant::before { background-color: darkgreen; }
+
+.housing::before {
+  background-color: white;
+  border-color: red;
+}
+
+.gap::before {
+  border: 2px solid red;
+  border-radius: 0;
+}
+
+.packer::before {
+  border: 2px solid pink;
+  border-radius: 0;
+}
+
+.permit::before {
+  background-color: white;
+  border-color: brown;
+}
+
+.xx::before {
+  border: white;
+  border-color: white;
+}
+
+.leaflet-control.legend {
+  background-color: lightgray;
+}
+
+/* smaller screens: slides and legend shrink to fit phones - used Claude for this codee for mobile phone use */
+
+/* adjusts the slides and legend for screens 600px wide or smaller */
+
+@media screen and (width <= 600px) {
+  .slide {
+    /* lets the slide width adjust to the available space */
+    width: auto;
+
+    /* leaves space on both sides, based on the root font size */
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    /* rounds the slide's corners */
+    border-radius: 1.5rem;
+  }
+
+  .legend {
+    /* adds space between the legend's content and its edges */
+    padding: 0.5rem;
+
+    /* sets the text size to 80% of the root font size */
+    font-size: 0.8rem;
+  }
+}
